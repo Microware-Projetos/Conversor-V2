@@ -1,0 +1,43 @@
+.cards[b-krswt4g3zq] {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.card[b-krswt4g3zq] {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+    width: 240px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover[b-krswt4g3zq] {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.logo[b-krswt4g3zq] {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.card h2[b-krswt4g3zq] {
+    margin: 12px 0 8px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card p[b-krswt4g3zq] {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}

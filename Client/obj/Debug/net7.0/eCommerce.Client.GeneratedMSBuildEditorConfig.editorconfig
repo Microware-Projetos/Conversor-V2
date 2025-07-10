@@ -1,0 +1,49 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = eCommerce.Client
+build_property.RootNamespace = eCommerce.Client
+build_property.ProjectDir = /app/eCommerce/Client/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /app/eCommerce/Client
+build_property._RazorSourceGeneratorDebug = 
+
+[/app/eCommerce/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/app/eCommerce/Client/Pages/Cisco/Cisco.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY28ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/app/eCommerce/Client/Pages/Lenovo/Lenovo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGVub3ZvL0xlbm92by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/app/eCommerce/Client/Pages/Microware/Microware.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWljcm93YXJlL01pY3Jvd2FyZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/app/eCommerce/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/app/eCommerce/Client/Pages/HP/HP.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSFAvSFAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ba69s4me23
+
+[/app/eCommerce/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-krswt4g3zq
+
+[/app/eCommerce/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s5cvtvm9go

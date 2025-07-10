@@ -1,0 +1,41 @@
+@page "/hp"
+
+
+<PageTitle>HP</PageTitle>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h2>Upload de Arquivos Excel - HP</h2>
+        <img src="images/hp.png" alt="HP Logo" style="height:40px;" />
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Upload para WooCommerce</a>
+            </li>
+        </ul>
+        <div class="mb-3">
+            <label for="tipoUpload" class="form-label">Tipo de Upload</label>
+            <select id="tipoUpload" class="form-select" @bind="tipoUpload">
+                <option value="Produtos">Produtos</option>
+                <option value="Plotter">Plotter</option>
+                <option value="Care Pack">Care Pack</option>
+                <option value="Promoção">Promoção</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="arquivoProdutos" class="form-label">Arquivo de Produtos</label>
+            <InputFile id="arquivoProdutos" class="form-control" OnChange="OnProdutosFileChange" />
+        </div>
+        @if (tipoUpload == "Produtos")
+        {
+            <div class="mb-3">
+                <label for="arquivoPrecos" class="form-label">Arquivo de Preços</label>
+                <InputFile id="arquivoPrecos" class="form-control" OnChange="OnPrecosFileChange" />
+            </div>
+        }
+        <button class="btn btn-primary w-100" type="button" @onclick="EnviarParaWooCommerce">
+            <i class="bi bi-upload"></i> Enviar para WooCommerce
+        </button>
+    </div>
+</div>
