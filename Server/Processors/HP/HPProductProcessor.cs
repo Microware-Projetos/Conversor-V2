@@ -118,16 +118,19 @@ public static class HPProductProcessor
 
         foreach (var ws in listPrecos.Worksheets)
         {
-            var linhasPrecos = ws.RowsUsed().Skip(1);
+            var linhasPrecos = ws.RowsUsed().Skip(1); // pula o cabeçalho
+
+            // Pegando título das colunas que interessam uma única vez, no início:
+            string tituloSku = ws.Cell(1, 2).GetString().Trim();     // coluna 2 = sku
+            string tituloPreco = ws.Cell(1, 14).GetString().Trim();  // coluna 14 = preco (porque cell index começa em 1)
+            Console.WriteLine($"Worksheet: {ws.Name} - Colunas: SKU='{tituloSku}', Preço='{tituloPreco}'");
 
             foreach (var linha in linhasPrecos)
             {
                 var sku = linha.Cell(2).GetString().Trim();
-                Console.WriteLine(ws.Name);
-                Console.WriteLine("sku: " + sku);
-                var preco = linha.Cell(13).GetString().Trim(); 
-                Console.WriteLine("preco: " + preco);
-            
+                var preco = linha.Cell(14).GetString().Trim();
+
+                Console.WriteLine($"SKU: {sku} - Preço: {preco}");
 
                 if (!string.IsNullOrWhiteSpace(sku) && !precosPorSku.ContainsKey(sku))
                 {
@@ -138,5 +141,6 @@ public static class HPProductProcessor
 
         return precosPorSku;
     }
+
   
 }
