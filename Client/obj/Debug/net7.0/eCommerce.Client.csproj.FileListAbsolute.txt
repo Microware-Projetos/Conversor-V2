@@ -835,3 +835,8 @@
 /app/eCommerce/Client/obj/Debug/net7.0/ref/eCommerce.Client.dll
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Index.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/HP/HP.razor.rz.scp.css
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll.gz
+/app/eCommerce/Client/bin/Debug/net7.0/LiteDB.dll
+/app/eCommerce/Client/obj/Debug/net7.0/build-gz/SvcENC+S.gz
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Jobs/Jobs.razor.rz.scp.css

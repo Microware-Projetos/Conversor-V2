@@ -53,3 +53,14 @@
 /app/eCommerce/Server/obj/Debug/net7.0/eCommerce.Server.pdb
 /app/eCommerce/Server/obj/Debug/net7.0/eCommerce.Server.genruntimeconfig.cache
 /app/eCommerce/Server/obj/Debug/net7.0/ref/eCommerce.Server.dll
+/app/eCommerce/Server/bin/Debug/net7.0/LiteDB.dll
+/app/eCommerce/Server/bin/Debug/net7.0/Newtonsoft.Json.dll
+/app/eCommerce/Server/bin/Debug/net7.0/ClosedXML.dll
+/app/eCommerce/Server/bin/Debug/net7.0/ClosedXML.Parser.dll
+/app/eCommerce/Server/bin/Debug/net7.0/DocumentFormat.OpenXml.dll
+/app/eCommerce/Server/bin/Debug/net7.0/DocumentFormat.OpenXml.Framework.dll
+/app/eCommerce/Server/bin/Debug/net7.0/ExcelNumberFormat.dll
+/app/eCommerce/Server/bin/Debug/net7.0/RBush.dll
+/app/eCommerce/Server/bin/Debug/net7.0/SixLabors.Fonts.dll
+/app/eCommerce/Server/bin/Debug/net7.0/System.IO.Packaging.dll
+/app/eCommerce/Server/bin/Debug/net7.0/produtos.json

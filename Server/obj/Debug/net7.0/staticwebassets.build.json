@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HnFMLm5PTzYS3nPzvXSsorztfTB9fNur7EFX7W08F74=",
+  "Hash": "LRNz/P4ix1+XZEcHGkiLCG0GAs7Vzq4AyWaLpeB0usc=",
   "Source": "eCommerce.Server",
   "BasePath": "_content/eCommerce.Server",
   "Mode": "Default",
@@ -248,6 +248,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/root/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/7.0.20/runtimes/browser-wasm/native/icudt.dat"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/LiteDB.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/root/.nuget/packages/litedb/5.0.21/lib/netstandard2.0/LiteDB.dll"
     },
     {
       "Identity": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll",
@@ -6268,6 +6285,23 @@
       "OriginalItemSpec": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Numerics.dll"
     },
     {
+      "Identity": "/app/eCommerce/Client/obj/Debug/net7.0/build-gz/SvcENC+S.gz",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/LiteDB.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll"
+    },
+    {
       "Identity": "/app/eCommerce/Client/obj/Debug/net7.0/build-gz/sYAXPzhm.gz",
       "SourceId": "eCommerce.Client",
       "SourceType": "Project",
@@ -6963,6 +6997,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/bundle/eCommerce.Client.styles.css"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/wwwroot/appsettings.json",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Project",
+      "ContentRoot": "/app/eCommerce/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "appsettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "settings",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/appsettings.json"
     },
     {
       "Identity": "/app/eCommerce/Client/wwwroot/css/app.css",

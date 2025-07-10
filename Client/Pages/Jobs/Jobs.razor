@@ -1,0 +1,200 @@
+@page "/jobs"
+@using eCommerce.Client.Services.Job
+@using eCommerce.Shared.Models
+
+<PageTitle>Jobs - Monitoramento</PageTitle>
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h2><i class="bi bi-list-task"></i> Monitoramento de Jobs</h2>
+        <button class="btn btn-outline-primary" @onclick="CarregarJobs" disabled="@isLoading">
+            @if (isLoading)
+            {
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                <span>Carregando...</span>
+            }
+            else
+            {
+                <i class="bi bi-arrow-clockwise"></i>
+                <span>Atualizar</span>
+            }
+        </button>
+    </div>
+    <div class="card-body">
+        @if (!string.IsNullOrEmpty(mensagem))
+        {
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                @mensagem
+                <button type="button" class="btn-close" @onclick="LimparMensagem"></button>
+            </div>
+        }
+
+        @if (isLoading)
+        {
+            <div class="text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Carregando...</span>
+                </div>
+                <p class="mt-2">Carregando jobs...</p>
+            </div>
+        }
+        else if (!todosJobs.Any())
+        {
+            <div class="text-center py-4">
+                <i class="bi bi-inbox display-1 text-muted"></i>
+                <h4 class="mt-3 text-muted">Nenhum job encontrado</h4>
+                <p class="text-muted">Não há jobs para exibir no momento.</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th>Data Criação</th>
+                            <th>Arquivos</th>
+                            <th>Mensagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var job in jobsExibidos)
+                        {
+                            <tr>
+                                <td>
+                                    <code class="text-primary">@job.Id.Substring(0, 8)...</code>
+                                </td>
+                                <td>
+                                    <span class="@GetTipoClass(job.Tipo)">@job.Tipo</span>
+                                </td>
+                                <td>
+                                    <span class="@GetStatusClass(job.Status)">@job.Status</span>
+                                </td>
+                                <td>
+                                    <small class="text-muted">@job.DataCriacao.ToString("dd/MM/yyyy HH:mm")</small>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto))
+                                    {
+                                        <div class="small">
+                                            <i class="bi bi-file-earmark-text text-primary"></i>
+                                            <span class="text-muted">@Path.GetFileName(job.CaminhoArquivoProduto)</span>
+                                        </div>
+                                    }
+                                    @if (!string.IsNullOrEmpty(job.CaminhoArquivoPreco))
+                                    {
+                                        <div class="small">
+                                            <i class="bi bi-file-earmark-text text-success"></i>
+                                            <span class="text-muted">@Path.GetFileName(job.CaminhoArquivoPreco)</span>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(job.Mensagem))
+                                    {
+                                        <small class="text-muted">@job.Mensagem</small>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">-</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @if (totalPaginas > 1)
+            {
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="text-muted">
+                        <small>
+                            Mostrando @((paginaAtual - 1) * ITENS_POR_PAGINA + 1) a @Math.Min(paginaAtual * ITENS_POR_PAGINA, todosJobs.Count) 
+                            de @todosJobs.Count jobs
+                        </small>
+                    </div>
+                    <nav aria-label="Navegação de páginas">
+                        <ul class="pagination pagination-sm mb-0">
+                            <!-- Primeira página -->
+                            <li class="page-item @(paginaAtual == 1 ? "disabled" : "")">
+                                <button class="page-link" @onclick="() => IrParaPagina(1)" disabled="@(paginaAtual == 1)">
+                                    <i class="bi bi-chevron-double-left"></i>
+                                </button>
+                            </li>
+                            
+                            <!-- Página anterior -->
+                            <li class="page-item @(paginaAtual == 1 ? "disabled" : "")">
+                                <button class="page-link" @onclick="PaginaAnterior" disabled="@(paginaAtual == 1)">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                            </li>
+                            
+                            <!-- Páginas numeradas -->
+                            @foreach (var pagina in ObterPaginasParaExibir())
+                            {
+                                <li class="page-item @(pagina == paginaAtual ? "active" : "")">
+                                    <button class="page-link" @onclick="() => IrParaPagina(pagina)">@pagina</button>
+                                </li>
+                            }
+                            
+                            <!-- Página seguinte -->
+                            <li class="page-item @(paginaAtual == totalPaginas ? "disabled" : "")">
+                                <button class="page-link" @onclick="ProximaPagina" disabled="@(paginaAtual == totalPaginas)">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </li>
+                            
+                            <!-- Última página -->
+                            <li class="page-item @(paginaAtual == totalPaginas ? "disabled" : "")">
+                                <button class="page-link" @onclick="() => IrParaPagina(totalPaginas)" disabled="@(paginaAtual == totalPaginas)">
+                                    <i class="bi bi-chevron-double-right"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            }
+
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body text-center">
+                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Pendente)</h5>
+                                <small>Pendentes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white">
+                            <div class="card-body text-center">
+                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Processando)</h5>
+                                <small>Processando</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Concluido)</h5>
+                                <small>Concluídos</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body text-center">
+                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Erro)</h5>
+                                <small>Com Erro</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

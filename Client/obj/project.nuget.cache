@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6WWfV0nTB4c9ZfLCm3bdKoZScwyA1KigjJK0+gnb1bXzRhk/TmMQdQS95u1aChWM0+UP5JMuTiQICKEFAiR/9w==",
+  "dgSpecHash": "zC2mL58iNdR3rH+KKKiX3FRJM44rSiUTsP9gS3lMJJDqhRKZHBWBYjXfHI28/cfxIGdCXkShDzv6IexoAb3I/g==",
   "success": true,
   "projectFilePath": "/app/eCommerce/Client/eCommerce.Client.csproj",
   "expectedPackageFiles": [
+    "/root/.nuget/packages/litedb/5.0.21/litedb.5.0.21.nupkg.sha512",
     "/root/.nuget/packages/microsoft.aspnetcore.authorization/7.0.20/microsoft.aspnetcore.authorization.7.0.20.nupkg.sha512",
     "/root/.nuget/packages/microsoft.aspnetcore.components/7.0.20/microsoft.aspnetcore.components.7.0.20.nupkg.sha512",
     "/root/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.20/microsoft.aspnetcore.components.analyzers.7.0.20.nupkg.sha512",
@@ -28,6 +29,7 @@
     "/root/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/root/.nuget/packages/microsoft.jsinterop/7.0.20/microsoft.jsinterop.7.0.20.nupkg.sha512",
     "/root/.nuget/packages/microsoft.jsinterop.webassembly/7.0.20/microsoft.jsinterop.webassembly.7.0.20.nupkg.sha512",
+    "/root/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/root/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
     "/root/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/root/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",

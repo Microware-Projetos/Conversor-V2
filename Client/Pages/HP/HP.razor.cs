@@ -1,55 +1,119 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using eCommerce.Client.Services.HP;
+using eCommerce.Shared.Models;
 
 namespace eCommerce.Client.Pages.HP;
 
 public partial class HP : ComponentBase
 {
-    
+    [Inject]
+    private HPService _hpService { get; set; } = default!;
+
     private string tipoUpload = "Produtos";
     private IBrowserFile? arquivoProdutos;
     private IBrowserFile? arquivoPrecos;
+    private string mensagem = "";
+    private bool isLoading = false;
+    private const long MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
+
+    private void LimparMensagem()
+    {
+        mensagem = "";
+        StateHasChanged();
+    }
 
     private void OnProdutosFileChange(InputFileChangeEventArgs e)
     {
         arquivoProdutos = e.File;
+        ValidarArquivo(arquivoProdutos, "Produtos");
     }
 
     private void OnPrecosFileChange(InputFileChangeEventArgs e)
     {
         arquivoPrecos = e.File;
+        ValidarArquivo(arquivoPrecos, "Preços");
+    }
+
+    private void ValidarArquivo(IBrowserFile? arquivo, string nomeArquivo)
+    {
+        if (arquivo == null) return;
+
+        if (arquivo.Size > MAX_FILE_SIZE)
+        {
+            mensagem = $"Erro: O arquivo {nomeArquivo} ({arquivo.Size / 1024 / 1024}MB) excede o limite de {MAX_FILE_SIZE / 1024 / 1024}MB";
+            StateHasChanged();
+        }
+        else
+        {
+            mensagem = $"Arquivo {nomeArquivo} carregado: {arquivo.Name} ({arquivo.Size / 1024}KB)";
+            StateHasChanged();
+        }
     }
 
     private async Task EnviarParaWooCommerce()
     {
-        switch (tipoUpload)
+        if (arquivoProdutos == null || arquivoPrecos == null)
         {
-            case "Produtos":
-                await EnviarProdutos();
-                break;
-            case "Plotter":
-                await EnviarPlotter();
-                break;
-            case "Care Pack":
-                await EnviarCarePack();
-                break;
-            case "Promoção":
-                await EnviarPromocao();
-                break;
+            mensagem = "Por favor, selecione ambos os arquivos antes de enviar.";
+            StateHasChanged();
+            return;
+        }
+
+        if (arquivoProdutos.Size > MAX_FILE_SIZE || arquivoPrecos.Size > MAX_FILE_SIZE)
+        {
+            mensagem = "Um ou ambos os arquivos excedem o tamanho máximo permitido.";
+            StateHasChanged();
+            return;
+        }
+
+        isLoading = true;
+        mensagem = "Enviando arquivos...";
+        StateHasChanged();
+
+        try
+        {
+            switch (tipoUpload)
+            {
+                case "Produtos":
+                    await EnviarProdutos();
+                    break;
+                case "Plotter":
+                    await EnviarPlotter();
+                    break;
+                case "Care Pack":
+                    await EnviarCarePack();
+                    break;
+                case "Promoção":
+                    await EnviarPromocao();
+                    break;
+            }
+        }
+        catch (Exception ex)
+        {
+            mensagem = $"Erro ao enviar arquivos: {ex.Message}";
+            StateHasChanged();
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
         }
     }
 
-    private Task EnviarProdutos()
+    private async Task EnviarProdutos()
     {
-        // TODO: Implementar chamada de API para Produtos usando arquivoProdutos e arquivoPrecos
         Console.WriteLine("Enviando Produtos");
-        return Task.CompletedTask;
+        var job = await _hpService.EnviarProdutos(arquivoProdutos!, arquivoPrecos!);
+        mensagem = $"Produtos enviados com sucesso! Job ID: {job.Id}";
+        StateHasChanged();
     }
 
     private Task EnviarPlotter()
     {
         // TODO: Implementar chamada de API para Plotter usando arquivoProdutos
         Console.WriteLine("Enviando Plotter");
+        mensagem = "Funcionalidade Plotter ainda não implementada.";
         return Task.CompletedTask;
     }
 
@@ -57,6 +121,7 @@ public partial class HP : ComponentBase
     {
         // TODO: Implementar chamada de API para Care Pack usando arquivoProdutos
         Console.WriteLine("Enviando Care Pack");
+        mensagem = "Funcionalidade Care Pack ainda não implementada.";
         return Task.CompletedTask;
     }
 
@@ -64,8 +129,7 @@ public partial class HP : ComponentBase
     {
         // TODO: Implementar chamada de API para Promoção usando arquivoProdutos
         Console.WriteLine("Enviando Promoção");
+        mensagem = "Funcionalidade Promoção ainda não implementada.";
         return Task.CompletedTask;
     }
-
-
 }

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PbvKlaIps8odjbJ9sUtrfqEBGXhbZwliEVF9D795eH4Gya6JmE/DM7uuvmDQBf9vcss91vdAQO0HST/n/HZ2QQ==",
+  "dgSpecHash": "wVah7ARSlcwjbNw2vnls6PHNRLUcvIR0w/E+X6N2mwlBV8qkrjwChVDU6ZZCHk1qqhBFTrOvfanxEolQDmFtcQ==",
   "success": true,
   "projectFilePath": "/app/eCommerce/Shared/eCommerce.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/litedb/5.0.21/litedb.5.0.21.nupkg.sha512",
+    "/root/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

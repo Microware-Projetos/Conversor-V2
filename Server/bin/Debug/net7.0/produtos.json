@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "957J9LA#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 8GB (1x8GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe Win 11 Home",
+    "price": "3233.2565999999997",
+    "regular_price": "3233.2565999999997",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "957L5LA#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i7-13700 RAM 16GB (1x16GB) DDR4 3200 SSD 512G M.2 2280 PCIe NVMe Win 11 Pro",
+    "price": "6101.441699999999",
+    "regular_price": "6101.441699999999",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "957L1LA#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 16GB (1x16GB) DDR4 3200 SSD 256G M.2 2280 PCIe NVMe Win 11 Pro",
+    "price": "3680.6703",
+    "regular_price": "3680.6703",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "BT5T7AT#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i3-13100 RAM 8GB (1x8GB) DDR4 3200 CR\t SSD 512G M.2 2280 PCIe NVMe FreeDOS",
+    "price": "2380.0839",
+    "regular_price": "2380.0839",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "BT5V1AT#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 8GB (1x8GB) DDR4 3200 CR\t SSD 512G M.2 2280 PCIe NVMe\t FreeDOS",
+    "price": "2870.7798",
+    "regular_price": "2870.7798",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "BT5T8AT#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 8GB (1x8GB) DDR4 3200 CR\t SSD 256G M.2 2280 PCIe NVMe\t Win 11 Pro",
+    "price": "3578.7329999999993",
+    "regular_price": "3578.7329999999993",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "BT5T9AT#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 16GB (1x16GB) DDR4 3200 CR\t SSD 256G M.2 2280 PCIe NVMe\t Win 11 Pro",
+    "price": "3674.0673",
+    "regular_price": "3674.0673",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop HP 280 G9 SFF ",
+    "sku": "BT5V2AT#AK4",
+    "short_description": "HP HP 280 G9 SFF ",
+    "description": "Desktop HP 280 G9 SFF  i5-13500 RAM 16GB (1x16GB) DDR4 3200 CR\t SSD 512G M.2 2280 PCIe NVMe\t Win 11 Pro",
+    "price": "3782.9330999999997",
+    "regular_price": "3782.9330999999997",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4.2Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "A58U7LA#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i3-13100 RAM 8GB (1x8GB) DDR4 3200 NECC SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "3873.6174",
+    "regular_price": "3873.6174",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "A58PMLA#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i3-13100 RAM 16GB (1x16GB) DDR4 3200 NECC SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4059.5150999999996",
+    "regular_price": "4059.5150999999996",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "A58PLLA#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i5-13500 RAM 8GB (1x8GB) DDR4 3200 NECC SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4386.5589",
+    "regular_price": "4386.5589",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "BT5U4AT#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i5-13500 RAM 16GB (1x16GB) DDR4 3200 CR SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4539.0231",
+    "regular_price": "4539.0231",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "A58PNLA#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i5-13500 RAM 16GB (1x16GB) DDR4 3200 NECC SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4578.408600000001",
+    "regular_price": "4578.408600000001",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "BT5U6AT#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i5-13500 RAM 16GB (1x16GB) DDR4 3200 CR SSD 1T 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4741.0284",
+    "regular_price": "4741.0284",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "BT5V3AT#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i7-13700 RAM 16GB (1x16GB) DDR4 3200 CR SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5421.1002",
+    "regular_price": "5421.1002",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 SFF",
+    "sku": "BT5U7AT#AK4",
+    "short_description": "HP ProDesk 400 G9 SFF",
+    "description": "Desktop ProDesk 400 G9 SFF i7-13700 RAM 16GB (1x16GB) DDR4 3200 CR SSD 1T 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5623.5612",
+    "regular_price": "5623.5612",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "4,73Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "940H4LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i3-13100T RAM 8GB(1x8GB) DDR4 3200 SODIMM SSD 256G 2280 PCIe NVMe Value Win 11 Home",
+    "price": "3270.4473000000003",
+    "regular_price": "3270.4473000000003",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "940H7LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i5-13500T RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4240.6326",
+    "regular_price": "4240.6326",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "A59H7LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i3-13100T RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "3862.5596999999993",
+    "regular_price": "3862.5596999999993",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "A59H8LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i5-13500T RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5386.494900000001",
+    "regular_price": "5386.494900000001",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "A59H6LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i3-13100T RAM 8GB(1x8GB) DDR4 3200 SODIMM SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "3660.5544000000004",
+    "regular_price": "3660.5544000000004",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "BT5U0AT#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i5-13500T RAM 8GB (1x8GB) DDR4 3200 CR SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4150.1993999999995",
+    "regular_price": "4150.1993999999995",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "BT5U1AT#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i5-13500T RAM 16GB (1x16GB) DDR4 3200 CR SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4365.6618",
+    "regular_price": "4365.6618",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "940J0LA#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i7-13700T RAM 16GB(1x16GB) DDR4 3200 SODIMM SSD 256G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5142.5745",
+    "regular_price": "5142.5745",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "BT5U2AT#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i7-13700T RAM 16GB (1x16GB) DDR4 3200 CR SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5247.5622",
+    "regular_price": "5247.5622",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop ProDesk 400 G9 DM ",
+    "sku": "BT5U3AT#AK4",
+    "short_description": "HP ProDesk 400 G9 DM ",
+    "description": "Desktop ProDesk 400 G9 DM  i7-13700T RAM 16GB (1x16GB) DDR4 3200 CR SSD 1TB 2280 PCIe-4x4 NVMe TLC Win 11 Pro",
+    "price": "5595.363600000001",
+    "regular_price": "5595.363600000001",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.25 kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 DM ",
+    "sku": "940J8LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 DM ",
+    "description": "Desktop EliteDesk 800 G9 DM  i5-13500T RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Home PLS",
+    "price": "4573.7493",
+    "regular_price": "4573.7493",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.42Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 DM ",
+    "sku": "940K0LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 DM ",
+    "description": "Desktop EliteDesk 800 G9 DM  i5-13500T RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5762.6892",
+    "regular_price": "5762.6892",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.42Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 DM ",
+    "sku": "940K1LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 DM ",
+    "description": "Desktop EliteDesk 800 G9 DM  i7-13700T RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5816.1828000000005",
+    "regular_price": "5816.1828000000005",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.42Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G8 DM ",
+    "sku": "BV2R5AT#AK4",
+    "short_description": "HP EliteDesk 805 G8 DM ",
+    "description": "Desktop EliteDesk 805 G8 DM  R5-5600GE RAM 8GB (1x8GB) DDR4 3200 CR SSD 256G 2280 PCIe NVMe Value\t Win 11 Pro",
+    "price": "4110.4884",
+    "regular_price": "4110.4884",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.45Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G8 DM ",
+    "sku": "BV2R6AT#AK4",
+    "short_description": "HP EliteDesk 805 G8 DM ",
+    "description": "Desktop EliteDesk 805 G8 DM  R5-5600GE RAM 16GB (1x16GB) DDR4 3200 CR\t SSD 512G 2280 PCIe NVMe Value\t Win 11 Pro",
+    "price": "4338.3012",
+    "regular_price": "4338.3012",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "1.45Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 SFF",
+    "sku": "940J6LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 SFF",
+    "description": "Desktop EliteDesk 800 G9 SFF i5-13500 RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5105.960399999999",
+    "regular_price": "5105.960399999999",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 SFF",
+    "sku": "940J7LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 SFF",
+    "description": "Desktop EliteDesk 800 G9 SFF i7-13700 RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "6061.3308",
+    "regular_price": "6061.3308",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 800 G9 SFF",
+    "sku": "940J5LA#AK4",
+    "short_description": "HP EliteDesk 800 G9 SFF",
+    "description": "Desktop EliteDesk 800 G9 SFF i7-13700 RAM 16GB (1x16GB) DDR5 4800 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "6868.515",
+    "regular_price": "6868.515",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "BZ6U1AT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R5-8600G RAM 8GB (1x8GB) DDR5 5600 CR\t SSD 256G 2280 PCIe NVMe Value\t Win 11 Pro",
+    "price": "5070.7785",
+    "regular_price": "5070.7785",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "BV2S0AT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R7-8700G RAM 16GB (1x16GB) DDR5 5600 CR\t SSD 512G 2280 PCIe NVMe Value\t Win 11 Pro",
+    "price": "5795.4252",
+    "regular_price": "5795.4252",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "AM0B8LT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R5-8500G RAM 16GB (1x16GB) DDR5 5600 SSD 512G 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5016.3084",
+    "regular_price": "5016.3084",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "AM0B9LT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R5-Pro-8500G RAM 16GB (1x16GB) DDR5 5600 SSD 1T 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "4731.9051",
+    "regular_price": "4731.9051",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "AM0C0LT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R5-8600G RAM 16GB (1x16GB) DDR5 5600 SSD 1T 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5465.079900000001",
+    "regular_price": "5465.079900000001",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop EliteDesk 805 G9 SFF ",
+    "sku": "AM0C5LT#AK4",
+    "short_description": "HP EliteDesk 805 G9 SFF ",
+    "description": "Desktop EliteDesk 805 G9 SFF  R5-Pro-8600G RAM 16GB (1x16GB) DDR5 5600 SSD 1T 2280 PCIe NVMe Value Win 11 Pro",
+    "price": "5594.7126",
+    "regular_price": "5594.7126",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": null,
+      "width": null,
+      "height": null
+    },
+    "weight": "5,04Kg",
+    "categories": [],
+    "shipping_class": "desktop",
+    "manage_stock": true
+  }
+]

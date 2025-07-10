@@ -9,3 +9,4 @@
 /app/eCommerce/Shared/obj/Debug/net7.0/refint/eCommerce.Shared.dll
 /app/eCommerce/Shared/obj/Debug/net7.0/eCommerce.Shared.pdb
 /app/eCommerce/Shared/obj/Debug/net7.0/ref/eCommerce.Shared.dll
+/app/eCommerce/Shared/obj/Debug/net7.0/eCommerce.Shared.csproj.AssemblyReference.cache

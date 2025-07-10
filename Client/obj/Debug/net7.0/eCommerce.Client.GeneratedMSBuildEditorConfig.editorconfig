@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope = b-ba69s4me23
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-krswt4g3zq
 
+[/app/eCommerce/Client/Pages/Jobs/Jobs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSm9icy9Kb2JzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ttqwkbpfzq
+
 [/app/eCommerce/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-s5cvtvm9go

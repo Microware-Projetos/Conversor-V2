@@ -1,12 +1,15 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.json"
+  ],
   "debugBuild": true,
   "entryAssembly": "eCommerce.Client",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "LiteDB.dll": "sha256-rjGsapNUkhe56LgUl9HugxZYrebfnh7iDyg48i3l4hg=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-inb7VSJ8MbisrKkE6xM0zuYupL2VrGJebY\/RYSfefaQ=",
       "Microsoft.AspNetCore.Components.dll": "sha256-ScTTRq19ZjJQojkZfjSU4bgMM9JF\/sX+n9bfusNfbCY=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-7psgFLvDwizdMsElAo+bjqThhWn7rk43Uahh86MHIEs=",
@@ -198,15 +201,15 @@
       "mscorlib.dll": "sha256-HYyp9hO+GKFyupcEiY1PxtBBXbHzefsO3Q8RiQTaNCA=",
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
-      "eCommerce.Shared.dll": "sha256-0hpKpvTdm1w5KRpfMWgAsT+fPUrQnQaXTns9DbpTBHg=",
-      "eCommerce.Client.dll": "sha256-U3cknCptPcu5cJzLdi6paYMgy3wZ\/frfztfTdKGeMUk="
+      "eCommerce.Shared.dll": "sha256-GT1egF4\/XhIAyjgxxNGPfoWpFO4N5YmElivOZzYvj60=",
+      "eCommerce.Client.dll": "sha256-tXkdCQRLJgWhDbyTUha544CJCpvLW2VZPE5XCxM00Ss="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "eCommerce.Shared.pdb": "sha256-37DRRkwhX1jZKzrrX0r+q4299Iotc7z3zl4RS14wR3g=",
-      "eCommerce.Client.pdb": "sha256-8RKC25A+jul09UeUYg\/PI2Lx11cwbrXP2yKcIX\/WKDE="
+      "eCommerce.Shared.pdb": "sha256-M1QPccnF4vjX\/ic2x\/fDqYf1cuw1\/bgXFSgbQoetpZY=",
+      "eCommerce.Client.pdb": "sha256-oaUiqdAuWT4W5Bjb82Mke02Vtaw+7Qb7vKFI1P8dawc="
     },
     "runtime": {
       "dotnet.7.0.20.z0sgs8vy1p.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
