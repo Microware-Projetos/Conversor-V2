@@ -3,7 +3,6 @@ using ClosedXML.Excel;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using ClosedXML.Excel;
 using Newtonsoft.Json;
 using System;
 
@@ -19,6 +18,13 @@ public static class HPProductProcessor
             var produtos = new List<WooProduct>();
             var listProdutos = new XLWorkbook(caminhoArquivoProdutos);
             var precosPorSku = GetPrecosPorSku(caminhoArquivoPrecos);
+            var leadtime = new Dictionary<float, string>
+             {
+                {0.04f, "importado"},
+                {0.18f, "importado"},
+                {0.07f, "local"},
+                {0.12f, "local"} 
+            };
             
             foreach (var worksheet in listProdutos.Worksheets)
             {
@@ -36,9 +42,11 @@ public static class HPProductProcessor
                         {
 
                             var sku = linha.Cell(2).Value.ToString() ?? "";
-                            var preco = precosPorSku[sku];
+                            float preco = float.Parse(precosPorSku[sku]);
+                            var icms = precosPorSku[sku + "_icms"];
+                            var lead = leadtime[float.Parse(icms)];
 
-                            if (preco == "0" || preco == "" || preco == null)
+                            if (preco == 0)
                             {
                                 continue;
                             }
@@ -72,7 +80,7 @@ public static class HPProductProcessor
                                 stock_quantity = "10",
                                 weight = weight,
                                 manage_stock = true,
-                                shipping_class = "desktop",
+                                shipping_class = lead,
                             };
                             produtos.Add(produto);
                             contadorLinhas++;
@@ -118,23 +126,24 @@ public static class HPProductProcessor
 
         foreach (var ws in listPrecos.Worksheets)
         {
-            var linhasPrecos = ws.RowsUsed().Skip(1); // pula o cabeçalho
-
-            // Pegando título das colunas que interessam uma única vez, no início:
-            string tituloSku = ws.Cell(1, 2).GetString().Trim();     // coluna 2 = sku
-            string tituloPreco = ws.Cell(1, 14).GetString().Trim();  // coluna 14 = preco (porque cell index começa em 1)
-            Console.WriteLine($"Worksheet: {ws.Name} - Colunas: SKU='{tituloSku}', Preço='{tituloPreco}'");
+            var linhasPrecos = ws.RowsUsed().Skip(1);
 
             foreach (var linha in linhasPrecos)
             {
                 var sku = linha.Cell(2).GetString().Trim();
-                var preco = linha.Cell(14).GetString().Trim();
+                var precoStr = linha.Cell(14).GetString().Trim();
+                var icms = linha.Cell(16).GetString().Trim();
 
-                Console.WriteLine($"SKU: {sku} - Preço: {preco}");
+                if (string.IsNullOrWhiteSpace(sku)) continue;
 
-                if (!string.IsNullOrWhiteSpace(sku) && !precosPorSku.ContainsKey(sku))
+                // Tentar converter o preço para decimal
+                if (!decimal.TryParse(precoStr, out decimal precoAtual)) continue;
+
+                // Se o SKU ainda não existe ou o novo preço for maior, atualiza
+                if (!precosPorSku.ContainsKey(sku) || decimal.Parse(precosPorSku[sku]) < precoAtual)
                 {
-                    precosPorSku[sku] = preco;
+                    precosPorSku[sku] = precoStr;
+                    precosPorSku[sku + "_icms"] = icms;
                 }
             }
         }
