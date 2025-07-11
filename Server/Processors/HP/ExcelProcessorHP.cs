@@ -22,6 +22,7 @@ public static class ExcelProcessorHP
                 var precoStr = linha.Cell(14).GetString().Trim();
                 var icms = linha.Cell(16).GetString().Trim();
                 var ean = linha.Cell(11).GetString().Trim();
+                var ncm = linha.Cell(12).GetString().Trim();
 
                 if (string.IsNullOrWhiteSpace(sku)) continue;
 
@@ -34,6 +35,7 @@ public static class ExcelProcessorHP
                     precosPorSku[sku] = precoStr;
                     precosPorSku[sku + "_icms"] = icms;
                     precosPorSku[sku + "_ean"] = ean;
+                    precosPorSku[sku + "_ncm"] = ncm;
                 }
             }
         }

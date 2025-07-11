@@ -251,9 +251,13 @@ public static class DataUtilsHP
                                             "Dimensões (L x P x A)",
                                             "Dimensions (W x D x H)",
                                             "Dimensões mínimas (L x P x A)",
-                                            "Dimensões"
+                                            "Dimensões",
+                                            "Dimensions",
+                                            "Package Dimensions",
+                                            "Product Dimensions"
                                         };
                                         
+                                        Console.WriteLine($"\nProcessando dimensões da API...");
                                         foreach (var dimItem in productDims)
                                         {
                                             if (dimItem != null && dimItem.Type == JTokenType.Object)
@@ -264,23 +268,46 @@ public static class DataUtilsHP
                                                     var name = dimObj["name"]?.ToString();
                                                     var value = dimObj["value"]?.ToString();
                                                     
-                                                    if (dimensionFields.Contains(name) && !string.IsNullOrWhiteSpace(value))
+                                                    Console.WriteLine($"Campo encontrado: '{name}' = '{value}'");
+                                                    
+                                                    // Verifica se o campo contém "dimension" ou "dimensão" (case insensitive)
+                                                    var isDimensionField = dimensionFields.Contains(name) || 
+                                                                          (name != null && (name.ToLower().Contains("dimension") || 
+                                                                                           name.ToLower().Contains("dimensão")));
+                                                    
+                                                    if (isDimensionField && !string.IsNullOrWhiteSpace(value))
                                                     {
+                                                        Console.WriteLine($"Campo de dimensão encontrado: '{name}'");
                                                         var originalValue = value.ToLower();
                                                         
                                                         // Verifica se tem unidades de medida
                                                         if (!originalValue.Contains("cm") && !originalValue.Contains("mm") && !originalValue.Contains("in"))
+                                                        {
+                                                            Console.WriteLine($"Campo não contém unidades de medida: {originalValue}");
                                                             continue;
+                                                        }
+                                                        
+                                                        Console.WriteLine($"Processando valor: {originalValue}");
                                                         
                                                         // Tenta processar como três dimensões primeiro
                                                         var result = ProcessThreeDimensions(originalValue);
                                                         if (result != null)
+                                                        {
+                                                            Console.WriteLine($"Dimensões processadas com sucesso: L={result.length}, W={result.width}, H={result.height}");
+                                                            Console.WriteLine($"Tipo do objeto result: {result.GetType().Name}");
+                                                            Console.WriteLine($"Verificando propriedades: length='{result.length}', width='{result.width}', height='{result.height}'");
                                                             return result;
+                                                        }
                                                         
                                                         // Se não conseguiu processar como três dimensões, tenta como dimensão única
                                                         result = ProcessSingleDimension(originalValue);
                                                         if (result != null)
+                                                        {
+                                                            Console.WriteLine($"Dimensão única processada: W={result.width}");
                                                             return result;
+                                                        }
+                                                        
+                                                        Console.WriteLine($"Não foi possível processar as dimensões: {originalValue}");
                                                     }
                                                 }
                                             }
@@ -306,6 +333,7 @@ public static class DataUtilsHP
     {
         try
         {
+            var originalValue = value; // Preserva o valor original com unidades
             value = CleanDimensionValue(value);
             var dimensions = ExtractDimensions(value);
             
@@ -314,7 +342,7 @@ public static class DataUtilsHP
                 var processedDims = new string[3];
                 for (int i = 0; i < dimensions.Length; i++)
                 {
-                    processedDims[i] = ConvertToCm(dimensions[i], value);
+                    processedDims[i] = ConvertToCm(dimensions[i], originalValue);
                 }
                 
                 return new Dimensions
@@ -336,11 +364,12 @@ public static class DataUtilsHP
     {
         try
         {
+            var originalValue = value; // Preserva o valor original com unidades
             value = CleanDimensionValue(value);
             var numbers = Regex.Matches(value, @"[-+]?\d*\.\d+|\d+");
             if (numbers.Count > 0)
             {
-                var dimValue = ConvertToCm(numbers[0].Value, value);
+                var dimValue = ConvertToCm(numbers[0].Value, originalValue);
                 return new Dimensions
                 {
                     length = "0",
@@ -358,6 +387,8 @@ public static class DataUtilsHP
     
     private static string[]? ExtractDimensions(string value)
     {
+        Console.WriteLine($"Extraindo dimensões de: '{value}'");
+        
         // Tenta encontrar padrões de dimensões (três números separados por x)
         var pattern = @"(\d+\.?\d*)\s*x\s*(\d+\.?\d*)\s*x\s*(\d+\.?\d*)";
         var matches = Regex.Matches(value, pattern);
@@ -366,21 +397,28 @@ public static class DataUtilsHP
         {
             // Pega o primeiro conjunto de dimensões encontrado
             var match = matches[0];
-            return new[] { match.Groups[1].Value, match.Groups[2].Value, match.Groups[3].Value };
+            var result = new[] { match.Groups[1].Value, match.Groups[2].Value, match.Groups[3].Value };
+            Console.WriteLine($"Dimensões extraídas com regex: {string.Join(" x ", result)}");
+            return result;
         }
         
         // Se não encontrou o padrão, tenta extrair números individuais
         var numbers = Regex.Matches(value, @"[-+]?\d*\.\d+|\d+");
         if (numbers.Count >= 3)
         {
-            return new[] { numbers[0].Value, numbers[1].Value, numbers[2].Value };
+            var result = new[] { numbers[0].Value, numbers[1].Value, numbers[2].Value };
+            Console.WriteLine($"Dimensões extraídas como números individuais: {string.Join(" x ", result)}");
+            return result;
         }
         
+        Console.WriteLine("Não foi possível extrair dimensões");
         return null;
     }
     
     private static string CleanDimensionValue(string value)
     {
+        Console.WriteLine($"Limpando valor de dimensão: '{value}'");
+        
         // Converte para minúsculo
         value = value.ToLower();
         
@@ -411,15 +449,13 @@ public static class DataUtilsHP
         // Remove texto após ponto e vírgula
         value = value.Split(';')[0].Trim();
         
-        // Remove unidades e espaços extras
-        value = value.Replace("cm", "").Replace("mm", "").Replace("in", "").Trim();
-        
         // Substitui vírgula por ponto
         value = value.Replace(",", ".");
         
         // Remove espaços extras
         value = string.Join(" ", value.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
         
+        Console.WriteLine($"Valor limpo: '{value}'");
         return value;
     }
     
@@ -427,20 +463,29 @@ public static class DataUtilsHP
     {
         try
         {
+            Console.WriteLine($"Convertendo valor: '{value}' de '{originalValue}'");
+            
             // Se o valor original contém mm, converte para cm
             if (originalValue.Contains("mm"))
             {
-                return (float.Parse(value) / 10f).ToString();
+                var convertedValue = (float.Parse(value) / 10f).ToString();
+                Console.WriteLine($"Convertido de mm para cm: {value}mm -> {convertedValue}cm");
+                return convertedValue;
             }
             // Se o valor original contém in (polegadas), converte para cm
             else if (originalValue.Contains("in"))
             {
-                return (float.Parse(value) * 2.54f).ToString();
+                var convertedValue = (float.Parse(value) * 2.54f).ToString();
+                Console.WriteLine($"Convertido de in para cm: {value}in -> {convertedValue}cm");
+                return convertedValue;
             }
+            
+            Console.WriteLine($"Valor mantido como está: {value}");
             return value;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"Erro ao converter valor '{value}': {ex.Message}");
             return "0";
         }
     }
@@ -666,8 +711,9 @@ public static class DataUtilsHP
             
             if (imageUrls.Count > 1)
             {
-                // Para galeria, concatena as URLs com vírgula
-                var galleryUrls = string.Join(",", imageUrls.Skip(1));
+                // Para galeria, retorna array de URLs
+                var galleryUrls = imageUrls.Skip(1).ToArray();
+                Console.WriteLine($"Galeria para {sku}: {galleryUrls.Length} imagens");
                 metaData.Add(new MetaData
                 {
                     key = "_external_gallery_images",

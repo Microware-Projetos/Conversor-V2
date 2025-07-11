@@ -31,7 +31,7 @@ namespace eCommerce.Shared.Models
     public class MetaData
     {
         public string key { get; set; }
-        public string value { get; set; }
+        public object value { get; set; }
     }
 
     public class Dimensions
