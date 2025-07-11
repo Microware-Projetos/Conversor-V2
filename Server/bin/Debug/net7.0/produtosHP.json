@@ -21988,5 +21988,4593 @@
     ],
     "shipping_class": "local",
     "manage_stock": true
+  },
+  {
+    "name": "HP Prelude  15.6 Backpack",
+    "sku": "1E7D6UT",
+    "short_description": "HP Prelude  15.6 Backpack",
+    "description": "Acessório HP Prelude  15.6 Backpack",
+    "price": "106.3048",
+    "regular_price": "106.3048",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "42029200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "41",
+      "width": "28.6",
+      "height": "9"
+    },
+    "weight": "0.52",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Prelude  15.6 Top Load",
+    "sku": "1E7D7AA",
+    "short_description": "HP Prelude  15.6 Top Load",
+    "description": "Acessório HP Prelude  15.6 Top Load",
+    "price": "112.1432",
+    "regular_price": "112.1432",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "42021220",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "6",
+      "width": "28.5",
+      "height": "40"
+    },
+    "weight": "0.3",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Prelude Pro Rec 15.6 BPk",
+    "sku": "1X644AA",
+    "short_description": "HP Prelude Pro Rec 15.6 BPk",
+    "description": "Acessório HP Prelude Pro Rec 15.6 BPk",
+    "price": "143.5246",
+    "regular_price": "143.5246",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "42029200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "42.54",
+      "width": "12.7",
+      "height": "31.75"
+    },
+    "weight": "0.46",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Laptop Bckpck HP Rnw Exec 16",
+    "sku": "6B8Y1UT",
+    "short_description": "Laptop Bckpck HP Rnw Exec 16",
+    "description": "Acessório Laptop Bckpck HP Rnw Exec 16",
+    "price": "415.3136",
+    "regular_price": "415.3136",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "42029200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "29",
+      "width": "15.5",
+      "height": "43.2"
+    },
+    "weight": "0.93",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Laptop BPk HP Rnw Business 17.3",
+    "sku": "3E2U5UT",
+    "short_description": "Laptop BPk HP Rnw Business 17.3",
+    "description": "Acessório Laptop BPk HP Rnw Business 17.3",
+    "price": "194.2416",
+    "regular_price": "194.2416",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "42029200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "32",
+      "width": "14",
+      "height": "47"
+    },
+    "weight": "0.79",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 15.6\" Privacy filter",
+    "sku": "J7H71AA",
+    "short_description": "HP 15.6\" Privacy filter",
+    "description": "Acessório HP 15.6\" Privacy filter",
+    "price": "365.6052",
+    "regular_price": "365.6052",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "39269090",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 16GB DDR4-3200 DIMM",
+    "sku": "13L74AA",
+    "short_description": "HP 16GB DDR4-3200 DIMM",
+    "description": "Acessório HP 16GB DDR4-3200 DIMM",
+    "price": "1239.1923",
+    "regular_price": "1239.1923",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733042",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "13.33",
+      "width": "3.07",
+      "height": "0.31"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 16GB DDR4-3200 SODIMM",
+    "sku": "13L75AA",
+    "short_description": "HP 16GB DDR4-3200 SODIMM",
+    "description": "Acessório HP 16GB DDR4-3200 SODIMM",
+    "price": "945.2304",
+    "regular_price": "945.2304",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733042",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "6.96",
+      "width": "3",
+      "height": "0.37"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 1TB 7200rpm SATA 6Gbps Hard Drive",
+    "sku": "QK555AA",
+    "short_description": "HP 1TB 7200rpm SATA 6Gbps Hard Drive",
+    "description": "Acessório HP 1TB 7200rpm SATA 6Gbps Hard Drive",
+    "price": "917.826",
+    "regular_price": "917.826",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84717010",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 8GB DDR4-3200 SODIMM",
+    "sku": "13L77AA",
+    "short_description": "HP 8GB DDR4-3200 SODIMM",
+    "description": "Acessório HP 8GB DDR4-3200 SODIMM",
+    "price": "604.2088",
+    "regular_price": "604.2088",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733042",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "13.33",
+      "width": "3.07",
+      "height": "0.31"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Combination Lock",
+    "sku": "T0Y15AA",
+    "short_description": "HP Combination Lock",
+    "description": "Acessório HP Combination Lock",
+    "price": "169.3054",
+    "regular_price": "169.3054",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83014000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Dual TBT4 Pcle x4 Low Profile Card",
+    "sku": "340L1AA",
+    "short_description": "HP Dual TBT4 Pcle x4 Low Profile Card",
+    "description": "Acessório HP Dual TBT4 Pcle x4 Low Profile Card",
+    "price": "1788.6414",
+    "regular_price": "1788.6414",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733049",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Keyed Cable Lock 10mm",
+    "sku": "T1A62AA",
+    "short_description": "HP Keyed Cable Lock 10mm",
+    "description": "Acessório HP Keyed Cable Lock 10mm",
+    "price": "223.368",
+    "regular_price": "223.368",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83011000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "18.3",
+      "height": "0"
+    },
+    "weight": "0.12",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Nano Key Cab Lk",
+    "sku": "1AJ39AA",
+    "short_description": "HP Nano Key Cab Lk",
+    "description": "Acessório HP Nano Key Cab Lk",
+    "price": "152.3642",
+    "regular_price": "152.3642",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83014000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "12.5",
+      "width": "12.5",
+      "height": "1.5"
+    },
+    "weight": "0.14",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP SuperMulti DVD-Writer 9.5 ODD",
+    "sku": "K3R64AA",
+    "short_description": "HP SuperMulti DVD-Writer 9.5 ODD",
+    "description": "Acessório HP SuperMulti DVD-Writer 9.5 ODD",
+    "price": "454.2144",
+    "regular_price": "454.2144",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84717020",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "12.8",
+      "width": "0.95",
+      "height": "12.7"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Sure Key Cable Lock",
+    "sku": "6UW42AA",
+    "short_description": "HP Sure Key Cable Lock",
+    "description": "Acessório HP Sure Key Cable Lock",
+    "price": "224.0404",
+    "regular_price": "224.0404",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83014000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "183",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB External DVDRW Drive",
+    "sku": "F2B56AA",
+    "short_description": "HP USB External DVDRW Drive",
+    "description": "Acessório HP USB External DVDRW Drive",
+    "price": "300.4152",
+    "regular_price": "300.4152",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84717020",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0.2",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Intel Ethernet I350-T4 4-Port 1Gb NIC",
+    "sku": "W8X25AA",
+    "short_description": "Intel Ethernet I350-T4 4-Port 1Gb NIC",
+    "description": "Acessório Intel Ethernet I350-T4 4-Port 1Gb NIC",
+    "price": "2353.892",
+    "regular_price": "2353.892",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85176299",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Intel VROC NVMe SSD Standard Ctlr Module",
+    "sku": "3FJ80AA",
+    "short_description": "Intel VROC NVMe SSD Standard Ctlr Module",
+    "description": "Acessório Intel VROC NVMe SSD Standard Ctlr Module",
+    "price": "1767.7478",
+    "regular_price": "1767.7478",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733090",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E14 G4 Portable Monitor WW",
+    "sku": "1B065AA#AC3",
+    "short_description": "HP E14 G4 Portable Monitor WW",
+    "description": "Display HP E14 G4 Portable Monitor WW",
+    "price": "2701.8174",
+    "regular_price": "2701.8174",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "147512104076",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67bf05d7eb28eb7ca9e6f004.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67bf05d8eb28eb7ca9e6f006.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67bf05d9eb28eb7ca9e6f008.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67bf05daeb28eb7ca9e6f00a.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67bf05dbeb28eb7ca9e6f00c.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d8a2c26591a05fd048a2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d8a2c26591a05fd048a4.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d8a3c26591a05fd048a6.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d8a4c26591a05fd048a8.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "40.5",
+      "width": "6.1",
+      "height": "28.4"
+    },
+    "weight": "0.64",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E22 G5 FHD MNTR",
+    "sku": "6N4E8AA#ABA",
+    "short_description": "HP E22 G5 FHD MNTR",
+    "description": "Display HP E22 G5 FHD MNTR",
+    "price": "1704.2994",
+    "regular_price": "1704.2994",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d9c9c26591a05fd048b2.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d9cac26591a05fd048b4.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d9cbc26591a05fd048b6.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76685eb28eb7ca9e6eacf.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76685eb28eb7ca9e6ead1.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76686eb28eb7ca9e6ead3.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76686eb28eb7ca9e6ead5.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "57.1",
+      "width": "14",
+      "height": "36.3"
+    },
+    "weight": "4.9",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E24t G5 FHD Touch MNTR",
+    "sku": "6N6E6AA#ABA",
+    "short_description": "HP E24t G5 FHD Touch MNTR",
+    "description": "Display HP E24t G5 FHD Touch MNTR",
+    "price": "2800.416",
+    "regular_price": "2800.416",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da43c26591a05fd048c2.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da44c26591a05fd048c4.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da45c26591a05fd048c6.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da45c26591a05fd048c8.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da46c26591a05fd048ca.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b7689aeb28eb7ca9e6ec29.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b7689aeb28eb7ca9e6ec2b.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b7689beb28eb7ca9e6ec2d.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b7689beb28eb7ca9e6ec2f.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.1",
+      "width": "14",
+      "height": "40"
+    },
+    "weight": "5.77",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E27 G5 FHD MNTR",
+    "sku": "6N4E2AA#ABA",
+    "short_description": "HP E27 G5 FHD MNTR",
+    "description": "Display HP E27 G5 FHD MNTR",
+    "price": "2268.3257",
+    "regular_price": "2268.3257",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da0dc26591a05fd048b8.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da0ec26591a05fd048ba.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da0ec26591a05fd048bc.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da0fc26591a05fd048be.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da10c26591a05fd048c0.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76852eb28eb7ca9e6ebf5.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76853eb28eb7ca9e6ebf7.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76853eb28eb7ca9e6ebf9.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "69.9",
+      "width": "16",
+      "height": "44.6"
+    },
+    "weight": "6.96",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E27k G5 4K USB-C MNTR",
+    "sku": "6N4C4AA#ABA",
+    "short_description": "HP E27k G5 4K USB-C MNTR",
+    "description": "Display HP E27k G5 4K USB-C MNTR",
+    "price": "3852.553",
+    "regular_price": "3852.553",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da71c26591a05fd048cc.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da71c26591a05fd048ce.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da72c26591a05fd048d0.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da73c26591a05fd048d2.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7da73c26591a05fd048d4.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "69.9",
+      "width": "44.6",
+      "height": "16"
+    },
+    "weight": "10",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP E32k G5 4K USB-C MNTR",
+    "sku": "6N4D6AA#ABA",
+    "short_description": "HP E32k G5 4K USB-C MNTR",
+    "description": "Display HP E32k G5 4K USB-C MNTR",
+    "price": "4736.8433",
+    "regular_price": "4736.8433",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fc73c26591a05fd048f6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fc74c26591a05fd048f8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fc74c26591a05fd048fa.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fc75c26591a05fd048fc.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "82",
+      "width": "52.7",
+      "height": "16.1"
+    },
+    "weight": "8.4",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP P22a G5 FHD MNTR",
+    "sku": "8D5J1AA#AC4",
+    "short_description": "HP P22a G5 FHD MNTR",
+    "description": "Display HP P22a G5 FHD MNTR",
+    "price": "1074.1779",
+    "regular_price": "1074.1779",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf0d710aa52a7a69d79a.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf0e710aa52a7a69d79c.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf0f710aa52a7a69d79e.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf10710aa52a7a69d7a0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf11710aa52a7a69d7a2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767baeb28eb7ca9e6eb87.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767bbeb28eb7ca9e6eb89.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767bbeb28eb7ca9e6eb8b.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767bceb28eb7ca9e6eb8d.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767bceb28eb7ca9e6eb8f.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "56.5",
+      "width": "35",
+      "height": "20.8"
+    },
+    "weight": "4.7",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP P24a G5 FHD MNTR",
+    "sku": "8D5J5AA#AC4",
+    "short_description": "HP P24a G5 FHD MNTR",
+    "description": "Display HP P24a G5 FHD MNTR",
+    "price": "1156.5201",
+    "regular_price": "1156.5201",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf39710aa52a7a69d7a4.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf3a710aa52a7a69d7a6.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf3b710aa52a7a69d7a8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7cf3c710aa52a7a69d7aa.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b764eeeb28eb7ca9e6eab5.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b764eeeb28eb7ca9e6eab7.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "59.8",
+      "width": "38.8",
+      "height": "22.2"
+    },
+    "weight": "5.6",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP P27 G5 FHD MNTR",
+    "sku": "64X69AA#ABA",
+    "short_description": "HP P27 G5 FHD MNTR",
+    "description": "Display HP P27 G5 FHD MNTR",
+    "price": "1479.7603",
+    "regular_price": "1479.7603",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d995c26591a05fd048aa.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d996c26591a05fd048ac.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d997c26591a05fd048ae.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d997c26591a05fd048b0.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767f4eb28eb7ca9e6ebb3.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767f4eb28eb7ca9e6ebb5.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767f5eb28eb7ca9e6ebb7.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b767f5eb28eb7ca9e6ebb9.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP P27h G5 FHD MNTR",
+    "sku": "64W41AA#ABA",
+    "short_description": "HP P27h G5 FHD MNTR",
+    "description": "Display HP P27h G5 FHD MNTR",
+    "price": "1928.3922",
+    "regular_price": "1928.3922",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76801eb28eb7ca9e6ebbb.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76802eb28eb7ca9e6ebbd.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76803eb28eb7ca9e6ebbf.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76803eb28eb7ca9e6ebc1.png",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67b76804eb28eb7ca9e6ebc3.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S3 Pro 21.45 inch FHD Monitor - 322pe US",
+    "sku": "AK2F1UT#ABA",
+    "short_description": "HP S3 Pro 21.45 inch FHD Monitor - 322pe US",
+    "description": "Display HP S3 Pro 21.45 inch FHD Monitor - 322pe US",
+    "price": "829.839",
+    "regular_price": "829.839",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fadfc26591a05fd048e6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fae0c26591a05fd048e8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fae2c26591a05fd048ea.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fae2c26591a05fd048ec.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "55.6",
+      "width": "13.8",
+      "height": "35"
+    },
+    "weight": "2.6",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S3 Pro 322ph FHD MNTR",
+    "sku": "B0BN7UT#ABA",
+    "short_description": "HP S3 Pro 322ph FHD MNTR",
+    "description": "Display HP S3 Pro 322ph FHD MNTR",
+    "price": "1588.9304",
+    "regular_price": "1588.9304",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "56.7",
+      "width": "13.3",
+      "height": "38.7"
+    },
+    "weight": "3.73",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S3 Pro 327pf FHD MNTR",
+    "sku": "B0CG3UT#ABA",
+    "short_description": "HP S3 Pro 327pf FHD MNTR",
+    "description": "Display HP S3 Pro 327pf FHD MNTR",
+    "price": "1812.6102",
+    "regular_price": "1812.6102",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "68.5",
+      "width": "13.7",
+      "height": "42.5"
+    },
+    "weight": "4.43",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 524pf FHD MNTR",
+    "sku": "9D9L6UT#ABA",
+    "short_description": "HP S5 Pro 524pf FHD MNTR",
+    "description": "Display HP S5 Pro 524pf FHD MNTR",
+    "price": "1623.7148",
+    "regular_price": "1623.7148",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98cc26591a05fd048de.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98dc26591a05fd048e0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e4.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.1",
+      "width": "14",
+      "height": "39.3"
+    },
+    "weight": "4.9",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 524pm FHD USB-C Conf MNTR",
+    "sku": "9E0G9UT#ABA",
+    "short_description": "HP S5 Pro 524pm FHD USB-C Conf MNTR",
+    "description": "Display HP S5 Pro 524pm FHD USB-C Conf MNTR",
+    "price": "3169.4585",
+    "regular_price": "3169.4585",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98cc26591a05fd048de.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98dc26591a05fd048e0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e4.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.1",
+      "width": "14",
+      "height": "39.3"
+    },
+    "weight": "9.5",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 524pn WUXGA MNTR",
+    "sku": "9D9A7AA#ABA",
+    "short_description": "HP S5 Pro 524pn WUXGA MNTR",
+    "description": "Display HP S5 Pro 524pn WUXGA MNTR",
+    "price": "1767.3999",
+    "regular_price": "1767.3999",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98cc26591a05fd048de.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98dc26591a05fd048e0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e4.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.1",
+      "width": "14",
+      "height": "41.1"
+    },
+    "weight": "5.1",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 524pu FHD USB-C MNTR",
+    "sku": "9D9V7AA#ABA",
+    "short_description": "HP S5 Pro 524pu FHD USB-C MNTR",
+    "description": "Display HP S5 Pro 524pu FHD USB-C MNTR",
+    "price": "2252.6274",
+    "regular_price": "2252.6274",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98cc26591a05fd048de.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98dc26591a05fd048e0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f98ec26591a05fd048e4.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.1",
+      "width": "14",
+      "height": "39.3"
+    },
+    "weight": "5.93",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 527pm QHD USB-C ConfMNTR US",
+    "sku": "9E0Y9UT#ABA",
+    "short_description": "HP S5 Pro 527pm QHD USB-C ConfMNTR US",
+    "description": "Display HP S5 Pro 527pm QHD USB-C ConfMNTR US",
+    "price": "3931.6958",
+    "regular_price": "3931.6958",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8cfc26591a05fd048d6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048d8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048da.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d1c26591a05fd048dc.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "69.9",
+      "width": "16",
+      "height": "44.6"
+    },
+    "weight": "7.88",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 527pq QHD MNTR",
+    "sku": "9D9S0UT#ABA",
+    "short_description": "HP S5 Pro 527pq QHD MNTR",
+    "description": "Display HP S5 Pro 527pq QHD MNTR",
+    "price": "2466.267",
+    "regular_price": "2466.267",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8cfc26591a05fd048d6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048d8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048da.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d1c26591a05fd048dc.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "69.9",
+      "width": "16",
+      "height": "44.6"
+    },
+    "weight": "6.2",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 527pu QHD USB-C MNTR",
+    "sku": "9E0G5AA#ABA",
+    "short_description": "HP S5 Pro 527pu QHD USB-C MNTR",
+    "description": "Display HP S5 Pro 527pu QHD USB-C MNTR",
+    "price": "3026.9546",
+    "regular_price": "3026.9546",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8cfc26591a05fd048d6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048d8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048da.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d1c26591a05fd048dc.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "69.9",
+      "width": "16",
+      "height": "44.6"
+    },
+    "weight": "7.2",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 534pm WQHD USB-C Conferencing Monitor",
+    "sku": "9E0Z2UT#ABA",
+    "short_description": "HP S5 Pro 534pm WQHD USB-C Conferencing Monitor",
+    "description": "Display HP S5 Pro 534pm WQHD USB-C Conferencing Monitor",
+    "price": "5031.058",
+    "regular_price": "5031.058",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fb7cc26591a05fd048ee.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fb7dc26591a05fd048f0.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fb7ec26591a05fd048f2.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7fb7fc26591a05fd048f4.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "91.1",
+      "width": "22.5",
+      "height": "46.5"
+    },
+    "weight": "11.46",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 524da FHD MNTR US",
+    "sku": "B11W5AT#ABA",
+    "short_description": "HP S5 524da FHD MNTR US",
+    "description": "Display HP S5 524da FHD MNTR US",
+    "price": "1297.0608",
+    "regular_price": "1297.0608",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "61",
+      "width": "12.1",
+      "height": "39.9"
+    },
+    "weight": "3.52",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S5 Pro 527pf FHD MNTR",
+    "sku": "B28F5UT#ABA",
+    "short_description": "HP S5 Pro 527pf FHD MNTR",
+    "description": "Display HP S5 Pro 527pf FHD MNTR",
+    "price": "1709.3341",
+    "regular_price": "1709.3341",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8cfc26591a05fd048d6.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048d8.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d0c26591a05fd048da.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7f8d1c26591a05fd048dc.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S7 Pro 727pu QHD TB4 MNTR",
+    "sku": "8J9E6UT#ABA",
+    "short_description": "HP S7 Pro 727pu QHD TB4 MNTR",
+    "description": "Display HP S7 Pro 727pu QHD TB4 MNTR",
+    "price": "5618.6504",
+    "regular_price": "5618.6504",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "71.5",
+      "width": "16.1",
+      "height": "45.5"
+    },
+    "weight": "7",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S7 Pro 727pk 4K TB4 MNTR",
+    "sku": "8J9G2AA#ABA",
+    "short_description": "HP S7 Pro 727pk 4K TB4 MNTR",
+    "description": "Display HP S7 Pro 727pk 4K TB4 MNTR",
+    "price": "7065.74",
+    "regular_price": "7065.74",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "71.5",
+      "width": "16.1",
+      "height": "45.5"
+    },
+    "weight": "6.5",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP WQHD P34hc G4 com USB-C",
+    "sku": "21Y56AA#ABA",
+    "short_description": "HP WQHD P34hc G4 com USB-C",
+    "description": "Display HP WQHD P34hc G4 com USB-C",
+    "price": "4085.6575",
+    "regular_price": "4085.6575",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "95",
+      "width": "22.5",
+      "height": "48"
+    },
+    "weight": "10.51",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "MNTR HP E24mv G4 FHD Conf",
+    "sku": "169L0AA#ABA",
+    "short_description": "MNTR HP E24mv G4 FHD Conf",
+    "description": "Display MNTR HP E24mv G4 FHD Conf",
+    "price": "2336.4575",
+    "regular_price": "2336.4575",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d87cc26591a05fd04896.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d87dc26591a05fd04898.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d87ec26591a05fd0489a.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d87fc26591a05fd0489c.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d880c26591a05fd0489e.jpeg",
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67f7d881c26591a05fd048a0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "59.6",
+      "width": "41.1",
+      "height": "22.5"
+    },
+    "weight": "6.5",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Adapter HP USB 3.0 to Gig RJ45 G2",
+    "sku": "4Z7Z7AA",
+    "short_description": "Adapter HP USB 3.0 to Gig RJ45 G2",
+    "description": "Acessório Adapter HP USB 3.0 to Gig RJ45 G2",
+    "price": "155.841",
+    "regular_price": "155.841",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85176299",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "17.2",
+      "width": "2.1",
+      "height": "1.5"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Adapter HP USB-C to RJ45 G2",
+    "sku": "4Z527AA",
+    "short_description": "Adapter HP USB-C to RJ45 G2",
+    "description": "Acessório Adapter HP USB-C to RJ45 G2",
+    "price": "117.9652",
+    "regular_price": "117.9652",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85176299",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18",
+      "width": "2.06",
+      "height": "1.65"
+    },
+    "weight": "0.019958064",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Display Port to VGA Adapter",
+    "sku": "F7W97AA",
+    "short_description": "HP Display Port to VGA Adapter",
+    "description": "Acessório HP Display Port to VGA Adapter",
+    "price": "116.6286",
+    "regular_price": "116.6286",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "20",
+      "height": "0"
+    },
+    "weight": "0.058967005",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DisplayPort Cable Kit",
+    "sku": "VN567AA",
+    "short_description": "HP DisplayPort Cable Kit",
+    "description": "Acessório HP DisplayPort Cable Kit",
+    "price": "107.9612",
+    "regular_price": "107.9612",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85444200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DisplayPort To DVI-D Adapter",
+    "sku": "FH973AA",
+    "short_description": "HP DisplayPort To DVI-D Adapter",
+    "description": "Acessório HP DisplayPort To DVI-D Adapter",
+    "price": "122.4014",
+    "regular_price": "122.4014",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85444200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "19",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DisplayPort To HDMI True 4k Adapter",
+    "sku": "2JA63AA",
+    "short_description": "HP DisplayPort To HDMI True 4k Adapter",
+    "description": "Acessório HP DisplayPort To HDMI True 4k Adapter",
+    "price": "203.934",
+    "regular_price": "203.934",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "30",
+      "height": "0"
+    },
+    "weight": "0.03628739",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DisplayPort To VGA Adapter",
+    "sku": "AS615AA",
+    "short_description": "HP DisplayPort To VGA Adapter",
+    "description": "Acessório HP DisplayPort To VGA Adapter",
+    "price": "119.2034",
+    "regular_price": "119.2034",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "20",
+      "height": "0"
+    },
+    "weight": "0.058967005",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DP to HDMI 1.4 Adapter",
+    "sku": "F3W43AA",
+    "short_description": "HP DP to HDMI 1.4 Adapter",
+    "description": "Acessório HP DP to HDMI 1.4 Adapter",
+    "price": "232.6586",
+    "regular_price": "232.6586",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "5.028",
+      "width": "2.4",
+      "height": "1.28"
+    },
+    "weight": "0.01360777",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP HDMI Standard Cable Kit",
+    "sku": "T6F94AA",
+    "short_description": "HP HDMI Standard Cable Kit",
+    "description": "Acessório HP HDMI Standard Cable Kit",
+    "price": "107.7808",
+    "regular_price": "107.7808",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85444200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "180",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP HDMI to VGA Adapter",
+    "sku": "H4F02AA#ABA",
+    "short_description": "HP HDMI to VGA Adapter",
+    "description": "Acessório HP HDMI to VGA Adapter",
+    "price": "133.2254",
+    "regular_price": "133.2254",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "1.8",
+      "width": "5.4",
+      "height": "16.02"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Single miniDP-to-DP Adapter Cable",
+    "sku": "2MY05AA",
+    "short_description": "HP Single miniDP-to-DP Adapter Cable",
+    "description": "Acessório HP Single miniDP-to-DP Adapter Cable",
+    "price": "101.475",
+    "regular_price": "101.475",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "23.3",
+      "width": "15.7",
+      "height": "2.5"
+    },
+    "weight": "0.09071847",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Universal USB-C Multiport Hub",
+    "sku": "50H55UT",
+    "short_description": "HP Universal USB-C Multiport Hub",
+    "description": "Acessório HP Universal USB-C Multiport Hub",
+    "price": "575.2956",
+    "regular_price": "575.2956",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "15",
+      "width": "5.5",
+      "height": "2.15"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C to DisplayPort Adapter G2",
+    "sku": "8Y8Y1AA",
+    "short_description": "HP USB-C to DisplayPort Adapter G2",
+    "description": "Acessório HP USB-C to DisplayPort Adapter G2",
+    "price": "177.079",
+    "regular_price": "177.079",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0.031751465",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C to HDMI 2.0 Adapter",
+    "sku": "1WC36AA",
+    "short_description": "HP USB-C to HDMI 2.0 Adapter",
+    "description": "Acessório HP USB-C to HDMI 2.0 Adapter",
+    "price": "238.3986",
+    "regular_price": "238.3986",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "11.12",
+      "width": "4.42",
+      "height": "1.71"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C to USB 3.0 Adapter",
+    "sku": "N2Z63AA#ABA",
+    "short_description": "HP USB-C to USB 3.0 Adapter",
+    "description": "Acessório HP USB-C to USB 3.0 Adapter",
+    "price": "135.5788",
+    "regular_price": "135.5788",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "14.09",
+      "height": "0"
+    },
+    "weight": "1.1748042",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C to USB-A Hub",
+    "sku": "Z6A00AA",
+    "short_description": "HP USB-C to USB-A Hub",
+    "description": "Acessório HP USB-C to USB-A Hub",
+    "price": "161.1218",
+    "regular_price": "161.1218",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "6.68",
+      "width": "4.14",
+      "height": "1.05"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C to VGA Adapter",
+    "sku": "N9K76AA#ABA",
+    "short_description": "HP USB-C to VGA Adapter",
+    "description": "Acessório HP USB-C to VGA Adapter",
+    "price": "169.7974",
+    "regular_price": "169.7974",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "1.3",
+      "width": "2.55",
+      "height": "15"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C Travel Hub G3",
+    "sku": "86S97AA",
+    "short_description": "HP USB-C Travel Hub G3",
+    "description": "Acessório HP USB-C Travel Hub G3",
+    "price": "557.7722",
+    "regular_price": "557.7722",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "11.6",
+      "width": "4.19",
+      "height": "1.45"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 105 BLK WRD Mouse US",
+    "sku": "822M9UT#ABA",
+    "short_description": "HP 105 BLK WRD Mouse US",
+    "description": "Acessório HP 105 BLK WRD Mouse US",
+    "price": "77.0718",
+    "regular_price": "77.0718",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0.12",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 125 Wired Mouse BRZP",
+    "sku": "265A9AT#AK4",
+    "short_description": "HP 125 Wired Mouse BRZP",
+    "description": "Acessório HP 125 Wired Mouse BRZP",
+    "price": "88.2402",
+    "regular_price": "88.2402",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 128 LSR Wired Mouse",
+    "sku": "265D9AA",
+    "short_description": "HP 128 LSR Wired Mouse",
+    "description": "Acessório HP 128 LSR Wired Mouse",
+    "price": "114.8984",
+    "regular_price": "114.8984",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "6.3",
+      "width": "11.2",
+      "height": "3.6"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 225 Wired MSE and KB",
+    "sku": "286J4AA#AK4",
+    "short_description": "HP 225 Wired MSE and KB",
+    "description": "Acessório HP 225 Wired MSE and KB",
+    "price": "142.9178",
+    "regular_price": "142.9178",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "13.8",
+      "width": "43.6",
+      "height": "2.05"
+    },
+    "weight": "0.47",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 235 Slim Wireless Mouse",
+    "sku": "4E407UT#ABM",
+    "short_description": "HP 235 Slim Wireless Mouse",
+    "description": "Acessório HP 235 Slim Wireless Mouse",
+    "price": "80.3682",
+    "regular_price": "80.3682",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "11.5",
+      "width": "6.33",
+      "height": "3.62"
+    },
+    "weight": "0.06",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 235 Wireless Mouse and Keyboard Combo",
+    "sku": "1Y4D0UT#AC4",
+    "short_description": "HP 235 Wireless Mouse and Keyboard Combo",
+    "description": "Acessório HP 235 Wireless Mouse and Keyboard Combo",
+    "price": "263.0068",
+    "regular_price": "263.0068",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "44",
+      "width": "14.62",
+      "height": "2.76"
+    },
+    "weight": "0.5",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 435 MltDvc WRLS Mouse",
+    "sku": "3B4Q5UT#ABA",
+    "short_description": "HP 435 MltDvc WRLS Mouse",
+    "description": "Acessório HP 435 MltDvc WRLS Mouse",
+    "price": "278.6852",
+    "regular_price": "278.6852",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "11.541",
+      "width": "7.4160004",
+      "height": "4.0290003"
+    },
+    "weight": "0.0782",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 475 Dual-Mode WL KBD",
+    "sku": "7N7B9AA#AC4",
+    "short_description": "HP 475 Dual-Mode WL KBD",
+    "description": "Acessório HP 475 Dual-Mode WL KBD",
+    "price": "286.098",
+    "regular_price": "286.098",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "37.6",
+      "width": "15.3",
+      "height": "1.9"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 655 WRLS KB/MSE Combo BRZL",
+    "sku": "4R009AA#AC4",
+    "short_description": "HP 655 WRLS KB/MSE Combo BRZL",
+    "description": "Acessório HP 655 WRLS KB/MSE Combo BRZL",
+    "price": "393.723",
+    "regular_price": "393.723",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "42.822",
+      "width": "11.547",
+      "height": "1.806"
+    },
+    "weight": "0.43",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 925 Ergonomic Vertical Wireless Mouse-US",
+    "sku": "6H1A5AA#ABA",
+    "short_description": "HP 925 Ergonomic Vertical Wireless Mouse-US",
+    "description": "Acessório HP 925 Ergonomic Vertical Wireless Mouse-US",
+    "price": "644.4872",
+    "regular_price": "644.4872",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "17",
+      "width": "10",
+      "height": "7.7"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 935 Creator Wireless Mouse US",
+    "sku": "1D0K8AA#ABA",
+    "short_description": "HP 935 Creator Wireless Mouse US",
+    "description": "Acessório HP 935 Creator Wireless Mouse US",
+    "price": "587.0052",
+    "regular_price": "587.0052",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0.13",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Travel USB Mouse",
+    "sku": "G1K28AA#ABA",
+    "short_description": "HP Travel USB Mouse",
+    "description": "Acessório HP Travel USB Mouse",
+    "price": "100.4828",
+    "regular_price": "100.4828",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "3.7",
+      "width": "9.8",
+      "height": "5.9"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB Bus Slim CCID SmartCard Kyd BRZL",
+    "sku": "Z9H48AA#AC4",
+    "short_description": "HP USB Bus Slim CCID SmartCard Kyd BRZL",
+    "description": "Acessório HP USB Bus Slim CCID SmartCard Kyd BRZL",
+    "price": "338.988",
+    "regular_price": "338.988",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "14.45",
+      "width": "44.06",
+      "height": "1.89"
+    },
+    "weight": "0.6",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Wired 320M Mouse",
+    "sku": "9VA80AA#AK4",
+    "short_description": "HP Wired 320M Mouse",
+    "description": "Acessório HP Wired 320M Mouse",
+    "price": "73.7672",
+    "regular_price": "73.7672",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716053",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "10.38",
+      "width": "6.34",
+      "height": "3.55"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "KBD 125 WD HP BRZP",
+    "sku": "266C9AA#AK4",
+    "short_description": "KBD 125 WD HP BRZP",
+    "description": "Acessório KBD 125 WD HP BRZP",
+    "price": "101.1798",
+    "regular_price": "101.1798",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0.08",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 320K WD KBD",
+    "sku": "9SR37UT#AK4",
+    "short_description": "HP 320K WD KBD",
+    "description": "Acessório HP 320K WD KBD",
+    "price": "124.82146",
+    "regular_price": "124.82146",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "42.620003",
+      "width": "11.09",
+      "height": "1.6700001"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Wired 320MK combo",
+    "sku": "9SR36UT#AK4",
+    "short_description": "HP Wired 320MK combo",
+    "description": "Acessório HP Wired 320MK combo",
+    "price": "171.64052",
+    "regular_price": "171.64052",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84716052",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "42.620003",
+      "width": "11.09",
+      "height": "1.6700001"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "B250 PC Mounting Bracket",
+    "sku": "8RA46AA",
+    "short_description": "B250 PC Mounting Bracket",
+    "description": "Acessório B250 PC Mounting Bracket",
+    "price": "337.389",
+    "regular_price": "337.389",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83025000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "11.5",
+      "width": "18.13",
+      "height": "5.7"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 325 FHD USB-A Webcam",
+    "sku": "53X27AA",
+    "short_description": "HP 325 FHD USB-A Webcam",
+    "description": "Acessório HP 325 FHD USB-A Webcam",
+    "price": "205.3772",
+    "regular_price": "205.3772",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85258929",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "7.2",
+      "width": "5.3599997",
+      "height": "5.32"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 435 FHD Webcam-US",
+    "sku": "77B10AA#ABA",
+    "short_description": "HP 435 FHD Webcam-US",
+    "description": "Acessório HP 435 FHD Webcam-US",
+    "price": "394.0428",
+    "regular_price": "394.0428",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85258919",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP B300 PC Mounting Bracket",
+    "sku": "2DW53AA",
+    "short_description": "HP B300 PC Mounting Bracket",
+    "description": "Acessório HP B300 PC Mounting Bracket",
+    "price": "167.4112",
+    "regular_price": "167.4112",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83025000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "24.630001",
+      "width": "11.5",
+      "height": "5.19"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP B560 PC Mtng Brckt",
+    "sku": "763U8AA",
+    "short_description": "HP B560 PC Mtng Brckt",
+    "description": "Acessório HP B560 PC Mtng Brckt",
+    "price": "314.6012",
+    "regular_price": "314.6012",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "83025000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "27.71",
+      "width": "13",
+      "height": "6.78"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Quick Release 2",
+    "sku": "6KD15AA",
+    "short_description": "HP Quick Release 2",
+    "description": "Acessório HP Quick Release 2",
+    "price": "191.2896",
+    "regular_price": "191.2896",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84733090",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "16.7",
+      "width": "13",
+      "height": "1.79"
+    },
+    "weight": "0.49",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 65W USB-C LC Power Adapter US",
+    "sku": "1P3K6AA#AC4",
+    "short_description": "HP 65W USB-C LC Power Adapter US",
+    "description": "Acessório HP 65W USB-C LC Power Adapter US",
+    "price": "210.5514",
+    "regular_price": "210.5514",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85044090",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "9",
+      "width": "5.1",
+      "height": "2.85"
+    },
+    "weight": "0.235",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 90W Smart AC Adapter",
+    "sku": "H6Y90AA#ABA",
+    "short_description": "HP 90W Smart AC Adapter",
+    "description": "Acessório HP 90W Smart AC Adapter",
+    "price": "235.4876",
+    "regular_price": "235.4876",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85044090",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C 65W Laptop Charger",
+    "sku": "671R3UT#AC4",
+    "short_description": "HP USB-C 65W Laptop Charger",
+    "description": "Acessório HP USB-C 65W Laptop Charger",
+    "price": "221.441",
+    "regular_price": "221.441",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85044010",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "9.7",
+      "width": "5.35",
+      "height": "2.1"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP TB 120W G4 Dock BRZP",
+    "sku": "4J0A2AA#AK4",
+    "short_description": "HP TB 120W G4 Dock BRZP",
+    "description": "Acessório HP TB 120W G4 Dock BRZP",
+    "price": "1865.4672",
+    "regular_price": "1865.4672",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "9.8",
+      "width": "9.8",
+      "height": "6.8"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP TB 280W G4 Dock wCombo Cable",
+    "sku": "4J0G4AA#AC4",
+    "short_description": "HP TB 280W G4 Dock wCombo Cable",
+    "description": "Acessório HP TB 280W G4 Dock wCombo Cable",
+    "price": "2542.7954",
+    "regular_price": "2542.7954",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "9.8",
+      "width": "9.8",
+      "height": "6.8"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C Dock G5 BRZL\t",
+    "sku": "5TW10AA#AC4",
+    "short_description": "HP USB-C Dock G5 BRZL\t",
+    "description": "Acessório HP USB-C Dock G5 BRZL\t",
+    "price": "1413.7866",
+    "regular_price": "1413.7866",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "12.2",
+      "width": "12.2",
+      "height": "4.5"
+    },
+    "weight": "0.75",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP USB-C/A 120W G2 Univ Dock",
+    "sku": "5TW13AA#AC4",
+    "short_description": "HP USB-C/A 120W G2 Univ Dock",
+    "description": "Acessório HP USB-C/A 120W G2 Univ Dock",
+    "price": "1941.0793",
+    "regular_price": "1941.0793",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "84718000",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "12.2",
+      "width": "12.2",
+      "height": "4.5"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 16
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP 7 Pro 39.7 5K2K Conferencing Monitor - 740pm US",
+    "sku": "8Y2R2AA#ABA",
+    "short_description": "HP 7 Pro 39.7 5K2K Conferencing Monitor - 740pm US",
+    "description": "Display HP 7 Pro 39.7 5K2K Conferencing Monitor - 740pm US",
+    "price": "14801.327",
+    "regular_price": "14801.327",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "107",
+      "width": "22.6",
+      "height": "55.8"
+    },
+    "weight": "14.2",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S7 Pro 724pf FHD MNTR",
+    "sku": "8X530AA#ABA",
+    "short_description": "HP S7 Pro 724pf FHD MNTR",
+    "description": "Display HP S7 Pro 724pf FHD MNTR",
+    "price": "2970.2903",
+    "regular_price": "2970.2903",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "62.5",
+      "width": "37.3",
+      "height": "14.2"
+    },
+    "weight": "4.7",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S7 Pro 724pn WUXGA MNTR",
+    "sku": "8X534AA#ABA",
+    "short_description": "HP S7 Pro 724pn WUXGA MNTR",
+    "description": "Display HP S7 Pro 724pn WUXGA MNTR",
+    "price": "3209.5183",
+    "regular_price": "3209.5183",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "53.17",
+      "width": "19.5",
+      "height": "52.14"
+    },
+    "weight": "4.8",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP S7 Pro 727pk 4K TB4 MNTR",
+    "sku": "8J9G2AA#ABA",
+    "short_description": "HP S7 Pro 727pk 4K TB4 MNTR",
+    "description": "Display HP S7 Pro 727pk 4K TB4 MNTR",
+    "price": "7065.74",
+    "regular_price": "7065.74",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 13,
+        "options": "85285200",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "HP",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f94fb3c26591a05fd049b9.jpeg"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://eprodutos-integracao.microware.com.br/api/photos/image/67c097c9be14dc12f6b266d0.jpeg"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "71.5",
+      "width": "16.1",
+      "height": "45.5"
+    },
+    "weight": "6.5",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
   }
 ]

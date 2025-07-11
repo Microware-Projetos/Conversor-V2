@@ -121,7 +121,7 @@ public static class HPProductProcessor
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
                             Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
-                            
+
                             var produto = new WooProduct
                             {
                                 name = "Desktop " + model,
@@ -706,5 +706,5 @@ public static class HPProductProcessor
         }
     }
 
-
+  
 }

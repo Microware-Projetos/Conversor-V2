@@ -536,7 +536,28 @@ public static class DataUtilsHP
         
         try
         {
-            // Verifica se tem dados da API HP
+            Console.WriteLine($"\n=== Processando fotos para SKU: {sku} ===");
+            
+            // 1. PRIMEIRA TENTATIVA: ProcessarFotosAlternativo (busca por família/categoria específica)
+            Console.WriteLine($"1. Tentando ProcessarFotosAlternativo para {sku}...");
+            var fotosAlternativo = ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName, false); // false = não usar default
+            if (fotosAlternativo.Count > 0)
+            {
+                Console.WriteLine($"{sku} - Foto encontrada por família/categoria");
+                return fotosAlternativo;
+            }
+            
+            // 2. SEGUNDA TENTATIVA: Cache de Produtos
+            Console.WriteLine($"2. Tentando cache de produtos para {sku}...");
+            var fotosCache = VerificarFotoNoCache(sku);
+            if (fotosCache.Count > 0)
+            {
+                Console.WriteLine($"{sku} - Usando foto do cache de produtos");
+                return fotosCache;
+            }
+            
+            // 3. TERCEIRA TENTATIVA: API HP Atual
+            Console.WriteLine($"3. Tentando API HP atual para {sku}...");
             if (productAttributesAPI != null)
             {
                 var jsonData = JObject.FromObject(productAttributesAPI);
@@ -561,12 +582,22 @@ public static class DataUtilsHP
                                     var imageUri = specsData["imageUri"]?.ToString();
                                     if (!string.IsNullOrEmpty(imageUri))
                                     {
-                                        metaData.Add(new MetaData
+                                        // Verifica se a URL é completa (começa com http ou https)
+                                        if (imageUri.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || 
+                                            imageUri.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
                                         {
-                                            key = "_external_image_url",
-                                            value = imageUri
-                                        });
-                                        return metaData;
+                                            Console.WriteLine($"{sku} - Foto encontrada na API HP atual");
+                                            metaData.Add(new MetaData
+                                            {
+                                                key = "_external_image_url",
+                                                value = imageUri
+                                            });
+                                            return metaData;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine($"{sku} - URL incompleta na API HP, ignorando: {imageUri}");
+                                        }
                                     }
                                 }
                             }
@@ -575,18 +606,134 @@ public static class DataUtilsHP
                 }
             }
             
-            // Se não encontrou na API, usa o método alternativo
-            return ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName);
+            // 4. QUARTA TENTATIVA: Fotos Default (última tentativa)
+            Console.WriteLine($"4. Não encontrou em nenhum lugar, usando fotos default para {sku}...");
+            var fotosDefault = ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName, true); // true = usar default
+            if (fotosDefault.Count > 0)
+            {
+                Console.WriteLine($"{sku} - Usando fotos default");
+            }
+            else
+            {
+                Console.WriteLine($"{sku} - Produto sem foto");
+            }
+            return fotosDefault;
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Erro ao processar imagem do produto {sku}: {ex.Message}");
             // Se houver erro, tenta usar o método alternativo de busca de imagens
-            return ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName);
+            return ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName, true);
         }
     }
     
-    private static List<MetaData> ProcessarFotosAlternativo(string sku, string model, List<object> images, Dictionary<string, string> normalizedFamily, string sheetName)
+    private static List<MetaData> VerificarFotoNoCache(string sku)
+    {
+        var metaData = new List<MetaData>();
+        
+        try
+        {
+            // Limpa o SKU removendo sufixos como #ABA
+            var cleanSku = sku.Split('#')[0].Trim();
+            Console.WriteLine($"Verificando cache para SKU limpo: '{cleanSku}' (original: '{sku}')");
+            
+            var cacheFile = "Cache/HP/product_cache.json";
+            if (!File.Exists(cacheFile))
+            {
+                Console.WriteLine($"Arquivo de cache não encontrado: {cacheFile}");
+                return metaData;
+            }
+            
+            var cacheData = CacheManagerHP.LoadCache(cacheFile);
+            if (cacheData.ContainsKey(cleanSku))
+            {
+                Console.WriteLine($"Produto encontrado no cache: {cleanSku}");
+                var productData = cacheData[cleanSku];
+                var productJson = JObject.FromObject(productData);
+                
+                // O CacheManagerHP.LoadCache retorna apenas o "data" da estrutura
+                // Então productJson já é o "data" do cache
+                var dataNode = productJson["data"];
+                if (dataNode != null && dataNode.Type == JTokenType.Object)
+                {
+                    var devicesNode = dataNode["devices"];
+                    if (devicesNode != null && devicesNode.Type == JTokenType.Array)
+                    {
+                        var devices = devicesNode as JArray;
+                        if (devices != null && devices.Count > 0)
+                        {
+                            var device = devices[0];
+                            var productSpecs = device["productSpecs"];
+                            
+                            if (productSpecs != null && productSpecs.Type == JTokenType.Object)
+                            {
+                                var specsData = productSpecs["data"];
+                                if (specsData != null && specsData.Type == JTokenType.Object)
+                                {
+                                    var imageUri = specsData["imageUri"]?.ToString();
+                                    if (!string.IsNullOrEmpty(imageUri))
+                                    {
+                                        // Verifica se a URL é completa (começa com http ou https)
+                                        if (imageUri.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || 
+                                            imageUri.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            Console.WriteLine($"Foto encontrada no cache: {imageUri}");
+                                            metaData.Add(new MetaData
+                                            {
+                                                key = "_external_image_url",
+                                                value = imageUri
+                                            });
+                                            return metaData;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine($"URL incompleta no cache, ignorando: {imageUri}");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("imageUri não encontrado ou vazio no cache");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("specsData não encontrado no cache");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("productSpecs não encontrado no cache");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("devices array vazio no cache");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("devices não encontrado no cache");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("dataNode não encontrado no cache");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Produto não encontrado no cache: {cleanSku}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao verificar foto no cache para {sku}: {ex.Message}");
+        }
+        
+        return metaData;
+    }
+    
+    private static List<MetaData> ProcessarFotosAlternativo(string sku, string model, List<object> images, Dictionary<string, string> normalizedFamily, string sheetName, bool useDefault = true)
     {
         var metaData = new List<MetaData>();
         
@@ -651,8 +798,8 @@ public static class DataUtilsHP
                 }
             }
             
-            // Se ainda estiver vazio, tenta com a família Default
-            if (filteredImages.Count == 0)
+            // Se ainda estiver vazio E useDefault for true, tenta com a família Default
+            if (filteredImages.Count == 0 && useDefault)
             {
                 string defaultCategory;
                 if (sheetName == "Portfólio Acessorios_Monitores")
