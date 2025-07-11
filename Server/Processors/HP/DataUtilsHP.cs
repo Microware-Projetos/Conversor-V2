@@ -3,6 +3,8 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.IO;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -59,19 +61,10 @@ public static class DataUtilsHP
                                                         if (!originalValue.Contains("kg") && !originalValue.Contains("lb"))
                                                             continue;
                                                         
-                                                        // Limpa o valor
-                                                        var cleanValue = CleanWeightValue(originalValue);
-                                                        
-                                                        // Tenta extrair o primeiro número encontrado
-                                                        var numbers = Regex.Matches(cleanValue, @"[-+]?\d*\.\d+|\d+");
-                                                        if (numbers.Count > 0)
-                                                        {
-                                                            var numberValue = numbers[0].Value;
-                                                            // Converte para kg se necessário
-                                                            var result = ConvertToKg(numberValue, originalValue);
-                                                            if (!string.IsNullOrEmpty(result))
-                                                                return result;
-                                                        }
+                                                        // Processa o peso
+                                                        var result = ProcessWeightValue(originalValue);
+                                                        if (!string.IsNullOrEmpty(result))
+                                                            return result;
                                                     }
                                                 }
                                             }
@@ -93,18 +86,70 @@ public static class DataUtilsHP
         return ProcessWeightOriginal(weight);
     }
     
+    private static string ProcessWeightValue(string originalValue)
+    {
+        try
+        {
+            // Se tem múltiplos valores, prioriza kg sobre lb
+            if (originalValue.Contains("kg") && originalValue.Contains("lb"))
+            {
+                // Extrai o valor em kg primeiro
+                var kgMatch = Regex.Match(originalValue, @"(\d+[.,]?\d*)\s*kg");
+                if (kgMatch.Success)
+                {
+                    var kgValue = kgMatch.Groups[1].Value.Replace(",", ".");
+                    return kgValue;
+                }
+                
+                // Se não encontrou kg, tenta lb
+                var lbMatch = Regex.Match(originalValue, @"(\d+[.,]?\d*)\s*lb");
+                if (lbMatch.Success)
+                {
+                    var lbValue = lbMatch.Groups[1].Value.Replace(",", ".");
+                    return ConvertToKg(lbValue, originalValue);
+                }
+            }
+            else
+            {
+                // Processamento normal para um valor
+                var cleanValue = CleanWeightValue(originalValue);
+                
+                // Tenta extrair o primeiro número encontrado
+                var numbers = Regex.Matches(cleanValue, @"[-+]?\d*\.\d+|\d+");
+                if (numbers.Count > 0)
+                {
+                    var numberValue = numbers[0].Value;
+                    // Converte para kg se necessário
+                    var result = ConvertToKg(numberValue, originalValue);
+                    if (!string.IsNullOrEmpty(result))
+                        return result;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao processar valor de peso: {ex.Message}");
+        }
+        
+        return "";
+    }
+    
     private static string CleanWeightValue(string value)
     {
         // Remove textos comuns que podem aparecer
         var removeTexts = new[] { 
             "with stand", "without stand", "starting at", "a partir de", 
             "approximately", "approx", "aprox", "min", "max", "minimum", 
-            "maximum", "from", "de", "to", "até", "&lt;br /&gt;", "&gt;", "&lt;" 
+            "maximum", "from", "de", "to", "até", "&lt;br /&gt;", "&gt;", "&lt;",
+            "configurado com", "configurado", "uma unidade", "unidade de disco", 
+            "disco rígido", "unidade ótica", "ótica", "o peso pode variar", 
+            "de acordo com a configuração", "peso pode variar", "acordo com",
+            "configuração", "pode variar"
         };
         
         foreach (var text in removeTexts)
         {
-            value = value.Replace(text, "");
+            value = value.Replace(text, "", StringComparison.OrdinalIgnoreCase);
         }
         
         // Remove parênteses e seu conteúdo
@@ -112,6 +157,18 @@ public static class DataUtilsHP
         
         // Remove texto após ponto e vírgula
         value = value.Split(';')[0].Trim();
+        
+        // Remove texto após ponto final (seguido de texto descritivo)
+        var sentences = value.Split('.');
+        if (sentences.Length > 1)
+        {
+            // Pega apenas a primeira frase que deve conter o peso
+            var firstSentence = sentences[0].Trim();
+            if (!string.IsNullOrEmpty(firstSentence) && (firstSentence.Contains("kg") || firstSentence.Contains("lb")))
+            {
+                value = firstSentence;
+            }
+        }
         
         // Remove unidades e espaços extras
         value = value.Replace("kg", "").Replace("lb", "").Trim();
@@ -245,7 +302,7 @@ public static class DataUtilsHP
         return ProcessDimensionsOriginal(dimensions);
     }
     
-    private static Dimensions ProcessThreeDimensions(string value)
+    private static Dimensions? ProcessThreeDimensions(string value)
     {
         try
         {
@@ -275,7 +332,7 @@ public static class DataUtilsHP
         return null;
     }
     
-    private static Dimensions ProcessSingleDimension(string value)
+    private static Dimensions? ProcessSingleDimension(string value)
     {
         try
         {
@@ -299,7 +356,7 @@ public static class DataUtilsHP
         return null;
     }
     
-    private static string[] ExtractDimensions(string value)
+    private static string[]? ExtractDimensions(string value)
     {
         // Tenta encontrar padrões de dimensões (três números separados por x)
         var pattern = @"(\d+\.?\d*)\s*x\s*(\d+\.?\d*)\s*x\s*(\d+\.?\d*)";
@@ -426,5 +483,203 @@ public static class DataUtilsHP
         
         // Se não conseguir extrair 3 dimensões, retorna zeros
         return new Dimensions { length = "0", width = "0", height = "0" };
+    }
+    
+    public static List<MetaData> ProcessarFotos(string sku, string model, List<object> images, Dictionary<string, string> normalizedFamily, object productAttributesAPI, string sheetName)
+    {
+        var metaData = new List<MetaData>();
+        
+        try
+        {
+            // Verifica se tem dados da API HP
+            if (productAttributesAPI != null)
+            {
+                var jsonData = JObject.FromObject(productAttributesAPI);
+                var dataNode = jsonData["data"];
+                
+                if (dataNode != null && dataNode.Type == JTokenType.Object)
+                {
+                    var devicesNode = dataNode["devices"];
+                    if (devicesNode != null && devicesNode.Type == JTokenType.Array)
+                    {
+                        var devices = devicesNode as JArray;
+                        if (devices != null && devices.Count > 0)
+                        {
+                            var device = devices[0];
+                            var productSpecs = device["productSpecs"];
+                            
+                            if (productSpecs != null && productSpecs.Type == JTokenType.Object)
+                            {
+                                var specsData = productSpecs["data"];
+                                if (specsData != null && specsData.Type == JTokenType.Object)
+                                {
+                                    var imageUri = specsData["imageUri"]?.ToString();
+                                    if (!string.IsNullOrEmpty(imageUri))
+                                    {
+                                        metaData.Add(new MetaData
+                                        {
+                                            key = "_external_image_url",
+                                            value = imageUri
+                                        });
+                                        return metaData;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Se não encontrou na API, usa o método alternativo
+            return ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao processar imagem do produto {sku}: {ex.Message}");
+            // Se houver erro, tenta usar o método alternativo de busca de imagens
+            return ProcessarFotosAlternativo(sku, model, images, normalizedFamily, sheetName);
+        }
+    }
+    
+    private static List<MetaData> ProcessarFotosAlternativo(string sku, string model, List<object> images, Dictionary<string, string> normalizedFamily, string sheetName)
+    {
+        var metaData = new List<MetaData>();
+        
+        try
+        {
+            // Define coluna com base na sheet (para logs)
+            string colunaInfo = "SKU"; // Valor padrão
+            if (sheetName == "SmartChoice")
+                colunaInfo = "PN";
+            else if (sheetName == "Portfólio Acessorios_Monitores")
+                colunaInfo = "SKU";
+            else
+                colunaInfo = "Model";
+            
+            var baseUrl = "https://eprodutos-integracao.microware.com.br/api/photos/image/";
+            var filteredImages = new List<object>();
+            
+            // Busca família normalizada
+            string normalizeFamily = "";
+            foreach (var kvp in normalizedFamily)
+            {
+                if (model.Contains(kvp.Key, StringComparison.OrdinalIgnoreCase))
+                {
+                    normalizeFamily = kvp.Value;
+                    break;
+                }
+            }
+            
+            // Carrega categoria do map.json
+            var mapData = JObject.Parse(File.ReadAllText("Maps/HP/map.json"));
+            var traducaoLinha = mapData["TraducaoLinha"]?.ToObject<Dictionary<string, string>>() ?? new Dictionary<string, string>();
+            var category = traducaoLinha.GetValueOrDefault(sheetName, "Acessorio");
+            
+            var searchTerm = model ?? "";
+            
+            // Filtra imagens por família
+            foreach (var image in images)
+            {
+                var imageObj = JObject.FromObject(image);
+                var family = imageObj["family"]?.ToString();
+                
+                if (!string.IsNullOrEmpty(family) && searchTerm.Contains(family, StringComparison.OrdinalIgnoreCase))
+                {
+                    filteredImages.Add(image);
+                }
+            }
+            
+            // Se não encontrar, tenta com a família normalizada
+            if (filteredImages.Count == 0)
+            {
+                foreach (var image in images)
+                {
+                    var imageObj = JObject.FromObject(image);
+                    var manufacturer = imageObj["manufacturer"]?.ToString();
+                    var imageCategory = imageObj["category"]?.ToString();
+                    var family = imageObj["family"]?.ToString();
+                    
+                    if (manufacturer == "HP" && imageCategory == category && family == normalizeFamily)
+                    {
+                        filteredImages.Add(image);
+                    }
+                }
+            }
+            
+            // Se ainda estiver vazio, tenta com a família Default
+            if (filteredImages.Count == 0)
+            {
+                string defaultCategory;
+                if (sheetName == "Portfólio Acessorios_Monitores")
+                {
+                    // Aqui você precisaria ter acesso ao PL Description do produto
+                    defaultCategory = "Monitor"; // Simplificado
+                }
+                else
+                {
+                    var defaultPhotos = mapData["DefaultPhotos"]?.ToObject<Dictionary<string, string>>() ?? new Dictionary<string, string>();
+                    defaultCategory = defaultPhotos.GetValueOrDefault(sheetName, "Acessorio");
+                }
+                
+                foreach (var image in images)
+                {
+                    var imageObj = JObject.FromObject(image);
+                    var manufacturer = imageObj["manufacturer"]?.ToString();
+                    var imageCategory = imageObj["category"]?.ToString();
+                    var family = imageObj["family"]?.ToString();
+                    
+                    if (manufacturer == "HP" && imageCategory == defaultCategory && family == "Default")
+                    {
+                        filteredImages.Add(image);
+                        Console.WriteLine($"{sku} - Produto com foto default");
+                    }
+                }
+            }
+            
+            // Cria a lista de URLs das imagens
+            var imageUrls = new List<string>();
+            foreach (var image in filteredImages)
+            {
+                var imageObj = JObject.FromObject(image);
+                var id = imageObj["id"]?.ToString();
+                var extension = imageObj["extension"]?.ToString();
+                
+                if (!string.IsNullOrEmpty(id) && !string.IsNullOrEmpty(extension))
+                {
+                    var imageUrl = $"{baseUrl}{id}.{extension}";
+                    imageUrls.Add(imageUrl);
+                }
+            }
+            
+            if (imageUrls.Count == 0)
+            {
+                Console.WriteLine($"{sku} - Produto sem foto");
+                return metaData;
+            }
+            
+            // Primeira imagem é a principal (thumbnail), o resto é galeria
+            metaData.Add(new MetaData
+            {
+                key = "_external_image_url",
+                value = imageUrls[0]
+            });
+            
+            if (imageUrls.Count > 1)
+            {
+                // Para galeria, concatena as URLs com vírgula
+                var galleryUrls = string.Join(",", imageUrls.Skip(1));
+                metaData.Add(new MetaData
+                {
+                    key = "_external_gallery_images",
+                    value = galleryUrls
+                });
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao processar fotos alternativo para {sku}: {ex.Message}");
+        }
+        
+        return metaData;
     }
 } 

@@ -36,10 +36,13 @@ public class CacheManagerHP
             
             foreach (var kvp in cacheData)
             {
-                var cacheTime = DateTime.Parse(kvp.Value.Timestamp);
-                if (currentTime - cacheTime < TimeSpan.FromDays(CACHE_EXPIRY_DAYS))
+                if (!string.IsNullOrEmpty(kvp.Value.Timestamp))
                 {
-                    validCache[kvp.Key] = kvp.Value.Data;
+                    var cacheTime = DateTime.Parse(kvp.Value.Timestamp);
+                    if (currentTime - cacheTime < TimeSpan.FromDays(CACHE_EXPIRY_DAYS))
+                    {
+                        validCache[kvp.Key] = kvp.Value.Data;
+                    }
                 }
             }
             

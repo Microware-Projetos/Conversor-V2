@@ -68,4 +68,3 @@
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/HP/map.json
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/HP/attributes_cache.json
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/HP/product_cache.json
-/app/eCommerce/Server/bin/Debug/net7.0/produtos.json

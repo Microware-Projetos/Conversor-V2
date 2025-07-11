@@ -116,6 +116,9 @@ public static class HPProductProcessor
                             
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
+                            // Processar fotos
+                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+
                             var produto = new WooProduct
                             {
                                 name = "Desktop " + model,
@@ -131,6 +134,7 @@ public static class HPProductProcessor
                                 attributes = attributes,
                                 dimensions = DataUtilsHP.ProcessDimensions(dimension),
                                 categories = new List<Category>{new Category{ id = 20}},
+                                meta_data = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba)
                             };
                             produtos.Add(produto);
                             contadorLinhas++;

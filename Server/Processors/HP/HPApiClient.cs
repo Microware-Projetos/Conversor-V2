@@ -12,7 +12,7 @@ public class DataProcessorHP
     
     private static readonly HttpClient httpClient = new HttpClient();
     
-    public static async Task<object> GetAttributesBySKU(string sku)
+    public static async Task<object?> GetAttributesBySKU(string sku)
     {
         sku = sku.Split('#')[0]; // Remove parte após #
         
@@ -50,7 +50,7 @@ public class DataProcessorHP
         return null;
     }
     
-    public static async Task<object> GetProductBySKU(string sku)
+    public static async Task<object?> GetProductBySKU(string sku)
     {
         sku = sku.Split('#')[0]; // Remove parte após #
         
