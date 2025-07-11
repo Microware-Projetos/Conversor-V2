@@ -44,6 +44,12 @@ namespace eCommerce.Shared.Models
     {
         public int id { get; set; }
     }
+
+    public class AttributeMap
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+    }
 }
 
 

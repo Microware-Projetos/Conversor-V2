@@ -26,11 +26,12 @@ public class JobWorker : BackgroundService
                     switch (job.Tipo)
                     {
                         case TipoJob.Produtos:
-                            HPProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, job.CaminhoArquivoPreco);
+                            await HPProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, job.CaminhoArquivoPreco);
                             break;
                     }
                     job.Status = StatusJob.Concluido;
                     job.Mensagem = "Processamento finalizado com sucesso!";
+                    LimparArquivosExcel(job);
                 }
                 catch (Exception ex)
                 {
@@ -38,17 +39,36 @@ public class JobWorker : BackgroundService
                     job.Mensagem = $"Erro: {ex.Message}";
                 }
 
-                
-                col.Update(job);
-
-                job.Status = StatusJob.Concluido;
-                job.Mensagem = "Processamento finalizado com sucesso!";
                 col.Update(job);
             }
             else
             {
                 await Task.Delay(2000); // Aguarda antes de checar novamente
             }
+        }
+    }
+
+    private void LimparArquivosExcel(JobFila job)
+    {
+        try
+        {
+            // Limpar arquivo de produtos
+            if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto) && File.Exists(job.CaminhoArquivoProduto))
+            {
+                File.Delete(job.CaminhoArquivoProduto);
+                Console.WriteLine($"Arquivo de produtos removido: {job.CaminhoArquivoProduto}");
+            }
+            
+            // Limpar arquivo de preços
+            if (!string.IsNullOrEmpty(job.CaminhoArquivoPreco) && File.Exists(job.CaminhoArquivoPreco))
+            {
+                File.Delete(job.CaminhoArquivoPreco);
+                Console.WriteLine($"Arquivo de preços removido: {job.CaminhoArquivoPreco}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao limpar arquivos Excel: {ex.Message}");
         }
     }
 }

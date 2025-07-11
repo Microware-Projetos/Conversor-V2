@@ -1,23 +1,51 @@
 using eCommerce.Shared.Models;
+using WooAttribute = eCommerce.Shared.Models.Attribute;
 using ClosedXML.Excel;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
+using System.Threading.Tasks;
 
 namespace eCommerce.Server.Processors.HP;
 
 public static class HPProductProcessor
 {
-    
-    public static void ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos)
+    public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos)
     {
         try
         {
+            // Verifica se os arquivos existem
+            if (!File.Exists(caminhoArquivoProdutos))
+            {
+                throw new FileNotFoundException($"Arquivo de produtos não encontrado: {caminhoArquivoProdutos}");
+            }
+            
+            if (!File.Exists(caminhoArquivoPrecos))
+            {
+                throw new FileNotFoundException($"Arquivo de preços não encontrado: {caminhoArquivoPrecos}");
+            }
+            
+            Console.WriteLine($"Arquivo de produtos: {caminhoArquivoProdutos}");
+            Console.WriteLine($"Arquivo de preços: {caminhoArquivoPrecos}");
+            
+            // Garante que o diretório de cache existe
+            CacheManagerHP.EnsureCacheDir();
+
+            // Buscar imagens
+            var images = await NormalizeUtis.BuscarImagens();
+
+            // Buscar delivery
+            var delivery = await NormalizeUtis.BuscarDelivery();
+
+            // Normalizar valores
+            var normalizedFamily = NormalizeUtis.NormalizeValuesList("Familia");
+            var normalizedAnatel = NormalizeUtis.NormalizeValuesList("Anatel");
+            
             var produtos = new List<WooProduct>();
             var listProdutos = new XLWorkbook(caminhoArquivoProdutos);
-            var precosPorSku = GetPrecosPorSku(caminhoArquivoPrecos);
+            var precosPorSku = ExcelProcessorHP.GetPrecosPorSku(caminhoArquivoPrecos);
             var leadtime = new Dictionary<float, string>
              {
                 {0.04f, "importado"},
@@ -33,18 +61,27 @@ public static class HPProductProcessor
                 
                 if (aba == "Desktops")
                 {
-                    var linhas = worksheet.RowsUsed().Skip(2);
+                    var linhas = worksheet.RowsUsed().Skip(3);
+                    var cabecalho = worksheet.Row(2); // Pega a segunda linha como cabeçalho
                     int contadorLinhas = 0;
 
                     foreach (var linha in linhas)
                     {
                         try
                         {
-
                             var sku = linha.Cell(2).Value.ToString() ?? "";
+                            
+                            if (!precosPorSku.ContainsKey(sku))
+                            {
+                                continue;
+                            }
+                            
+                            var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
+
                             float preco = float.Parse(precosPorSku[sku]);
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
+                            var ean = precosPorSku[sku + "_ean"];
 
                             if (preco == 0)
                             {
@@ -69,6 +106,16 @@ public static class HPProductProcessor
                             var dimension = linha.Cell(20).Value.ToString() ?? "";
                             var weight = linha.Cell(21).Value.ToString() ?? "";
 
+                            var prodInfo = new Dictionary<string, string>
+                            {
+                                { "EAN", ean },
+                                { "sku", sku },
+                                { "model", model }
+                            };
+
+                            
+                            var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
+
                             var produto = new WooProduct
                             {
                                 name = "Desktop " + model,
@@ -78,9 +125,12 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = weight,
+                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
+                                attributes = attributes,
+                                dimensions = DataUtilsHP.ProcessDimensions(dimension),
+                                categories = new List<Category>{new Category{ id = 20}},
                             };
                             produtos.Add(produto);
                             contadorLinhas++;
@@ -93,7 +143,7 @@ public static class HPProductProcessor
                     
                     Console.WriteLine($"Processadas {contadorLinhas} linhas na aba Desktops");
                 }
-             
+
             }
 
             Console.WriteLine($"Total de produtos processados: {produtos.Count}");
@@ -119,37 +169,5 @@ public static class HPProductProcessor
         }
     }
 
-    public static Dictionary<string, string> GetPrecosPorSku(string caminhoArquivoPrecos)
-    {
-        var precosPorSku = new Dictionary<string, string>();
-        var listPrecos = new XLWorkbook(caminhoArquivoPrecos);
 
-        foreach (var ws in listPrecos.Worksheets)
-        {
-            var linhasPrecos = ws.RowsUsed().Skip(1);
-
-            foreach (var linha in linhasPrecos)
-            {
-                var sku = linha.Cell(2).GetString().Trim();
-                var precoStr = linha.Cell(14).GetString().Trim();
-                var icms = linha.Cell(16).GetString().Trim();
-
-                if (string.IsNullOrWhiteSpace(sku)) continue;
-
-                // Tentar converter o preço para decimal
-                if (!decimal.TryParse(precoStr, out decimal precoAtual)) continue;
-
-                // Se o SKU ainda não existe ou o novo preço for maior, atualiza
-                if (!precosPorSku.ContainsKey(sku) || decimal.Parse(precosPorSku[sku]) < precoAtual)
-                {
-                    precosPorSku[sku] = precoStr;
-                    precosPorSku[sku + "_icms"] = icms;
-                }
-            }
-        }
-
-        return precosPorSku;
-    }
-
-  
 }
