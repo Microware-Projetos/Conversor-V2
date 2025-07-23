@@ -1,3 +1,9 @@
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.csproj.AssemblyReference.cache
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.GeneratedMSBuildEditorConfig.editorconfig
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.AssemblyInfoInputs.cache
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.AssemblyInfo.cs
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.csproj.CoreCompileInputs.cache
+/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.MvcApplicationPartsAssemblyInfo.cache
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/dotnet.7.0.20.z0sgs8vy1p.js
@@ -11,6 +17,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/icudt_EFIGS.dat
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/icudt_no_CJK.dat
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/icudt.dat
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll
@@ -40,6 +47,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Microsoft.Win32.Registry.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/mscorlib.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/netstandard.dll
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.AppContext.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Buffers.dll
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Collections.Concurrent.dll
@@ -287,6 +295,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Runtime.InteropServices.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Diagnostics.DiagnosticSource.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Security.Cryptography.Csp.dll.gz
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Resources.Writer.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Threading.Tasks.Dataflow.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.IO.Compression.ZipFile.dll.gz
@@ -365,6 +374,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Xml.ReaderWriter.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.IO.IsolatedStorage.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Numerics.dll.gz
+/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Xml.XDocument.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Private.Xml.dll.gz
 /app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Threading.Channels.dll.gz
@@ -408,6 +418,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/eCommerce.Client.staticwebassets.runtime.json
 /app/eCommerce/Client/bin/Debug/net7.0/eCommerce.Client.dll
 /app/eCommerce/Client/bin/Debug/net7.0/eCommerce.Client.pdb
+/app/eCommerce/Client/bin/Debug/net7.0/LiteDB.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.AspNetCore.Authorization.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.AspNetCore.Components.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.AspNetCore.Components.Forms.dll
@@ -430,6 +441,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.JSInterop.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.JSInterop.WebAssembly.dll
+/app/eCommerce/Client/bin/Debug/net7.0/Newtonsoft.Json.dll
 /app/eCommerce/Client/bin/Debug/net7.0/System.IO.Pipelines.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.CSharp.dll
 /app/eCommerce/Client/bin/Debug/net7.0/Microsoft.VisualBasic.Core.dll
@@ -608,12 +620,7 @@
 /app/eCommerce/Client/bin/Debug/net7.0/icudt_no_CJK.dat
 /app/eCommerce/Client/bin/Debug/net7.0/eCommerce.Shared.dll
 /app/eCommerce/Client/bin/Debug/net7.0/eCommerce.Shared.pdb
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.csproj.AssemblyReference.cache
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.GeneratedMSBuildEditorConfig.editorconfig
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.AssemblyInfoInputs.cache
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.AssemblyInfo.cs
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.csproj.CoreCompileInputs.cache
-/app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.MvcApplicationPartsAssemblyInfo.cache
+/app/eCommerce/Client/obj/Debug/net7.0/build-gz/SvcENC+S.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/NHRyP9es.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/jxdauf+3.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/06TWBaMw.gz
@@ -636,6 +643,7 @@
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/BsqdSSSm.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/h9bR1UsL.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/pzjmQ0JP.gz
+/app/eCommerce/Client/obj/Debug/net7.0/build-gz/i6p+nYCX.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/+7JVlhG1.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/UkJMCMbl.gz
 /app/eCommerce/Client/obj/Debug/net7.0/build-gz/Dj+W5boM.gz
@@ -825,6 +833,10 @@
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.pack.json
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.build.json
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.development.json
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Bling/Bling.razor.rz.scp.css
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/HP/HP.razor.rz.scp.css
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Index.razor.rz.scp.css
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Jobs/Jobs.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/bundle/eCommerce.Client.styles.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/projectbundle/eCommerce.Client.bundle.scp.css
@@ -833,10 +845,3 @@
 /app/eCommerce/Client/obj/Debug/net7.0/refint/eCommerce.Client.dll
 /app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.pdb
 /app/eCommerce/Client/obj/Debug/net7.0/ref/eCommerce.Client.dll
-/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Index.razor.rz.scp.css
-/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/HP/HP.razor.rz.scp.css
-/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll
-/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/LiteDB.dll.gz
-/app/eCommerce/Client/bin/Debug/net7.0/LiteDB.dll
-/app/eCommerce/Client/obj/Debug/net7.0/build-gz/SvcENC+S.gz
-/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Jobs/Jobs.razor.rz.scp.css

@@ -1,0 +1,47 @@
+{
+    "nome": "Produto 1",
+    "tipo": "P",
+    "situacao": "A",
+    "formato": "S",
+    "codigo": "CODE_123",
+    "preco": 1,
+    "descricaoCurta": "Descrição curta",
+    "unidade": "UN",
+    "pesoLiquido": 1,
+    "pesoBruto": 1,
+    "volumes": 1,
+    "tipoProducao": "P",
+    "condicao": 0,
+    "freteGratis": false,
+    "marca": "Marca",
+    "descricaoComplementar": "Descrição complementar",
+    "linkExterno": "https://www.google.com",
+    "observacoes": "Observações",
+    "descricaoEmbalagemDiscreta": "Produto teste",
+    "categoria": {
+      "id": 123456789
+    },
+    "estoque": {
+      "minimo": 1,
+      "maximo": 10
+    },
+    "actionEstoque": "T",
+    "dimensoes": {
+      "largura": 1,
+      "altura": 1,
+      "profundidade": 1,
+      "unidadeMedida": 2
+    },
+    "midia": {
+      "imagens": {
+        "imagensURL": [
+          {
+            "link": "https://shutterstock.com/lalala123"
+          },
+          {
+            "link": "https://shutterstock.com/lalala123"
+          }
+        ]
+      }
+    }
+  }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using eCommerce.Client;
 using eCommerce.Client.Services.HP;
 using eCommerce.Client.Services.Job;
+using eCommerce.Client.Services.Bling;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -12,5 +13,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<HPService>();
 builder.Services.AddScoped<JobService>();
+builder.Services.AddScoped<BlingService>();
 
 await builder.Build().RunAsync();

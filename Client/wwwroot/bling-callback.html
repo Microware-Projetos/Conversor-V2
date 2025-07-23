@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bling OAuth Callback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success {
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+        }
+        .code {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h2>Processando autorização...</h2>
+        </div>
+    </div>
+
+    <script>
+        // Função para capturar código de qualquer URL
+        function captureCodeFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const state = urlParams.get('state');
+            
+            if (code && state && state === '53a7fb14d9f453aa0dfd8eb1322a65a1') {
+                // Enviar o código para a janela pai
+                if (window.opener) {
+                    window.opener.postMessage({ type: 'BLING_AUTH_CODE', code: code }, '*');
+                }
+                
+                // Mostrar mensagem de sucesso
+                document.getElementById('content').innerHTML = `
+                    <h2 class="success">✅ Autorização Concluída!</h2>
+                    <p>Código capturado com sucesso:</p>
+                    <div class="code">${code}</div>
+                    <p>Esta janela será fechada automaticamente...</p>
+                `;
+                
+                // Fechar após 3 segundos
+                setTimeout(() => {
+                    window.close();
+                }, 3000);
+                
+                return true;
+            } else {
+                // Mostrar erro
+                document.getElementById('content').innerHTML = `
+                    <h2 class="error">❌ Erro na Autorização</h2>
+                    <p>Não foi possível capturar o código de autorização.</p>
+                    <p>Parâmetros encontrados:</p>
+                    <div class="code">
+                        Code: ${code || 'não encontrado'}<br>
+                        State: ${state || 'não encontrado'}
+                    </div>
+                `;
+                
+                return false;
+            }
+        }
+
+        // Executar quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            captureCodeFromUrl();
+        });
+    </script>
+</body>
+</html> 

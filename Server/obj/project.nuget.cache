@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mvSrfeoRhaeBRIv2CfGvx0Dq5GOEDzsKNtVMkHMviRtpHtycd+67L4z7iLeCeLPzFzatk2eX/lAet8eNeRWSJA==",
+  "dgSpecHash": "DpDqokNvDlhu3kqadgQaHxZ6uLSlefqq2EE2TicxVVpqqjE3FsisUDIZqXnJEy+MSEda/CjenVS6e3G7F1E9iQ==",
   "success": true,
   "projectFilePath": "/app/eCommerce/Server/eCommerce.Server.csproj",
   "expectedPackageFiles": [

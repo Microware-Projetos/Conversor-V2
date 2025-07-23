@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/appsettings.json"
     },
     {
+      "Id": "/app/eCommerce/Client/wwwroot/bling-callback.html",
+      "PackagePath": "staticwebassets/bling-callback.html"
+    },
+    {
       "Id": "/app/eCommerce/Client/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },
@@ -99,6 +103,10 @@
     {
       "Id": "/app/eCommerce/Client/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/app/eCommerce/Client/wwwroot/js/bling-auth.js",
+      "PackagePath": "staticwebassets/js/bling-auth.js"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.eCommerce.Client.props",

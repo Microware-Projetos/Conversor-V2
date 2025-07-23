@@ -7,15 +7,20 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace eCommerce.Server.Processors.HP;
 
 public static class HPProductProcessor
 {
-    public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos)
+    public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos, CancellationToken cancellationToken = default)
     {
         try
         {
+
+            // Verificar cancelamento
+            cancellationToken.ThrowIfCancellationRequested();
+            
             // Verifica se os arquivos existem
             if (!File.Exists(caminhoArquivoProdutos))
             {
@@ -56,6 +61,9 @@ public static class HPProductProcessor
             
             foreach (var worksheet in listProdutos.Worksheets)
             {
+                // Verificar cancelamento a cada aba
+                cancellationToken.ThrowIfCancellationRequested();
+                
                 string aba = worksheet.Name;
                 Console.WriteLine($"Processando aba: {aba}");
                 
@@ -67,6 +75,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(2).Value.ToString() ?? "";
@@ -79,15 +90,23 @@ public static class HPProductProcessor
                             var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
 
                             float preco = float.Parse(precosPorSku[sku]);
+
+                            
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
                             var ean = precosPorSku[sku + "_ean"];
+
 
                             if (preco == 0)
                             {
                                 continue;
                             }
 
+                            Console.WriteLine("ean: " + ean + " Tamanho: " + ean.Length);
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
+                        
                             var model = linha.Cell(3).Value.ToString() ?? "";
                             var processor = linha.Cell(4).Value.ToString() ?? "";
                             var os = linha.Cell(5).Value.ToString() ?? "";
@@ -112,7 +131,6 @@ public static class HPProductProcessor
                                 { "sku", sku },
                                 { "model", model }
                             };
-
                             
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
@@ -120,7 +138,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -140,7 +157,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -161,6 +177,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(2).Value.ToString() ?? "";
@@ -173,6 +192,8 @@ public static class HPProductProcessor
                             var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
 
                             float preco = float.Parse(precosPorSku[sku]);
+
+                            
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
                             var ean = precosPorSku[sku + "_ean"];
@@ -181,6 +202,9 @@ public static class HPProductProcessor
                             {
                                 continue;
                             }
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
 
                             var model = linha.Cell(3).Value.ToString() ?? "";
                             var processor = linha.Cell(4).Value.ToString() ?? "";
@@ -210,7 +234,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -230,7 +253,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -251,6 +273,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(2).Value.ToString() ?? "";
@@ -263,6 +288,7 @@ public static class HPProductProcessor
                             var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
 
                             float preco = float.Parse(precosPorSku[sku]);
+
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
                             var ean = precosPorSku[sku + "_ean"];
@@ -271,6 +297,10 @@ public static class HPProductProcessor
                             {
                                 continue;
                             }
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
+                            
 
                             var model = linha.Cell(3).Value.ToString() ?? "";
                             var processor = linha.Cell(4).Value.ToString() ?? "";
@@ -297,7 +327,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -317,7 +346,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -338,6 +366,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(2).Value.ToString() ?? "";
@@ -350,6 +381,8 @@ public static class HPProductProcessor
                             var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
 
                             float preco = float.Parse(precosPorSku[sku]);
+                           
+                            
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
                             var ean = precosPorSku[sku + "_ean"];
@@ -358,6 +391,9 @@ public static class HPProductProcessor
                             {
                                 continue;
                             }
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
 
                             var model = linha.Cell(3).Value.ToString() ?? "";
                             var processor = linha.Cell(4).Value.ToString() ?? "";
@@ -383,7 +419,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -403,7 +438,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -424,6 +458,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(2).Value.ToString() ?? "";
@@ -436,6 +473,8 @@ public static class HPProductProcessor
                             var product_attributesAPI = await DataProcessorHP.GetAttributesBySKU(sku);
 
                             float preco = float.Parse(precosPorSku[sku]);
+
+                            
                             var icms = precosPorSku[sku + "_icms"];
                             var lead = leadtime[float.Parse(icms)];
                             var ean = precosPorSku[sku + "_ean"];
@@ -444,6 +483,9 @@ public static class HPProductProcessor
                             {
                                 continue;
                             }
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
 
                             var model = linha.Cell(3).Value.ToString() ?? "";
                             var os = linha.Cell(4).Value.ToString() ?? "";
@@ -468,7 +510,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -488,7 +529,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -509,6 +549,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(4).Value.ToString() ?? "";
@@ -531,6 +574,9 @@ public static class HPProductProcessor
                                 continue;
                             }
 
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
+
                             var descricao = linha.Cell(5).Value.ToString() ?? "";
                             var model = descricao; // Para SmartChoice, usa a descrição como model
                             var dimension = ""; // SmartChoice pode não ter dimensões
@@ -549,7 +595,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -569,7 +614,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }
@@ -590,6 +634,9 @@ public static class HPProductProcessor
 
                     foreach (var linha in linhas)
                     {
+                        // Verificar cancelamento a cada linha
+                        cancellationToken.ThrowIfCancellationRequested();
+                        
                         try
                         {
                             var sku = linha.Cell(3).Value.ToString() ?? "";
@@ -611,6 +658,9 @@ public static class HPProductProcessor
                             {
                                 continue;
                             }
+
+                            // Preco com Margem
+                            preco = preco / (1 - (20 / 100));
 
                             var descricao = linha.Cell(4).Value.ToString() ?? "";
                             var tipo = linha.Cell(6).Value.ToString() ?? "";
@@ -644,7 +694,6 @@ public static class HPProductProcessor
                             var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
                             var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
-                            Console.WriteLine($"\nDimensões processadas para {sku}: L={processedDimensions.length}, W={processedDimensions.width}, H={processedDimensions.height}");
 
                             var produto = new WooProduct
                             {
@@ -664,7 +713,6 @@ public static class HPProductProcessor
                                 meta_data = fotos
                             };
                             
-                            Console.WriteLine($"Dimensões do produto criado: L={produto.dimensions.length}, W={produto.dimensions.width}, H={produto.dimensions.height}");
                             produtos.Add(produto);
                             contadorLinhas++;
                         }

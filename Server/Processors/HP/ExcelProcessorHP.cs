@@ -21,8 +21,8 @@ public static class ExcelProcessorHP
                 var sku = linha.Cell(2).GetString().Trim();
                 var precoStr = linha.Cell(14).GetString().Trim();
                 var icms = linha.Cell(16).GetString().Trim();
-                var ean = linha.Cell(11).GetString().Trim();
-                var ncm = linha.Cell(12).GetString().Trim();
+                var ean = linha.Cell(10).GetString().Trim();
+                var ncm = linha.Cell(11).GetString().Trim();
 
                 if (string.IsNullOrWhiteSpace(sku)) continue;
 

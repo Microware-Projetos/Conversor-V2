@@ -4,6 +4,8 @@ using eCommerce.Server.Services.HP;
 using LiteDB;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.Http.Features;
+using eCommerce.Server.Services.Bling;
+using eCommerce.Server.Services.HP;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,23 @@ builder.Services.Configure<FormOptions>(options =>
 
 // Add services to the container.
 builder.Services.AddHostedService<JobWorker>();
+builder.Services.AddScoped<JobWorker>();
+builder.Services.AddScoped<BlingService>();
+builder.Services.AddScoped<HPService>();
+
+// Adicionar HttpClient
+builder.Services.AddHttpClient();
+
+// Adicionar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 // Registrar LiteDatabase
 builder.Services.AddSingleton<LiteDatabase>(provider => 
@@ -56,6 +75,9 @@ app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
+
+// Usar CORS
+app.UseCors("AllowAll");
 
 app.UseRouting();
 

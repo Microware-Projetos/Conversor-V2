@@ -525,7 +525,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "LiteDB": "5.0.21"
+          "LiteDB": "5.0.21",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/eCommerce.Shared.dll": {}

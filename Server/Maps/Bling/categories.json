@@ -1,0 +1,42 @@
+[{
+    "id": 11877759,
+    "descricao": "Notebook",
+    "categoriaPai": {
+        "id": 0
+    }
+},
+{
+    "id": 11877763,
+    "descricao": "Desktop",
+    "categoriaPai": {
+        "id": 0
+    }
+},
+{
+    "id": 11877767,
+    "descricao": "Display",
+    "categoriaPai": {
+        "id": 0
+    }
+},
+{
+    "id": 11877771,
+    "descricao": "Acessório",
+    "categoriaPai": {
+        "id": 0
+    }
+},
+{
+    "id": 11877775,
+    "descricao": "Workstation",
+    "categoriaPai": {
+        "id": 0
+    }
+},
+{
+    "id": 11877788,
+    "descricao": "Plotter",
+    "categoriaPai": {
+        "id": 0
+    }
+}]

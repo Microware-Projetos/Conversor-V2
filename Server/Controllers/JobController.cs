@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using LiteDB;
 using eCommerce.Shared.Models;
+using eCommerce.Server.Services.Job;
 
 namespace eCommerce.Server.Controllers;
 
@@ -8,6 +9,13 @@ namespace eCommerce.Server.Controllers;
 [Route("api/job")]
 public class JobController : ControllerBase
 {
+    private readonly JobWorker _jobWorker;
+
+    public JobController(JobWorker jobWorker)
+    {
+        _jobWorker = jobWorker;
+    }
+
     [HttpPost]
     public IActionResult CriarJob([FromForm] IFormFile produto, [FromForm] IFormFile preco)
     {
@@ -94,6 +102,60 @@ public class JobController : ControllerBase
         catch (Exception)
         {
             return BadRequest("ID inválido");
+        }
+    }
+
+    [HttpPost("cancelar-atual")]
+    public IActionResult CancelarJobAtual()
+    {
+        try
+        {
+            _jobWorker.CancelarJobAtual();
+            return Ok(new { message = "Job em execução foi cancelado com sucesso." });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = "Erro ao cancelar job", error = ex.Message });
+        }
+    }
+
+    [HttpDelete("limpar-todos")]
+    public IActionResult LimparTodosJobs()
+    {
+        try
+        {
+            using var db = new LiteDatabase("Filename=fila.db;Connection=shared");
+            var col = db.GetCollection<JobFila>("jobs");
+            
+            // Contar quantos jobs existem antes de limpar
+            var totalJobs = col.Count();
+            var jobsProcessando = col.Count(x => x.Status == StatusJob.Processando);
+            
+            // Cancelar job em execução se houver
+            if (jobsProcessando > 0)
+            {
+                _jobWorker.CancelarJobAtual();
+            }
+            
+            // Limpar todos os jobs
+            col.DeleteAll();
+            
+            var mensagem = jobsProcessando > 0 
+                ? $"Todos os {totalJobs} jobs foram removidos com sucesso. {jobsProcessando} job(s) em execução foi(foram) cancelado(s)."
+                : $"Todos os {totalJobs} jobs foram removidos com sucesso.";
+            
+            return Ok(new { 
+                message = mensagem,
+                jobsRemovidos = totalJobs,
+                jobsCancelados = jobsProcessando
+            });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { 
+                message = "Erro ao limpar jobs", 
+                error = ex.Message 
+            });
         }
     }
 }

@@ -15,7 +15,7 @@ public class JobFila
     public TipoJob Tipo { get; set; } = TipoJob.Produtos;
     public DateTime DataCriacao { get; set; } = DateTime.Now;
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
-    public string CaminhoArquivoPreco { get; set; } = string.Empty;
+    public string? CaminhoArquivoPreco { get; set; }
     public string? Mensagem { get; set; }
 }
 
@@ -26,7 +26,7 @@ public class JobFilaResponse
     public TipoJob Tipo { get; set; }
     public DateTime DataCriacao { get; set; }
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
-    public string CaminhoArquivoPreco { get; set; } = string.Empty;
+    public string? CaminhoArquivoPreco { get; set; }
     public string? Mensagem { get; set; }
 }
 
@@ -34,7 +34,8 @@ public enum TipoJob {
     Produtos,
     Plotter,
     CarePack,
-    Promocao
+    Promocao,
+    Bling
 }
 
 public enum StatusJob {

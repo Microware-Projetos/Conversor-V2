@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zotd3J3u7lSmAmWDj9XdQMtua5EwhPnAQGIJojto4AQ=",
+  "Hash": "l06S1G2XXyjdWlSyzBHdURmfVrc8eaQX+GN0r6zrnjU=",
   "Source": "eCommerce.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -746,6 +746,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/root/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/7.0.20/runtimes/browser-wasm/lib/net7.0/netstandard.dll"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/root/.nuget/packages/newtonsoft.json/13.0.3/lib/net6.0/Newtonsoft.Json.dll"
     },
     {
       "Identity": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.AppContext.dll",
@@ -4947,6 +4964,23 @@
       "OriginalItemSpec": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/System.Security.Cryptography.Csp.dll"
     },
     {
+      "Identity": "/app/eCommerce/Client/obj/Debug/net7.0/build-gz/i6p+nYCX.gz",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/app/eCommerce/Client/bin/Debug/net7.0/wwwroot/_framework/Newtonsoft.Json.dll"
+    },
+    {
       "Identity": "/app/eCommerce/Client/obj/Debug/net7.0/build-gz/ieEkYltf.gz",
       "SourceId": "eCommerce.Client",
       "SourceType": "Computed",
@@ -7021,6 +7055,23 @@
       "OriginalItemSpec": "wwwroot/appsettings.json"
     },
     {
+      "Identity": "/app/eCommerce/Client/wwwroot/bling-callback.html",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "/app/eCommerce/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "bling-callback.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/bling-callback.html"
+    },
+    {
       "Identity": "/app/eCommerce/Client/wwwroot/css/app.css",
       "SourceId": "eCommerce.Client",
       "SourceType": "Discovered",
@@ -7376,6 +7427,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/wwwroot/js/bling-auth.js",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "/app/eCommerce/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "js/bling-auth.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/bling-auth.js"
     }
   ]
 }

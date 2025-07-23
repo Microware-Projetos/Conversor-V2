@@ -1,0 +1,15 @@
+{
+    "id": 16506582523,
+    "nome": "Notebook HP Zbook Power G11",
+    "codigo": "B5EV7LT#AC4",
+    "preco": 15945.413,
+    "precoCusto": 0,
+    "estoque": {
+        "saldoVirtualTotal": 0
+    },
+    "tipo": "P",
+    "situacao": "A",
+    "formato": "S",
+    "descricaoCurta": "<p>Notebook HP Zbook Power G11 U7-155H Win 11 Pro RAM 32GB (1x32GB) DDR5 5600</p>\n",
+    "imagemURL": ""
+}

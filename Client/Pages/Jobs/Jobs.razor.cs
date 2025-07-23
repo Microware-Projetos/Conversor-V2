@@ -126,7 +126,40 @@ public partial class Jobs : ComponentBase
             TipoJob.Plotter => "badge bg-secondary",
             TipoJob.CarePack => "badge bg-info",
             TipoJob.Promocao => "badge bg-warning",
+            TipoJob.Bling => "badge bg-success",
             _ => "badge bg-secondary"
         };
+    }
+
+    private async Task LimparTodosJobs()
+    {
+        try
+        {
+            isLoading = true;
+            StateHasChanged();
+
+            var result = await _jobService.LimparTodosJobs();
+            
+            if (result.jobsCancelados > 0)
+            {
+                mensagem = $"✅ {result.message} ({result.jobsCancelados} job(s) em execução foi(foram) cancelado(s))";
+            }
+            else
+            {
+                mensagem = $"✅ {result.message}";
+            }
+            
+            // Recarregar a lista de jobs
+            await CarregarJobs();
+        }
+        catch (Exception ex)
+        {
+            mensagem = $"❌ Erro ao limpar jobs: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
     }
 }
