@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using LiteDB;
 using eCommerce.Shared.Models;
 using eCommerce.Server.Services.Job;
+using eCommerce.Server.Helpers;
 
 namespace eCommerce.Server.Controllers;
 
@@ -19,30 +20,18 @@ public class JobController : ControllerBase
     [HttpPost]
     public IActionResult CriarJob([FromForm] IFormFile produto, [FromForm] IFormFile preco)
     {
-        // Salvar arquivos em disco
         var pasta = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-        Directory.CreateDirectory(pasta);
+        var caminhoProduto = FileHelper.SaveFile(produto, pasta);
+        var caminhoPreco = FileHelper.SaveFile(preco, pasta);
 
-        var caminhoProduto = Path.Combine(pasta, Guid.NewGuid() + "_" + produto.FileName);
-        var caminhoPreco = Path.Combine(pasta, Guid.NewGuid() + "_" + preco.FileName);
-
-        using (var stream = new FileStream(caminhoProduto, FileMode.Create))
-            produto.CopyTo(stream);
-        using (var stream = new FileStream(caminhoPreco, FileMode.Create))
-            preco.CopyTo(stream);
-
-        // Criar job no LiteDB
         using var db = new LiteDatabase("Filename=fila.db;Connection=shared");
-        var col = db.GetCollection<JobFila>("jobs");
-
         var job = new JobFila
         {
             Id = ObjectId.NewObjectId(),
             CaminhoArquivoProduto = caminhoProduto,
             CaminhoArquivoPreco = caminhoPreco
         };
-
-        col.Insert(job);
+        DbHelper.InsertOrUpdate(db, "jobs", job);
 
         return Ok(new JobFilaResponse
         {

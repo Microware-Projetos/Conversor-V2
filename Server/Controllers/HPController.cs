@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using LiteDB;
 using eCommerce.Shared.Models;
 using eCommerce.Server.Services.HP;
+using eCommerce.Server.Helpers;
 
 namespace eCommerce.Server.Controllers;
 
@@ -21,6 +22,10 @@ public class HPController : ControllerBase
     [HttpPost("produtos")]
     public async Task<IActionResult> EnviarProdutos([FromForm] IFormFile arquivoProdutos, [FromForm] IFormFile arquivoPrecos)
     {
+        var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        var caminhoProdutos = FileHelper.SaveFile(arquivoProdutos, pastaUploads);
+        var caminhoPrecos = FileHelper.SaveFile(arquivoPrecos, pastaUploads);
+
         var job = await _hpService.EnviarProdutos(arquivoProdutos, arquivoPrecos);
         return Ok(job);
     }

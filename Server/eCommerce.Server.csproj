@@ -12,7 +12,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.20" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\Client\eCommerce.Client.csproj" />
     <ProjectReference Include="..\Shared\eCommerce.Shared.csproj" />
