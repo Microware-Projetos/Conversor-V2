@@ -82,6 +82,26 @@ public static class BlingProcessor
                     }
                 };
                 
+                // Verificar se o produto tem imagens antes de adicionar à lista
+                if (produtoBling.Midia?.Imagens?.ImagensURL == null || !produtoBling.Midia.Imagens.ImagensURL.Any())
+                {
+                    Console.WriteLine($"⚠️ Produto {produtoBling.Codigo} não tem imagens. Verificando meta_data...");
+                    
+                    // Tentar extrair imagens novamente com mais detalhes
+                    var imagens = ExtrairImagensDoProduto(produto.meta_data);
+                    if (imagens.Any())
+                    {
+                        produtoBling.Midia.Imagens.ImagensURL = imagens;
+                        Console.WriteLine($"✅ Imagens encontradas na segunda tentativa para {produtoBling.Codigo}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"❌ Produto {produtoBling.Codigo} será pulado por não ter imagens");
+                        continue; // Pular produtos sem imagens
+                    }
+                }
+                
+                Console.WriteLine($"✅ Produto {produtoBling.Codigo} processado com {produtoBling.Midia.Imagens.ImagensURL.Count} imagens");
                 produtosBling.Add(produtoBling);
             }
             
@@ -108,8 +128,8 @@ public static class BlingProcessor
         // Configurar timeout maior para evitar timeouts
         client.Timeout = TimeSpan.FromMinutes(2);
 
-        // Processar produtos em lotes de 3 (limite da API)
-        var batchSize = 3;
+        // Processar produtos em lotes de 2 (reduzido para evitar rate limit)
+        var batchSize = 2;
         var semaphore = new SemaphoreSlim(batchSize, batchSize);
         var tasks = new List<Task>();
 
@@ -129,8 +149,8 @@ public static class BlingProcessor
         
         try
         {
-            // Aguardar 1/3 de segundo para respeitar o limite de 3 requisições por segundo
-            await Task.Delay(333, cancellationToken);
+            // Aguardar 1 segundo para respeitar o limite de 2 requisições por segundo (mais conservador)
+            await Task.Delay(1000, cancellationToken);
             
             await EnviarProdutoComRetry(client, url, produto, cancellationToken);
         }
@@ -147,13 +167,26 @@ public static class BlingProcessor
             try
             {
                 var json = JsonConvert.SerializeObject(produto);
+                Console.WriteLine($"📤 Enviando produto {produto.Codigo}:");
+                Console.WriteLine($"   - Nome: {produto.Nome}");
+                Console.WriteLine($"   - Preço: {produto.Preco}");
+                Console.WriteLine($"   - Imagens: {produto.Midia?.Imagens?.ImagensURL?.Count ?? 0}");
+                if (produto.Midia?.Imagens?.ImagensURL?.Any() == true)
+                {
+                    foreach (var img in produto.Midia.Imagens.ImagensURL)
+                    {
+                        Console.WriteLine($"     - {img.Link}");
+                    }
+                }
+                
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(url, content, cancellationToken);
                 var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
                 
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine($"Produto {produto.Codigo} enviado com sucesso");
+                    Console.WriteLine($"✅ Produto {produto.Codigo} enviado com sucesso");
+                    Console.WriteLine($"📥 Resposta da criação: {responseBody}");
                     
                     // Deserializar resposta para obter o ID do produto
                     var produtoResponse = JsonConvert.DeserializeObject<BlingProdutoResponse>(responseBody);
@@ -161,6 +194,32 @@ public static class BlingProcessor
                     {
                         var produtoId = produtoResponse.data.id;
                         Console.WriteLine($"ID do produto {produto.Codigo}: {produtoId}");
+                        
+                        // Aguardar um pouco antes de adicionar estoque para evitar conflitos
+                        await Task.Delay(3000, cancellationToken);
+                        
+                        // Verificar se o produto foi criado corretamente com fotos
+                        var temImagens = await VerificarProdutoCriado(client, produtoId, produto.Codigo, cancellationToken);
+                        
+                        // Se o produto não tem imagens, tentar atualizar
+                        if (!temImagens)
+                        {
+                            await TentarAtualizarImagensProduto(client, produtoId, produto, cancellationToken);
+                            
+                            // Aguardar um pouco para a API processar a atualização
+                            await Task.Delay(2000, cancellationToken);
+                            
+                            // Verificar novamente se as imagens foram atualizadas
+                            var imagensAtualizadas = await VerificarProdutoCriado(client, produtoId, produto.Codigo, cancellationToken);
+                            if (imagensAtualizadas)
+                            {
+                                Console.WriteLine($"✅ Imagens do produto {produto.Codigo} foram atualizadas com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"❌ Falha ao atualizar imagens do produto {produto.Codigo}");
+                            }
+                        }
                         
                         // Adicionar estoque ao produto com retry
                         await AdicionarEstoqueComRetry(client, produtoId, produto.Estoque.Maximo, cancellationToken);
@@ -219,10 +278,15 @@ public static class BlingProcessor
 
     private static async Task AdicionarEstoqueComRetry(HttpClient client, long produtoId, int quantidade, CancellationToken cancellationToken, int maxRetries = 3)
     {
+        Console.WriteLine($"Iniciando adição de estoque para produto ID {produtoId} com quantidade {quantidade}");
+        
         for (int attempt = 1; attempt <= maxRetries; attempt++)
         {
             try
             {
+                // Aguardar um pouco antes de tentar adicionar estoque para evitar conflitos
+                await Task.Delay(2000, cancellationToken);
+                
                 var url = "https://api.bling.com.br/Api/v3/estoques";
                 
                 var estoqueRequest = new
@@ -234,32 +298,50 @@ public static class BlingProcessor
                 };
                 
                 var json = JsonConvert.SerializeObject(estoqueRequest);
+                Console.WriteLine($"Enviando requisição de estoque (tentativa {attempt}): {json}");
+                
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(url, content, cancellationToken);
                 var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
                 
+                Console.WriteLine($"Resposta do estoque (tentativa {attempt}): {response.StatusCode} - {responseBody}");
+                
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine($"Estoque adicionado com sucesso para o produto ID {produtoId}");
+                    Console.WriteLine($"✅ Estoque adicionado com sucesso para o produto ID {produtoId}");
                     return; // Sucesso, sair do loop de retry
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
                 {
                     var waitTime = TimeSpan.FromSeconds(Math.Pow(2, attempt));
-                    Console.WriteLine($"Rate limit atingido para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
+                    Console.WriteLine($"⚠️ Rate limit atingido para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
                     await Task.Delay(waitTime, cancellationToken);
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.GatewayTimeout || 
                          response.StatusCode == System.Net.HttpStatusCode.RequestTimeout)
                 {
                     var waitTime = TimeSpan.FromSeconds(Math.Pow(2, attempt));
-                    Console.WriteLine($"Timeout para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
+                    Console.WriteLine($"⚠️ Timeout para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
                     await Task.Delay(waitTime, cancellationToken);
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+                {
+                    Console.WriteLine($"⚠️ Conflito ao adicionar estoque para produto {produtoId}. Produto pode já ter estoque.");
+                    return; // Não tentar novamente em caso de conflito
                 }
                 else
                 {
-                    Console.WriteLine($"Erro ao adicionar estoque para produto ID {produtoId}: {response.StatusCode} - {responseBody}");
-                    return; // Erro não recuperável
+                    Console.WriteLine($"❌ Erro ao adicionar estoque para produto ID {produtoId}: {response.StatusCode} - {responseBody}");
+                    if (attempt == maxRetries)
+                    {
+                        Console.WriteLine($"❌ Falha definitiva ao adicionar estoque para produto {produtoId} após {maxRetries} tentativas");
+                    }
+                    else
+                    {
+                        var waitTime = TimeSpan.FromSeconds(Math.Pow(2, attempt));
+                        Console.WriteLine($"Aguardando {waitTime.TotalSeconds}s antes da próxima tentativa");
+                        await Task.Delay(waitTime, cancellationToken);
+                    }
                 }
             }
             catch (TaskCanceledException ex) when (ex.InnerException is TimeoutException)
@@ -267,26 +349,157 @@ public static class BlingProcessor
                 if (attempt < maxRetries)
                 {
                     var waitTime = TimeSpan.FromSeconds(Math.Pow(2, attempt));
-                    Console.WriteLine($"Timeout da requisição para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
+                    Console.WriteLine($"⚠️ Timeout da requisição para estoque do produto {produtoId}. Aguardando {waitTime.TotalSeconds}s");
                     await Task.Delay(waitTime, cancellationToken);
                 }
                 else
                 {
-                    Console.WriteLine($"Erro de timeout após {maxRetries} tentativas para estoque do produto {produtoId}");
+                    Console.WriteLine($"❌ Erro de timeout após {maxRetries} tentativas para estoque do produto {produtoId}");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao adicionar estoque para produto ID {produtoId} (tentativa {attempt}): {ex.Message}");
+                Console.WriteLine($"❌ Erro ao adicionar estoque para produto ID {produtoId} (tentativa {attempt}): {ex.Message}");
                 if (attempt == maxRetries)
                 {
-                    Console.WriteLine($"Falha definitiva ao adicionar estoque para produto {produtoId} após {maxRetries} tentativas");
+                    Console.WriteLine($"❌ Falha definitiva ao adicionar estoque para produto {produtoId} após {maxRetries} tentativas");
                 }
                 else
                 {
-                    await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, attempt)), cancellationToken);
+                    var waitTime = TimeSpan.FromSeconds(Math.Pow(2, attempt));
+                    Console.WriteLine($"Aguardando {waitTime.TotalSeconds}s antes da próxima tentativa");
+                    await Task.Delay(waitTime, cancellationToken);
                 }
             }
+        }
+    }
+
+    private static async Task<bool> VerificarProdutoCriado(HttpClient client, long produtoId, string codigoProduto, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var url = $"https://api.bling.com.br/Api/v3/produtos/{produtoId}";
+            Console.WriteLine($"🔍 Verificando produto {codigoProduto} (ID: {produtoId})...");
+            
+            var response = await client.GetAsync(url, cancellationToken);
+            var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"✅ Produto {codigoProduto} (ID: {produtoId}) encontrado na API");
+                
+                // Tentar deserializar a resposta completa para extrair informações das imagens
+                try
+                {
+                    var produtoCompleto = JsonConvert.DeserializeObject<BlingProdutoCompletoResponse>(responseBody);
+                    
+                    if (produtoCompleto?.data != null)
+                    {
+                        var produto = produtoCompleto.data;
+                        Console.WriteLine($"📋 Informações do produto {codigoProduto}:");
+                        Console.WriteLine($"   - Nome: {produto.nome}");
+                        Console.WriteLine($"   - Código: {produto.codigo}");
+                        Console.WriteLine($"   - Preço: {produto.preco}");
+                        
+                        // Verificar imagens
+                        if (produto.imagens != null && produto.imagens.Any())
+                        {
+                            Console.WriteLine($"🖼️ Produto {codigoProduto} tem {produto.imagens.Count} imagens:");
+                            foreach (var imagem in produto.imagens)
+                            {
+                                Console.WriteLine($"   - {imagem.link}");
+                            }
+                            return true; // Produto tem imagens
+                        }
+                        else
+                        {
+                            Console.WriteLine($"⚠️ Produto {codigoProduto} foi criado mas NÃO tem imagens!");
+                            return false; // Produto não tem imagens
+                        }
+                        
+                        // Verificar estoque
+                        if (produto.estoque != null)
+                        {
+                            Console.WriteLine($"📦 Estoque do produto {codigoProduto}: {produto.estoque.quantidade}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"⚠️ Produto {codigoProduto} não tem informações de estoque");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"❌ Não foi possível extrair dados do produto {codigoProduto} da resposta");
+                        Console.WriteLine($"Resposta recebida: {responseBody}");
+                        return false; // Produto não tem imagens
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"❌ Erro ao processar resposta do produto {codigoProduto}: {ex.Message}");
+                    Console.WriteLine($"Resposta recebida: {responseBody}");
+                    return false; // Produto não tem imagens
+                }
+            }
+            else
+            {
+                Console.WriteLine($"❌ Falha ao verificar produto {codigoProduto} (ID: {produtoId}): {response.StatusCode}");
+                Console.WriteLine($"Resposta de erro: {responseBody}");
+                return false; // Produto não tem imagens
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"❌ Erro ao verificar produto {codigoProduto} (ID: {produtoId}): {ex.Message}");
+            return false; // Produto não tem imagens
+        }
+    }
+
+    private static async Task TentarAtualizarImagensProduto(HttpClient client, long produtoId, BlingProduct produto, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var url = $"https://api.bling.com.br/Api/v3/produtos/{produtoId}";
+            Console.WriteLine($"🔄 Tentando atualizar imagens do produto {produto.Codigo} (ID: {produtoId})...");
+
+            // Verificar se o produto tem imagens para enviar
+            if (produto.Midia?.Imagens?.ImagensURL == null || !produto.Midia.Imagens.ImagensURL.Any())
+            {
+                Console.WriteLine($"❌ Produto {produto.Codigo} não tem imagens para atualizar!");
+                return;
+            }
+
+            // Criar objeto com a estrutura correta da API do Bling (PATCH)
+            var patchBody = new
+            {
+                imagens = new
+                {
+                    imagensURL = produto.Midia.Imagens.ImagensURL.Select(img => new { link = img.Link }).ToList()
+                }
+            };
+
+            var json = JsonConvert.SerializeObject(patchBody);
+            Console.WriteLine($"📤 Enviando PATCH de imagens: {json}");
+            
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var request = new HttpRequestMessage(new HttpMethod("PATCH"), url) { Content = content };
+            var response = await client.SendAsync(request, cancellationToken);
+            var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+
+            Console.WriteLine($"📥 Resposta do PATCH: {response.StatusCode} - {responseBody}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"✅ Imagens do produto {produto.Codigo} (ID: {produtoId}) atualizadas com sucesso.");
+            }
+            else
+            {
+                Console.WriteLine($"❌ Falha ao atualizar imagens do produto {produto.Codigo} (ID: {produtoId}): {response.StatusCode} - {responseBody}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"❌ Erro ao tentar atualizar imagens do produto {produto.Codigo} (ID: {produtoId}): {ex.Message}");
         }
     }
 
@@ -376,43 +589,141 @@ public static class BlingProcessor
     {
         var imagensURL = new List<BlingImagemURL>();
 
+        Console.WriteLine($"🔍 Iniciando extração de imagens. Meta_data count: {meta_data?.Count ?? 0}");
+
+        if (meta_data == null || !meta_data.Any())
+        {
+            Console.WriteLine("❌ Meta_data está vazio ou nulo");
+            return imagensURL;
+        }
+
+        // Log de todas as chaves disponíveis para debug
+        Console.WriteLine("📋 Chaves disponíveis no meta_data:");
+        foreach (var meta in meta_data)
+        {
+            Console.WriteLine($"   - {meta.key}: {meta.value}");
+        }
+
         // Buscar imagem principal (_external_image_url)
         var imagemPrincipal = meta_data.FirstOrDefault(m => m.key == "_external_image_url");
         if (imagemPrincipal?.value != null)
         {
-            imagensURL.Add(new BlingImagemURL { Link = imagemPrincipal.value.ToString() });
+            var urlImagem = imagemPrincipal.value.ToString();
+            Console.WriteLine($"🔍 Imagem principal encontrada: {urlImagem}");
+            
+            if (!string.IsNullOrWhiteSpace(urlImagem) && IsValidImageUrl(urlImagem))
+            {
+                imagensURL.Add(new BlingImagemURL { Link = urlImagem.Trim() });
+                Console.WriteLine($"✅ Imagem principal adicionada: {urlImagem}");
+            }
+            else
+            {
+                Console.WriteLine($"❌ URL da imagem principal inválida: {urlImagem}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("⚠️ Imagem principal (_external_image_url) não encontrada");
         }
 
         // Buscar galeria de imagens (_external_gallery_images)
         var galeriaImagens = meta_data.FirstOrDefault(m => m.key == "_external_gallery_images");
         if (galeriaImagens?.value != null)
         {
+            Console.WriteLine($"🔍 Galeria de imagens encontrada: {galeriaImagens.value}");
+            
             try
             {
                 // Tentar deserializar como array de strings
                 var galeriaJson = galeriaImagens.value.ToString();
+                Console.WriteLine($"🔄 Tentando processar galeria: {galeriaJson}");
+                
                 var imagensGaleria = JsonConvert.DeserializeObject<List<string>>(galeriaJson);
                 
-                if (imagensGaleria != null)
+                if (imagensGaleria != null && imagensGaleria.Any())
                 {
+                    Console.WriteLine($"📸 Galeria deserializada com {imagensGaleria.Count} imagens");
                     foreach (var imagem in imagensGaleria)
                     {
-                        imagensURL.Add(new BlingImagemURL { Link = imagem });
+                        if (!string.IsNullOrWhiteSpace(imagem) && IsValidImageUrl(imagem))
+                        {
+                            imagensURL.Add(new BlingImagemURL { Link = imagem.Trim() });
+                            Console.WriteLine($"✅ Imagem da galeria adicionada: {imagem}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"❌ URL da imagem da galeria inválida: {imagem}");
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("⚠️ Galeria deserializada está vazia, tentando como string única");
+                    // Se falhar na deserialização como lista, tentar como string única
+                    var imagemUnica = galeriaImagens.value.ToString();
+                    if (!string.IsNullOrWhiteSpace(imagemUnica) && IsValidImageUrl(imagemUnica))
+                    {
+                        imagensURL.Add(new BlingImagemURL { Link = imagemUnica.Trim() });
+                        Console.WriteLine($"✅ Imagem única da galeria adicionada: {imagemUnica}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"❌ URL da imagem única inválida: {imagemUnica}");
                     }
                 }
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"❌ Erro ao processar galeria de imagens: {ex.Message}");
                 // Se falhar na deserialização, tentar como string única
                 var imagemUnica = galeriaImagens.value.ToString();
-                if (!string.IsNullOrEmpty(imagemUnica))
+                if (!string.IsNullOrWhiteSpace(imagemUnica) && IsValidImageUrl(imagemUnica))
                 {
-                    imagensURL.Add(new BlingImagemURL { Link = imagemUnica });
+                    imagensURL.Add(new BlingImagemURL { Link = imagemUnica.Trim() });
+                    Console.WriteLine($"✅ Imagem única da galeria (fallback) adicionada: {imagemUnica}");
+                }
+                else
+                {
+                    Console.WriteLine($"❌ URL da imagem única (fallback) inválida: {imagemUnica}");
                 }
             }
         }
+        else
+        {
+            Console.WriteLine("⚠️ Galeria de imagens (_external_gallery_images) não encontrada");
+        }
+
+        // Verificar se encontrou alguma imagem
+        if (!imagensURL.Any())
+        {
+            Console.WriteLine("❌ ERRO: Nenhuma imagem foi extraída do produto!");
+        }
+        else
+        {
+            Console.WriteLine($"✅ Total de imagens extraídas: {imagensURL.Count}");
+        }
 
         return imagensURL;
+    }
+
+    private static bool IsValidImageUrl(string url)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+            return false;
+            
+        // Verificar se é uma URL válida
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+            return false;
+            
+        // Verificar se é HTTP ou HTTPS
+        if (uri.Scheme != "http" && uri.Scheme != "https")
+            return false;
+            
+        // Verificar se tem extensão de imagem comum
+        var extension = Path.GetExtension(uri.AbsolutePath).ToLowerInvariant();
+        var validExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp" };
+        
+        return validExtensions.Contains(extension);
     }
 
     private static string ProcessarObservacoesAtributos(List<WooAttribute> attributes)
@@ -450,36 +761,4 @@ public static class BlingProcessor
         var eanAttribute = attributes.FirstOrDefault(a => a.id == 13);
         return !string.IsNullOrWhiteSpace(eanAttribute?.options) ? eanAttribute.options.Trim() : "";
     }
-}
-
-// Classes auxiliares para deserialização dos JSONs
-public class WordPressCategory
-{
-    public int id { get; set; }
-    public string name { get; set; } = "";
-}
-
-public class BlingCategory
-{
-    public long id { get; set; }
-    public string descricao { get; set; } = "";
-    public CategoriaPai categoriaPai { get; set; } = new();
-}
-
-public class CategoriaPai
-{
-    public long id { get; set; }
-}
-
-// Classes para deserializar resposta da API do Bling
-public class BlingProdutoResponse
-{
-    public BlingProdutoData? data { get; set; }
-}
-
-public class BlingProdutoData
-{
-    public long id { get; set; }
-    public object? variations { get; set; }
-    public List<string>? warnings { get; set; }
 }
