@@ -1,0 +1,232 @@
+[
+    {
+        "id": 3481213,
+        "nome": "Teste",
+        "situacao": 1
+    },
+    {
+        "id": 3481214,
+        "nome": "Altura da embalagem (cm)",
+        "situacao": 1
+    },
+    {
+        "id": 3481215,
+        "nome": "Bateria",
+        "situacao": 1
+    },
+    {
+        "id": 3481216,
+        "nome": "Biometria",
+        "situacao": 1
+    },
+    {
+        "id": 3481217,
+        "nome": "Câmera",
+        "situacao": 1
+    },
+    {
+        "id": 3481218,
+        "nome": "Caracteristicas Adicionais",
+        "situacao": 1
+    },
+    {
+        "id": 3481220,
+        "nome": "Carregador",
+        "situacao": 1
+    },
+    {
+        "id": 3481221,
+        "nome": "Cartão SIM",
+        "situacao": 1
+    },
+    {
+        "id": 3481224,
+        "nome": "Case Material",
+        "situacao": 1
+    },
+    {
+        "id": 3481225,
+        "nome": "Categoria",
+        "situacao": 1
+    },
+    {
+        "id": 3481226,
+        "nome": "Chipset",
+        "situacao": 1
+    },
+    {
+        "id": 3481227,
+        "nome": "Classificação Fiscal",
+        "situacao": 1
+    },
+    {
+        "id": 3481231,
+        "nome": "Código Anatel",
+        "situacao": 1
+    },
+    {
+        "id": 3481233,
+        "nome": "Código EAN",
+        "situacao": 1
+    },
+    {
+        "id": 3481235,
+        "nome": "Compatibilidade",
+        "situacao": 1
+    },
+    {
+        "id": 3481236,
+        "nome": "Condição",
+        "situacao": 1
+    },
+    {
+        "id": 3481237,
+        "nome": "Conteúdo da Embalagem",
+        "situacao": 1
+    },
+    {
+        "id": 3481239,
+        "nome": "Cor",
+        "situacao": 1
+    },
+    {
+        "id": 3481241,
+        "nome": "Description",
+        "situacao": 1
+    },
+    {
+        "id": 3481242,
+        "nome": "Dimensões do produto (cm)",
+        "situacao": 1
+    },
+    {
+        "id": 3481243,
+        "nome": "Fabricante",
+        "situacao": 1
+    },
+    {
+        "id": 3481245,
+        "nome": "Fonte de alimentação",
+        "situacao": 1
+    },
+    {
+        "id": 3481247,
+        "nome": "Garantia",
+        "situacao": 1
+    },
+    {
+        "id": 3481248,
+        "nome": "Largura da embalagem (cm)",
+        "situacao": 1
+    },
+    {
+        "id": 3481257,
+        "nome": "Lead Time",
+        "situacao": 1
+    },
+    {
+        "id": 3481260,
+        "nome": "Memória",
+        "situacao": 1
+    },
+    {
+        "id": 3481262,
+        "nome": "Memória RAM (MB)",
+        "situacao": 1
+    },
+    {
+        "id": 3481263,
+        "nome": "Microfone",
+        "situacao": 1
+    },
+    {
+        "id": 3481264,
+        "nome": "NFC",
+        "situacao": 1
+    },
+    {
+        "id": 3481265,
+        "nome": "Origem",
+        "situacao": 1
+    },
+    {
+        "id": 3481267,
+        "nome": "Peso Bruto (kg)",
+        "situacao": 1
+    },
+    {
+        "id": 3481269,
+        "nome": "Placa Gráfica",
+        "situacao": 1
+    },
+    {
+        "id": 3481270,
+        "nome": "Price",
+        "situacao": 1
+    },
+    {
+        "id": 3481271,
+        "nome": "Processador",
+        "situacao": 1
+    },
+    {
+        "id": 3481272,
+        "nome": "Product Name",
+        "situacao": 1
+    },
+    {
+        "id": 3481273,
+        "nome": "Profundidade da embalagem (cm)",
+        "situacao": 1
+    },
+    {
+        "id": 3481274,
+        "nome": "Rede",
+        "situacao": 1
+    },
+    {
+        "id": 3481275,
+        "nome": "Sistema Operacional",
+        "situacao": 1
+    },
+    {
+        "id": 3481277,
+        "nome": "SKU",
+        "situacao": 1
+    },
+    {
+        "id": 3481278,
+        "nome": "Storage",
+        "situacao": 1
+    },
+    {
+        "id": 3481279,
+        "nome": "Teclado",
+        "situacao": 1
+    },
+    {
+        "id": 3481280,
+        "nome": "Tela",
+        "situacao": 1
+    },
+    {
+        "id": 3481281,
+        "nome": "Touch",
+        "situacao": 1
+    },
+    {
+        "id": 3481282,
+        "nome": "Webcam",
+        "situacao": 1
+    },
+    {
+        "id": 3481283,
+        "nome": "WLAN",
+        "situacao": 1
+    },
+    {
+        "id": 3481284,
+        "nome": "Família",
+        "situacao": 1
+    }
+]

@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
+using eCommerce.Server.Helpers;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -644,14 +645,14 @@ public static class DataUtilsHP
                 return metaData;
             }
             
-            var cacheData = CacheManagerHP.LoadCache(cacheFile);
+            var cacheData = CacheManager.LoadCache(cacheFile);
             if (cacheData.ContainsKey(cleanSku))
             {
                 Console.WriteLine($"Produto encontrado no cache: {cleanSku}");
                 var productData = cacheData[cleanSku];
                 var productJson = JObject.FromObject(productData);
                 
-                // O CacheManagerHP.LoadCache retorna apenas o "data" da estrutura
+                // O CacheManager.LoadCache retorna apenas o "data" da estrutura
                 // Então productJson já é o "data" do cache
                 var dataNode = productJson["data"];
                 if (dataNode != null && dataNode.Type == JTokenType.Object)

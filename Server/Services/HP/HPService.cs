@@ -33,8 +33,9 @@ public class HPService
         var job = new JobFila
         {
             Id = objectId,
-            Tipo = TipoJob.Produtos,
             Status = StatusJob.Pendente,
+            Tipo = TipoJob.Produtos,
+            Fornecedor = FornecedorJob.HP,
             DataCriacao = DateTime.Now,
             CaminhoArquivoProduto = caminhoProduto,
             CaminhoArquivoPreco = caminhoPreco
@@ -51,6 +52,7 @@ public class HPService
             Id = job.IdString,
             Status = job.Status,
             Tipo = job.Tipo,
+            Fornecedor = job.Fornecedor,
             DataCriacao = job.DataCriacao,
             CaminhoArquivoProduto = job.CaminhoArquivoProduto,
             CaminhoArquivoPreco = job.CaminhoArquivoPreco,

@@ -18,11 +18,11 @@ public class JobController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult CriarJob([FromForm] IFormFile produto, [FromForm] IFormFile preco)
+    public IActionResult CriarJob([FromForm] IFormFile produto, [FromForm] IFormFile? preco)
     {
         var pasta = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
         var caminhoProduto = FileHelper.SaveFile(produto, pasta);
-        var caminhoPreco = FileHelper.SaveFile(preco, pasta);
+        var caminhoPreco = preco != null ? FileHelper.SaveFile(preco, pasta) : null; //Tratamento para caso não tenha preço
 
         using var db = new LiteDatabase("Filename=fila.db;Connection=shared");
         var job = new JobFila

@@ -13,6 +13,7 @@ public class JobFila
     
     public StatusJob Status { get; set; } = StatusJob.Pendente;
     public TipoJob Tipo { get; set; } = TipoJob.Produtos;
+    public FornecedorJob Fornecedor { get; set; }
     public DateTime DataCriacao { get; set; } = DateTime.Now;
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
     public string? CaminhoArquivoPreco { get; set; }
@@ -24,6 +25,7 @@ public class JobFilaResponse
     public string Id { get; set; } = string.Empty;
     public StatusJob Status { get; set; }
     public TipoJob Tipo { get; set; }
+    public FornecedorJob Fornecedor { get; set; }
     public DateTime DataCriacao { get; set; }
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
     public string? CaminhoArquivoPreco { get; set; }
@@ -43,4 +45,13 @@ public enum StatusJob {
     Processando,
     Concluido,
     Erro
+}
+
+//Enumerate para identificar o fornecedor do job
+public enum FornecedorJob{
+    HP,
+    Lenovo,
+    Bling,
+    Cisco,
+    Microware
 }

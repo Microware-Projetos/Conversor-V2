@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/app/eCommerce/Client/Pages/Lenovo/Lenovo.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGVub3ZvL0xlbm92by5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/app/eCommerce/Client/Pages/Microware/Microware.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWljcm93YXJlL01pY3Jvd2FyZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -55,6 +51,10 @@ build_metadata.AdditionalFiles.CssScope = b-krswt4g3zq
 [/app/eCommerce/Client/Pages/Jobs/Jobs.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSm9icy9Kb2JzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ttqwkbpfzq
+
+[/app/eCommerce/Client/Pages/Lenovo/Lenovo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGVub3ZvL0xlbm92by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-dkroreciua
 
 [/app/eCommerce/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=

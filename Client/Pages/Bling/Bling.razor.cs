@@ -135,4 +135,47 @@ partial class Bling
             StateHasChanged();
         }
     }
+
+    private async Task GerarNovoToken()
+    {
+        isLoading = true;
+        loadingMessage = "Descartando token atual...";
+        StateHasChanged();
+
+        var sucesso = await BlingService.DeletarToken();
+        if (sucesso)
+        {
+            tokenResponse = null;
+            mensagem = "Token anterior removido. Iniciando nova autorização...";
+            StateHasChanged();
+
+            try
+            {
+                var codigoAutorizacao = await BlingService.RedirecionarParaAutorizacao();
+                if (string.IsNullOrEmpty(codigoAutorizacao))
+                {
+                    throw new InvalidOperationException("Não foi possível obter o código de autorização. Verifique se a popup foi fechada corretamente.");
+                }
+                loadingMessage = "Obtendo novo token de acesso...";
+                StateHasChanged();
+                tokenResponse = await BlingService.TrocarCodigoPorToken(codigoAutorizacao);
+                if (tokenResponse == null || string.IsNullOrEmpty(tokenResponse.access_token))
+                {
+                    throw new InvalidOperationException("Falha ao obter novo token de acesso.");
+                }
+                mensagem = "Novo token obtido com sucesso!";
+            }
+            catch (Exception ex)
+            {
+                mensagem = $"Erro ao gerar novo token: {ex.Message}";
+            }
+        }
+        else
+        {
+            mensagem = "Erro ao remover o token atual.";
+        }
+        isLoading = false;
+        loadingMessage = string.Empty;
+        StateHasChanged();
+    }
 }

@@ -845,3 +845,4 @@
 /app/eCommerce/Client/obj/Debug/net7.0/refint/eCommerce.Client.dll
 /app/eCommerce/Client/obj/Debug/net7.0/eCommerce.Client.pdb
 /app/eCommerce/Client/obj/Debug/net7.0/ref/eCommerce.Client.dll
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Lenovo/Lenovo.razor.rz.scp.css

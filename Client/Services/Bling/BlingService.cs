@@ -259,4 +259,22 @@ public class BlingService
             throw new HttpRequestException($"Erro ao enviar produtos: {response.StatusCode}");
         }
     }
+
+    public async Task<bool> DeletarToken()
+    {
+        try
+        {
+            var response = await _http.DeleteAsync("api/bling/token");
+            if (response.IsSuccessStatusCode)
+            {
+                _currentToken = null;
+                return true;
+            }
+            return false;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }

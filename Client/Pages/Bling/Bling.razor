@@ -47,7 +47,15 @@
                                     <strong>Tipo:</strong> @tokenResponse.token_type
                                 </small>
                             </div>
+                            <div class="mt-2">
+                                <strong>Access Token:</strong>
+                                <pre style="word-break: break-all;">@tokenResponse.access_token</pre>
+                            </div>
                         </div>
+                        <button class="btn btn-warning mt-2" @onclick="GerarNovoToken" disabled="@isLoading">
+                            <i class="bi bi-arrow-clockwise me-2"></i>
+                            Gerar Novo Token (descartar atual)
+                        </button>
                     }
                 </div>
             </div>

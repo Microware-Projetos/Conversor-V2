@@ -7,6 +7,7 @@ using System.Text;
 using LiteDB;
 using WooAttribute = eCommerce.Shared.Models.Attribute;
 using System.Threading;
+using System.Net.Http;
 
 namespace eCommerce.Server.Processors.Bling;
 
@@ -15,6 +16,11 @@ public static class BlingProcessor
     private static List<WordPressCategory>? _wordPressCategories;
     private static List<BlingCategory>? _blingCategories;
     private static List<AttributeMap>? _attributeMaps;
+
+    // Dicionários globais para mapeamento
+    private static Dictionary<string, long> campoNomeParaId = CarregarCamposCustomizados();
+
+    private static HttpClient _httpClient = new HttpClient();
 
     public static async Task ProcessarProdutos(string loja, CancellationToken cancellationToken = default)
     {
@@ -79,7 +85,8 @@ public static class BlingProcessor
                         {
                             ImagensURL = ExtrairImagensDoProduto(produto.meta_data)
                         }
-                    }
+                    },
+                    CamposCustomizados = MontarCamposCustomizados(produto)
                 };
                 
                 // Verificar se o produto tem imagens antes de adicionar à lista
@@ -760,5 +767,33 @@ public static class BlingProcessor
         // Buscar o atributo com ID 13 (Código EAN)
         var eanAttribute = attributes.FirstOrDefault(a => a.id == 13);
         return !string.IsNullOrWhiteSpace(eanAttribute?.options) ? eanAttribute.options.Trim() : "";
+    }
+
+    private static Dictionary<string, long> CarregarCamposCustomizados()
+    {
+        var camposJson = File.ReadAllText("Maps/Bling/campos.json");
+        var camposBling = JsonConvert.DeserializeObject<List<BlingCampoInfo>>(camposJson);
+        return camposBling.ToDictionary(c => c.Nome, c => c.Id);
+    }
+
+    private static List<BlingCampoCustomizado> MontarCamposCustomizados(WooProduct produto)
+    {
+        var camposCustomizados = new List<BlingCampoCustomizado>();
+        foreach (var attribute in produto.attributes)
+        {
+            var attributeMap = _attributeMaps.FirstOrDefault(a => a.id == attribute.id);
+            if (attributeMap == null || string.IsNullOrWhiteSpace(attribute.options))
+                continue;
+            var nomeCampo = attributeMap.name;
+            if (campoNomeParaId.TryGetValue(nomeCampo, out var idCampo))
+            {
+                camposCustomizados.Add(new BlingCampoCustomizado
+                {
+                    Id = idCampo,
+                    Valor = attribute.options
+                });
+            }
+        }
+        return camposCustomizados;
     }
 }

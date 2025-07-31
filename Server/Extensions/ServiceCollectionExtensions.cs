@@ -5,6 +5,7 @@ using LiteDB;
 using eCommerce.Server.Services.Job;
 using eCommerce.Server.Services.Bling;
 using eCommerce.Server.Services.HP;
+using eCommerce.Server.Services.Lenovo;
 
 namespace eCommerce.Server.Extensions
 {
@@ -33,6 +34,7 @@ namespace eCommerce.Server.Extensions
             services.AddScoped<JobWorker>();
             services.AddScoped<BlingService>();
             services.AddScoped<HPService>();
+            services.AddScoped<LenovoService>();
 
             // HttpClient
             services.AddHttpClient();

@@ -70,3 +70,8 @@
 /app/eCommerce/Server/obj/Debug/net7.0/eCommerce.Server.genruntimeconfig.cache
 /app/eCommerce/Server/obj/Debug/net7.0/ref/eCommerce.Server.dll
 /app/eCommerce/Server/bin/Debug/net7.0/produtosHP.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Bling/campos.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/attributesLenovo.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/attributesWordpress.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/categoriesWordpress.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/map.json

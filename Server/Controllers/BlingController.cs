@@ -215,4 +215,19 @@ public class BlingController : ControllerBase
             return BadRequest($"Erro ao renovar token: {ex.Message}");
         }
     }
+
+    [HttpDelete("token")]
+    public IActionResult DeletarToken()
+    {
+        try
+        {
+            var tokenCollection = _db.GetCollection<BlingToken>("bling_tokens");
+            tokenCollection.DeleteAll();
+            return Ok("Token removido com sucesso.");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Erro ao remover token: {ex.Message}");
+        }
+    }
 } 

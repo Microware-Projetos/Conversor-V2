@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eCommerce.Shared.Models;
 using eCommerce.Server.Processors.HP;
 using eCommerce.Server.Processors.Bling;
+using eCommerce.Server.Processors.Lenovo;
 
 namespace eCommerce.Server.Services.Job;
 
@@ -42,7 +43,7 @@ public class JobWorker : BackgroundService
 
                     switch (job.Tipo)
                     {
-                        case TipoJob.Produtos:
+                        case TipoJob.Produtos when job.Fornecedor == FornecedorJob.HP:
                             // Verifica se o arquivo de preços foi fornecido para jobs HP
                             if (string.IsNullOrEmpty(job.CaminhoArquivoPreco))
                             {
@@ -52,6 +53,12 @@ public class JobWorker : BackgroundService
                             Console.WriteLine($"Processando job HP - Produto: {job.CaminhoArquivoProduto}, Preço: {job.CaminhoArquivoPreco}");
                             await HPProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, job.CaminhoArquivoPreco, combinedCts.Token);
                             break;
+
+                        case TipoJob.Produtos when job.Fornecedor == FornecedorJob.Lenovo:
+                            Console.WriteLine($"Processando job Lenovo - Produto: {job.CaminhoArquivoProduto}");
+                            await LenovoProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
+                            break;
+
                         case TipoJob.Bling:
                             await BlingProcessor.ProcessarProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;

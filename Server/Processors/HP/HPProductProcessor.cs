@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 using System.Threading;
+using eCommerce.Server.Helpers;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -15,6 +16,8 @@ public static class HPProductProcessor
 {
     public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos, CancellationToken cancellationToken = default)
     {
+        const string CHACHE_DIR = "Cache/HP";
+
         try
         {
 
@@ -36,23 +39,23 @@ public static class HPProductProcessor
             Console.WriteLine($"Arquivo de preços: {caminhoArquivoPrecos}");
             
             // Garante que o diretório de cache existe
-            CacheManagerHP.EnsureCacheDir();
+            CacheManager.EnsureCacheDir(CHACHE_DIR);
 
             // Buscar imagens
-            var images = await NormalizeUtis.BuscarImagens();
+            var images = await NormalizeUtisHP.BuscarImagens();
 
             // Buscar delivery
-            var delivery = await NormalizeUtis.BuscarDelivery();
+            var delivery = await NormalizeUtisHP.BuscarDelivery();
 
             // Normalizar valores
-            var normalizedFamily = NormalizeUtis.NormalizeValuesList("Familia");
-            var normalizedAnatel = NormalizeUtis.NormalizeValuesList("Anatel");
+            var normalizedFamily = NormalizeUtisHP.NormalizeValuesList("Familia");
+            var normalizedAnatel = NormalizeUtisHP.NormalizeValuesList("Anatel");
             
             var produtos = new List<WooProduct>();
             var listProdutos = new XLWorkbook(caminhoArquivoProdutos);
             var precosPorSku = ExcelProcessorHP.GetPrecosPorSku(caminhoArquivoPrecos);
             var leadtime = new Dictionary<float, string>
-             {
+            {
                 {0.04f, "importado"},
                 {0.18f, "importado"},
                 {0.07f, "local"},

@@ -85,6 +85,9 @@ public class BlingProduct
     
     [JsonProperty("dataAtualizacao")]
     public DateTime DataAtualizacao { get; set; } = DateTime.Now;
+    
+    [JsonProperty("camposCustomizados")]
+    public List<BlingCampoCustomizado>? CamposCustomizados { get; set; }
 }
 
 public class BlingCategoria
