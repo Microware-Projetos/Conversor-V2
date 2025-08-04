@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using eCommerce.Server.Helpers;
+using eCommerce.Server.Processors;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -18,7 +19,7 @@ public class DataProcessorHP
         sku = sku.Split('#')[0]; // Remove parte após #
         
         // Verifica cache primeiro
-        var cachedData = CacheManager.GetCachedData(sku, ATTRIBUTES_CACHE_FILE);
+        var cachedData = CacheManagerHP.GetCachedData(sku, ATTRIBUTES_CACHE_FILE);
         if (cachedData != null)
         {
             return cachedData;
@@ -38,7 +39,7 @@ public class DataProcessorHP
                 // Salva no cache
                 if (data != null)
                 {
-                    CacheManager.SaveToCache(sku, data, ATTRIBUTES_CACHE_FILE);
+                    CacheManagerHP.SaveToCache(sku, data, ATTRIBUTES_CACHE_FILE);
                 }
                 return data;
             }
@@ -56,7 +57,7 @@ public class DataProcessorHP
         sku = sku.Split('#')[0]; // Remove parte após #
         
         // Verifica cache primeiro
-        var cachedData = CacheManager.GetCachedData(sku, PRODUCT_CACHE_FILE);
+        var cachedData = CacheManagerHP.GetCachedData(sku, PRODUCT_CACHE_FILE);
         if (cachedData != null)
         {
             return cachedData;
@@ -98,7 +99,7 @@ public class DataProcessorHP
                 // Salva no cache
                 if (data != null)
                 {
-                    CacheManager.SaveToCache(sku, data, PRODUCT_CACHE_FILE);
+                    CacheManagerHP.SaveToCache(sku, data, PRODUCT_CACHE_FILE);
                 }
                 return data;
             }

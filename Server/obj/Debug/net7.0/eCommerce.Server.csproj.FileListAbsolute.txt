@@ -75,3 +75,5 @@
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/attributesWordpress.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/categoriesWordpress.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/map.json
+/app/eCommerce/Server/bin/Debug/net7.0/Cache/Lenovo/product_cache.json
+/app/eCommerce/Server/bin/Debug/net7.0/produtosLenovo.json

@@ -9,6 +9,7 @@ using System;
 using System.Threading.Tasks;
 using System.Threading;
 using eCommerce.Server.Helpers;
+using eCommerce.Server.Processors.HP;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -39,7 +40,7 @@ public static class HPProductProcessor
             Console.WriteLine($"Arquivo de preços: {caminhoArquivoPrecos}");
             
             // Garante que o diretório de cache existe
-            CacheManager.EnsureCacheDir(CHACHE_DIR);
+            CacheManagerHP.EnsureCacheDir(CHACHE_DIR);
 
             // Buscar imagens
             var images = await NormalizeUtisHP.BuscarImagens();

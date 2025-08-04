@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using eCommerce.Server.Helpers;
+using eCommerce.Server.Processors.Lenovo;
 
 namespace eCommerce.Server.Processors.Lenovo;
 
@@ -16,12 +17,14 @@ public class DataProcessorLenovo
     public static async Task<object?> GetProductBySKU(string sku)
     {
         // Garante que o diretório de cache existe
-        CacheManager.EnsureCacheDir(CACHE_DIR);
+        CacheManagerLenovo.EnsureCacheDir(CACHE_DIR);
 
         // Verifica cache primeiro
-        var cachedData = CacheManager.GetCachedData(sku, PRODUCT_CACHE_FILE);
+        var cachedData = CacheManagerLenovo.GetCachedData(sku, PRODUCT_CACHE_FILE);
+        Console.WriteLine($"Vendo se o retorno dentro do GetCachedData dentro do GetProductBySKU é válido: {cachedData}");
         if (cachedData != null)
         {
+            Console.WriteLine($"Pegando produto por SKU do Cache: {sku}");
             return cachedData;
         }
 
@@ -37,30 +40,33 @@ public class DataProcessorLenovo
             if(response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<object>(responseBody);
+                Console.WriteLine($"Resposta do body: {responseBody}");
+
+                var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+                Console.WriteLine($"Conversor para objeto: {data}");
                 
-                if(productData != null && productData.TryGetValue("code", out var codeObj) &&
+                if(data != null && data.TryGetValue("code", out var codeObj) &&
                     Convert.ToInt32(codeObj) == 0 &&
-                    productData.TryGetValue("msg", out var msgObj) &&
+                    data.TryGetValue("msg", out var msgObj) &&
                     msgObj?.ToString() == "No corresponding product found")
                 {
-                    CacheManager.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
+                    CacheManagerLenovo.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
                     return null;
                 }
 
-                CacheManager.SaveToCache(sku, data, PRODUCT_CACHE_FILE);
+                CacheManagerLenovo.SaveToCache(sku, data, PRODUCT_CACHE_FILE);
                 return data;
             }
             else
             {
-                CacheManager.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
+                CacheManagerLenovo.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
                 return null;
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Erro ao consultar SKU: {sku}: {ex.Message}");
-            CacheManager.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
+            CacheManagerLenovo.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
             return null;
         }
     }
