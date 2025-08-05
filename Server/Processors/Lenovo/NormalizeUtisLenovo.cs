@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ClosedXML.Excel;
 using eCommerce.Server.Helpers;
+using eCommerce.Shared.Models;
 using eCommerce.Server.Processors.Lenovo;
 
 namespace eCommerce.Server.Processors.Lenovo;
@@ -18,9 +21,33 @@ public static class NormalizeUtisLenovo
     private static readonly Dictionary<string, Dictionary<string, string>> _normalizedValuesCache = new();
 
     //TODO: Implementar BuscarImagens
-    public static async Task<List<object>> BuscarImagens()
+    public static async Task<List<Dictionary<string, object>>> BuscarImagens()
     {
-        return new List<object>();
+        Console.WriteLine("[INFO]: Buscando Imagens pelo eProdutos.");
+        string url = "https://eprodutos-integracao.microware.com.br/api/photos/allId";
+
+        try
+        {
+            Console.WriteLine("[INFO]: Pedindo response da url");
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"[ERRO]: Requisição falhou com status {response.StatusCode}");
+                return new List<Dictionary<string, object>>();
+            }
+
+            string json = await response.Content.ReadAsStringAsync();
+
+            var lista = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(json);
+
+            return lista ?? new List<Dictionary<string, object>>();
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERRO]: Exceção ao buscar imagens: {ex.Message}");
+            return new List<Dictionary<string, object>>();
+        } 
     }
 
     //TODO: Implementar BuscarDelivery

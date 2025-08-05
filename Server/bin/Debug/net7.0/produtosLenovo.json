@@ -109,7 +109,12 @@
         "visible": true
       }
     ],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f027b0ff6d81181139ddfe.png"
+      }
+    ],
     "dimensions": {
       "length": "20.0",
       "width": "28.7",
@@ -234,7 +239,12 @@
         "visible": true
       }
     ],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f027b0ff6d81181139ddfe.png"
+      }
+    ],
     "dimensions": {
       "length": "20.0",
       "width": "28.7",
@@ -279,7 +289,12 @@
         "visible": true
       }
     ],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67f027b0ff6d81181139ddfe.png"
+      }
+    ],
     "dimensions": {
       "length": "23.6",
       "width": "35.9",

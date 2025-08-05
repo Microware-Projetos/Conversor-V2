@@ -39,6 +39,7 @@ public static class LenovoProductProcessor
             CacheManagerLenovo.EnsureCacheDir(CHACHE_DIR);
 
             //TODO: Implementar NormalizeUtisLenovo BuscarImagens
+            var images = await NormalizeUtisLenovo.BuscarImagens();
 
             var deliveryInfo = await NormalizeUtisLenovo.BuscarDelivery();
             
@@ -153,8 +154,8 @@ public static class LenovoProductProcessor
                                     shipping_class = shippingClass,
                                     attributes = attributes,
                                     dimensions = DataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = new List<Category>{new Category{ id = 28}},
-                                    meta_data = new List<MetaData>()
+                                    categories = DataUtilsLenovo.ProcessCategories(linha),
+                                    meta_data = await DataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
                                 };
                                 
                                 produtos.Add(produto);

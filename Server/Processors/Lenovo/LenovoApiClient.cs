@@ -16,6 +16,7 @@ public class DataProcessorLenovo
 
     public static async Task<object?> GetProductBySKU(string sku)
     {
+        Console.WriteLine("[INFO]: Dentro de GetProductBySKU");
         // Garante que o diretório de cache existe
         CacheManagerLenovo.EnsureCacheDir(CACHE_DIR);
 
@@ -31,6 +32,7 @@ public class DataProcessorLenovo
         string hora = DateTime.Now.ToString("yyyyMMddHHmmss");
         
         // Se não estiver em cache, faz a chamada à API
+        Console.WriteLine("[INFO]: Produto fora do Cache, chamando API");
         var url = $"https://psref.lenovo.com/api/model/Info/SpecData?model_code={sku}&t={hora}";
         
         try
@@ -40,10 +42,10 @@ public class DataProcessorLenovo
             if(response.IsSuccessStatusCode)
             {
                 var responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Resposta do body: {responseBody}");
+                Console.WriteLine($"[INFO]: Resposta do body: {responseBody}");
 
                 var data = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-                Console.WriteLine($"Conversor para objeto: {data}");
+                Console.WriteLine($"[INFO]: Conversor para objeto: {data}");
                 
                 if(data != null && data.TryGetValue("code", out var codeObj) &&
                     Convert.ToInt32(codeObj) == 0 &&
@@ -65,7 +67,7 @@ public class DataProcessorLenovo
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Erro ao consultar SKU: {sku}: {ex.Message}");
+            Console.WriteLine($"[ERRO]: Erro ao consultar SKU: {sku}: {ex.Message}");
             CacheManagerLenovo.SaveToCache(sku, null, PRODUCT_CACHE_FILE);
             return null;
         }
