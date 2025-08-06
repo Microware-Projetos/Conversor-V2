@@ -352,5 +352,2834 @@
     ],
     "shipping_class": "local",
     "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "sku": "12LM0000BO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "price": "4007.76",
+    "regular_price": "4007.76",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i5",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 8GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "256GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "Windows 11 Pro, Portuguese (Brazil)",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "196804585420",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "196804585420",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I31",
+    "sku": "12LM0006BO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I31",
+    "price": "2517.08",
+    "regular_price": "2517.08",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i3",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 8GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "256GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "None",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635057",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635057",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "sku": "12LM0007BO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "price": "4007.76",
+    "regular_price": "4007.76",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i5",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 8GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "256GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "Windows 11 Pro, Portuguese (Brazil)",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635088",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635088",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "sku": "12LM0008BO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "price": "4484.88",
+    "regular_price": "4484.88",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i5",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 16GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "256GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "Windows 11 Pro, Portuguese (Brazil)",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635040",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635040",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "sku": "12LM0009BO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I51",
+    "price": "4505.91",
+    "regular_price": "4505.91",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i5",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 16GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "512GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "Windows 11 Pro, Portuguese (Brazil)",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635101",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197528635101",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC ThinkCentre neo 50q Gen 4 I31",
+    "sku": "12LM000JBO",
+    "short_description": "ThinkCentre neo 50q Gen 4",
+    "description": "Desktop TC ThinkCentre neo 50q Gen 4 I31",
+    "price": "3518.11",
+    "regular_price": "3518.11",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "69701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 33,
+        "options": "Intel Core i3",
+        "visible": true
+      },
+      {
+        "id": 31,
+        "options": "Integrated Intel UHD Graphics",
+        "visible": true
+      },
+      {
+        "id": 10,
+        "options": "Intel SoC Platform",
+        "visible": true
+      },
+      {
+        "id": 25,
+        "options": "1x 8GB",
+        "visible": true
+      },
+      {
+        "id": 39,
+        "options": "256GB",
+        "visible": true
+      },
+      {
+        "id": 36,
+        "options": "Integrated 100/1000M",
+        "visible": true
+      },
+      {
+        "id": 44,
+        "options": "Intel Wi-Fi 6 AX201, 11ax 2x2 + BT5.1",
+        "visible": true
+      },
+      {
+        "id": 27,
+        "options": "No microphone",
+        "visible": true
+      },
+      {
+        "id": 40,
+        "options": "USB Calliope Keyboard, Black, Portuguese (BR)",
+        "visible": true
+      },
+      {
+        "id": 37,
+        "options": "Windows 11 Pro, Portuguese (Brazil)",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197532297234",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "197532297234",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_01.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT1_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_01.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_02.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_03.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_04.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_05.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_06.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_07.png",
+          "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_50q_Gen_4/ThinkCentre_neo_50q_Gen_4_CT2_08.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "18.3",
+      "width": "17.9",
+      "height": "3.7"
+    },
+    "weight": "1.11",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A5P8500GE 16G 512G",
+    "sku": "12RR0002BO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A5P8500GE 16G 512G",
+    "price": "4957.19",
+    "regular_price": "4957.19",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198153516384",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198153516384",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e5d5be14dc12f6b266dc.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A3P8300GE 8G 256G",
+    "sku": "12RR000GBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A3P8300GE 8G 256G",
+    "price": "3060.6",
+    "regular_price": "3060.6",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627010",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627010",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A5P8500GE 8G 256G",
+    "sku": "12RR000HBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A5P8500GE 8G 256G",
+    "price": "4514.46",
+    "regular_price": "4514.46",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627027",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627027",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A5P8500GE 16G 256G",
+    "sku": "12RR000JBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A5P8500GE 16G 256G",
+    "price": "4853.61",
+    "regular_price": "4853.61",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627003",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627003",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A5P8500GE 16G 512G",
+    "sku": "12RR000KBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A5P8500GE 16G 512G",
+    "price": "4893.44",
+    "regular_price": "4893.44",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627034",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154627034",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A7P8700GE 16G 512G",
+    "sku": "12RR000LBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A7P8700GE 16G 512G",
+    "price": "5636.9",
+    "regular_price": "5636.9",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154626990",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154626990",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75q Gen 5 A3P8300GE 8G 256G",
+    "sku": "12RR000MBO",
+    "short_description": "ThinkCentre M75q Gen 5",
+    "description": "Desktop TC M75q Gen 5 A3P8300GE 8G 256G",
+    "price": "4360.35",
+    "regular_price": "4360.35",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154671891",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154671891",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A5P8500G 16G N W11",
+    "sku": "12T9000ABO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A5P8500G 16G N W11",
+    "price": "5783.9",
+    "regular_price": "5783.9",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198153576791",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198153576791",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A38300G 8G N W11P",
+    "sku": "12T9000EBO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A38300G 8G N W11P",
+    "price": "4487.26",
+    "regular_price": "4487.26",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642167",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642167",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A5P8500G 8G N W11P",
+    "sku": "12T9000FBO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A5P8500G 8G N W11P",
+    "price": "4699.4",
+    "regular_price": "4699.4",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642143",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642143",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A5P8500G 16G N W11",
+    "sku": "12T9000GBO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A5P8500G 16G N W11",
+    "price": "5284.97",
+    "regular_price": "5284.97",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642136",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642136",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A7P8700G 16G N W11",
+    "sku": "12T9000HBO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A7P8700G 16G N W11",
+    "price": "5840.33",
+    "regular_price": "5840.33",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642150",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642150",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M75s Gen 5 A7P8700G 16G N W11",
+    "sku": "12T9000JBO",
+    "short_description": "ThinkCentre M75s Gen 5",
+    "description": "Desktop TC M75s Gen 5 A7P8700G 16G N W11",
+    "price": "6026.77",
+    "regular_price": "6026.77",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642181",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198154642181",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I314100T 8G 256G",
+    "sku": "13E20000BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I314100T 8G 256G",
+    "price": "4354.8",
+    "regular_price": "4354.8",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157008335",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157008335",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I314100T 8G 256G W",
+    "sku": "13E20001BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I314100T 8G 256G W",
+    "price": "5277.61",
+    "regular_price": "5277.61",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157008342",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157008342",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I514400T 16G 256G",
+    "sku": "13E20002BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I514400T 16G 256G",
+    "price": "6314.45",
+    "regular_price": "6314.45",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049499",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049499",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I514400T 16G 512G",
+    "sku": "13E20003BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I514400T 16G 512G",
+    "price": "6437.84",
+    "regular_price": "6437.84",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049536",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049536",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I714700T 16G 512G",
+    "sku": "13E20004BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I714700T 16G 512G",
+    "price": "7986.6",
+    "regular_price": "7986.6",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049505",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049505",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I714700T 32GB 512G",
+    "sku": "13E20005BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I714700T 32GB 512G",
+    "price": "8503.1",
+    "regular_price": "8503.1",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049529",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049529",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I514400T 8G 256G W",
+    "sku": "13E20006BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I514400T 8G 256G W",
+    "price": "6013.77",
+    "regular_price": "6013.77",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049512",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049512",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 5 I514500T 16G 512G",
+    "sku": "13E20008BO",
+    "short_description": "ThinkCentre M70q Gen 5",
+    "description": "Desktop TC M70q Gen 5 I514500T 16G 512G",
+    "price": "6541.52",
+    "regular_price": "6541.52",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157624351",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157624351",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70s Gen 5 I514500 8G N W11P",
+    "sku": "13E30000BO",
+    "short_description": "ThinkCentre M70s Gen 5",
+    "description": "Desktop TC M70s Gen 5 I514500 8G N W11P",
+    "price": "6621.07",
+    "regular_price": "6621.07",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049413",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049413",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70s Gen 5 I514500 16G N W11P",
+    "sku": "13E30002BO",
+    "short_description": "ThinkCentre M70s Gen 5",
+    "description": "Desktop TC M70s Gen 5 I514500 16G N W11P",
+    "price": "7050.63",
+    "regular_price": "7050.63",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049444",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049444",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70s Gen 5 I514500 16G N W11P",
+    "sku": "13E30003BO",
+    "short_description": "ThinkCentre M70s Gen 5",
+    "description": "Desktop TC M70s Gen 5 I514500 16G N W11P",
+    "price": "7299.79",
+    "regular_price": "7299.79",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049406",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049406",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70s Gen 5 I714700 16G N W11P",
+    "sku": "13E30004BO",
+    "short_description": "ThinkCentre M70s Gen 5",
+    "description": "Desktop TC M70s Gen 5 I714700 16G N W11P",
+    "price": "8882.19",
+    "regular_price": "8882.19",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049468",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049468",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M90q Gen 5 I514500T 16G 256G",
+    "sku": "13E60000BO",
+    "short_description": "ThinkCentre M90q Gen 5",
+    "description": "Desktop TC M90q Gen 5 I514500T 16G 256G",
+    "price": "8294.86",
+    "regular_price": "8294.86",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049628",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049628",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M90q Gen 5 I514500T 16G 512G",
+    "sku": "13E60001BO",
+    "short_description": "ThinkCentre M90q Gen 5",
+    "description": "Desktop TC M90q Gen 5 I514500T 16G 512G",
+    "price": "8433.8",
+    "regular_price": "8433.8",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049604",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049604",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M90q Gen 5 I714700T 32GB 512G",
+    "sku": "13E60002BO",
+    "short_description": "ThinkCentre M90q Gen 5",
+    "description": "Desktop TC M90q Gen 5 I714700T 32GB 512G",
+    "price": "9741.1",
+    "regular_price": "9741.1",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049611",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157049611",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I514400 16G 256",
+    "sku": "13EJ0000BO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I514400 16G 256",
+    "price": "5391.65",
+    "regular_price": "5391.65",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949714",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949714",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I714700 16G 256",
+    "sku": "13EJ0001BO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I714700 16G 256",
+    "price": "6739.58",
+    "regular_price": "6739.58",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949752",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949752",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I714700 16G 512",
+    "sku": "13EJ0002BO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I714700 16G 512",
+    "price": "6891.36",
+    "regular_price": "6891.36",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949684",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949684",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I514400 16G 256",
+    "sku": "13EJ0005BO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I514400 16G 256",
+    "price": "4873.23",
+    "regular_price": "4873.23",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949707",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949707",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I514400 8G 256G",
+    "sku": "13EJ0009BO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I514400 8G 256G",
+    "price": "4649.22",
+    "regular_price": "4649.22",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949653",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949653",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I514400 16G 512",
+    "sku": "13EJ000ABO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I514400 16G 512",
+    "price": "5095.07",
+    "regular_price": "5095.07",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949660",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949660",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I714700 16G 512",
+    "sku": "13EJ000BBO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I714700 16G 512",
+    "price": "6237.16",
+    "regular_price": "6237.16",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949721",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949721",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I714700 16G 1T",
+    "sku": "13EJ000CBO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I714700 16G 1T",
+    "price": "7257.99",
+    "regular_price": "7257.99",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949622",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949622",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I314100 8G 256G",
+    "sku": "13EJ000DBO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I314100 8G 256G",
+    "price": "3123.48",
+    "regular_price": "3123.48",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949639",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949639",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I514400 8G 256G",
+    "sku": "13EJ000EBO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I514400 8G 256G",
+    "price": "3495.25",
+    "regular_price": "3495.25",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949677",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198156949677",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC neo 50s Gen 5 I314100 8G 256G",
+    "sku": "13EJ000GBO",
+    "short_description": "ThinkCentre neo 50s Gen 5",
+    "description": "Desktop TC neo 50s Gen 5 I314100 8G 256G",
+    "price": "4043.75",
+    "regular_price": "4043.75",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157624344",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157624344",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 4 I713700T 16G N W11",
+    "sku": "13FG0000BO",
+    "short_description": "ThinkCentre M70q Gen 4",
+    "description": "Desktop TC M70q Gen 4 I713700T 16G N W11",
+    "price": "6244.67",
+    "regular_price": "6244.67",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "069701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295926",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295926",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 4 I513400T 8G N W11P",
+    "sku": "13FG0001BO",
+    "short_description": "ThinkCentre M70q Gen 4",
+    "description": "Desktop TC M70q Gen 4 I513400T 8G N W11P",
+    "price": "5192.48",
+    "regular_price": "5192.48",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "069701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295933",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295933",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Desktop TC M70q Gen 4 I313100T 8G N W11P",
+    "sku": "13FG0004BO",
+    "short_description": "ThinkCentre M70q Gen 4",
+    "description": "Desktop TC M70q Gen 4 I313100T 8G N W11P",
+    "price": "3576.12",
+    "regular_price": "3576.12",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 12,
+        "options": "069701804423",
+        "visible": true
+      },
+      {
+        "id": 29,
+        "options": "LOCAL",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295964",
+        "visible": true
+      },
+      {
+        "id": 13,
+        "options": "198157295964",
+        "visible": true
+      },
+      {
+        "id": 45,
+        "options": "Lenovo",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "2.1",
+      "width": "2.1",
+      "height": "2.1"
+    },
+    "weight": "1.0",
+    "categories": [
+      {
+        "id": 21
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
   }
 ]

@@ -642,24 +642,11 @@ public static class DataUtilsLenovo
         return metaData;
     }
 
-    private static string GetDefaultPhoto(List<Category> categories)
-    {
-
-        foreach (var category in categories)
-        {
-            if (DEFAULT_PHOTOS.TryGetValue(category.id, out var photoUrl))
-            {
-                return photoUrl;
-            }
-        }
-
-        return DEFAULT_PHOTOS[17];
-    }
-
-
-
     private static async Task<List<MetaData>> FindApiImages(IXLRow product, object productData)
     {
+        var categories = DataUtilsLenovo.ProcessCategories(product);
+        var defaultPhoto = GetDefaultPhoto(categories);
+
         if (productData == null)
         {
             Console.WriteLine("[INFO]: Product Data é null");
@@ -698,7 +685,7 @@ public static class DataUtilsLenovo
                         Console.WriteLine("[INFO]: Nenhuma imagem retornada pela API.");
                         return new List<MetaData>
                         {
-                            new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[17] }
+                            new MetaData { key = "_external_image_url", value = defaultPhoto }
                         };
                     }
 
@@ -725,23 +712,23 @@ public static class DataUtilsLenovo
             }
             
             Console.WriteLine("[INFO]: Retornando vazio sem entrar em nada!");
-            
             return new List<MetaData>
             {
-                new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[17] }
+                new MetaData { key = "_external_image_url", value = defaultPhoto }
             };
         }
 
         try
         {
             var metaData = new List<MetaData>();
+            
 
             if (productData is not JObject productJObj)
             {
                 Console.WriteLine("[INFO]: Product Data não é um JObject");
                 return new List<MetaData>
                 { 
-                    new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[17] }
+                    new MetaData { key = "_external_image_url", value = defaultPhoto }
                 };
             }
 
@@ -752,14 +739,14 @@ public static class DataUtilsLenovo
 
             var imageUrls = imageUrlsToken?.ToObject<List<string>>() ?? new List<string>();
 
-            Console.WriteLine($"[DEBUG]: {imageUrls.Count} imagens encontradas no cache.");
+            Console.WriteLine($"[DEBUG]: {imageUrls.Count} imagens encontradas no cache.\n\n --------------- \n\n");
 
             if (!imageUrls.Any())
             {
                 Console.WriteLine("[INFO]: Nenhuma imagem no cache. Usando imagem padrão.");
                 return new List<MetaData>
                 {
-                    new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[17] }
+                    new MetaData { key = "_external_image_url", value = defaultPhoto }
                 };
             }
 
@@ -785,8 +772,22 @@ public static class DataUtilsLenovo
             Console.WriteLine($"[ERRO]: Falha ao processar imagens do cache: {ex.Message}");
             return new List<MetaData>
             {
-                new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[17] }
+                new MetaData { key = "_external_image_url", value = defaultPhoto }
             };
         }
+    }
+
+    private static string GetDefaultPhoto(List<Category> categories)
+    {
+
+        foreach (var category in categories)
+        {
+            if (DEFAULT_PHOTOS.TryGetValue(category.id, out var photoUrl))
+            {
+                return photoUrl;
+            }
+        }
+
+        return DEFAULT_PHOTOS[17];
     }
 }

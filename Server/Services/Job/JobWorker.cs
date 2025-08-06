@@ -55,7 +55,7 @@ public class JobWorker : BackgroundService
                             break;
 
                         case TipoJob.Produtos when job.Fornecedor == FornecedorJob.Lenovo:
-                            Console.WriteLine($"Processando job Lenovo - Produto: {job.CaminhoArquivoProduto}");
+                            Console.WriteLine($"\n[INFO]: Processando job Lenovo - Produto: {job.CaminhoArquivoProduto}");
                             await LenovoProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
 
@@ -123,7 +123,7 @@ public class JobWorker : BackgroundService
             if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto) && File.Exists(job.CaminhoArquivoProduto))
             {
                 File.Delete(job.CaminhoArquivoProduto);
-                Console.WriteLine($"Arquivo de produtos removido: {job.CaminhoArquivoProduto}");
+                Console.WriteLine($"[FINISH]: Arquivo de produtos removido: {job.CaminhoArquivoProduto}");
             }
             
             // Limpar arquivo de preços (se existir)

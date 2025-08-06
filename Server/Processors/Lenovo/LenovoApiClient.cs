@@ -22,10 +22,10 @@ public class DataProcessorLenovo
 
         // Verifica cache primeiro
         var cachedData = CacheManagerLenovo.GetCachedData(sku, PRODUCT_CACHE_FILE);
-        Console.WriteLine($"Vendo se o retorno dentro do GetCachedData dentro do GetProductBySKU é válido: {cachedData}");
+        //Console.WriteLine($"Vendo se o retorno dentro do GetCachedData dentro do GetProductBySKU é válido: {cachedData}");
         if (cachedData != null)
         {
-            Console.WriteLine($"Pegando produto por SKU do Cache: {sku}");
+            Console.WriteLine($"[INFO]: Pegando produto por SKU do Cache: {sku}");
             return cachedData;
         }
 

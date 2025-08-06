@@ -78,12 +78,12 @@ public static class NormalizeUtisLenovo
 
     public static Dictionary<string, string> NormalizeValuesList(string value)
     {
-        Console.WriteLine($"\nIniciando normalização de valores para: {value}");
+        Console.WriteLine($"\n[INFO]: Iniciando normalização de valores para: {value}");
 
         // Verifica se o valor já está no cache
         if (_normalizedValuesCache.ContainsKey(value))
         {
-            Console.WriteLine($"Valores de {value} encontrados no cache");
+            Console.WriteLine($"[INFO]: Valores de {value} encontrados no cache");
             return _normalizedValuesCache[value];
         }
 
@@ -92,46 +92,69 @@ public static class NormalizeUtisLenovo
         try
         {
             var request = _httpClient.GetAsync("https://eprodutos-integracao.microware.com.br/api/normalize-values").Result;
-            Console.WriteLine($"Status da resposta da API: {(int)request.StatusCode}");
+            Console.WriteLine($"[INFO]: Status da resposta da API: {(int)request.StatusCode}");
             
             if (request.IsSuccessStatusCode)
             {
-                Console.WriteLine("Resposta recebida da API, tentando processar...");
+                Console.WriteLine("[INFO]: Resposta recebida da API, tentando processar...");
                 try
                 {
                     // Tenta processar a resposta em partes menores
                     var responseText = request.Content.ReadAsStringAsync().Result;
                     if (string.IsNullOrWhiteSpace(responseText))
                     {
-                        Console.WriteLine("Resposta da API está vazia");
+                        Console.WriteLine("[ERRO]: Resposta da API está vazia");
                         normalizeValuesList = new Dictionary<string, string>();
                     }
                     else
                     {
-                        Console.WriteLine($"Tamanho da resposta: {responseText.Length} caracteres");
-                        var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseText);
+                        Console.WriteLine($"[INFO]: Tamanho da resposta: {responseText.Length} caracteres");
+                        var responseData = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(responseText);
 
                         foreach (var item in responseData!)
                         {
-                            if (item.Value is Dictionary<string, object> itemDict && 
-                                itemDict.TryGetValue("column", out var columnObj) && 
+                            var jsonDebugPath = "/app/eCommerce/Server/Uploads/debug.json";
+                            File.WriteAllText(jsonDebugPath, JsonConvert.SerializeObject(item, Formatting.Indented));
+                            Console.WriteLine($"[DEBUG]: Item salvo em: {jsonDebugPath}");
+                            //Console.WriteLine($"[DEBUG]: item: {JsonConvert.SerializeObject(item, Formatting.Indented)}");
+
+                            if (item.TryGetValue("column", out var columnObj) && 
                                 columnObj?.ToString() == value)
                             {
-                                if (itemDict.TryGetValue("fromTo", out var fromToObj) && 
-                                    fromToObj is Dictionary<string, object> fromToList)
-                                {
-                                    foreach (var pair in fromToList)
-                                    {
-                                        normalizeValuesList[pair.Key] = pair.Value?.ToString() ?? "";
-                                    }
+                                Console.WriteLine("[DEBUG]: Match de coluna encontrado!");
 
-                                    //Salva no cache persistente
-                                    CacheManagerLenovo.SaveToCache(value, normalizeValuesList, CACHE_FILE);
-                                    return normalizeValuesList;
+                                if (item.TryGetValue("from_to", out var fromToObj))
+                                {
+                                    Console.WriteLine($"[DEBUG]: from_to encontrado! Tipo: {fromToObj?.GetType().FullName}");
+
+                                    Dictionary<string, object>? fromToDict = null;
+
+                                    if (fromToObj is JObject jObj)
+                                        fromToDict = jObj.ToObject<Dictionary<string, object>>();
+                                    else if (fromToObj is Dictionary<string, object> dict)
+                                        fromToDict = dict;
+                                    else
+                                        Console.WriteLine("[DEBUG]: Tipo de from_to não tratado");
+
+                                    if (fromToDict != null)
+                                    {
+                                        foreach (var pair in fromToDict)
+                                        {
+                                            Console.WriteLine($"[DEBUG]: Normalizado: {pair.Key} => {pair.Value}");
+                                            normalizeValuesList[pair.Key] = pair.Value?.ToString() ?? "";
+                                        }
+
+                                        CacheManagerLenovo.SaveToCache(value, normalizeValuesList, CACHE_FILE);
+                                        return normalizeValuesList;
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("[DEBUG]: Campo 'fromTo' não encontrado");
                                 }
                             }
                         }
-                        Console.WriteLine("Nenhum item correspondente encontrado na resposta da API.");
+                        Console.WriteLine("[ERRO]: Nenhum item correspondente encontrado na resposta da API.");
                     }
                 }
                 catch (Exception ex)

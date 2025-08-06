@@ -70,8 +70,8 @@ public class CacheManagerLenovo
         var cacheData = LoadCache(cacheFile);
         if (cacheData.ContainsKey(sku))
         {
-            Console.WriteLine($"Usando cache para: {sku}");
-            Console.WriteLine($"Retorno do GetCachedData: {cacheData[sku]}");
+            Console.WriteLine($"[INFO]: Usando cache para: {sku}");
+            //Console.WriteLine($"Retorno do GetCachedData: {cacheData[sku]}");
             return cacheData[sku];
         }
         return null;
