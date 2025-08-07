@@ -69,6 +69,7 @@ public static class DataUtilsLenovo
             Console.WriteLine("Produto não encontrado na API Lenovo");
             return "1.0";
         }
+        
         try
         {
             Dictionary<string, object> productDict = null;

@@ -46,17 +46,7 @@ public class CacheManagerLenovo
     {
         try
         {
-            var cacheEntries = new Dictionary<string, CacheEntry>();
-            foreach (var kvp in cacheData)
-            {
-                cacheEntries[kvp.Key] = new CacheEntry
-                {
-                    Data = kvp.Value,
-                    Timestamp = DateTime.Now.ToString("O")
-                };
-            }
-            
-            var json = JsonConvert.SerializeObject(cacheEntries, Formatting.Indented);
+            var json = JsonConvert.SerializeObject(cacheData, Formatting.Indented);
             File.WriteAllText(cacheFile, json);
         }
         catch (Exception ex)
@@ -67,11 +57,12 @@ public class CacheManagerLenovo
     
     public static object? GetCachedData(string sku, string cacheFile)
     {
+        Console.WriteLine("[INFO]: Dentro de GetCachedData");
         var cacheData = LoadCache(cacheFile);
         if (cacheData.ContainsKey(sku))
         {
             Console.WriteLine($"[INFO]: Usando cache para: {sku}");
-            //Console.WriteLine($"Retorno do GetCachedData: {cacheData[sku]}");
+            //Console.WriteLine($"[INFO]: Retorno do GetCachedData: {cacheData[sku]}");
             return cacheData[sku];
         }
         return null;
@@ -84,9 +75,4 @@ public class CacheManagerLenovo
         SaveCache(cacheFile, cacheData);
     }
     
-    public class CacheEntry
-    {
-        public object? Data { get; set; }
-        public string? Timestamp { get; set; }
-    }
 } 

@@ -113,10 +113,12 @@ public static class NormalizeUtisLenovo
 
                         foreach (var item in responseData!)
                         {
+                            /*
                             var jsonDebugPath = "/app/eCommerce/Server/Uploads/debug.json";
-                            File.WriteAllText(jsonDebugPath, JsonConvert.SerializeObject(item, Formatting.Indented));
+                            File.WriteAllText(jsonDebugPath, JsonConvert.SerializeObject(item, Formatting.Indented)); //APAGAR ISSO DEPOIS
                             Console.WriteLine($"[DEBUG]: Item salvo em: {jsonDebugPath}");
-                            //Console.WriteLine($"[DEBUG]: item: {JsonConvert.SerializeObject(item, Formatting.Indented)}");
+                            Console.WriteLine($"[DEBUG]: item: {JsonConvert.SerializeObject(item, Formatting.Indented)}");
+                            */
 
                             if (item.TryGetValue("column", out var columnObj) && 
                                 columnObj?.ToString() == value)
