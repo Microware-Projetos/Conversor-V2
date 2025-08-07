@@ -5,6 +5,7 @@ using LiteDB;
 using eCommerce.Server.Services.Job;
 using eCommerce.Server.Services.Bling;
 using eCommerce.Server.Services.HP;
+using eCommerce.Server.Services.Lenovo;
 using eCommerce.Server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);

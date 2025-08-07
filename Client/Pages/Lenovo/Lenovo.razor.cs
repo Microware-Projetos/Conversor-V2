@@ -93,16 +93,17 @@ public partial class Lenovo : ComponentBase
     private async Task EnviarProdutos()
     {
         Console.WriteLine("Enviando Produtos");
-        var job = await _lenovoService.EnviarProdutos(arquivoProdutos!); // - Verificar se é necessário enviar o arquivo de precos
+        var job = await _lenovoService.EnviarProdutos(arquivoProdutos!);
         mensagem = $"Produtos enviados com sucesso! Job ID: {job.Id}";
         StateHasChanged();
     }
-    private Task EnviarCarePack()
+    private async Task EnviarCarePack()
     {
         // TODO: Implementar chamada de API para Care Pack usando arquivoProdutos
         Console.WriteLine("Enviando Care Pack");
-        mensagem = "Funcionalidade Care Pack ainda não implementada.";
-        return Task.CompletedTask;
+        var job = await _lenovoService.EnviarCarePack(arquivoProdutos!);
+        mensagem = $"Produtos enviados com sucesso! Job ID: {job.Id}";
+        StateHasChanged();
     }
 
 

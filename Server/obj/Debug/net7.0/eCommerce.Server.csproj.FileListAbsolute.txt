@@ -78,3 +78,4 @@
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/Lenovo/product_cache.json
 /app/eCommerce/Server/bin/Debug/net7.0/normalized_values_cache.json
 /app/eCommerce/Server/bin/Debug/net7.0/produtosLenovo.json
+/app/eCommerce/Server/bin/Debug/net7.0/carepackLenovo.json

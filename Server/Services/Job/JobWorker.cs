@@ -58,6 +58,11 @@ public class JobWorker : BackgroundService
                             Console.WriteLine($"\n[INFO]: Processando job Lenovo - Produto: {job.CaminhoArquivoProduto}");
                             await LenovoProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
+                        
+                        case TipoJob.CarePack when job.Fornecedor == FornecedorJob.Lenovo:
+                            Console.WriteLine($"\n[INFO]: Processando job Lenovo - CarePack: {job.CaminhoArquivoProduto}");
+                            await LenovoCarePackProcessor.ProcessarListaCarePack(job.CaminhoArquivoProduto, combinedCts.Token);
+                            break;
 
                         case TipoJob.Bling:
                             await BlingProcessor.ProcessarProdutos(job.CaminhoArquivoProduto, combinedCts.Token);

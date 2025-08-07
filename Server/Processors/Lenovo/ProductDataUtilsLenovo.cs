@@ -17,7 +17,7 @@ using eCommerce.Shared.Models;
 
 namespace eCommerce.Server.Processors.Lenovo;
 
-public static class DataUtilsLenovo
+public static class ProductDataUtilsLenovo
 {
     private static readonly string CATEGORIES_PATH_FILE ="/app/eCommerce/Server/Maps/Lenovo/categoriesWordpress.json";
     private static readonly HttpClient _httpClient = new HttpClient();
@@ -614,7 +614,7 @@ public static class DataUtilsLenovo
 
         if (!imageUrls.Any())
         {
-            var categories = DataUtilsLenovo.ProcessCategories(product);
+            var categories = ProductDataUtilsLenovo.ProcessCategories(product);
             var defaultPhoto = GetDefaultPhoto(categories);
             metaData.Add(new MetaData
             {
@@ -645,7 +645,7 @@ public static class DataUtilsLenovo
 
     private static async Task<List<MetaData>> FindApiImages(IXLRow product, object productData)
     {
-        var categories = DataUtilsLenovo.ProcessCategories(product);
+        var categories = ProductDataUtilsLenovo.ProcessCategories(product);
         var defaultPhoto = GetDefaultPhoto(categories);
 
         if (productData == null)
