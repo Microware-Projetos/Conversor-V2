@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 using eCommerce.Server.Helpers;
 using eCommerce.Shared.Models;
 
-namespace eCommerce.Server.Processors.Lenovo;
+namespace eCommerce.Server.Processors.Lenovo.Helpers;
 
 public static class ProductDataUtilsLenovo
 {

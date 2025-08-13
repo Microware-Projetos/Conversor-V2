@@ -1,5 +1,49 @@
 [
   {
+    "name": "Garantia 3 p/ 4 anos (OS)",
+    "sku": "5WS1C33183",
+    "short_description": "Garantia 3 p/ 4 anos (OS)",
+    "description": "Garantia 3 p/ 4 anos (OS)",
+    "price": "267",
+    "regular_price": "267",
+    "stock_quantity": "10",
+    "attributes": [
+      {
+        "id": 550,
+        "options": "Manutenção",
+        "visible": true
+      },
+      {
+        "id": 14,
+        "options": "DOCKSTATION",
+        "visible": true
+      },
+      {
+        "id": 9,
+        "options": "Serviço",
+        "visible": true
+      }
+    ],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+      }
+    ],
+    "dimensions": {
+      "length": "0",
+      "width": "0",
+      "height": "0"
+    },
+    "weight": "0",
+    "categories": [
+      {
+        "id": 33
+      }
+    ],
+    "manage_stock": true
+  },
+  {
     "name": "Garantia 3 p/ 5 anos (OS)",
     "sku": "5WS1B64727",
     "short_description": "Garantia 3 p/ 5 anos (OS)",

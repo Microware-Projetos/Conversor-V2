@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
+using eCommerce.Server.Processors.HP.Helpers;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -139,9 +140,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -152,7 +153,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -235,9 +236,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -248,7 +249,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -328,9 +329,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -341,7 +342,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -420,9 +421,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -433,7 +434,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -511,9 +512,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -524,7 +525,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -596,9 +597,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -609,7 +610,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,
@@ -695,9 +696,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = DataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
 
-                            var processedDimensions = DataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
+                            var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
                             {
@@ -708,7 +709,7 @@ public static class HPProductProcessor
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
-                                weight = DataUtilsHP.ProcessWeight(weight, product_attributesAPI),
+                                weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
                                 shipping_class = lead,
                                 attributes = attributes,

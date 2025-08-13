@@ -50,8 +50,18 @@ public class JobWorker : BackgroundService
                                 throw new InvalidOperationException("Arquivo de preços é obrigatório para processamento de produtos HP");
                             }
                             
-                            Console.WriteLine($"Processando job HP - Produto: {job.CaminhoArquivoProduto}, Preço: {job.CaminhoArquivoPreco}");
+                            Console.WriteLine($"[INFO]: Processando job HP - Produto: {job.CaminhoArquivoProduto}, Preço: {job.CaminhoArquivoPreco}");
                             await HPProductProcessor.ProcessarListasProdutos(job.CaminhoArquivoProduto, job.CaminhoArquivoPreco, combinedCts.Token);
+                            break;
+
+                        case TipoJob.CarePack when job.Fornecedor == FornecedorJob.HP:
+                            Console.WriteLine($"\n[INFO]: Processando job HP - CarePack: {job.CaminhoArquivoProduto}");
+                            await HPCarePackProcessor.ProcessarListaCarePack(job.CaminhoArquivoProduto, combinedCts.Token);
+                            break;
+                        
+                        case TipoJob.Plotter when job.Fornecedor == FornecedorJob.HP:
+                            Console.WriteLine($"\n[INFO]: Processando job HP - Plotter: {job.CaminhoArquivoProduto}");
+                            await HPPlotterProcessor.ProcessarListaPlotter(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
 
                         case TipoJob.Produtos when job.Fornecedor == FornecedorJob.Lenovo:

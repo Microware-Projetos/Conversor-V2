@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.Lenovo;
+using eCommerce.Server.Processors.Lenovo.Helpers;
 
 namespace eCommerce.Server.Processors.Lenovo;
 
@@ -128,8 +129,14 @@ public static class LenovoProductProcessor
                                 var productData = await DataProcessorLenovo.GetProductBySKU(sku);
 
                                 // Verifica se o início do nome do produto é NB e substitui por Notebook
-                                if (productName.StartsWith("NB"))
-                                    productName = productName.Replace("NB", "Notebook");
+                                if (productName.StartsWith("NBLN") || productName.StartsWith("NB"))
+                                {
+                                    if(productName.StartsWith("NBLN"))
+                                        productName = productName.Replace("NBLN", "Notebook");
+                                    else
+                                        productName = productName.Replace("NB", "Notebook");
+
+                                }
 
                                 // Verifica se o campo PART_ORIGIN é IMPORTED e se não for, define como local
                                 if (linha.Cell(7).Value.ToString() != "IMPORTED")

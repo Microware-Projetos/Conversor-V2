@@ -30,4 +30,24 @@ public class HPController : ControllerBase
         return Ok(job);
     }
 
+    [HttpPost("carepack")]
+    public async Task<IActionResult> EnviarCarePack([FromForm] IFormFile arquivoProdutos)
+    {
+        var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        var caminhoProdutos = FileHelper.SaveFile(arquivoProdutos, pastaUploads);
+        
+        var job = await _hpService.EnviarCarePack(arquivoProdutos);
+        return Ok(job);
+    }
+
+    [HttpPost("plotter")]
+    public async Task<IActionResult> EnviarPlotter([FromForm] IFormFile arquivoProdutos)
+    {
+        var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        var caminhoProdutos = FileHelper.SaveFile(arquivoProdutos, pastaUploads);
+        
+        var job = await _hpService.EnviarPlotter(arquivoProdutos);
+        return Ok(job);
+    }
+
 }

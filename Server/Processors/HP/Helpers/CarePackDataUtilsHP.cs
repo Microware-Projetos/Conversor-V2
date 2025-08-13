@@ -13,11 +13,11 @@ using WooAttribute = eCommerce.Shared.Models.Attribute;
 using eCommerce.Server.Helpers;
 using eCommerce.Shared.Models;
 
-namespace eCommerce.Server.Processors.Lenovo;
+namespace eCommerce.Server.Processors.HP.Helpers;
 
-public static class CarePackDataUtilsLenovo
+public static class CarePackDataUtilsHP
 {
-    private static readonly string CATEGORIES_PATH_FILE ="/app/eCommerce/Server/Maps/Lenovo/categoriesWordpress.json";
+    private static readonly string CATEGORIES_PATH_FILE ="/app/eCommerce/Server/Maps/HP/categoriesWordpress.json";
     
     public static List<MetaData> ProcessPhotos()
     {
@@ -25,7 +25,7 @@ public static class CarePackDataUtilsLenovo
         var metaData = new MetaData()
         {
             key = "_external_image_url",
-            value = "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png"
+            value = "https://eprodutos-integracao.microware.com.br/api/photos/image/682c799e253b92080f3ebda5.jpeg"
         };
 
         return new List<MetaData>{ metaData };
@@ -53,12 +53,6 @@ public static class CarePackDataUtilsLenovo
         Console.WriteLine("[INFO]: Processando atributos");
         var attributes = new List<WooAttribute>
         {
-            new WooAttribute
-            {
-                id = 550,
-                options = product.Cell(6).Value.ToString(),
-                visible = true
-            },
             new WooAttribute
             {
                 id = 14,

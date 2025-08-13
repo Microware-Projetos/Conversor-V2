@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors;
 
-namespace eCommerce.Server.Processors.HP;
+namespace eCommerce.Server.Processors.HP.Helpers;
 
 public class DataProcessorHP
 {

@@ -90621,5 +90621,3127 @@
       "ModelURL": "https://psref.lenovo.com/Detail/ThinkVision/ThinkVision_P24QD_40?M=64B1GAR1US",
       "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkVision/ThinkVision_P24QD_40/CompressedimageForMobileShare/ThinkVision_P24QD_40_CT1_01.png"
     }
-  }
+  },
+  "13DJ000CBO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i5-13420H, 8C (4P + 4E) / 12T, P-core 2.1 / 4.6GHz, E-core 1.5 / 3.4GHz, 12MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 16GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "512GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 Pro, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ000CBO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271341964"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-16"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ000CBO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "13DJ000EBO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i5-13420H, 8C (4P + 4E) / 12T, P-core 2.1 / 4.6GHz, E-core 1.5 / 3.4GHz, 12MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 8GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 Home, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ000EBO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271537220"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-25"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ000EBO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "13DJ000HBO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i7-13620H, 10C (6P + 4E) / 16T, P-core 2.4 / 4.9GHz, E-core 1.8 / 3.6GHz, 24MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 16GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "512GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg;"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 Home, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ000HBO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271537213"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-25"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ000HBO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "13DJ0004BO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i5-13420H, 8C (4P + 4E) / 12T, P-core 2.1 / 4.6GHz, E-core 1.5 / 3.4GHz, 12MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 8GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ0004BO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "198156948212"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-03-18"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ0004BO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "13DJ000DBO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i7-13620H, 10C (6P + 4E) / 16T, P-core 2.4 / 4.9GHz, E-core 1.8 / 3.6GHz, 24MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 16GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "512GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 Pro, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ000DBO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271341971"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-16"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ000DBO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "13DJ0007BO": {
+    "code": 1,
+    "data": {
+      "ProductID": 2717,
+      "ProductName": "ThinkCentre neo 30s Gen 5",
+      "ProductKey": "ThinkCentre_neo_30s_Gen_5",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core i5-13420H, 8C (4P + 4E) / 12T, P-core 2.1 / 4.6GHz, E-core 1.5 / 3.4GHz, 12MB"
+          ]
+        },
+        {
+          "feature_note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "name": "Graphics",
+          "note": [
+            "The information of integrated graphics are not applicable for the models with processor which has no integrated graphics inside (for the details, please refer to processor section)."
+          ],
+          "content": [
+            "Integrated Intel&reg; UHD Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "1x 8GB SO-DIMM DDR5-5200"
+          ]
+        },
+        {
+          "name": "Memory Slots",
+          "note": [],
+          "content": [
+            "Two DDR5 SO-DIMM slots, dual-channel capable"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "name": "Max Memory",
+          "note": [
+            "The max memory is based on the test results with current Lenovo memory offerings."
+          ],
+          "content": [
+            "Up to 64GB DDR5-5200"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal"
+          ]
+        },
+        {
+          "feature_note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "name": "Max Storage Support",
+          "note": [
+            "The max capacity of each disk type is based on the test results with current Lenovo storage offerings."
+          ],
+          "content": [
+            "Up to two drives, 2x M.2 SSD\n• M.2 SSD up to 1TB each"
+          ]
+        },
+        {
+          "name": "Card Reader",
+          "note": [],
+          "content": [
+            "No card reader"
+          ]
+        },
+        {
+          "name": "Optical",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Audio Chip",
+          "note": [],
+          "content": [
+            "High Definition (HD) Audio, Realtek&reg; ALC623-CG codec"
+          ]
+        },
+        {
+          "name": "Speakers",
+          "note": [],
+          "content": [
+            "1Wx1"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "180W 85%"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Keyboard",
+          "note": [],
+          "content": [
+            "USB Traditional Keyboard, Black, Portuguese (BR)"
+          ]
+        },
+        {
+          "name": "Mouse",
+          "note": [],
+          "content": [
+            "USB Calliope Mouse, Black"
+          ]
+        },
+        {
+          "name": "Expansion Slots",
+          "note": [],
+          "content": [
+            "One PCIe&reg; 4.0 x16, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "One PCIe&reg; 3.0 x1, low-profile, length ≤ 155mm, height ≤ 70mm",
+            "Three M.2 slots (one for WLAN, two for SSD)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Chassis: Black, Bezel: Grey"
+          ]
+        },
+        {
+          "name": "Stand",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Pen",
+          "note": [],
+          "content": [
+            "Pen Not Supported"
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "note": [],
+          "content": [
+            "SFF (8.2L)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "name": "Dimensions (WxDxH)",
+          "note": [
+            "The system dimensions may vary depending on configurations."
+          ],
+          "content": [
+            "92.5 x 291.7 x 339.5 mm (3.6 x 11.5 x 13.4 inches)"
+          ]
+        },
+        {
+          "feature_note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "name": "Weight",
+          "note": [
+            "The system weight is approximate and based on results in Lenovo lab, which varies depending on the source of component, variance of the distribution of each component, and manufacturing process. It may not be the exact weight for each specific model."
+          ],
+          "content": [
+            "Around 4.63 kg (10.2 lbs)"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Realtek&reg; Wi-Fi&reg; 6 RTL8852BE, 802.11ax 2x2 + BT5.2"
+          ]
+        },
+        {
+          "name": "WWAN",
+          "note": [],
+          "content": [
+            "Non-WWAN"
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "Front Ports",
+          "note": [],
+          "content": [
+            "1x USB-C&reg; (USB 5Gbps / USB 3.2 Gen 1), with 15W charging",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x headphone / microphone combo jack (3.5mm)",
+            "1x microphone (3.5mm)"
+          ]
+        },
+        {
+          "feature_note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "name": "Rear Ports",
+          "note": [
+            "For video ports on discrete graphics, please see <a href=\"https://psref.lenovo.com/Product/ThinkCentre/ThinkCentre_neo_30s_Gen_5?tab=spec&feature=Graphics\" target=\"_blank\"><u>graphics section</u></a>"
+          ],
+          "content": [
+            "2x USB-A (Hi-Speed USB / USB 2.0)",
+            "2x USB-A (USB 5Gbps / USB 3.2 Gen 1), one supports Smart Power On",
+            "1x HDMI&reg; 2.1 TMDS",
+            "1x VGA",
+            "1x Ethernet (RJ-45)",
+            "1x line-out (3.5mm)"
+          ]
+        },
+        {
+          "name": "Optional Rear Ports (configured)",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Monitor Cable",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SECURITY & PRIVACY",
+          "name": "Security Chip",
+          "note": [],
+          "content": [
+            "Firmware TPM 2.0 integrated in SoC"
+          ]
+        },
+        {
+          "name": "Physical Locks",
+          "note": [],
+          "content": [
+            "Kensington&reg; Security Slot&trade;",
+            "Padlock Loop"
+          ]
+        },
+        {
+          "name": "Smart Cable Clip",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Chassis Intrusion Switch",
+          "note": [],
+          "content": [
+            "Chassis Intrusion Switch"
+          ]
+        },
+        {
+          "name": "Additional Security",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "1Y Premier Support upgrade from 0 Base Warranty"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Green Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "-"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 Pro, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Model",
+          "v": "13DJ0007BO"
+        },
+        {
+          "k": "Machine Type",
+          "v": "13DJ"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "198156948236"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-03-18"
+        },
+        {
+          "k": "End of Support",
+          "v": "2031-07-31"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT1_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_01.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_02.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_03.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_04.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_05.png",
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/ThinkCentre_neo_30s_Gen_5_CT2_06.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkCentre/ThinkCentre_neo_30s_Gen_5?M=13DJ0007BO",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkCentre/ThinkCentre_neo_30s_Gen_5/CompressedimageForMobileShare/ThinkCentre_neo_30s_Gen_5_CT1_01.png"
+    }
+  },
+  "12WG0009BP": {
+    "code": 1,
+    "data": {
+      "ProductID": 2521,
+      "ProductName": "ThinkSmart Core Gen 2 for Zoom",
+      "ProductKey": "ThinkSmart_Core_Gen_2_for_Zoom",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core Ultra 5 135H, 14C (4P + 8E + 2LPE) / 18T, Max Turbo up to 4.6GHz, 18MB"
+          ]
+        },
+        {
+          "name": "Graphics",
+          "note": [],
+          "content": [
+            "Integrated Intel&reg; Arc&trade; Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "2x 8GB SO-DIMM DDR5-5600"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal 2.0"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "170W 89% Adapter"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Intel&reg; Wi-Fi&reg; 6E AX211, 802.11ax 2x2 + BT5.3"
+          ]
+        },
+        {
+          "name": "Compute Unit Ports",
+          "note": [],
+          "content": [
+            "2x USB-C&reg; (USB 10Gbps / 3.2 Gen 2), with DisplayPort&trade; 1.4",
+            "1x USB-C&reg; in (USB 5Gbps / USB 3.2 Gen 1), with 45W power supply and DisplayPort&trade; 1.4",
+            "3x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x USB-A (Hi-Speed USB / USB 2.0)",
+            "1x HDMI&reg;-in 2.1 TMDS",
+            "2x HDMI&reg;-out 2.1 TMDS",
+            "1x Ethernet (RJ-45)",
+            "1x DC-in"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Component Options",
+          "note": [],
+          "content": [
+            "ThinkSmart&reg; Core Gen 2",
+            "Lenovo&reg; IP Controller"
+          ]
+        },
+        {
+          "name": "Controller",
+          "note": [],
+          "content": [
+            "Lenovo&reg; IP Controller, 10.1\" Touch Controller, Multi-touch, 1280x800, 16:10, PoE, HDMI&reg;(in)"
+          ]
+        },
+        {
+          "name": "Audio Bar",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Microphone Component",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Camera Component",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Black"
+          ]
+        },
+        {
+          "name": "Dimensions (WxDxH)",
+          "note": [],
+          "content": [
+            "Compute Unit With Cable Management, 185 x 220 x 38 mm (7.28 x 8.66 x 1.50 inches) + Lenovo&reg; IP Controller, 248 x 151 x 100 mm (9.76 x 5.94 x 3.94 inches)"
+          ]
+        },
+        {
+          "name": "Weight",
+          "note": [],
+          "content": [
+            "Compute Unit, 1.01 kg (2.23 lbs) + Lenovo&reg; IP Controller, 0.97 kg (2.16 lbs)"
+          ]
+        },
+        {
+          "title": "MANAGEABILITY",
+          "name": "System Management",
+          "note": [],
+          "content": [
+            "Intel&reg; vPro&reg;"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "3-year, Onsite"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "3Y Premier Support Upgrade from 3Y Onsite"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "Zoom Room Certification"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 IoT Enterprise GAC 64, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "Zoom Rooms"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "External Adapter Cage + Removable Cable Management Box + USB-C&reg; to USB-C 3M&trade; Active Optical Cable + VESA Mount Bracket"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Product",
+          "v": "ThinkSmart&reg; Core Gen 2+IPCTRL Zoom"
+        },
+        {
+          "k": "Model",
+          "v": "12WG0009BP"
+        },
+        {
+          "k": "Machine Type",
+          "v": "12WG"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271341919"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-16"
+        },
+        {
+          "k": "End of Support",
+          "v": "N/A"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_02.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_02.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom?M=12WG0009BP",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/CompressedimageForMobileShare/ThinkSmart_Core_Gen_2_for_Zoom_CT1_02.png"
+    }
+  },
+  "12WC0007BP": {
+    "code": 1,
+    "data": {
+      "ProductID": 2521,
+      "ProductName": "ThinkSmart Core Gen 2 for Zoom",
+      "ProductKey": "ThinkSmart_Core_Gen_2_for_Zoom",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core Ultra 5 135H, 14C (4P + 8E + 2LPE) / 18T, Max Turbo up to 4.6GHz, 18MB"
+          ]
+        },
+        {
+          "name": "Graphics",
+          "note": [],
+          "content": [
+            "Integrated Intel&reg; Arc&trade; Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "2x 8GB SO-DIMM DDR5-5600"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal 2.0"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "170W 89% Adapter"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Intel&reg; Wi-Fi&reg; 6E AX211, 802.11ax 2x2 + BT5.3"
+          ]
+        },
+        {
+          "name": "Compute Unit Ports",
+          "note": [],
+          "content": [
+            "2x USB-C&reg; (USB 10Gbps / 3.2 Gen 2), with DisplayPort&trade; 1.4",
+            "1x USB-C&reg; in (USB 5Gbps / USB 3.2 Gen 1), with 45W power supply and DisplayPort&trade; 1.4",
+            "3x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x USB-A (Hi-Speed USB / USB 2.0)",
+            "1x HDMI&reg;-in 2.1 TMDS",
+            "2x HDMI&reg;-out 2.1 TMDS",
+            "1x Ethernet (RJ-45)",
+            "1x DC-in"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Component Options",
+          "note": [],
+          "content": [
+            "ThinkSmart&reg; Core Gen 2",
+            "ThinkSmart&reg; Controller"
+          ]
+        },
+        {
+          "name": "Controller",
+          "note": [],
+          "content": [
+            "ThinkSmart&reg; Controller, 10.1\" Touch Controller, Multi-touch, 1280x800, 16:10, USB-C&reg;, 3.5mm headphone"
+          ]
+        },
+        {
+          "name": "Audio Bar",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Microphone Component",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Camera Component",
+          "note": [],
+          "content": [
+            "None"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Black"
+          ]
+        },
+        {
+          "name": "Dimensions (WxDxH)",
+          "note": [],
+          "content": [
+            "Compute Unit With Cable Management, 185 x 220 x 38 mm (7.28 x 8.66 x 1.50 inches) + ThinkSmart&reg; Controller, 265.5 x 13 x 168.1 mm (10.5 x 0.5 x 6.6 inches)"
+          ]
+        },
+        {
+          "name": "Weight",
+          "note": [],
+          "content": [
+            "Compute Unit, 1.01 kg (2.23 lbs) + ThinkSmart&reg; Controller, 753.8 g (1.7 lbs)"
+          ]
+        },
+        {
+          "title": "MANAGEABILITY",
+          "name": "System Management",
+          "note": [],
+          "content": [
+            "Intel&reg; vPro&reg;"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "3-year, Onsite"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "3Y Premier Support Upgrade from 3Y Onsite"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "Zoom Room Certification"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 IoT Enterprise GAC 64, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "Zoom Rooms"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "External Adapter Cage + Removable Cable Management Box + USB-C&reg; to USB-C 3M&trade; Active Optical Cable + VESA Mount Bracket"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Product",
+          "v": "ThinkSmart&reg; Core Gen 2+CTRL Zoom"
+        },
+        {
+          "k": "Model",
+          "v": "12WC0007BP"
+        },
+        {
+          "k": "Machine Type",
+          "v": "12WC"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271341933"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-16"
+        },
+        {
+          "k": "End of Support",
+          "v": "N/A"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_01.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_01.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom?M=12WC0007BP",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/CompressedimageForMobileShare/ThinkSmart_Core_Gen_2_for_Zoom_CT1_01.png"
+    }
+  },
+  "12X2S00006": null,
+  "12WR0009BP": {
+    "code": 1,
+    "data": {
+      "ProductID": 2521,
+      "ProductName": "ThinkSmart Core Gen 2 for Zoom",
+      "ProductKey": "ThinkSmart_Core_Gen_2_for_Zoom",
+      "SpecData": [
+        {
+          "title": "PERFORMANCE",
+          "name": "Processor",
+          "note": [],
+          "content": [
+            "Intel&reg; Core Ultra 5 135H, 14C (4P + 8E + 2LPE) / 18T, Max Turbo up to 4.6GHz, 18MB"
+          ]
+        },
+        {
+          "name": "Graphics",
+          "note": [],
+          "content": [
+            "Integrated Intel&reg; Arc&trade; Graphics"
+          ]
+        },
+        {
+          "name": "Chipset",
+          "note": [],
+          "content": [
+            "Intel&reg; SoC Platform"
+          ]
+        },
+        {
+          "name": "Memory",
+          "note": [],
+          "content": [
+            "2x 8GB SO-DIMM DDR5-5600"
+          ]
+        },
+        {
+          "name": "Storage",
+          "note": [],
+          "content": [
+            "256GB SSD M.2 2280 PCIe&reg; 4.0x4 NVMe&reg; Opal 2.0"
+          ]
+        },
+        {
+          "name": "Power Supply",
+          "note": [],
+          "content": [
+            "170W 89% Adapter"
+          ]
+        },
+        {
+          "title": "CONNECTIVITY",
+          "name": "Ethernet",
+          "note": [],
+          "content": [
+            "Integrated 100/1000M"
+          ]
+        },
+        {
+          "name": "WLAN + Bluetooth",
+          "note": [],
+          "content": [
+            "Intel&reg; Wi-Fi&reg; 6E AX211, 802.11ax 2x2 + BT5.3"
+          ]
+        },
+        {
+          "name": "Compute Unit Ports",
+          "note": [],
+          "content": [
+            "2x USB-C&reg; (USB 10Gbps / 3.2 Gen 2), with DisplayPort&trade; 1.4",
+            "1x USB-C&reg; in (USB 5Gbps / USB 3.2 Gen 1), with 45W power supply and DisplayPort&trade; 1.4",
+            "3x USB-A (USB 5Gbps / USB 3.2 Gen 1)",
+            "1x USB-A (Hi-Speed USB / USB 2.0)",
+            "1x HDMI&reg;-in 2.1 TMDS",
+            "2x HDMI&reg;-out 2.1 TMDS",
+            "1x Ethernet (RJ-45)",
+            "1x DC-in"
+          ]
+        },
+        {
+          "title": "DESIGN",
+          "name": "Component Options",
+          "note": [],
+          "content": [
+            "ThinkSmart&reg; Core Gen 2",
+            "Lenovo&reg; IP Controller",
+            "ThinkSmart&reg; Bar 180"
+          ]
+        },
+        {
+          "name": "Controller",
+          "note": [],
+          "content": [
+            "Lenovo&reg; IP Controller, 10.1\" Touch Controller, Multi-touch, 1280x800, 16:10, PoE, HDMI&reg;(in)"
+          ]
+        },
+        {
+          "name": "Audio Bar",
+          "note": [],
+          "content": [
+            "ThinkSmart&reg; Bar 180, 4x speaker (2 woofer, 2 tweeters), 8x microphone, 3x Camera, Noise cancellation"
+          ]
+        },
+        {
+          "name": "Microphone Component",
+          "note": [],
+          "content": [
+            "8x Mic on ThinkSmart&reg; Bar 180, -37dBFS, 100Hz - 8KHz"
+          ]
+        },
+        {
+          "name": "Camera Component",
+          "note": [],
+          "content": [
+            "3x Camera on Thinksmart Bar 180, up to 4k@30fps, 180°/54°(H/V FoV)"
+          ]
+        },
+        {
+          "name": "Case Color",
+          "note": [],
+          "content": [
+            "Black"
+          ]
+        },
+        {
+          "name": "Dimensions (WxDxH)",
+          "note": [],
+          "content": [
+            "Compute Unit With Cable Management, 185 x 220 x 38 mm (7.28 x 8.66 x 1.50 inches) + Lenovo&reg; IP Controller, 248 x 151 x 100 mm (9.76 x 5.94 x 3.94 inches) + ThinkSmart&reg; Bar 180, 650 x 80 x 125 mm (25.6 x 3.1 x 4.9 inches)"
+          ]
+        },
+        {
+          "name": "Weight",
+          "note": [],
+          "content": [
+            "Compute Unit, 1.01 kg (2.23 lbs) + Lenovo&reg; IP Controller, 0.97 kg (2.16 lbs) + ThinkSmart&reg; Bar 180, 2.2 kg (4.9 lbs)"
+          ]
+        },
+        {
+          "title": "MANAGEABILITY",
+          "name": "System Management",
+          "note": [],
+          "content": [
+            "Intel&reg; vPro&reg;"
+          ]
+        },
+        {
+          "title": "SERVICE",
+          "name": "Base Warranty",
+          "note": [],
+          "content": [
+            "3-year, Onsite"
+          ]
+        },
+        {
+          "name": "Included Upgrade",
+          "note": [],
+          "content": [
+            "3Y Premier Support Upgrade from 3Y Onsite"
+          ]
+        },
+        {
+          "title": "CERTIFICATIONS",
+          "name": "Other Certifications",
+          "note": [],
+          "content": [
+            "Zoom Room Certification"
+          ]
+        },
+        {
+          "title": "SOFTWARE",
+          "name": "Operating System",
+          "note": [],
+          "content": [
+            "Windows&reg; 11 IoT Enterprise GAC 64, Portuguese (Brazil)"
+          ]
+        },
+        {
+          "name": "Bundled Software",
+          "note": [],
+          "content": [
+            "Zoom Rooms"
+          ]
+        },
+        {
+          "title": "ACCESSORIES",
+          "name": "Bundled Accessories",
+          "note": [],
+          "content": [
+            "External Adapter Cage + Removable Cable Management Box + USB-C&reg; to USB-C 3M&trade; Active Optical Cable + VESA Mount Bracket"
+          ]
+        }
+      ],
+      "ModelGroupTable": [
+        {
+          "k": "Product",
+          "v": "ThinkSmart&reg; Core Gen 2 IPFRK Zoom"
+        },
+        {
+          "k": "Model",
+          "v": "12WR0009BP"
+        },
+        {
+          "k": "Machine Type",
+          "v": "12WR"
+        },
+        {
+          "k": "Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "Country/Region",
+          "v": "Brazil"
+        },
+        {
+          "k": "TopSeller",
+          "v": "Yes"
+        },
+        {
+          "k": "EAN / UPC / JAN",
+          "v": "199271341926"
+        },
+        {
+          "k": "Announce Date",
+          "v": "2025-05-16"
+        },
+        {
+          "k": "End of Support",
+          "v": "N/A"
+        }
+      ],
+      "bottomNote": [
+        "Lenovo reserves the right to change specifications or other product information without notice.",
+        "The product images are for illustration purpose only, the actual ports, color and accessories of different models may vary.",
+        "Actual port transfer speeds will vary and may be slower than the theoretical speed depending on many factors such as the processing speed of the host device, file attributes, and other factors related to your system configuration and operating environment."
+      ],
+      "ProductPicturePath": "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_04.png",
+      "ProductPicturePathArray": [
+        "https://psrefstuff.lenovo.com/syspool/Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/ThinkSmart_Core_Gen_2_for_Zoom_CT1_04.png"
+      ],
+      "ModelURL": "https://psref.lenovo.com/Detail/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom?M=12WR0009BP",
+      "ImageForShare": "https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkSmart/ThinkSmart_Core_Gen_2_for_Zoom/CompressedimageForMobileShare/ThinkSmart_Core_Gen_2_for_Zoom_CT1_04.png"
+    }
+  },
+  "4XC1Q25246": null,
+  "000006947681566187": null,
+  "000006947681566170": null
 }

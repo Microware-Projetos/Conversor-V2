@@ -53,16 +53,33 @@ public partial class HP : ComponentBase
 
     private async Task EnviarParaWooCommerce()
     {
-        if (arquivoProdutos == null || arquivoPrecos == null)
+        if (tipoUpload == "Produtos")
         {
-            mensagem = "Por favor, selecione ambos os arquivos antes de enviar.";
+            if (arquivoProdutos == null || arquivoPrecos == null)
+            {
+                mensagem = "Por favor, selecione ambos os arquivos antes de enviar.";
+                StateHasChanged();
+                return;
+            }
+
+            if (arquivoProdutos.Size > MAX_FILE_SIZE || arquivoPrecos.Size > MAX_FILE_SIZE)
+            {
+                mensagem = "Um ou ambos os arquivos excedem o tamanho máximo permitido.";
+                StateHasChanged();
+                return;
+            }
+        }
+
+        if (tipoUpload != "Produtos" && arquivoProdutos == null)
+        {
+            mensagem = "Por favor, selecione o arquivo antes de enviar.";
             StateHasChanged();
             return;
         }
 
-        if (arquivoProdutos.Size > MAX_FILE_SIZE || arquivoPrecos.Size > MAX_FILE_SIZE)
+        if (tipoUpload != "Produtos" && arquivoProdutos.Size > MAX_FILE_SIZE)
         {
-            mensagem = "Um ou ambos os arquivos excedem o tamanho máximo permitido.";
+            mensagem = "O arquivo excede o tamanho máximo permitido.";
             StateHasChanged();
             return;
         }
@@ -109,20 +126,22 @@ public partial class HP : ComponentBase
         StateHasChanged();
     }
 
-    private Task EnviarPlotter()
+    private async Task EnviarPlotter()
     {
         // TODO: Implementar chamada de API para Plotter usando arquivoProdutos
         Console.WriteLine("Enviando Plotter");
-        mensagem = "Funcionalidade Plotter ainda não implementada.";
-        return Task.CompletedTask;
+        var job = await _hpService.EnviarPlotter(arquivoProdutos!);
+        mensagem = $"Plotters enviados com sucesso! Job ID: {job.Id}";
+        StateHasChanged();
     }
 
-    private Task EnviarCarePack()
+    private async Task EnviarCarePack()
     {
         // TODO: Implementar chamada de API para Care Pack usando arquivoProdutos
         Console.WriteLine("Enviando Care Pack");
-        mensagem = "Funcionalidade Care Pack ainda não implementada.";
-        return Task.CompletedTask;
+        var job = await _hpService.EnviarCarePack(arquivoProdutos!);
+        mensagem = $"Care Packs enviados com sucesso! Job ID: {job.Id}";
+        StateHasChanged();
     }
 
     private Task EnviarPromocao()

@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 
-namespace eCommerce.Server.Helpers;
+namespace eCommerce.Server.Processors.HP.Helpers;
 
 public static class NormalizeUtisHP
 {

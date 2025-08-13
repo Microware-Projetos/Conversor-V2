@@ -11,8 +11,9 @@ using ClosedXML.Excel;
 using eCommerce.Server.Helpers;
 using eCommerce.Shared.Models;
 using eCommerce.Server.Processors.Lenovo;
+using eCommerce.Server.Processors.Lenovo.Helpers;
 
-namespace eCommerce.Server.Processors.Lenovo;
+namespace eCommerce.Server.Processors.Lenovo.Helpers;
 
 public static class NormalizeUtisLenovo
 {

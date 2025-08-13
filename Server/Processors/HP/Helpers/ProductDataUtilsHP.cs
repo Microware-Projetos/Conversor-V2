@@ -7,10 +7,11 @@ using System.Collections.Generic;
 using System.IO;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
+using eCommerce.Server.Processors.HP.Helpers;
 
-namespace eCommerce.Server.Processors.HP;
+namespace eCommerce.Server.Processors.HP.Helpers;
 
-public static class DataUtilsHP
+public static class ProductDataUtilsHP
 {
     public static string ProcessWeight(string weight, object product_attributes)
     {

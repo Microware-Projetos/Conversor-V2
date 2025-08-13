@@ -2,6 +2,8 @@ using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using eCommerce.Server.Processors.HP.Helpers;
+using eCommerce.Server.Processors.HP;
 
 namespace eCommerce.Server.Processors.HP;
 

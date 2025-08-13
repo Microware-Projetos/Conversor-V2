@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace eCommerce.Server.Processors.HP;
+namespace eCommerce.Server.Processors.HP.Helpers;
 
 public class CacheManagerHP
 {
@@ -98,8 +98,7 @@ public class CacheManagerHP
         var cacheData = LoadCache(cacheFile);
         if (cacheData.ContainsKey(sku))
         {
-            Console.WriteLine($"Usando cache para: {sku}");
-            Console.WriteLine($"Retorno do GetCachedData: {cacheData[sku]}");
+            Console.WriteLine($"[INFO]: Usando cache para: {sku}");
             return cacheData[sku];
         }
         return null;
@@ -110,6 +109,17 @@ public class CacheManagerHP
         var cacheData = LoadCache(cacheFile);
         cacheData[sku] = data;
         SaveCache(cacheFile, cacheData);
+    }
+
+    public static object? GetCachedDataPlotter(string sku, string cacheFile)
+    {
+        var cacheData = LoadCache(cacheFile);
+        if (cacheData.ContainsKey(sku))
+        {
+            Console.WriteLine($"[INFO]: Usando cache para plotter: {sku}");
+            return cacheData[sku];
+        }
+        return null;
     }
     
     public class CacheEntry

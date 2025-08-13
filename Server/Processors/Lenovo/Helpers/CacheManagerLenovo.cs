@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace eCommerce.Server.Processors.Lenovo;
+namespace eCommerce.Server.Processors.Lenovo.Helpers;
 
 public class CacheManagerLenovo
 {

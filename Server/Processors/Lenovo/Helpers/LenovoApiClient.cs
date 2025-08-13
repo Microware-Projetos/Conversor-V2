@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.Lenovo;
+using eCommerce.Server.Processors.Lenovo.Helpers;
 
-namespace eCommerce.Server.Processors.Lenovo;
+namespace eCommerce.Server.Processors.Lenovo.Helpers;
 
 public class DataProcessorLenovo
 {
@@ -67,7 +68,7 @@ public class DataProcessorLenovo
                     return null;
                 }
 
-                Console.WriteLine("[INFO]: Final do IsSiccessStatusCode");
+                Console.WriteLine("[INFO]: Final do IsSuccessStatusCode");
                 CacheManagerLenovo.SaveToCache(sku, data, PRODUCT_CACHE_FILE);
                 return data;
             }

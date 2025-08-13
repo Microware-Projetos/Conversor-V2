@@ -1,0 +1,114 @@
+[
+  {
+    "name": "HP DesignJet T230 24-in Printer",
+    "sku": "5HB07D#AC4",
+    "short_description": "HP DesignJet T230 24-in Printer",
+    "description": "HP DesignJet T230 24-in Printer",
+    "price": "2864.78",
+    "regular_price": "2864.78",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vntlt34epb/png/vntlt34epb.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/ndqpsglppn/png/ndqpsglppn.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06903745.png",
+          "https://hp.widen.net/content/hkfhrb1vch/png/hkfhrb1vch.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06903855.png"
+        ]
+      }
+    ],
+    "dimensions": {},
+    "categories": [],
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T830 24in MFP:NA/LA",
+    "sku": "F9A28D#B1K",
+    "short_description": "HP DesignJet T830 24in MFP:NA/LA",
+    "description": "HP DesignJet T830 24in MFP:NA/LA",
+    "price": "12193.70",
+    "regular_price": "12193.70",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {},
+    "categories": [],
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6 24-in PS Printer:NA/LA",
+    "sku": "T8W15A#B1K",
+    "short_description": "HP DesignJet Z6 24-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z6 24-in PS Printer:NA/LA",
+    "price": "21181.64",
+    "regular_price": "21181.64",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/fxiepsebxi/png/fxiepsebxi.png",
+          "https://hp.widen.net/content/b46mb1ux5x/png/b46mb1ux5x.png",
+          "https://hp.widen.net/content/fajuwuv1ab/png/fajuwuv1ab.png"
+        ]
+      }
+    ],
+    "dimensions": {},
+    "categories": [],
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T850 36-in Printer:NA/LA",
+    "sku": "2Y9H0A#AC4",
+    "short_description": "HP DesignJet T850 36-in Printer:NA/LA",
+    "description": "HP DesignJet T850 36-in Printer:NA/LA",
+    "price": "13776.76",
+    "regular_price": "13776.76",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/l07zdvjlz4/png/l07zdvjlz4.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/jiejneqkv0/png/jiejneqkv0.png",
+          "https://hp.widen.net/content/rkxdooyhzf/png/rkxdooyhzf.png",
+          "https://hp.widen.net/content/tri6wry7ta/png/tri6wry7ta.png",
+          "https://hp.widen.net/content/7lumstrxz8/png/7lumstrxz8.png"
+        ]
+      }
+    ],
+    "dimensions": {},
+    "categories": [],
+    "manage_stock": true
+  },
+  {
+    "name": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
+    "sku": "6TX91A",
+    "short_description": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
+    "description": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
+    "price": "1474.70",
+    "regular_price": "1474.70",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {},
+    "categories": [],
+    "manage_stock": true
+  }
+]
