@@ -57,6 +57,8 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                         Console.WriteLine($"[INFO]: Dados do plotter encontrados no cache para o SKU: {formatedSku}");
 
                         // CRIAR LÓGICA DE RETORNO DE ATRIBUTOS WOOATTRIBUTIE
+
+                        System.Console.WriteLine($"[INFO]: Atributos processados no cache para o SKU: {formatedSku}");
                         return new List<WooAttribute>();
                     }
                     else
@@ -69,7 +71,42 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                     Console.WriteLine($"[INFO]: Cache não encontrado!");
                 }
 
-                string? accessToken = null;
+                Console.WriteLine("[INFO]: Processando atributos via API...");
+                var attributes = await ProcessAttributesApi(product);
+                
+                
+                if(attributes == null || !attributes.Any())
+                {
+                    Console.WriteLine($"[INFO]: Nenhum atributo encontrado para o SKU: {formatedSku}");
+                    return new List<WooAttribute>();
+                }
+
+                Console.WriteLine($"[INFO]: Atributos processados com sucesso para o SKU: {formatedSku}");
+                return attributes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR]: Erro ao processar atributos para o SKU {formatedSku}: {ex.Message}");
+                return new List<WooAttribute>();
+            }
+        }
+        
+        public static async Task<List<WooAttribute>> ProcessAttributesApi(IXLRow product)
+        {
+            var sku = product.Cell(2).Value.ToString() ?? "";
+            var formatedSku = sku.Split('#')[0];
+            string? accessToken = null;
+            
+            if (string.IsNullOrEmpty(formatedSku))
+            {
+                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha {product.RowNumber()}");
+                return new List<WooAttribute>();
+            }
+
+            Console.WriteLine($"[INFO]: Processando atributos via API para o SKU: {formatedSku}");
+
+            try
+            {
                 bool isTokenValid = CheckAccessTokenAsync();
                 if(isTokenValid)
                 {
@@ -126,9 +163,23 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 var jsonObj = JObject.Parse(responseContent);
-                var chunks = jsonObj["product"]?[0]?["chunks"];
-
+                
                 var plotterDataDict = new Dictionary<string, object>();
+
+                var detailsDict = new Dictionary<string, string>();
+
+                foreach (var detail in jsonObj["product"]?
+                    .SelectMany(p => p["chunks"])
+                    .SelectMany(c => c["details"] ?? Enumerable.Empty<JToken>()))
+                {
+                    var name = detail["name"]?.ToString();
+                    var value = detail["value"]?.ToString();
+
+                    if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(value))
+                    {
+                        detailsDict[name] = value;
+                    }
+                }
 
                 if (File.Exists(PLOTTER_CACHE_FILE))
                 {
@@ -137,30 +188,40 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                     Console.WriteLine($"[INFO]: Dados do plotter carregados do cache.");
                 }
 
-                plotterDataDict[sku] = new
+                Dictionary<string, string> existingDetails;
+
+                if (plotterDataDict.ContainsKey(sku))
                 {
-                    chunks = chunks
-                };
-                
-                
+                    existingDetails = JsonConvert.DeserializeObject<Dictionary<string, string>>(
+                        plotterDataDict[sku].ToString()
+                    ) ?? new Dictionary<string, string>();
+                }
+                else
+                {
+                    existingDetails = new Dictionary<string, string>();
+                }
+
+                foreach (var kvp in detailsDict)
+                {
+                    existingDetails[kvp.Key] = kvp.Value;
+                }
+
+                plotterDataDict[sku] = existingDetails;
+
                 string json = JsonConvert.SerializeObject(plotterDataDict, Formatting.Indented);
-                File.WriteAllText(PLOTTER_CACHE_FILE,json);
+                File.WriteAllText(PLOTTER_CACHE_FILE, json);
                 Console.WriteLine($"[INFO]: Dados do plotter salvos em {PLOTTER_CACHE_FILE}");
-
-                var attributes = new List<WooAttribute>();
-
-                //CRIAR LÓGICA PARA PROCESSAR OS DADOS DO PLOTTER E RETORNAR OS ATRIBUTOS
 
                 Console.WriteLine($"[INFO]: Requisição realizada: {response.StatusCode}");
                 return new List<WooAttribute>();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ERROR]: Erro ao processar atributos para o SKU {formatedSku}: {ex.Message}");
+                Console.WriteLine($"[ERROR]: Erro ao processar atributos por API para o SKU {formatedSku}: {ex.Message}");
                 return new List<WooAttribute>();
             }
         }
-        
+
         public static async Task<List<MetaData>> ProcessPhotos(IXLRow product)
         {
             var sku = product.Cell(2).Value.ToString() ?? "";
@@ -232,12 +293,17 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 }
                 
                 // ----------------- 2. Requisição via API -----------------
-                Console.WriteLine("[INFO]: Processando fotos via API...");
 
+                Console.WriteLine("[INFO]: Processando fotos via API...");
                 metaData = await ProcessImagesAPI(product);
 
-                Console.WriteLine($"[INFO]: Fotos processadas com sucesso para o SKU: {formatedSku}");
+                if (metaData == null || !metaData.Any())
+                {
+                    Console.WriteLine($"[INFO]: Nenhuma foto encontrada para o SKU na API: {formatedSku}");
+                    return new List<MetaData>();
+                }
 
+                Console.WriteLine($"[INFO]: Fotos processadas com sucesso para o SKU: {formatedSku}");
                 return metaData;
             }
             catch (Exception ex)
@@ -395,7 +461,7 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 }
                 else
                 {
-                    Console.WriteLine($"[INFO]: Nenhuma imagem encontrada para o SKU: {formatedSku}");
+                    Console.WriteLine($"[INFO]: Nenhuma imagem encontrada para o SKU na API: {formatedSku}");
                     return new List<MetaData>();
                 }
             }

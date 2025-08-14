@@ -8,7 +8,21 @@
     "regular_price": "2864.78",
     "stock_quantity": "10",
     "attributes": [],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vntlt34epb/png/vntlt34epb.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/ndqpsglppn/png/ndqpsglppn.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06903745.png",
+          "https://hp.widen.net/content/hkfhrb1vch/png/hkfhrb1vch.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06903855.png"
+        ]
+      }
+    ],
     "dimensions": {},
     "categories": [],
     "manage_stock": true
@@ -36,7 +50,21 @@
     "regular_price": "21181.64",
     "stock_quantity": "10",
     "attributes": [],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/fxiepsebxi/png/fxiepsebxi.png",
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://hp.widen.net/content/fajuwuv1ab/png/fajuwuv1ab.png"
+        ]
+      }
+    ],
     "dimensions": {},
     "categories": [],
     "manage_stock": true
@@ -50,7 +78,21 @@
     "regular_price": "13776.76",
     "stock_quantity": "10",
     "attributes": [],
-    "meta_data": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/l07zdvjlz4/png/l07zdvjlz4.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/jiejneqkv0/png/jiejneqkv0.png",
+          "https://hp.widen.net/content/rkxdooyhzf/png/rkxdooyhzf.png",
+          "https://hp.widen.net/content/tri6wry7ta/png/tri6wry7ta.png",
+          "https://hp.widen.net/content/7lumstrxz8/png/7lumstrxz8.png"
+        ]
+      }
+    ],
     "dimensions": {},
     "categories": [],
     "manage_stock": true
