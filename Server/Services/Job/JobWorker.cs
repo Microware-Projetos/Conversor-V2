@@ -138,15 +138,16 @@ public class JobWorker : BackgroundService
             if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto) && File.Exists(job.CaminhoArquivoProduto))
             {
                 File.Delete(job.CaminhoArquivoProduto);
-                Console.WriteLine($"[FINISH]: Arquivo de produtos removido: {job.CaminhoArquivoProduto}");
+                Console.WriteLine($"[FINISH]: Arquivo de produtos removido: {job.CaminhoArquivoProduto} (Tipo: {job.Tipo})");
             }
             
             // Limpar arquivo de preços (se existir)
             if (!string.IsNullOrEmpty(job.CaminhoArquivoPreco) && File.Exists(job.CaminhoArquivoPreco))
             {
                 File.Delete(job.CaminhoArquivoPreco);
-                Console.WriteLine($"Arquivo de preços removido: {job.CaminhoArquivoPreco}");
+                Console.WriteLine($"Arquivo de preços removido: {job.CaminhoArquivoPreco} (Tipo: {job.Tipo})");
             }
+            
         }
         catch (Exception ex)
         {

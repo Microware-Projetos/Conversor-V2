@@ -23,8 +23,418 @@
         ]
       }
     ],
-    "dimensions": {},
-    "categories": [],
+    "dimensions": {
+      "length": "115.5",
+      "width": "57.5",
+      "height": "40.5"
+    },
+    "weight": "27",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T250 24-in Printer",
+    "sku": "5HB06D#AC4",
+    "short_description": "HP DesignJet T250 24-in Printer",
+    "description": "HP DesignJet T250 24-in Printer",
+    "price": "3150.88",
+    "regular_price": "3150.88",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/dad5xflqkk/png/dad5xflqkk.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/hkfhrb1vch/png/hkfhrb1vch.png",
+          "https://hp.widen.net/content/ehhnoum3ip/png/ehhnoum3ip.png",
+          "https://hp.widen.net/content/ndqpsglppn/png/ndqpsglppn.png",
+          "https://hp.widen.net/content/hveqraa4dc/png/hveqraa4dc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "115.5",
+      "width": "57.5",
+      "height": "40.5"
+    },
+    "weight": "27",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T650 24-in Printer",
+    "sku": "5HB08D#AC4",
+    "short_description": "HP DesignJet T650 24-in Printer",
+    "description": "HP DesignJet T650 24-in Printer",
+    "price": "4972.54",
+    "regular_price": "4972.54",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/4arc5j2l6w/png/4arc5j2l6w.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/ndqpsglppn/png/ndqpsglppn.png",
+          "https://hp.widen.net/content/ftfdvjufj2/png/ftfdvjufj2.png",
+          "https://hp.widen.net/content/hkfhrb1vch/png/hkfhrb1vch.png",
+          "https://hp.widen.net/content/aq0kxzgipi/png/aq0kxzgipi.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "115.5",
+      "width": "57.5",
+      "height": "47.5"
+    },
+    "weight": "38",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T650 36-in Printer",
+    "sku": "5HB10D#AC4",
+    "short_description": "HP DesignJet T650 36-in Printer",
+    "description": "HP DesignJet T650 36-in Printer",
+    "price": "6641.55",
+    "regular_price": "6641.55",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/zamcpzqihs/png/zamcpzqihs.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/hkfhrb1vch/png/hkfhrb1vch.png",
+          "https://hp.widen.net/content/diumiyjmbg/png/diumiyjmbg.png",
+          "https://hp.widen.net/content/ndqpsglppn/png/ndqpsglppn.png",
+          "https://hp.widen.net/content/qjrecmkuyx/png/qjrecmkuyx.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.0",
+      "width": "57.5",
+      "height": "59.0"
+    },
+    "weight": "56",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Studio Wood 24-in Printer",
+    "sku": "5HB12A#B1K",
+    "short_description": "HP DesignJet Studio Wood 24-in Printer",
+    "description": "HP DesignJet Studio Wood 24-in Printer",
+    "price": "9412.71",
+    "regular_price": "9412.71",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06729840.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/tamfhc2vjh/png/tamfhc2vjh.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06729812.png",
+          "https://hp.widen.net/content/eja6bpcfg4/png/eja6bpcfg4.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06729867.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "119.9",
+      "width": "59.0",
+      "height": "52.4"
+    },
+    "weight": "43",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Studio Steel 24-in Printer",
+    "sku": "5HB12C#B1K",
+    "short_description": "HP DesignJet Studio Steel 24-in Printer",
+    "description": "HP DesignJet Studio Steel 24-in Printer",
+    "price": "9412.71",
+    "regular_price": "9412.71",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "176.2",
+      "width": "69.8",
+      "height": "102.0"
+    },
+    "weight": "130.6",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T850 36-in Printer:NA/LA",
+    "sku": "2Y9H0A#AC4",
+    "short_description": "HP DesignJet T850 36-in Printer:NA/LA",
+    "description": "HP DesignJet T850 36-in Printer:NA/LA",
+    "price": "14501.57",
+    "regular_price": "14501.57",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/l07zdvjlz4/png/l07zdvjlz4.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/jiejneqkv0/png/jiejneqkv0.png",
+          "https://hp.widen.net/content/rkxdooyhzf/png/rkxdooyhzf.png",
+          "https://hp.widen.net/content/tri6wry7ta/png/tri6wry7ta.png",
+          "https://hp.widen.net/content/7lumstrxz8/png/7lumstrxz8.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "57.0",
+      "height": "65.0"
+    },
+    "weight": "71",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T950 36-in Printer:NA/LA",
+    "sku": "2Y9H1A#AC4",
+    "short_description": "HP DesignJet T950 36-in Printer:NA/LA",
+    "description": "HP DesignJet T950 36-in Printer:NA/LA",
+    "price": "17330.23",
+    "regular_price": "17330.23",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/6bmljexpjh/png/6bmljexpjh.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/efkjn8jx3u/png/efkjn8jx3u.png",
+          "https://hp.widen.net/content/sk52e2pnfs/png/sk52e2pnfs.png",
+          "https://hp.widen.net/content/ntiievrwq7/png/ntiievrwq7.png",
+          "https://hp.widen.net/content/thkxstplec/png/thkxstplec.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "63.0",
+      "height": "78.0"
+    },
+    "weight": "84",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1600 36-in PS Printer",
+    "sku": "3EK11A#B1K",
+    "short_description": "HP DesignJet T1600 36-in PS Printer",
+    "description": "HP DesignJet T1600 36-in PS Printer",
+    "price": "22164.60",
+    "regular_price": "22164.60",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/2vlqcavs5n/png/2vlqcavs5n.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/0oq2fxyk9n/png/0oq2fxyk9n.png",
+          "https://hp.widen.net/content/iwjpgugj1y/png/iwjpgugj1y.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "113",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1700 Printer:NA/LA",
+    "sku": "W6B55A#B1K",
+    "short_description": "HP DesignJet T1700 Printer:NA/LA",
+    "description": "HP DesignJet T1700 Printer:NA/LA",
+    "price": "21440.82",
+    "regular_price": "21440.82",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/q8yuhzufom/png/q8yuhzufom.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/l5kp9dvtcg/png/l5kp9dvtcg.png",
+          "https://hp.widen.net/content/cxpnm12li9/png/cxpnm12li9.png",
+          "https://hp.widen.net/content/gz8v0y4hzn/png/gz8v0y4hzn.png",
+          "https://hp.widen.net/content/sweejukgfv/png/sweejukgfv.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.5",
+      "width": "77.0",
+      "height": "71.0"
+    },
+    "weight": "126",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1600dr 36-in PS Printer",
+    "sku": "3EK13A#B1K",
+    "short_description": "HP DesignJet T1600dr 36-in PS Printer",
+    "description": "HP DesignJet T1600dr 36-in PS Printer",
+    "price": "25917.91",
+    "regular_price": "25917.91",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06368315.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06368261.png",
+          "https://hp.widen.net/content/iwjpgugj1y/png/iwjpgugj1y.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "117",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "sku": "1VD88A#B1K",
+    "short_description": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "description": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "price": "25917.91",
+    "regular_price": "25917.91",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/zesq4akmbh/png/zesq4akmbh.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/l5kp9dvtcg/png/l5kp9dvtcg.png",
+          "https://hp.widen.net/content/wy4bgblclc/png/wy4bgblclc.png",
+          "https://hp.widen.net/content/gz8v0y4hzn/png/gz8v0y4hzn.png",
+          "https://hp.widen.net/content/sweejukgfv/png/sweejukgfv.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.5",
+      "width": "77.0",
+      "height": "71.0"
+    },
+    "weight": "128",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
     "manage_stock": true
   },
   {
@@ -37,8 +447,314 @@
     "stock_quantity": "10",
     "attributes": [],
     "meta_data": [],
-    "dimensions": {},
-    "categories": [],
+    "dimensions": {
+      "length": "176.2",
+      "width": "69.8",
+      "height": "102.0"
+    },
+    "weight": "130.6",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T850 36-in MFP:NA/LA",
+    "sku": "2Y9H2A#AC4",
+    "short_description": "HP DesignJet T850 36-in MFP:NA/LA",
+    "description": "HP DesignJet T850 36-in MFP:NA/LA",
+    "price": "25066.93",
+    "regular_price": "25066.93",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/middy0t7qv/png/middy0t7qv.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/x0plrpdfw5/png/x0plrpdfw5.png",
+          "https://hp.widen.net/content/ky5erfype6/png/ky5erfype6.png",
+          "https://hp.widen.net/content/wggdl1s1vp/png/wggdl1s1vp.png",
+          "https://hp.widen.net/content/chcrd32rte/png/chcrd32rte.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "57.0",
+      "height": "65.0"
+    },
+    "weight": "83,5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": " HP DesignJet T950 36-in MFP:NA/LA",
+    "sku": "2Y9H3A#AC4",
+    "short_description": " HP DesignJet T950 36-in MFP:NA/LA",
+    "description": " HP DesignJet T950 36-in MFP:NA/LA",
+    "price": "26996.39",
+    "regular_price": "26996.39",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/f93sudpzdf/png/f93sudpzdf.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/hbrsnl87o8/png/hbrsnl87o8.png",
+          "https://hp.widen.net/content/w4fufyaajd/png/w4fufyaajd.png",
+          "https://hp.widen.net/content/musiht613a/png/musiht613a.png",
+          "https://hp.widen.net/content/vo1ny6hr0g/png/vo1ny6hr0g.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "63.0",
+      "height": "78.0"
+    },
+    "weight": "97",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T2600 36-in PS MFP Printer",
+    "sku": "3XB78A#B1K",
+    "short_description": "HP DesignJet T2600 36-in PS MFP Printer",
+    "description": "HP DesignJet T2600 36-in PS MFP Printer",
+    "price": "36633.70",
+    "regular_price": "36633.70",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/paozyaqesp/png/paozyaqesp.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06407203.png",
+          "https://hp.widen.net/content/z40czsr3dt/png/z40czsr3dt.png",
+          "https://hp.widen.net/content/ub2ufcqhmw/png/ub2ufcqhmw.png",
+          "https://hp.widen.net/content/uopxdua24e/png/uopxdua24e.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "137",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "sku": "3EK15A#B1K",
+    "short_description": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "description": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "price": "41216.37",
+    "regular_price": "41216.37",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vnguvtifzc/png/vnguvtifzc.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/l8sweaalzx/png/l8sweaalzx.png",
+          "https://hp.widen.net/content/krlhiatg7u/png/krlhiatg7u.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "142",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet SD Pro 44in MFP Prntr:NA/LA",
+    "sku": "1GY94E#B1K",
+    "short_description": "HP DesignJet SD Pro 44in MFP Prntr:NA/LA",
+    "description": "HP DesignJet SD Pro 44in MFP Prntr:NA/LA",
+    "price": "74868.44",
+    "regular_price": "74868.44",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/fralckx0pf/png/fralckx0pf.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05921341.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "126.0"
+    },
+    "weight": "213",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet HD Pro 44-in MFP:NA/LA",
+    "sku": "2QX51E#B1K",
+    "short_description": "HP DesignJet HD Pro 44-in MFP:NA/LA",
+    "description": "HP DesignJet HD Pro 44-in MFP:NA/LA",
+    "price": "108752.80",
+    "regular_price": "108752.80",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08967608.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/bgutkjxar4/png/bgutkjxar4.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06519815.png",
+          "https://hp.widen.net/content/fsvgggy6sd/png/fsvgggy6sd.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08967650.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "126.0"
+    },
+    "weight": "232",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Designjet SD Stand Alone Scanner",
+    "sku": "5EK01A#B1K",
+    "short_description": "HP Designjet SD Stand Alone Scanner",
+    "description": "HP Designjet SD Stand Alone Scanner",
+    "price": "55010.08",
+    "regular_price": "55010.08",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/aaigbx8su2/png/aaigbx8su2.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/gjd2mahhsg/png/gjd2mahhsg.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "150.0",
+      "width": "68.0",
+      "height": "71.0"
+    },
+    "weight": "85",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet HD Pro Scanner",
+    "sku": "5EK00A#B1K",
+    "short_description": "HP DesignJet HD Pro Scanner",
+    "description": "HP DesignJet HD Pro Scanner",
+    "price": "95013.37",
+    "regular_price": "95013.37",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/zizeatg2ei/png/zizeatg2ei.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/uebz9edgvb/png/uebz9edgvb.png",
+          "https://hp.widen.net/content/rrjrzk6vnq/png/rrjrzk6vnq.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06519580.png",
+          "https://hp.widen.net/content/39v09q1g7j/png/39v09q1g7j.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "191.0",
+      "width": "68.0",
+      "height": "80.0"
+    },
+    "weight": "118",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
     "manage_stock": true
   },
   {
@@ -65,8 +781,308 @@
         ]
       }
     ],
-    "dimensions": {},
-    "categories": [],
+    "dimensions": {
+      "length": "144.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "97",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z9 24-in PS Printer:NA/LA",
+    "sku": "W3Z71A#B1K",
+    "short_description": "HP DesignJet Z9 24-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z9 24-in PS Printer:NA/LA",
+    "price": "26403.16",
+    "regular_price": "26403.16",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/rkd2eazhke/png/rkd2eazhke.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06016086.png",
+          "https://hp.widen.net/content/oyxef2fysz/png/oyxef2fysz.png",
+          "https://hp.widen.net/content/dhsssf3vpc/png/dhsssf3vpc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "144.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "102",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "sku": "T8W16A#B1K",
+    "short_description": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "price": "29937.23",
+    "regular_price": "29937.23",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/shv4gprzco/png/shv4gprzco.png",
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://hp.widen.net/content/ypjlcfq2h8/png/ypjlcfq2h8.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "123",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "sku": "T8W18A#B1K",
+    "short_description": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "price": "41805.30",
+    "regular_price": "41805.30",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/fxiepsebxi/png/fxiepsebxi.png",
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015414.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "132",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "sku": "W3Z72A#B1K",
+    "short_description": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "price": "32340.91",
+    "regular_price": "32340.91",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/jwapxv9awt/png/jwapxv9awt.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06016086.png",
+          "https://hp.widen.net/content/oyxef2fysz/png/oyxef2fysz.png",
+          "https://hp.widen.net/content/dhsssf3vpc/png/dhsssf3vpc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "130",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "sku": "X9D24A#B1K",
+    "short_description": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "description": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "price": "45067.01",
+    "regular_price": "45067.01",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/jwapxv9awt/png/jwapxv9awt.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06016086.png",
+          "https://hp.widen.net/content/oyxef2fysz/png/oyxef2fysz.png",
+          "https://hp.widen.net/content/dhsssf3vpc/png/dhsssf3vpc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "137",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "sku": "2QU12A#B1K",
+    "short_description": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "description": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "price": "59312.66",
+    "regular_price": "59312.66",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "176.2",
+      "width": "69.8",
+      "height": "102.0"
+    },
+    "weight": "130.6",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Impressora HP Designjet Z6 Pro de 64\"",
+    "sku": "2QU25A#B1K",
+    "short_description": "Impressora HP Designjet Z6 Pro de 64\"",
+    "description": "Impressora HP Designjet Z6 Pro de 64\"",
+    "price": "68683.97",
+    "regular_price": "68683.97",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/jbrkchigml/png/jbrkchigml.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/tiqj4dlhsv/png/tiqj4dlhsv.png",
+          "https://hp.widen.net/content/rdqesaxfut/png/rdqesaxfut.png",
+          "https://hp.widen.net/content/wlgc6alkmq/png/wlgc6alkmq.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08917235.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "280.0",
+      "width": "75.0",
+      "height": "130.2"
+    },
+    "weight": "262",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "sku": "2RM82A#B1K",
+    "short_description": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "description": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "price": "101875.56",
+    "regular_price": "101875.56",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vufejdmv8v/png/vufejdmv8v.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/5biafakafp/png/5biafakafp.png",
+          "https://hp.widen.net/content/rdqesaxfut/png/rdqesaxfut.png",
+          "https://hp.widen.net/content/xeoegvdcin/png/xeoegvdcin.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07812033.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "280.0",
+      "width": "75.0",
+      "height": "130.2"
+    },
+    "weight": "264",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
     "manage_stock": true
   },
   {
@@ -93,8 +1109,456 @@
         ]
       }
     ],
-    "dimensions": {},
-    "categories": [],
+    "dimensions": {
+      "length": "157.5",
+      "width": "57.0",
+      "height": "65.0"
+    },
+    "weight": "71",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T850 36-in MFP:NA/LA",
+    "sku": "2Y9H2A#AC4",
+    "short_description": "HP DesignJet T850 36-in MFP:NA/LA",
+    "description": "HP DesignJet T850 36-in MFP:NA/LA",
+    "price": "23810.37",
+    "regular_price": "23810.37",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/middy0t7qv/png/middy0t7qv.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/x0plrpdfw5/png/x0plrpdfw5.png",
+          "https://hp.widen.net/content/ky5erfype6/png/ky5erfype6.png",
+          "https://hp.widen.net/content/wggdl1s1vp/png/wggdl1s1vp.png",
+          "https://hp.widen.net/content/chcrd32rte/png/chcrd32rte.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "57.0",
+      "height": "65.0"
+    },
+    "weight": "83,5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T950 36-in Printer:NA/LA",
+    "sku": "2Y9H1A#AC4",
+    "short_description": "HP DesignJet T950 36-in Printer:NA/LA",
+    "description": "HP DesignJet T950 36-in Printer:NA/LA",
+    "price": "16463.09",
+    "regular_price": "16463.09",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/6bmljexpjh/png/6bmljexpjh.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/efkjn8jx3u/png/efkjn8jx3u.png",
+          "https://hp.widen.net/content/sk52e2pnfs/png/sk52e2pnfs.png",
+          "https://hp.widen.net/content/ntiievrwq7/png/ntiievrwq7.png",
+          "https://hp.widen.net/content/thkxstplec/png/thkxstplec.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "63.0",
+      "height": "78.0"
+    },
+    "weight": "84",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": " HP DesignJet T950 36-in MFP:NA/LA",
+    "sku": "2Y9H3A#AC4",
+    "short_description": " HP DesignJet T950 36-in MFP:NA/LA",
+    "description": " HP DesignJet T950 36-in MFP:NA/LA",
+    "price": "25647.57",
+    "regular_price": "25647.57",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/f93sudpzdf/png/f93sudpzdf.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/hbrsnl87o8/png/hbrsnl87o8.png",
+          "https://hp.widen.net/content/w4fufyaajd/png/w4fufyaajd.png",
+          "https://hp.widen.net/content/musiht613a/png/musiht613a.png",
+          "https://hp.widen.net/content/vo1ny6hr0g/png/vo1ny6hr0g.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "157.5",
+      "width": "63.0",
+      "height": "78.0"
+    },
+    "weight": "97",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1600dr 36-in PS Printer",
+    "sku": "3EK13A#B1K",
+    "short_description": "HP DesignJet T1600dr 36-in PS Printer",
+    "description": "HP DesignJet T1600dr 36-in PS Printer",
+    "price": "24479.61",
+    "regular_price": "24479.61",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06368315.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06368261.png",
+          "https://hp.widen.net/content/iwjpgugj1y/png/iwjpgugj1y.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "117",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "sku": "1VD88A#B1K",
+    "short_description": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "description": "HP DesignJet T1700dr PS Printer:NA/LA",
+    "price": "24629.13",
+    "regular_price": "24629.13",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/zesq4akmbh/png/zesq4akmbh.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/l5kp9dvtcg/png/l5kp9dvtcg.png",
+          "https://hp.widen.net/content/wy4bgblclc/png/wy4bgblclc.png",
+          "https://hp.widen.net/content/gz8v0y4hzn/png/gz8v0y4hzn.png",
+          "https://hp.widen.net/content/sweejukgfv/png/sweejukgfv.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.5",
+      "width": "77.0",
+      "height": "71.0"
+    },
+    "weight": "128",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "sku": "3EK15A#B1K",
+    "short_description": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "description": "HP DesignJet T2600dr 36in PS MFP Printer",
+    "price": "36897.72",
+    "regular_price": "36897.72",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vnguvtifzc/png/vnguvtifzc.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/l8sweaalzx/png/l8sweaalzx.png",
+          "https://hp.widen.net/content/krlhiatg7u/png/krlhiatg7u.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "147.7",
+      "width": "76.7",
+      "height": "80.0"
+    },
+    "weight": "142",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "sku": "T8W16A#B1K",
+    "short_description": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z6 44-in PS Printer:NA/LA",
+    "price": "25082.54",
+    "regular_price": "25082.54",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/shv4gprzco/png/shv4gprzco.png",
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://hp.widen.net/content/ypjlcfq2h8/png/ypjlcfq2h8.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "123",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "sku": "T8W18A#B1K",
+    "short_description": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z6dr 44-in PS Printer:NA/LA",
+    "price": "35026.06",
+    "regular_price": "35026.06",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015522.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/f4v6zgxaj5/png/f4v6zgxaj5.png",
+          "https://hp.widen.net/content/fxiepsebxi/png/fxiepsebxi.png",
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06015414.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "132",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "sku": "W3Z72A#B1K",
+    "short_description": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "description": "HP DesignJet Z9 44-in PS Printer:NA/LA",
+    "price": "29997.37",
+    "regular_price": "29997.37",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/jwapxv9awt/png/jwapxv9awt.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06016086.png",
+          "https://hp.widen.net/content/oyxef2fysz/png/oyxef2fysz.png",
+          "https://hp.widen.net/content/dhsssf3vpc/png/dhsssf3vpc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "130",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "sku": "X9D24A#B1K",
+    "short_description": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "description": "HP DesignJet Z9dr 44in V-Trimmer Printer",
+    "price": "40495.00",
+    "regular_price": "40495.00",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/jwapxv9awt/png/jwapxv9awt.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/d0ewscyg8o/png/d0ewscyg8o.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06016086.png",
+          "https://hp.widen.net/content/oyxef2fysz/png/oyxef2fysz.png",
+          "https://hp.widen.net/content/dhsssf3vpc/png/dhsssf3vpc.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "195.0",
+      "width": "76.6",
+      "height": "71.8"
+    },
+    "weight": "137",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "sku": "2QU12A#B1K",
+    "short_description": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "description": "HP DesignJet Z6810 42-in Printer:NA/LA",
+    "price": "51297.43",
+    "regular_price": "51297.43",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "176.2",
+      "width": "69.8",
+      "height": "102.0"
+    },
+    "weight": "130.6",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "sku": "2RM82A#B1K",
+    "short_description": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "description": "Impressora HP Designjet Z9+ Pro de 64\"",
+    "price": "88108.59",
+    "regular_price": "88108.59",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/vufejdmv8v/png/vufejdmv8v.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/5biafakafp/png/5biafakafp.png",
+          "https://hp.widen.net/content/rdqesaxfut/png/rdqesaxfut.png",
+          "https://hp.widen.net/content/xeoegvdcin/png/xeoegvdcin.png",
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07812033.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "280.0",
+      "width": "75.0",
+      "height": "130.2"
+    },
+    "weight": "264",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
     "manage_stock": true
   },
   {
@@ -107,8 +1571,534 @@
     "stock_quantity": "10",
     "attributes": [],
     "meta_data": [],
-    "dimensions": {},
-    "categories": [],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Pedestal para impressora de 24 polegadas  HP DesignJet T200/T600",
+    "sku": "3C753A",
+    "short_description": "Pedestal para impressora de 24 polegadas  HP DesignJet T200/T600",
+    "description": "Pedestal para impressora de 24 polegadas  HP DesignJet T200/T600",
+    "price": "1676.50",
+    "regular_price": "1676.50",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/c8xckxvmiu/png/c8xckxvmiu.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/hut8omcage/png/hut8omcage.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Alimentador automático de folha para HP DesignJet T200/T600",
+    "sku": "8AJ60A",
+    "short_description": "Alimentador automático de folha para HP DesignJet T200/T600",
+    "description": "Alimentador automático de folha para HP DesignJet T200/T600",
+    "price": "717.94",
+    "regular_price": "717.94",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/u8wtoolmns/png/u8wtoolmns.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/beeaiyavf6/png/beeaiyavf6.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Protetor de rolo para HP DesignJet T200/T600 24\"",
+    "sku": "9GF94A",
+    "short_description": "Protetor de rolo para HP DesignJet T200/T600 24\"",
+    "description": "Protetor de rolo para HP DesignJet T200/T600 24\"",
+    "price": "587.82",
+    "regular_price": "587.82",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/hjwwwhibxl/png/hjwwwhibxl.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/xmujfsjyna/png/xmujfsjyna.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Sheet Organizer",
+    "sku": "698G7A",
+    "short_description": "HP DesignJet Sheet Organizer",
+    "description": "HP DesignJet Sheet Organizer",
+    "price": "1866.25",
+    "regular_price": "1866.25",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/kytrjtyrpx/png/kytrjtyrpx.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/jy6vctzzjw/png/jy6vctzzjw.png",
+          "https://hp.widen.net/content/fqlzufqilx/png/fqlzufqilx.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet Sheet Organizer and Stacker Kit",
+    "sku": "698G8A",
+    "short_description": "HP DesignJet Sheet Organizer and Stacker Kit",
+    "description": "HP DesignJet Sheet Organizer and Stacker Kit",
+    "price": "2673.27",
+    "regular_price": "2673.27",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/qhfnejb4ub/png/qhfnejb4ub.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://hp.widen.net/content/j0bk2o7tjd/png/j0bk2o7tjd.png",
+          "https://hp.widen.net/content/wshrrfkdes/png/wshrrfkdes.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP DesignJet 36-in Spindle",
+    "sku": "7F2C8A",
+    "short_description": "HP DesignJet 36-in Spindle",
+    "description": "HP DesignJet 36-in Spindle",
+    "price": "428.74",
+    "regular_price": "428.74",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/knx6n1zg3i/png/knx6n1zg3i.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Eixo para HP Designjet T120/T520 de 61cm (24pol)",
+    "sku": "B3Q36A",
+    "short_description": "Eixo para HP Designjet T120/T520 de 61cm (24pol)",
+    "description": "Eixo para HP Designjet T120/T520 de 61cm (24pol)",
+    "price": "438.29",
+    "regular_price": "438.29",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/e68uozkhdu/png/e68uozkhdu.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Eixo para HP Designjet T520,  T730, T830 de 91cm (36pol)",
+    "sku": "B3Q37A",
+    "short_description": "Eixo para HP Designjet T520,  T730, T830 de 91cm (36pol)",
+    "description": "Eixo para HP Designjet T520,  T730, T830 de 91cm (36pol)",
+    "price": "438.29",
+    "regular_price": "438.29",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/knx6n1zg3i/png/knx6n1zg3i.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Adaptador de eixo da HP DesignJet 3\" (T930, T1530, T1600, T2530, T2600)",
+    "sku": "CN538A",
+    "short_description": "Adaptador de eixo da HP DesignJet 3\" (T930, T1530, T1600, T2530, T2600)",
+    "description": "Adaptador de eixo da HP DesignJet 3\" (T930, T1530, T1600, T2530, T2600)",
+    "price": "61.88",
+    "regular_price": "61.88",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/its9ppj5lo/png/its9ppj5lo.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "HP Gloss Enhancer Upgrade Kit",
+    "sku": "2QX55A",
+    "short_description": "HP Gloss Enhancer Upgrade Kit",
+    "description": "HP Gloss Enhancer Upgrade Kit",
+    "price": "1546.89",
+    "regular_price": "1546.89",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/gjaframnb1/png/gjaframnb1.png"
+      },
+      {
+        "key": "_external_gallery_images",
+        "value": [
+          "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06173793.png"
+        ]
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Eixo de 24 polegadas para HP Designjet",
+    "sku": "Q6700A",
+    "short_description": "Eixo de 24 polegadas para HP Designjet",
+    "description": "Eixo de 24 polegadas para HP Designjet",
+    "price": "495.02",
+    "regular_price": "495.02",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/e68uozkhdu/png/e68uozkhdu.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Eixo de 44 polegadas para HP Designjet",
+    "sku": "Q6709A",
+    "short_description": "Eixo de 44 polegadas para HP Designjet",
+    "description": "Eixo de 44 polegadas para HP Designjet",
+    "price": "453.64",
+    "regular_price": "453.64",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "local",
+    "manage_stock": true
+  },
+  {
+    "name": "Adaptador de tubete 3\" para HP Designjet série Z Pro ",
+    "sku": "1A4T0A",
+    "short_description": "Adaptador de tubete 3\" para HP Designjet série Z Pro ",
+    "description": "Adaptador de tubete 3\" para HP Designjet série Z Pro ",
+    "price": "969.38",
+    "regular_price": "969.38",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://hp.widen.net/content/bfsqo34u36/png/bfsqo34u36.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Bobina de recolhimento para HP Designjet série Z Pro",
+    "sku": "7HC73A",
+    "short_description": "Bobina de recolhimento para HP Designjet série Z Pro",
+    "description": "Bobina de recolhimento para HP Designjet série Z Pro",
+    "price": "7837.58",
+    "regular_price": "7837.58",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Rolo multifunção para HP Designjet série Z Pro",
+    "sku": "7HC74A",
+    "short_description": "Rolo multifunção para HP Designjet série Z Pro",
+    "description": "Rolo multifunção para HP Designjet série Z Pro",
+    "price": "11214.96",
+    "regular_price": "11214.96",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Kit de atualização para aperfeiçoamento de brilho",
+    "sku": "7HC75A",
+    "short_description": "Kit de atualização para aperfeiçoamento de brilho",
+    "description": "Kit de atualização para aperfeiçoamento de brilho",
+    "price": "814.70",
+    "regular_price": "814.70",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08109567.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
+    "manage_stock": true
+  },
+  {
+    "name": "Kit de atualização PDF para HP Designjet série Z Pro",
+    "sku": "7HC76A",
+    "short_description": "Kit de atualização PDF para HP Designjet série Z Pro",
+    "description": "Kit de atualização PDF para HP Designjet série Z Pro",
+    "price": "9465.32",
+    "regular_price": "9465.32",
+    "stock_quantity": "10",
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_external_image_url",
+        "value": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c09031521.png"
+      }
+    ],
+    "dimensions": {
+      "length": "33.1",
+      "width": "40.8",
+      "height": "31.5"
+    },
+    "weight": "5.5",
+    "categories": [
+      {
+        "id": 24
+      }
+    ],
+    "shipping_class": "importado",
     "manage_stock": true
   }
 ]

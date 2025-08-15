@@ -11,8 +11,7 @@ using ClosedXML.Excel;
 using WooAttribute = eCommerce.Shared.Models.Attribute;
 using eCommerce.Server.Helpers;
 using eCommerce.Shared.Models;
-using eCommerce.Server.Processors.Lenovo;
-using eCommerce.Server.Processors.Lenovo.Helpers;
+using eCommerce.Server.Processors.HP.Helpers;
 
 namespace eCommerce.Server.Processors.HP.Helpers;
 
@@ -20,24 +19,17 @@ namespace eCommerce.Server.Processors.HP.Helpers;
     {
         private static readonly string CHACHE_DIR = "/app/eCommerce/Server/Cache/HP";
         private static string URL_PRODUCT = "https://partner.hp.com/o/headless-product-catalog/v1.0/product";
-        private static string URL_GET_TOKEN = "https://partner.hp.com/o/oauth2/token";
-        private static string HP_CLIENT_ID = "id-fcf82926-868e-acb2-ffa9-a63194f41d2";
-        private static string HP_CLIENT_SECRET = "secret-4e78b957-e137-ccbe-15a2-92d1305c517b";
         private static string HP_COOKIE = "JSESSIONID=34127AEB1363FDAC3038ECEE125EA888.tomcatpfp1-g7t16160s; COOKIE_SUPPORT=true; GUEST_LANGUAGE_ID=en_US";
-        private static readonly string TOKEN_PATH_FILE ="/app/eCommerce/Server/Cache/HP/tokenCache.json";
         private static readonly string PLOTTER_CACHE_FILE = "/app/eCommerce/Server/Cache/HP/plotterCache.json";
-
         private static readonly HttpClient _httpClient = new HttpClient();
 
-        
-        public static async Task<List<WooAttribute>> ProcessAttributes(IXLRow product)
+        public static async Task<List<WooAttribute>> ProcessAttributes(string sku)
         {
-            var sku = product.Cell(2).Value.ToString() ?? "";
             var formatedSku = sku.Split('#')[0];
 
             if (string.IsNullOrEmpty(formatedSku))
             {
-                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha {product.RowNumber()}");
+                Console.WriteLine($"[ERROR]: SKU vazio ou nulo");
                 return new List<WooAttribute>();
             }
 
@@ -72,7 +64,7 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 }
 
                 Console.WriteLine("[INFO]: Processando atributos via API...");
-                var attributes = await ProcessAttributesApi(product);
+                var attributes = await ProcessAttributesApi(sku);
                 
                 
                 if(attributes == null || !attributes.Any())
@@ -91,15 +83,14 @@ namespace eCommerce.Server.Processors.HP.Helpers;
             }
         }
         
-        public static async Task<List<WooAttribute>> ProcessAttributesApi(IXLRow product)
-        {
-            var sku = product.Cell(2).Value.ToString() ?? "";
+        public static async Task<List<WooAttribute>> ProcessAttributesApi(string sku)
+        {            
             var formatedSku = sku.Split('#')[0];
             string? accessToken = null;
             
             if (string.IsNullOrEmpty(formatedSku))
             {
-                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha {product.RowNumber()}");
+                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha");
                 return new List<WooAttribute>();
             }
 
@@ -107,17 +98,17 @@ namespace eCommerce.Server.Processors.HP.Helpers;
 
             try
             {
-                bool isTokenValid = CheckAccessTokenAsync();
+                bool isTokenValid = CacheManagerHP.CheckAccessTokenAsync();
                 if(isTokenValid)
                 {
                     Console.WriteLine("[INFO]: Access token válido encontrado.");
-                    accessToken = GetSavedAccessToken();
+                    accessToken = CacheManagerHP.GetSavedAccessToken();
                 }
                 else
                 {
                     Console.WriteLine("[INFO]: Access token expirado ou não encontrado. Obtendo novo token...");
-                    GetAccessTokenAsync().Wait();
-                    accessToken = GetSavedAccessToken();
+                    CacheManagerHP.GetAccessTokenAsync().Wait();
+                    accessToken = CacheManagerHP.GetSavedAccessToken();
 
                     if (accessToken == null)
                     {
@@ -163,22 +154,51 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 var jsonObj = JObject.Parse(responseContent);
-                
+                                
                 var plotterDataDict = new Dictionary<string, object>();
 
                 var detailsDict = new Dictionary<string, string>();
+                var atributoEncontrado = false;
 
-                foreach (var detail in jsonObj["product"]?
-                    .SelectMany(p => p["chunks"])
-                    .SelectMany(c => c["details"] ?? Enumerable.Empty<JToken>()))
+                Console.WriteLine($"[INFO]: Buscando atributos para o SKU: {formatedSku}");
+
+                try
                 {
-                    var name = detail["name"]?.ToString();
-                    var value = detail["value"]?.ToString();
-
-                    if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(value))
+                    foreach (var detail in jsonObj["product"]?
+                        .SelectMany(p => p["chunks"])
+                        .SelectMany(c => c["details"] ?? Enumerable.Empty<JToken>()))
                     {
-                        detailsDict[name] = value;
+                        var name = detail["tag"]?.ToString();
+                        var value = detail["value"]?.ToString();
+
+                        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(value))
+                        {
+                            System.Console.WriteLine($"[INFO]: Atributo encontrado: {name}");
+                            if (!detailsDict.ContainsKey(name)) // mantém só o primeiro que aparecer
+                            {
+                                detailsDict[name] = value;
+                            }
+                            else
+                                Console.WriteLine($"[INFO]: Atributo já presente para: {name}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"[INFO]: Atributo não encontrado!");
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[WARNING]: Atributos não encontrados para o SKU: {formatedSku}");
+
+                    var cachedJson = File.ReadAllText(PLOTTER_CACHE_FILE);
+                    plotterDataDict = JsonConvert.DeserializeObject<Dictionary<string, object>>(cachedJson) ?? new Dictionary<string, object>();
+                    plotterDataDict[sku] = null;
+                    string newJson = JsonConvert.SerializeObject(plotterDataDict, Formatting.Indented);
+                    File.WriteAllText(PLOTTER_CACHE_FILE, newJson);
+                    Console.WriteLine($"[INFO]: Dados do plotter salvos como NULL em {PLOTTER_CACHE_FILE}");
+
+                    return new List<WooAttribute>();
                 }
 
                 if (File.Exists(PLOTTER_CACHE_FILE))
@@ -203,7 +223,8 @@ namespace eCommerce.Server.Processors.HP.Helpers;
 
                 foreach (var kvp in detailsDict)
                 {
-                    existingDetails[kvp.Key] = kvp.Value;
+                    if(!existingDetails.ContainsKey(kvp.Key))
+                        existingDetails[kvp.Key] = kvp.Value;
                 }
 
                 plotterDataDict[sku] = existingDetails;
@@ -222,14 +243,13 @@ namespace eCommerce.Server.Processors.HP.Helpers;
             }
         }
 
-        public static async Task<List<MetaData>> ProcessPhotos(IXLRow product)
+        public static async Task<List<MetaData>> ProcessPhotos(string sku)
         {
-            var sku = product.Cell(2).Value.ToString() ?? "";
             var formatedSku = sku.Split('#')[0];
 
             if (string.IsNullOrEmpty(formatedSku))
             {
-                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha {product.RowNumber()}");
+                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha");
                 return new List<MetaData>();
             }
 
@@ -295,7 +315,7 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 // ----------------- 2. Requisição via API -----------------
 
                 Console.WriteLine("[INFO]: Processando fotos via API...");
-                metaData = await ProcessImagesAPI(product);
+                metaData = await ProcessImagesAPI(sku);
 
                 if (metaData == null || !metaData.Any())
                 {
@@ -313,24 +333,181 @@ namespace eCommerce.Server.Processors.HP.Helpers;
             }
         }
 
-        private static async Task<List<MetaData>> ProcessImagesAPI(IXLRow product)
+        public static string ProcessWeight(string sku)
         {
-            var sku = product.Cell(2).Value.ToString() ?? "";
+            CacheManagerHP.EnsureCacheDir(CHACHE_DIR);
+            string DEFAULT_WEIGHT = "130.6";
+
+            try
+            {
+                if(File.Exists(PLOTTER_CACHE_FILE))
+                {
+                    var cachedJson = File.ReadAllText(PLOTTER_CACHE_FILE);
+                    var plotterData = JsonConvert.DeserializeObject<Dictionary<string, object>>(cachedJson) ?? new Dictionary<string, object>();
+                    var weight = string.Empty;
+
+                    if (plotterData.ContainsKey(sku))
+                    {
+                        Console.WriteLine($"[INFO]: Dados do plotter encontrados no cache para o SKU: {sku}");
+                        var jsonCacheObj = JObject.Parse(cachedJson);
+
+                        if(jsonCacheObj[sku]?["weightpackmet"] != null)
+                        {
+                            weight = jsonCacheObj[sku]?["weightpackmet"]?.ToString();
+                            Console.WriteLine($"[INFO]: Peso com Embalagem encontrado no cache: {weight}");
+                        }
+                        else if(jsonCacheObj[sku]?["weightmet"] != null)
+                        {
+                            weight = jsonCacheObj[sku]?["weightmet"]?.ToString();
+                            Console.WriteLine($"[INFO]: Peso encontrado no cache: {weight}");
+                        }
+
+                        if (!string.IsNullOrEmpty(weight))
+                        {
+                            Console.WriteLine($"[INFO]: Convertendo peso para kg: {weight}");
+                            weight = ConvertToKg(weight, sku);
+
+                            return weight;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"[INFO]: Peso não encontrado no cache para o SKU: {sku}");
+                            return DEFAULT_WEIGHT;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[INFO]: Dados do plotter não encontrados no cache para o SKU: {sku}");
+                        return DEFAULT_WEIGHT;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[INFO]: Cache não encontrado!");
+                    return DEFAULT_WEIGHT;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR]: Erro ao processar peso para o SKU {sku}: {ex.Message}");
+                return DEFAULT_WEIGHT;
+            }
+        }
+
+        public static Dimensions ProcessDimensions(string sku)
+        {
+            Dimensions DEFAULT_DIMENSIONS = new Dimensions { length = "176.2", width = "69.8", height = "102.0" };
+            
+            if (string.IsNullOrEmpty(sku))
+            {
+                Console.WriteLine($"[ERROR]: SKU vazio ou nulo na linha");
+                Console.WriteLine("[WARNING]: Aplicando dimensão default");
+                
+                return DEFAULT_DIMENSIONS;
+            }
+
+            try
+            {
+                if(File.Exists(PLOTTER_CACHE_FILE))
+                {
+                    var cachedJson = File.ReadAllText(PLOTTER_CACHE_FILE);
+                    var plotterData = JsonConvert.DeserializeObject<Dictionary<string, object>>(cachedJson) ?? new Dictionary<string, object>();
+
+                    if(plotterData.ContainsKey(sku))
+                    {
+                        Console.WriteLine($"[INFO]: Dados do plotter encontrados no cache para o SKU: {sku}");
+                        var jsonCacheObj = JObject.Parse(cachedJson);
+
+                        if(jsonCacheObj[sku]?["dimenpackmet"] != null)
+                        {
+                            var dimensions = jsonCacheObj[sku]?["dimenpackmet"]?.ToString().Replace(" ", "");
+                            Console.WriteLine($"[INFO]: Dimensões com Embalagem encontradas no cache: {dimensions}");
+                            Dictionary<string, string> dimensionsDict = new Dictionary<string, string>();
+                            Console.WriteLine($"[INFO]: Processando dimensões para o SKU: {sku}");
+                            dimensionsDict["length"] = ExtractDimension(dimensions, 0); //dimensions.Split("x")[0];
+                            dimensionsDict["width"] = ExtractDimension(dimensions, 1); //dimensions.Split("x")[1];
+                            dimensionsDict["height"] = ExtractDimension(dimensions, 2); //dimensions.Split("x")[2];
+                            
+                            return new Dimensions
+                            {
+                                length = dimensionsDict["length"],
+                                width = dimensionsDict["width"],
+                                height = dimensionsDict["height"]
+                            };
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine($"[INFO]: Dimensões não encontradas para o SKU: {sku}");
+                            Console.WriteLine("[WARNING]: Aplicando dimensão default");
+                            
+                            return DEFAULT_DIMENSIONS;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[INFO]: Dados do plotter não encontrados no cache para o SKU: {sku}");
+                        Console.WriteLine("[WARNING]: Aplicando dimensão default");
+                        return DEFAULT_DIMENSIONS;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[INFO]: Cache não encontrado!");
+                    Console.WriteLine("[WARNING]: Aplicando dimensão default");
+
+                    return DEFAULT_DIMENSIONS;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR]: Erro ao processar dimensões para o SKU {sku}: {ex.Message}");
+                Console.WriteLine("[WARNING]: Aplicando dimensão default");
+
+                return DEFAULT_DIMENSIONS;
+            }
+        }
+
+        public static string ProcessShippingClass(IXLRow linha)
+        {
+            try
+            {
+                var icmsSP = linha.Cell(9).Value.ToString();
+
+                Console.WriteLine($"[INFO]: ICMS SP: {icmsSP}");
+
+                switch(icmsSP)
+                {
+                    case "0.04":
+                        return "importado";
+                    default:
+                        return "local";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR]: Erro ao processar shipping class: {ex.Message}");
+                return string.Empty;
+            }
+        }
+
+        private static async Task<List<MetaData>> ProcessImagesAPI(string sku)
+        {
             var formatedSku = sku.Split('#')[0];
 
             string? accessToken = null;
-            bool isTokenValid = CheckAccessTokenAsync();
+            bool isTokenValid = CacheManagerHP.CheckAccessTokenAsync();
             
             if(isTokenValid)
             {
                 Console.WriteLine("[INFO]: Access token válido encontrado.");
-                accessToken = GetSavedAccessToken();
+                accessToken = CacheManagerHP.GetSavedAccessToken();
             }
             else
             {
                 Console.WriteLine("[INFO]: Access token expirado ou não encontrado. Obtendo novo token...");
-                GetAccessTokenAsync().Wait();
-                accessToken = GetSavedAccessToken();
+                CacheManagerHP.GetAccessTokenAsync().Wait();
+                accessToken = CacheManagerHP.GetSavedAccessToken();
 
                 if (accessToken == null)
                 {
@@ -472,102 +649,89 @@ namespace eCommerce.Server.Processors.HP.Helpers;
             }
         }
 
-        private static async Task GetAccessTokenAsync()
+        private static string ConvertToKg(string weight, string sku)
         {
-            Console.WriteLine($"[INFO]: Obtendo novo access token de {URL_GET_TOKEN}");
+            string weightValue = weight.Replace(" ", "");
 
-            var content = new FormUrlEncodedContent(new[]
+            if(weightValue.Contains("lb"))
             {
-                new KeyValuePair<string, string>("grant_type", "client_credentials"),
-                new KeyValuePair<string, string>("client_id", HP_CLIENT_ID ?? ""),
-                new KeyValuePair<string, string>("client_secret", HP_CLIENT_SECRET ?? "")
-            });
+                weightValue = weightValue.Replace("lb", "");
 
-            _httpClient.DefaultRequestHeaders.Clear();
-            _httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
-            _httpClient.DefaultRequestHeaders.Add("Cookie", HP_COOKIE);
+                if(weightValue.Contains("-"))
+                {
+                    weightValue = weightValue.Split("-")[0];
+                }
 
+                weightValue = (double.Parse(weightValue) * 0.45359237).ToString("F2");
+                Console.WriteLine($"[INFO]: Peso convertido para kg: {weightValue}");
+            }
+            else if(weightValue.Contains("kg"))
+            {
+                weightValue = weightValue.Replace("kg", "");
+                Console.WriteLine($"[INFO]: Peso já está em kg, tratamento realizado: {weightValue}");
+            }
+            else
+            {
+                Console.WriteLine($"[ERROR]: Peso não encontrado para o SKU {sku}");
+                return string.Empty;
+            }
+
+            return weightValue;
+        }
+
+        private static string ExtractDimension(string dimensions, int position)
+        {
+            var dimension = dimensions.ToLower();
+            var deafaultDimensions = new List<string>
+            {
+                "176.2",
+                "69.8",
+                "102.0"
+            };
+            
             try
             {
-                var response = await _httpClient.PostAsync(URL_GET_TOKEN, content);
-                response.EnsureSuccessStatusCode();
-
-                var json = await response.Content.ReadAsStringAsync();
-
-                using var document = JsonDocument.Parse(json);
-                if (document.RootElement.TryGetProperty("access_token", out var tokenElement))
+                //MM -> CM
+                if(dimension.Contains("mm"))
                 {
-                    string? accessToken = tokenElement.GetString();
+                    Console.WriteLine($"[INFO]: Dimensão em mm: {dimension.Split("x")[position]}");
+                    double dimensionCm = double.Parse(dimension.Split("x")[position].Replace("mm", "")) / 10;
+                    Console.WriteLine($"[INFO]: Dimensão convertida para cm: {dimensionCm}");
 
-                    if(accessToken != null)
-                    {
-                        var tokenData = new 
-                        {
-                            access_token = accessToken,
-                            generated_at = DateTime.UtcNow,
-                            expires_in = DateTime.UtcNow.AddMinutes(10)
-                        };
-
-                        var jsonToSave = JsonConvert.SerializeObject(tokenData, Formatting.Indented);
-                        File.WriteAllText(TOKEN_PATH_FILE, jsonToSave);
-                        Console.WriteLine($"[INFO]: Access token obtido e salvo com sucesso");
-                    }
+                    return dimensionCm.ToString("F1");
                 }
+                //CM -> CM
+                else if(dimension.Contains("cm"))
+                {
+                    Console.WriteLine($"[INFO]: Dimensão em cm: {dimension.Split("x")[position]}");
+                    double dimensionCm = double.Parse(dimension.Split("x")[position].Replace("cm", ""));
+
+                    return dimensionCm.ToString("F1");
+                }
+                //IN -> CM
+                else if(dimension.Contains("in"))
+                {
+                    Console.WriteLine($"[INFO]: Dimensão em in: {dimension.Split("x")[position]}");
+                    double dimensionCm = double.Parse(dimension.Split("x")[position].Replace("in", "")) * 2.54;
+                    Console.WriteLine($"[INFO]: Dimensão convertida para cm: {dimensionCm}");
+
+                    return dimensionCm.ToString("F1");
+                }
+                //DEFAULT
                 else
                 {
-                    Console.WriteLine("[ERROR]: Access token não encontrado na resposta.");
+                    Console.WriteLine($"[ERROR]: Dimensão não encontrada: {dimension.Split("x")[position]}");
+                    Console.WriteLine("[WARNING]: Aplicando dimensão default");
+
+                    return deafaultDimensions[position];
                 }
             }
-            catch (HttpRequestException e)
+            catch (Exception ex)
             {
-                Console.WriteLine($"[ERROR]: Problema na requisição: {e.Message}");
+                Console.WriteLine($"[ERROR]: Erro ao processar dimensão: {ex.Message}");
+                Console.WriteLine("[WARNING]: Aplicando dimensão default");
+
+                return deafaultDimensions[position];
             }
-            
         }
-
-        private static string GetSavedAccessToken()
-        {
-            Console.WriteLine($"[INFO]: Verificando token salvo em: {TOKEN_PATH_FILE}");
-            if (File.Exists(TOKEN_PATH_FILE))
-            {
-                var json = File.ReadAllText(TOKEN_PATH_FILE);
-                var tokenData = JsonConvert.DeserializeObject<dynamic>(json);
-                Console.WriteLine($"[INFO]: Token encontrado no arquivo.");
-                return tokenData?.access_token;
-            }
-            Console.WriteLine("[INFO]: Nenhum token salvo encontrado.");
-            return null;
-        }
-
-        private static string GetSavedDataExpiresToken()
-        {
-            if (File.Exists(TOKEN_PATH_FILE))
-            {
-                var json = File.ReadAllText(TOKEN_PATH_FILE);
-                var tokenData = JsonConvert.DeserializeObject<dynamic>(json);
-                return tokenData?.expires_in;
-            }
-            return null;
-        }
-
-        private static bool CheckAccessTokenAsync()
-        {
-            var expiresDataToken = GetSavedDataExpiresToken();
-            
-            if (expiresDataToken == null)
-            {
-                Console.WriteLine("[ERROR]: Token expirado ou não encontrado.");
-                return false;
-            }
-            
-            if (DateTime.Parse(expiresDataToken) > DateTime.UtcNow)
-            {
-                Console.WriteLine($"[INFO]: Access token valido até {expiresDataToken}.");
-                return true;
-            }
-
-            Console.WriteLine("[INFO]: Access token expirado.");
-            return false;
-        }
-
     }

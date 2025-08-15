@@ -23,9 +23,8 @@ public class LenovoController : ControllerBase
     public async Task<IActionResult> EnviarProdutos([FromForm] IFormFile arquivoProdutos)
     {
         var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-        var caminhoProdutos = FileHelper.SaveFile(arquivoProdutos, pastaUploads);
-
         var job = await _lenovoService.EnviarProdutos(arquivoProdutos);
+        
         return Ok(job);
     }
 
@@ -33,9 +32,8 @@ public class LenovoController : ControllerBase
     public async Task<IActionResult> EnviarCarePack([FromForm] IFormFile arquivoProdutos)
     {
         var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-        var caminhoProdutos = FileHelper.SaveFile(arquivoProdutos, pastaUploads);
-
         var job = await _lenovoService.EnviarCarePack(arquivoProdutos);
+
         return Ok(job);
     }
 }

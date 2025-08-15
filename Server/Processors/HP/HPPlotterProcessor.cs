@@ -52,6 +52,7 @@ namespace eCommerce.Server.Processors.HP;
                         var linhas = worksheet.RowsUsed().Skip(6);
                         var cabecalho = worksheet.Row(6);
                         int contadorLinhas = 0;
+                        bool isAcessory = false;
 
                         foreach (var linha in linhas)
                         {
@@ -61,8 +62,13 @@ namespace eCommerce.Server.Processors.HP;
                             try
                             {
                                 var sku = linha.Cell(2).Value.ToString() ?? "";
-
-                                if (string.IsNullOrEmpty(sku))
+                                
+                                Console.WriteLine($"[INFO]: Linha: {linha.Cell(1).Value.ToString()}");
+                                if(linha.Cell(1).Value.ToString().Contains("Acessórios") || isAcessory)
+                                {
+                                    isAcessory = true;
+                                }
+                                else if(string.IsNullOrEmpty(sku))
                                 {
                                     Console.WriteLine("[AVISO]: SKU vazio, pulando linha.");
                                     continue;
@@ -74,11 +80,12 @@ namespace eCommerce.Server.Processors.HP;
                                 var price = "";
                                 var regularPrice = "";
                                 var stockQuantity = STOCK.ToString();
-                                var attributes = await PlotterDataUtilsHP.ProcessAttributes(linha); //INACABADO
-                                var metaData = await PlotterDataUtilsHP.ProcessPhotos(linha); //INACABADO
-                                //var dimensions = PlotterDataUtilsHP.ProcessDimensions(); //CRIAR MÉTODO
-                                //var weight = PlotterDataUtilsHP.ProcessWeight(); //CRIAR MÉTODO
-                                //var categories = PlotterDataUtilsHP.ProcessCategories(); //CRIAR MÉTODO
+                                var attributes = await PlotterDataUtilsHP.ProcessAttributes(sku); // DEFINIR VALORES A SEREM PEGOS DO PLOTTER
+                                var metaData = await PlotterDataUtilsHP.ProcessPhotos(sku);
+                                var dimensions = isAcessory ? new Dimensions { length = "33.1", width = "40.8", height = "31.5" } : PlotterDataUtilsHP.ProcessDimensions(sku);
+                                var weight = isAcessory ? "5.5" : PlotterDataUtilsHP.ProcessWeight(sku);
+                                var categories = new List<Category> { new Category { id = 24 } };
+                                var shippingClass = PlotterDataUtilsHP.ProcessShippingClass(linha);
                                 var manageStock = true;
 
                                 try
@@ -106,11 +113,12 @@ namespace eCommerce.Server.Processors.HP;
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity,
-                                    //weight = weight,
+                                    weight = weight,
                                     manage_stock = manageStock,
-                                    //attributes = attributes,
-                                    //dimensions = dimensions,
-                                    //categories = categories,
+                                    attributes = attributes,
+                                    dimensions = dimensions,
+                                    categories = categories,
+                                    shipping_class = shippingClass,
                                     meta_data = metaData
                                 };
 
