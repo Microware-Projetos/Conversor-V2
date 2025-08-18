@@ -140,7 +140,8 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
@@ -236,7 +237,8 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
@@ -329,7 +331,8 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
@@ -421,8 +424,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
-
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
+                            
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -512,8 +516,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
-
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
+                            
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -597,8 +602,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
-
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
+                            
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -696,8 +702,9 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
-
+                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
+                            var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
+                            
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct

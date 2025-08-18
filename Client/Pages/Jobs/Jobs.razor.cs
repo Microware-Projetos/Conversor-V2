@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using eCommerce.Client.Services.Job;
 using eCommerce.Shared.Models;
+using System.Threading;
 
 namespace eCommerce.Client.Pages.Jobs;
 
@@ -12,11 +13,14 @@ public partial class Jobs : ComponentBase
 
     private List<JobFilaResponse> todosJobs = new List<JobFilaResponse>();
     private List<JobFilaResponse> jobsExibidos = new List<JobFilaResponse>();
+    private List<JobFilaResponse> jobsFiltrados = new List<JobFilaResponse>();
     private bool isLoading = false;
     private string mensagem = "";
-    private const int ITENS_POR_PAGINA = 10;
+    private const int ITENS_POR_PAGINA = 9;
     private int paginaAtual = 1;
     private int totalPaginas = 1;
+    private StatusJob? filtroStatus = null;
+    private Timer? mensagemTimer;
 
     protected override async Task OnInitializedAsync()
     {
@@ -26,7 +30,27 @@ public partial class Jobs : ComponentBase
     private void LimparMensagem()
     {
         mensagem = "";
+        CancelarTimerMensagem();
         StateHasChanged();
+    }
+
+    private void CancelarTimerMensagem()
+    {
+        mensagemTimer?.Dispose();
+        mensagemTimer = null;
+    }
+
+    private void IniciarTimerMensagem()
+    {
+        CancelarTimerMensagem();
+        mensagemTimer = new Timer(_ =>
+        {
+            InvokeAsync(() =>
+            {
+                mensagem = "";
+                StateHasChanged();
+            });
+        }, null, 5000, Timeout.Infinite);
     }
 
     private async Task CarregarJobs()
@@ -37,9 +61,11 @@ public partial class Jobs : ComponentBase
             StateHasChanged();
             
             todosJobs = await _jobService.ListarJobs();
+            jobsFiltrados = todosJobs.ToList();
             CalcularPaginas();
             AplicarPaginacao();
             mensagem = $"Carregados {todosJobs.Count} jobs";
+            IniciarTimerMensagem();
         }
         catch (Exception ex)
         {
@@ -54,16 +80,26 @@ public partial class Jobs : ComponentBase
 
     private void CalcularPaginas()
     {
-        totalPaginas = (int)Math.Ceiling((double)todosJobs.Count / ITENS_POR_PAGINA);
+        var totalJobs = jobsFiltrados.Count;
+        totalPaginas = (int)Math.Ceiling((double)totalJobs / ITENS_POR_PAGINA);
         if (totalPaginas == 0) totalPaginas = 1;
         if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
     }
 
     private void AplicarPaginacao()
     {
-        var jobsOrdenados = todosJobs.OrderByDescending(j => j.DataCriacao).ToList();
+        // Aplicar filtros primeiro
+        AplicarFiltros();
+        
+        // Aplicar ordenação
+        var jobsOrdenados = jobsFiltrados.OrderByDescending(j => j.DataCriacao).ToList();
+        
+        // Aplicar paginação
         var inicio = (paginaAtual - 1) * ITENS_POR_PAGINA;
         jobsExibidos = jobsOrdenados.Skip(inicio).Take(ITENS_POR_PAGINA).ToList();
+        
+        // Recalcular páginas
+        CalcularPaginas();
     }
 
     private void IrParaPagina(int pagina)
@@ -148,6 +184,7 @@ public partial class Jobs : ComponentBase
             {
                 mensagem = $"✅ {result.message}";
             }
+            IniciarTimerMensagem();
             
             // Recarregar a lista de jobs
             await CarregarJobs();
@@ -161,5 +198,51 @@ public partial class Jobs : ComponentBase
             isLoading = false;
             StateHasChanged();
         }
+    }
+
+    private void AplicarFiltros()
+    {
+        jobsFiltrados = todosJobs.ToList();
+        
+        // Aplicar filtro por status
+        if (filtroStatus.HasValue)
+        {
+            jobsFiltrados = jobsFiltrados.Where(j => j.Status == filtroStatus.Value).ToList();
+        }
+    }
+
+    private void FiltrarPorStatus(StatusJob status)
+    {
+        // Se clicar no mesmo status, remove o filtro
+        if (filtroStatus == status)
+        {
+            filtroStatus = null;
+        }
+        else
+        {
+            filtroStatus = status;
+        }
+        
+        // Volta para a primeira página
+        paginaAtual = 1;
+        
+        // Aplica os filtros e paginação
+        AplicarPaginacao();
+        StateHasChanged();
+    }
+
+
+
+    private void LimparFiltros()
+    {
+        filtroStatus = null;
+        paginaAtual = 1;
+        AplicarPaginacao();
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        CancelarTimerMensagem();
     }
 }

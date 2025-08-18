@@ -84,4 +84,29 @@ main {
     background-color: #182A3F;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jobs-link {
+    color: white !important;
+    text-decoration: none !important;
+    position: absolute !important;
+    right: 20px !important;
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
+    padding: 8px 15px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.jobs-link:hover {
+    color: #f0f0f0 !important;
+    text-decoration: none !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.jobs-link i {
+    color: rgb(255, 255, 255) !important;
+    margin-right: 8px;
 }

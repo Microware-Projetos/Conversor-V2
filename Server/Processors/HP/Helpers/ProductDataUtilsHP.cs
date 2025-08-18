@@ -1,10 +1,17 @@
-using eCommerce.Shared.Models;
 using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Text.Json;
+using System.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using ClosedXML.Excel;
+using System.Text.RegularExpressions;
 using System.IO;
+using WooAttribute = eCommerce.Shared.Models.Attribute;
+using eCommerce.Shared.Models;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
 using eCommerce.Server.Processors.HP.Helpers;
@@ -13,6 +20,15 @@ namespace eCommerce.Server.Processors.HP.Helpers;
 
 public static class ProductDataUtilsHP
 {
+    private static readonly string CHACHE_DIR = "/app/eCommerce/Server/Cache/HP";
+    private static readonly string URL_PRODUCT = "https://partner.hp.com/o/headless-product-catalog/v1.0/product";
+    private static readonly string HP_COOKIE = "JSESSIONID=34127AEB1363FDAC3038ECEE125EA888.tomcatpfp1-g7t16160s; COOKIE_SUPPORT=true; GUEST_LANGUAGE_ID=en_US";
+    private static readonly string PRODUCT_CACHE_FILE = "/app/eCommerce/Server/Cache/HP/product_cache.json";
+    private static readonly HttpClient _httpClient = new HttpClient()
+    {
+        Timeout = TimeSpan.FromMinutes(2)
+    };
+
     public static string ProcessWeight(string weight, object product_attributes)
     {
         try
@@ -271,7 +287,7 @@ public static class ProductDataUtilsHP
                                                     var name = dimObj["name"]?.ToString();
                                                     var value = dimObj["value"]?.ToString();
                                                     
-                                                    Console.WriteLine($"Campo encontrado: '{name}' = '{value}'");
+                                                    //Console.WriteLine($"Campo encontrado: '{name}' = '{value}'");
                                                     
                                                     // Verifica se o campo contém "dimension" ou "dimensão" (case insensitive)
                                                     var isDimensionField = dimensionFields.Contains(name) || 
@@ -280,7 +296,7 @@ public static class ProductDataUtilsHP
                                                     
                                                     if (isDimensionField && !string.IsNullOrWhiteSpace(value))
                                                     {
-                                                        Console.WriteLine($"Campo de dimensão encontrado: '{name}'");
+                                                        //Console.WriteLine($"Campo de dimensão encontrado: '{name}'");
                                                         var originalValue = value.ToLower();
                                                         
                                                         // Verifica se tem unidades de medida
@@ -290,15 +306,15 @@ public static class ProductDataUtilsHP
                                                             continue;
                                                         }
                                                         
-                                                        Console.WriteLine($"Processando valor: {originalValue}");
+                                                        //Console.WriteLine($"Processando valor: {originalValue}");
                                                         
                                                         // Tenta processar como três dimensões primeiro
                                                         var result = ProcessThreeDimensions(originalValue);
                                                         if (result != null)
                                                         {
-                                                            Console.WriteLine($"Dimensões processadas com sucesso: L={result.length}, W={result.width}, H={result.height}");
-                                                            Console.WriteLine($"Tipo do objeto result: {result.GetType().Name}");
-                                                            Console.WriteLine($"Verificando propriedades: length='{result.length}', width='{result.width}', height='{result.height}'");
+                                                            //Console.WriteLine($"Dimensões processadas com sucesso: L={result.length}, W={result.width}, H={result.height}");
+                                                            //Console.WriteLine($"Tipo do objeto result: {result.GetType().Name}");
+                                                            //Console.WriteLine($"Verificando propriedades: length='{result.length}', width='{result.width}', height='{result.height}'");
                                                             return result;
                                                         }
                                                         
@@ -306,7 +322,7 @@ public static class ProductDataUtilsHP
                                                         result = ProcessSingleDimension(originalValue);
                                                         if (result != null)
                                                         {
-                                                            Console.WriteLine($"Dimensão única processada: W={result.width}");
+                                                            //Console.WriteLine($"Dimensão única processada: W={result.width}");
                                                             return result;
                                                         }
                                                         
@@ -390,7 +406,7 @@ public static class ProductDataUtilsHP
     
     private static string[]? ExtractDimensions(string value)
     {
-        Console.WriteLine($"Extraindo dimensões de: '{value}'");
+        //Console.WriteLine($"Extraindo dimensões de: '{value}'");
         
         // Tenta encontrar padrões de dimensões (três números separados por x)
         var pattern = @"(\d+\.?\d*)\s*x\s*(\d+\.?\d*)\s*x\s*(\d+\.?\d*)";
@@ -401,7 +417,7 @@ public static class ProductDataUtilsHP
             // Pega o primeiro conjunto de dimensões encontrado
             var match = matches[0];
             var result = new[] { match.Groups[1].Value, match.Groups[2].Value, match.Groups[3].Value };
-            Console.WriteLine($"Dimensões extraídas com regex: {string.Join(" x ", result)}");
+            //Console.WriteLine($"Dimensões extraídas com regex: {string.Join(" x ", result)}");
             return result;
         }
         
@@ -420,7 +436,7 @@ public static class ProductDataUtilsHP
     
     private static string CleanDimensionValue(string value)
     {
-        Console.WriteLine($"Limpando valor de dimensão: '{value}'");
+        //Console.WriteLine($"Limpando valor de dimensão: '{value}'");
         
         // Converte para minúsculo
         value = value.ToLower();
@@ -458,7 +474,7 @@ public static class ProductDataUtilsHP
         // Remove espaços extras
         value = string.Join(" ", value.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
         
-        Console.WriteLine($"Valor limpo: '{value}'");
+        //Console.WriteLine($"Valor limpo: '{value}'");
         return value;
     }
     
@@ -466,7 +482,7 @@ public static class ProductDataUtilsHP
     {
         try
         {
-            Console.WriteLine($"Convertendo valor: '{value}' de '{originalValue}'");
+            //Console.WriteLine($"Convertendo valor: '{value}' de '{originalValue}'");
             
             // Se o valor original contém mm, converte para cm
             if (originalValue.Contains("mm"))
@@ -483,7 +499,7 @@ public static class ProductDataUtilsHP
                 return convertedValue;
             }
             
-            Console.WriteLine($"Valor mantido como está: {value}");
+            //Console.WriteLine($"Valor mantido como está: {value}");
             return value;
         }
         catch (Exception ex)
@@ -533,6 +549,278 @@ public static class ProductDataUtilsHP
         return new Dimensions { length = "0", width = "0", height = "0" };
     }
     
+    public static async Task<List<MetaData>> ProcessPhotos(string sku, string aba)
+    {
+        Console.WriteLine($"[INFO]: Processando fotos para o SKU: {sku}");
+        var metaData = new List<MetaData>();
+        var formatedSku = sku.Split('#')[0];
+        
+        try
+        {
+            if(File.Exists(PRODUCT_CACHE_FILE))
+            {
+                var cacheData = File.ReadAllText(PRODUCT_CACHE_FILE);
+                var productData =  JsonConvert.DeserializeObject<Dictionary<string, object>>(cacheData) ?? new Dictionary<string, object>();
+                if(productData.ContainsKey(formatedSku))
+                {
+                    Console.WriteLine($"[INFO]: Dados do produto encontrados no cache para o SKU: {formatedSku}");
+                    var jsonCacheObj = JObject.Parse(cacheData);
+                    var imageProduct = jsonCacheObj[formatedSku]?["data"]?["images"] as JArray;
+                    if(imageProduct != null && imageProduct.Any())
+                    {
+                        Console.WriteLine($"[INFO]: Imagens encontradas para o SKU: {formatedSku}");
+                            
+                        metaData.Add(new MetaData
+                        {
+                            key = "_external_image_url",
+                            value = imageProduct.First().ToString()
+                        });
+
+                        if (imageProduct.Count > 1)
+                        {
+                            metaData.Add(new MetaData
+                            {
+                                key = "_external_gallery_images",
+                                value = imageProduct.Skip(1).ToList()
+                            });
+                        }
+
+                        Console.WriteLine($"[INFO]: Total de imagens processadas: {metaData.Count}");
+                        return metaData;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[INFO]: Nenhuma imagem encontrada para o SKU: {formatedSku}");
+                        Console.WriteLine("[INFO]: Tentando buscar imagens por API...");
+                        
+                        metaData = await ProcessImagesAPI(sku, aba);
+
+                        if (metaData == null || !metaData.Any())
+                        {
+                            Console.WriteLine($"[INFO]: Nenhuma foto encontrada para o SKU na API: {formatedSku}");
+                            return new List<MetaData>();
+                        }
+
+                        Console.WriteLine($"[INFO]: Fotos processadas com sucesso para o SKU: {formatedSku}");
+                        return metaData;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[INFO]: Dados do produto não encontrados no cache para o SKU: {formatedSku}");
+                    return new List<MetaData>();
+                }
+            }
+            else
+            {
+                Console.WriteLine($"[INFO]: Arquivo de cache não encontrado para o SKU: {formatedSku}");
+                return new List<MetaData>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERROR]: Erro ao processar fotos para o SKU {sku}: {ex.Message}");
+            return new List<MetaData>();
+        }
+    }
+
+    private static async Task<List<MetaData>> ProcessImagesAPI(string sku, string aba)
+    {
+        Console.WriteLine($"[INFO]: Processando imagens para o SKU: {sku}");
+        var formatedSku = sku.Split('#')[0];
+
+        string? accessToken = null;
+        bool isTokenValid = CacheManagerHP.CheckAccessTokenAsync();
+        
+        if(isTokenValid)
+        {
+            Console.WriteLine("[INFO]: Access token válido encontrado.");
+            accessToken = CacheManagerHP.GetSavedAccessToken();
+        }
+        else
+        {
+            Console.WriteLine("[INFO]: Access token expirado ou não encontrado. Obtendo novo token...");
+            CacheManagerHP.GetAccessTokenAsync().Wait();
+            accessToken = CacheManagerHP.GetSavedAccessToken();
+
+            if (accessToken == null)
+            {
+                throw new Exception("[ERROR]: Não foi possível obter o access token.");
+                return new List<MetaData>();
+            }
+            else
+            {
+                Console.WriteLine($"[INFO]: Access token obtido: {accessToken}");
+            }
+        }
+
+        _httpClient.DefaultRequestHeaders.Clear();
+        _httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
+        _httpClient.DefaultRequestHeaders.Add("Cookie", HP_COOKIE);
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+        var body = new
+        {
+            oid = new string[] { },
+            sku = new[] { formatedSku },
+            reqContent = new[] { "plc", "chunks", "images" },
+            layoutName = "ALL-SPECS",
+            fallback = false,
+            requestor = "PFP-PRO",
+            apiserviceContext = new { pfpUserId = "1897480112" },
+            languageCode = "br",
+            countryCode = "BR"
+        };
+
+        var jsonBody = JsonConvert.SerializeObject(body);
+        var content = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+        var response = await _httpClient.PostAsync(URL_PRODUCT, content);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            Console.WriteLine($"[ERROR]: Erro ao obter dados. Status: {response.StatusCode}");
+            return new List<MetaData>();
+        }
+
+        try
+        {
+            Console.WriteLine($"[INFO]: Requisição realizada: {response.StatusCode}");
+            Console.WriteLine($"[INFO]: Processando imagens para o SKU: {formatedSku}");
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var jsonObj = JObject.Parse(responseContent);
+            var images = jsonObj["product"]?[0]?["images"] as JArray;
+            var resultImages = new List<string>();
+
+            if (images != null)
+            {
+                Console.WriteLine($"[INFO]: Aba: {aba}");
+                var orientationOrder = new string[] {};
+                if(aba == "Notebooks")
+                {
+                    Console.WriteLine("[INFO]: Usando orientação para Notebook");
+                    orientationOrder = new[]
+                    {
+                        "Right Facing",
+                        "Left and Right facing",
+                        "Center facing",
+                        "Left rear facing",
+                        "Left facing"
+                    };
+                }
+                else if(aba == "Desktops")
+                {
+                    Console.WriteLine("[INFO]: Usando orientação para Desktops");
+                    orientationOrder = new[]
+                    {
+                        "Right",
+                        "Center",
+                        "Left",
+                        "Rear",
+                        ""
+                    };
+                }
+                else
+                {
+                    Console.WriteLine("[INFO]: Usando orientação para outras abas");
+                    orientationOrder = new[]
+                    {
+                        "Right",
+                        "Other",
+                        "Center",
+                        "Other",
+                        "Left"
+                    };
+                }
+                
+
+                var usadas = new HashSet<string>();
+
+                foreach (var orientation in orientationOrder)
+                {
+                    var matchingImage = images
+                        .SelectMany(img => img["details"] ?? Enumerable.Empty<JToken>())
+                        .Where(details =>
+                            details["background"]?.ToString() == "Transparent" &&
+                            (int?)details["pixelHeight"] > 1000 &&
+                            (int?)details["pixelWidth"] > 1000 &&
+                            details["orientation"]?.ToString()
+                            ?.StartsWith(orientation, StringComparison.OrdinalIgnoreCase) == true)
+                        .Select(detail => detail["imageUrlHttps"]?.ToString())
+                        .FirstOrDefault(url =>
+                            !string.IsNullOrEmpty(url) && !usadas.Contains(url));
+                    
+                    if (!string.IsNullOrEmpty(matchingImage))
+                    {
+                        usadas.Add(matchingImage);
+
+                        resultImages.Add(matchingImage.Split('?')[0]); // Remove query string
+                        Console.WriteLine($"[INFO]: Imagem encontrada para a orientação '{orientation}': {matchingImage}");
+                        if (resultImages.Count >= 5)
+                        {
+                            break;
+                        }
+                    }
+                }
+                // ----------------- Salva no cache -----------------
+                Dictionary<string, object> productData = new Dictionary<string, object>();
+                var metaData = new List<MetaData>();
+                CacheManagerHP.EnsureCacheDir(CHACHE_DIR);
+
+                if (File.Exists(PRODUCT_CACHE_FILE))
+                {
+                    var cachedJson = File.ReadAllText(PRODUCT_CACHE_FILE);
+                    productData = JsonConvert.DeserializeObject<Dictionary<string, object>>(cachedJson) ?? new Dictionary<string, object>();
+                }
+
+                if (!productData.ContainsKey(formatedSku))
+                {
+                    Console.WriteLine($"[INFO]: Adicionando novo SKU ao cache: {formatedSku}");
+                    productData[formatedSku] = new JObject();
+                }
+
+                var produto = productData[formatedSku] as JObject ?? new JObject();
+                
+                // Garante que o campo "data" existe
+                if (produto["data"] == null)
+                {
+                    produto["data"] = new JObject();
+                }
+                
+                produto["data"]["images"] = JToken.FromObject(resultImages);
+                productData[formatedSku] = produto;
+
+                File.WriteAllText(PRODUCT_CACHE_FILE, JsonConvert.SerializeObject(productData, Formatting.Indented));
+
+                metaData.Add(new MetaData
+                {
+                    key = "_external_image_url",
+                    value = resultImages.First()
+                });
+
+                if (resultImages.Count > 1)
+                {
+                    metaData.Add(new MetaData
+                    {
+                        key = "_external_gallery_images",
+                        value = resultImages.Skip(1).ToList()
+                    });
+                }
+                return metaData;
+            }
+            else
+            {
+                Console.WriteLine($"[INFO]: Nenhuma imagem encontrada para o SKU na API: {formatedSku}");
+                return new List<MetaData>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERROR]: Erro ao processar imagens para o SKU {formatedSku}: {ex.Message}");
+            return new List<MetaData>();
+        }
+    }
+
     public static List<MetaData> ProcessarFotos(string sku, string model, List<object> images, Dictionary<string, string> normalizedFamily, object productAttributesAPI, string sheetName)
     {
         var metaData = new List<MetaData>();

@@ -18,8 +18,8 @@ namespace eCommerce.Server.Processors.HP.Helpers;
     public static class PlotterDataUtilsHP
     {
         private static readonly string CHACHE_DIR = "/app/eCommerce/Server/Cache/HP";
-        private static string URL_PRODUCT = "https://partner.hp.com/o/headless-product-catalog/v1.0/product";
-        private static string HP_COOKIE = "JSESSIONID=34127AEB1363FDAC3038ECEE125EA888.tomcatpfp1-g7t16160s; COOKIE_SUPPORT=true; GUEST_LANGUAGE_ID=en_US";
+        private static readonly string URL_PRODUCT = "https://partner.hp.com/o/headless-product-catalog/v1.0/product";
+        private static readonly string HP_COOKIE = "JSESSIONID=34127AEB1363FDAC3038ECEE125EA888.tomcatpfp1-g7t16160s; COOKIE_SUPPORT=true; GUEST_LANGUAGE_ID=en_US";
         private static readonly string PLOTTER_CACHE_FILE = "/app/eCommerce/Server/Cache/HP/plotterCache.json";
         private static readonly HttpClient _httpClient = new HttpClient();
 

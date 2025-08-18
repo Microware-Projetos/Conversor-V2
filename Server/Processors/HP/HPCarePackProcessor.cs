@@ -65,11 +65,11 @@ public static class HPCarePackProcessor
                             var price = "";
                             var regularPrice = "";
                             var stockQuantity = STOCK.ToString();
-                            var attributes = CarePackDataUtilsHP.ProcessAttributes(linha);  //CRIAR MÉTODO
-                            var metaData = CarePackDataUtilsHP.ProcessPhotos(); //CRIAR MÉTODO
-                            var dimensions = CarePackDataUtilsHP.ProcessDimensions(); //CRIAR MÉTODO
-                            var weight = CarePackDataUtilsHP.ProcessWeight(); //CRIAR MÉTODO
-                            var categories = CarePackDataUtilsHP.ProcessCategories(); //CRIAR MÉTODO
+                            var attributes = CarePackDataUtilsHP.ProcessAttributes(linha); 
+                            var metaData = CarePackDataUtilsHP.ProcessPhotos();
+                            var dimensions = CarePackDataUtilsHP.ProcessDimensions();
+                            var weight = CarePackDataUtilsHP.ProcessWeight();
+                            var categories = CarePackDataUtilsHP.ProcessCategories();
                             var manageStock = true;
 
                             try

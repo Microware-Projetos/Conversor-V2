@@ -48,6 +48,177 @@
     margin: 0;
 }
 /* /Pages/Jobs/Jobs.razor.rz.scp.css */
+.cursor-pointer[b-ttqwkbpfzq] {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cursor-pointer:hover[b-ttqwkbpfzq] {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+/* Estilos para o cabeçalho da tabela clicável */
+.table-dark th.cursor-pointer[b-ttqwkbpfzq] {
+    position: relative;
+    user-select: none;
+}
+
+.table-dark th.cursor-pointer:hover[b-ttqwkbpfzq] {
+    background-color: #495057 !important;
+}
+
+/* Estilos para os cards clicáveis */
+.card.cursor-pointer[b-ttqwkbpfzq] {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card.cursor-pointer:hover[b-ttqwkbpfzq] {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card.cursor-pointer:active[b-ttqwkbpfzq] {
+    transform: translateY(0);
+}
+
+/* Estilos para filtro ativo */
+.card.border-warning[b-ttqwkbpfzq] {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+/* Estilos para o botão de limpar filtros */
+.btn-outline-secondary:hover[b-ttqwkbpfzq] {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+/* Estilos para indicadores de filtro */
+.text-warning[b-ttqwkbpfzq] {
+    color: #ffc107 !important;
+}
+
+/* Estilos para mensagens de filtro */
+.text-muted[b-ttqwkbpfzq] {
+    color: #6c757d !important;
+}
+
+/* Estilos para linhas placeholder da tabela */
+.table-row-placeholder[b-ttqwkbpfzq] {
+    height: 38.5px; /* Altura fixa igual às linhas com dados */
+    background-color: #f8f9fa; /* Fundo sutil para diferenciar */
+    line-height: 38.5px; /* Garantir que o conteúdo ocupe toda a altura */
+}
+
+.table-row-placeholder td[b-ttqwkbpfzq] {
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+    text-align: center;
+    color: #6c757d;
+    height: 38.5px; /* Altura fixa da célula */
+    padding: 0; /* Remove padding para controle total da altura */
+}
+
+.table-row-placeholder td i[b-ttqwkbpfzq] {
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.table-row-placeholder td small[b-ttqwkbpfzq] {
+    font-size: 0.7rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-left: 0.5rem;
+}
+
+/* Estilos para tabela muito compacta */
+.table td[b-ttqwkbpfzq], .table th[b-ttqwkbpfzq] {
+    padding: 0.5rem 0.75rem; /* Reduz padding vertical */
+    vertical-align: middle;
+}
+
+.table tbody tr[b-ttqwkbpfzq] {
+    height: 38.5px; /* Altura fixa para todas as linhas */
+}
+
+/* Garantir altura consistente da tabela */
+.table-responsive[b-ttqwkbpfzq] {
+    min-height: 386.5px; /* 9 linhas × 38.5px + cabeçalho */
+}
+
+.table tbody[b-ttqwkbpfzq] {
+    min-height: 346.5px; /* 9 linhas × 38.5px */
+}
+
+/* Estilos para badges muito compactos */
+.badge[b-ttqwkbpfzq] {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Estilos para texto pequeno muito compacto */
+.small[b-ttqwkbpfzq] {
+    line-height: 1.2;
+}
+
+/* Estilos para nomes de arquivos longos */
+.arquivos-container .small .text-muted[b-ttqwkbpfzq] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px; /* Largura máxima para o nome do arquivo */
+    display: block;
+    min-width: 0; /* Permite que o flexbox funcione corretamente */
+    line-height: 19px; /* Altura da linha igual à altura do container */
+    font-size: 0.7rem; /* Fonte menor para caber na altura */
+}
+
+/* Container para os arquivos */
+.arquivos-container[b-ttqwkbpfzq] {
+    max-width: 250px; /* Largura máxima para a coluna de arquivos */
+    min-width: 250px; /* Largura mínima para manter consistência */
+}
+
+/* Ícones dos arquivos */
+.arquivos-container .bi[b-ttqwkbpfzq] {
+    flex-shrink: 0; /* Impede que o ícone encolha */
+    margin-right: 0.5rem;
+    width: 14px; /* Largura fixa para o ícone */
+    height: 14px; /* Altura fixa para o ícone */
+    font-size: 0.8rem; /* Tamanho da fonte do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Layout flexbox para os arquivos */
+.arquivos-container .small[b-ttqwkbpfzq] {
+    display: flex;
+    align-items: center;
+    height: 19px; /* Metade da altura da linha da tabela (38px ÷ 2) */
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.arquivos-container .small:last-child[b-ttqwkbpfzq] {
+    margin-bottom: 0;
+}
+
+/* Ajustar altura da coluna de arquivos para 38px total */
+.arquivos-container[b-ttqwkbpfzq] {
+    max-width: 250px; /* Largura máxima para a coluna de arquivos */
+    min-width: 250px; /* Largura mínima para manter consistência */
+    height: 38px; /* Altura total igual às outras linhas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* /Pages/Lenovo/Lenovo.razor.rz.scp.css */
 .card[b-dkroreciua] {
     margin-top: 20px;
@@ -139,4 +310,29 @@ main[b-s5cvtvm9go] {
     background-color: #182A3F;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jobs-link[b-s5cvtvm9go] {
+    color: white !important;
+    text-decoration: none !important;
+    position: absolute !important;
+    right: 20px !important;
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
+    padding: 8px 15px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.jobs-link:hover[b-s5cvtvm9go] {
+    color: #f0f0f0 !important;
+    text-decoration: none !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.jobs-link i[b-s5cvtvm9go] {
+    color: rgb(255, 255, 255) !important;
+    margin-right: 8px;
 }
