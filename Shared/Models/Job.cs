@@ -15,6 +15,7 @@ public class JobFila
     public TipoJob Tipo { get; set; } = TipoJob.Produtos;
     public FornecedorJob Fornecedor { get; set; }
     public DateTime DataCriacao { get; set; } = DateTime.Now;
+    public DateTime? DataFinalizacao { get; set; }
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
     public string? CaminhoArquivoPreco { get; set; }
     public string? Mensagem { get; set; }
@@ -27,6 +28,7 @@ public class JobFilaResponse
     public TipoJob Tipo { get; set; }
     public FornecedorJob Fornecedor { get; set; }
     public DateTime DataCriacao { get; set; }
+    public DateTime? DataFinalizacao { get; set; }
     public string CaminhoArquivoProduto { get; set; } = string.Empty;
     public string? CaminhoArquivoPreco { get; set; }
     public string? Mensagem { get; set; }

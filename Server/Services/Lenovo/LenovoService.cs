@@ -51,6 +51,7 @@ public class LenovoService
             Tipo = job.Tipo,
             Fornecedor = job.Fornecedor,
             DataCriacao = job.DataCriacao,
+            DataFinalizacao = job.DataFinalizacao,
             CaminhoArquivoProduto = job.CaminhoArquivoProduto,
             Mensagem = job.Mensagem
         };
@@ -93,6 +94,7 @@ public class LenovoService
             Tipo = job.Tipo,
             Fornecedor = job.Fornecedor,
             DataCriacao = job.DataCriacao,
+            DataFinalizacao = job.DataFinalizacao,
             CaminhoArquivoProduto = job.CaminhoArquivoProduto,
             Mensagem = job.Mensagem
         };

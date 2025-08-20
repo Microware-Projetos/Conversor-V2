@@ -190,30 +190,6 @@
     "manage_stock": true
   },
   {
-    "name": "HP DesignJet Studio Steel 24-in Printer",
-    "sku": "5HB12C#B1K",
-    "short_description": "HP DesignJet Studio Steel 24-in Printer",
-    "description": "HP DesignJet Studio Steel 24-in Printer",
-    "price": "9412.71",
-    "regular_price": "9412.71",
-    "stock_quantity": "10",
-    "attributes": [],
-    "meta_data": [],
-    "dimensions": {
-      "length": "176.2",
-      "width": "69.8",
-      "height": "102.0"
-    },
-    "weight": "130.6",
-    "categories": [
-      {
-        "id": 24
-      }
-    ],
-    "shipping_class": "local",
-    "manage_stock": true
-  },
-  {
     "name": "HP DesignJet T850 36-in Printer:NA/LA",
     "sku": "2Y9H0A#AC4",
     "short_description": "HP DesignJet T850 36-in Printer:NA/LA",
@@ -429,30 +405,6 @@
       "height": "71.0"
     },
     "weight": "128",
-    "categories": [
-      {
-        "id": 24
-      }
-    ],
-    "shipping_class": "local",
-    "manage_stock": true
-  },
-  {
-    "name": "HP DesignJet T830 24in MFP:NA/LA",
-    "sku": "F9A28D#B1K",
-    "short_description": "HP DesignJet T830 24in MFP:NA/LA",
-    "description": "HP DesignJet T830 24in MFP:NA/LA",
-    "price": "12193.70",
-    "regular_price": "12193.70",
-    "stock_quantity": "10",
-    "attributes": [],
-    "meta_data": [],
-    "dimensions": {
-      "length": "176.2",
-      "width": "69.8",
-      "height": "102.0"
-    },
-    "weight": "130.6",
     "categories": [
       {
         "id": 24
@@ -986,30 +938,6 @@
     "manage_stock": true
   },
   {
-    "name": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "sku": "2QU12A#B1K",
-    "short_description": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "description": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "price": "59312.66",
-    "regular_price": "59312.66",
-    "stock_quantity": "10",
-    "attributes": [],
-    "meta_data": [],
-    "dimensions": {
-      "length": "176.2",
-      "width": "69.8",
-      "height": "102.0"
-    },
-    "weight": "130.6",
-    "categories": [
-      {
-        "id": 24
-      }
-    ],
-    "shipping_class": "local",
-    "manage_stock": true
-  },
-  {
     "name": "Impressora HP Designjet Z6 Pro de 64\"",
     "sku": "2QU25A#B1K",
     "short_description": "Impressora HP Designjet Z6 Pro de 64\"",
@@ -1500,30 +1428,6 @@
     "manage_stock": true
   },
   {
-    "name": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "sku": "2QU12A#B1K",
-    "short_description": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "description": "HP DesignJet Z6810 42-in Printer:NA/LA",
-    "price": "51297.43",
-    "regular_price": "51297.43",
-    "stock_quantity": "10",
-    "attributes": [],
-    "meta_data": [],
-    "dimensions": {
-      "length": "176.2",
-      "width": "69.8",
-      "height": "102.0"
-    },
-    "weight": "130.6",
-    "categories": [
-      {
-        "id": 24
-      }
-    ],
-    "shipping_class": "local",
-    "manage_stock": true
-  },
-  {
     "name": "Impressora HP Designjet Z9+ Pro de 64\"",
     "sku": "2RM82A#B1K",
     "short_description": "Impressora HP Designjet Z9+ Pro de 64\"",
@@ -1559,30 +1463,6 @@
       }
     ],
     "shipping_class": "local",
-    "manage_stock": true
-  },
-  {
-    "name": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
-    "sku": "6TX91A",
-    "short_description": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
-    "description": "Pedestal para impressora HP Designjet T130 e T530 de 24 polegadas",
-    "price": "1474.70",
-    "regular_price": "1474.70",
-    "stock_quantity": "10",
-    "attributes": [],
-    "meta_data": [],
-    "dimensions": {
-      "length": "33.1",
-      "width": "40.8",
-      "height": "31.5"
-    },
-    "weight": "5.5",
-    "categories": [
-      {
-        "id": 24
-      }
-    ],
-    "shipping_class": "importado",
     "manage_stock": true
   },
   {

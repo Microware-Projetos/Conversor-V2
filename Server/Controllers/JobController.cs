@@ -59,6 +59,7 @@ public class JobController : ControllerBase
             Tipo = job.Tipo,
             Fornecedor = job.Fornecedor,
             DataCriacao = job.DataCriacao,
+            DataFinalizacao = job.DataFinalizacao,
             CaminhoArquivoProduto = job.CaminhoArquivoProduto,
             CaminhoArquivoPreco = job.CaminhoArquivoPreco,
             Mensagem = job.Mensagem
@@ -86,6 +87,7 @@ public class JobController : ControllerBase
                 Tipo = job.Tipo,
                 Fornecedor = job.Fornecedor,
                 DataCriacao = job.DataCriacao,
+                DataFinalizacao = job.DataFinalizacao,
                 CaminhoArquivoProduto = job.CaminhoArquivoProduto,
                 CaminhoArquivoPreco = job.CaminhoArquivoPreco,
                 Mensagem = job.Mensagem

@@ -57,9 +57,9 @@
 
 /* Estilos para linhas placeholder da tabela */
 .table-row-placeholder {
-    height: 38.5px; /* Altura fixa igual às linhas com dados */
+    height: 37.5px; /* Altura fixa igual às linhas com dados */
     background-color: #f8f9fa; /* Fundo sutil para diferenciar */
-    line-height: 38.5px; /* Garantir que o conteúdo ocupe toda a altura */
+    line-height: 37.5px; /* Garantir que o conteúdo ocupe toda a altura */
 }
 
 .table-row-placeholder td {
@@ -67,7 +67,7 @@
     vertical-align: middle;
     text-align: center;
     color: #6c757d;
-    height: 38.5px; /* Altura fixa da célula */
+    height: 37.5px; /* Altura fixa da célula */
     padding: 0; /* Remove padding para controle total da altura */
 }
 
@@ -94,16 +94,101 @@
 }
 
 .table tbody tr {
-    height: 38.5px; /* Altura fixa para todas as linhas */
+    height: 3px; /* Altura fixa para todas as linhas */
 }
 
 /* Garantir altura consistente da tabela */
 .table-responsive {
-    min-height: 386.5px; /* 9 linhas × 38.5px + cabeçalho */
+    min-height: 333px; /* 9 linhas × 37.5px + cabeçalho */
+    margin-bottom: -1rem; /* Reduz espaçamento com a navegação */
 }
 
 .table tbody {
-    min-height: 346.5px; /* 9 linhas × 38.5px */
+    min-height: 333px; /* 9 linhas × 38.5px */
+}
+
+/* Fixar larguras das colunas da tabela */
+.table th,
+.table td {
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Esconde conteúdo que excede */
+    text-overflow: ellipsis; /* Adiciona "..." para conteúdo cortado */
+}
+
+/* Larguras flexíveis para cada coluna */
+.table th:nth-child(1), /* ID */
+.table td:nth-child(1) {
+    width: 120px; /* Largura sugerida para ID */
+    min-width: 100px;
+    max-width: 140px;
+}
+
+.table th:nth-child(2), /* Tipo */
+.table td:nth-child(2) {
+    width: 120px; /* Largura sugerida para Tipo */
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.table th:nth-child(3), /* Status */
+.table td:nth-child(3) {
+    width: 100px; /* Largura sugerida para Status */
+    min-width: 80px;
+    max-width: 120px;
+}
+
+.table th:nth-child(4), /* Data Criação */
+.table td:nth-child(4) {
+    width: 130px; /* Largura sugerida para Data Criação */
+    min-width: 110px;
+    max-width: 150px;
+}
+
+.table th:nth-child(5), /* Data Finalização */
+.table td:nth-child(5) {
+    width: 130px; /* Largura sugerida para Data Finalização */
+    min-width: 110px;
+    max-width: 150px;
+}
+
+.table th:nth-child(6), /* Arquivos */
+.table td:nth-child(6) {
+    width: 200px; /* Largura sugerida para Arquivos */
+    min-width: 180px;
+    max-width: 250px;
+}
+
+.table th:nth-child(7), /* Mensagem */
+.table td:nth-child(7) {
+    width: 180px; /* Largura sugerida para Mensagem */
+    min-width: 150px;
+    max-width: 220px;
+}
+
+/* Garantir que a tabela se ajuste automaticamente */
+.table {
+    table-layout: auto; /* Permite que as colunas se ajustem automaticamente */
+    width: 100%;
+    border-collapse: collapse; /* Remove espaçamento entre células */
+}
+
+/* Separadores verticais entre colunas */
+.table th:not(:last-child)::after,
+.table td:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px; /* Largura da linha vertical */
+    height: 100%; /* Altura completa da célula */
+    background-color: #dee2e6; /* Cor sutil para o separador */
+    pointer-events: none; /* Não interfere com cliques */
+}
+
+/* Posicionamento relativo para as células */
+.table th,
+.table td {
+    position: relative;
 }
 
 /* Estilos para badges muito compactos */
@@ -122,50 +207,67 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 180px; /* Largura máxima para o nome do arquivo */
+    max-width: 100%; /* Usa toda a largura disponível da célula */
     display: block;
     min-width: 0; /* Permite que o flexbox funcione corretamente */
-    line-height: 19px; /* Altura da linha igual à altura do container */
-    font-size: 0.7rem; /* Fonte menor para caber na altura */
 }
 
 /* Container para os arquivos */
 .arquivos-container {
-    max-width: 250px; /* Largura máxima para a coluna de arquivos */
-    min-width: 250px; /* Largura mínima para manter consistência */
+    width: 100%; /* Ocupa toda a largura da célula */
+    max-width: 100%; /* Não excede a largura da célula */
+    min-width: 0; /* Permite que o flexbox funcione corretamente */
 }
 
 /* Ícones dos arquivos */
 .arquivos-container .bi {
     flex-shrink: 0; /* Impede que o ícone encolha */
     margin-right: 0.5rem;
-    width: 14px; /* Largura fixa para o ícone */
-    height: 14px; /* Altura fixa para o ícone */
-    font-size: 0.8rem; /* Tamanho da fonte do ícone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 16px; /* Largura fixa para o ícone */
 }
 
 /* Layout flexbox para os arquivos */
 .arquivos-container .small {
     display: flex;
     align-items: center;
-    height: 19px; /* Metade da altura da linha da tabela (38px ÷ 2) */
-    margin-bottom: 0;
-    overflow: hidden;
+    margin-bottom: 0.25rem;
 }
 
 .arquivos-container .small:last-child {
     margin-bottom: 0;
 }
 
-/* Ajustar altura da coluna de arquivos para 38px total */
-.arquivos-container {
-    max-width: 250px; /* Largura máxima para a coluna de arquivos */
-    min-width: 250px; /* Largura mínima para manter consistência */
-    height: 38px; /* Altura total igual às outras linhas */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Estilos para a coluna de mensagens */
+.table td:nth-child(7) .text-muted {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Usa toda a largura disponível da célula */
+    display: block;
+    min-width: 0; /* Permite que o flexbox funcione corretamente */
+    cursor: help; /* Indica que há tooltip disponível */
+    position: relative; /* Para posicionamento correto do tooltip */
+}
+
+/* Melhorar a aparência do tooltip nativo */
+.table td:nth-child(7) .text-muted:hover {
+    color: #495057 !important; /* Escurece ligeiramente no hover */
+}
+
+/* Garantir que o tooltip seja visível */
+.table td:nth-child(7) .text-muted[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+    margin-bottom: 5px;
 }

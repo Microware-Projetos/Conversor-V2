@@ -88,6 +88,8 @@ namespace eCommerce.Server.Processors.HP;
                                 var shippingClass = PlotterDataUtilsHP.ProcessShippingClass(linha);
                                 var manageStock = true;
 
+                                var descriptionAPI = await PlotterDataUtilsHP.ProcessDescription(sku);
+
                                 try
                                 {
                                     var strPrice = linha.Cell(20).Value.ToString();

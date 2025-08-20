@@ -276,7 +276,7 @@ public static class ProductDataUtilsHP
                                             "Product Dimensions"
                                         };
                                         
-                                        Console.WriteLine($"\nProcessando dimensões da API...");
+                                        //Console.WriteLine($"\nProcessando dimensões da API...");
                                         foreach (var dimItem in productDims)
                                         {
                                             if (dimItem != null && dimItem.Type == JTokenType.Object)
@@ -488,14 +488,14 @@ public static class ProductDataUtilsHP
             if (originalValue.Contains("mm"))
             {
                 var convertedValue = (float.Parse(value) / 10f).ToString();
-                Console.WriteLine($"Convertido de mm para cm: {value}mm -> {convertedValue}cm");
+                //Console.WriteLine($"Convertido de mm para cm: {value}mm -> {convertedValue}cm");
                 return convertedValue;
             }
             // Se o valor original contém in (polegadas), converte para cm
             else if (originalValue.Contains("in"))
             {
                 var convertedValue = (float.Parse(value) * 2.54f).ToString();
-                Console.WriteLine($"Convertido de in para cm: {value}in -> {convertedValue}cm");
+                //Console.WriteLine($"Convertido de in para cm: {value}in -> {convertedValue}cm");
                 return convertedValue;
             }
             
@@ -1165,5 +1165,290 @@ public static class ProductDataUtilsHP
         }
         
         return metaData;
+    }
+
+    public static async Task<string> ProcessDescription(string sku)
+    {
+        Console.WriteLine($"[INFO]: Processando descrição para o SKU: {sku}");
+        var formatedSku = sku.Split('#')[0];
+        var description = string.Empty;
+
+        if (!File.Exists(PRODUCT_CACHE_FILE))
+        {
+            Console.WriteLine($"[INFO]: Arquivo de cache não encontrado!");
+            return string.Empty;
+        }
+
+        var cacheData = File.ReadAllText(PRODUCT_CACHE_FILE);
+        var jsonCacheObj = JObject.Parse(cacheData);
+
+        // Debug: Verificar a estrutura do cache
+        Console.WriteLine($"[DEBUG]: Verificando estrutura do cache para SKU: {formatedSku}");
+        
+        if (jsonCacheObj[formatedSku] != null)
+        {
+            Console.WriteLine($"[DEBUG]: SKU encontrado no cache");
+            
+            if (jsonCacheObj[formatedSku]["data"] != null)
+            {
+                Console.WriteLine($"[DEBUG]: Seção 'data' encontrada");
+                
+                var descriptionNode = jsonCacheObj[formatedSku]["data"]["description"];
+                if (descriptionNode != null)
+                {
+                    Console.WriteLine($"[DEBUG]: Descrição encontrada no cache. Tipo: {descriptionNode.Type}");
+                    Console.WriteLine($"[DEBUG]: Valor da descrição: {descriptionNode}");
+                    
+                    // Tentar diferentes tipos de acesso
+                    if (descriptionNode.Type == JTokenType.Array)
+                    {
+                        var descriptionArray = descriptionNode as JArray;
+                        if (descriptionArray != null && descriptionArray.Any())
+                        {
+                            description = descriptionArray.ToString();
+                            Console.WriteLine($"[INFO]: Descrição encontrada no cache (Array): {description}");
+                            return description;
+                        }
+                    }
+                    else if (descriptionNode.Type == JTokenType.String)
+                    {
+                        description = descriptionNode.ToString();
+                        Console.WriteLine($"[INFO]: Descrição encontrada no cache (String): {description}");
+                        return description;
+                    }
+                    else
+                    {
+                        description = descriptionNode.ToString();
+                        Console.WriteLine($"[INFO]: Descrição encontrada no cache (Outro tipo): {description}");
+                        return description;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[DEBUG]: Campo 'description' não encontrado em 'data'");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"[DEBUG]: Seção 'data' não encontrada para o SKU");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"[DEBUG]: SKU não encontrado no cache");
+        }
+
+        Console.WriteLine($"[INFO]: Descrição não encontrada no cache para o SKU: {sku}");
+        description = await ProcessDescriptionAPI(sku);
+        return description;
+    }
+
+    private static async Task<string> ProcessDescriptionAPI(string sku)
+    {
+        Console.WriteLine($"[INFO]: Processando descrição para o SKU: {sku} via API");
+
+        var formatedSku = sku.Split('#')[0];
+
+        string? accessToken = null;
+        bool isTokenValid = CacheManagerHP.CheckAccessTokenAsync();
+        
+        if(isTokenValid)
+        {
+            Console.WriteLine("[INFO]: Access token válido encontrado.");
+            accessToken = CacheManagerHP.GetSavedAccessToken();
+        }
+        else
+        {
+            Console.WriteLine("[INFO]: Access token expirado ou não encontrado. Obtendo novo token...");
+            CacheManagerHP.GetAccessTokenAsync().Wait();
+            accessToken = CacheManagerHP.GetSavedAccessToken();
+
+            if (accessToken == null)
+            {
+                throw new Exception("[ERROR]: Não foi possível obter o access token.");
+                return string.Empty;
+            }
+            else
+            {
+                Console.WriteLine($"[INFO]: Access token obtido: {accessToken}");
+            }
+        }
+
+        _httpClient.DefaultRequestHeaders.Clear();
+        _httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
+        _httpClient.DefaultRequestHeaders.Add("Cookie", HP_COOKIE);
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+        var body = new
+        {
+            oid = new string[] { },
+            sku = new[] { formatedSku },
+            reqContent = new[] { "plc", "chunks", "images" },
+            layoutName = "ALL-SPECS",
+            fallback = false,
+            requestor = "PFP-PRO",
+            apiserviceContext = new { pfpUserId = "1897480112" },
+            languageCode = "br",
+            countryCode = "BR"
+        };
+        try
+        {
+            var jsonBody = JsonConvert.SerializeObject(body);
+            var content = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync(URL_PRODUCT, content);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"[ERROR]: Erro ao obter dados. Status: {response.StatusCode}");
+                return string.Empty;
+            }
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var jsonObj = JObject.Parse(responseContent);
+            var description = string.Empty;
+
+            try
+            {
+
+                    var tags = new [] 
+                    { 
+                        "proddes_overview_extended",
+                        "ksp_01_headline_medium",
+                        "ksp_01_suppt_01_long",
+                        "ksp_02_headline_medium",
+                        "ksp_02_suppt_01_long",
+                        "ksp_03_headline_medium",
+                        "ksp_03_suppt_01_long",
+                        "ksp_04_headline_medium",
+                        "ksp_04_suppt_01_long"
+                    };
+
+                    // Criar um dicionário para armazenar os valores das tags encontradas
+                    var tagsEncontradasDict = new Dictionary<string, string>();
+                    
+                    // Primeiro, coletar todas as tags e seus valores
+                    foreach (var detail in jsonObj["product"]?
+                        .SelectMany(p => p["chunks"])
+                        .SelectMany(c => c["details"] ?? Enumerable.Empty<JToken>()))
+                    {
+                        var name = detail["tag"]?.ToString();
+                        var value = detail["value"]?.ToString();
+
+                        // Verificar se a tag atual é uma das que estamos procurando
+                        if (!string.IsNullOrEmpty(name) && tags.Contains(name))
+                        {
+                            if (!string.IsNullOrEmpty(value))
+                            {
+                                tagsEncontradasDict[name] = value;
+                                System.Console.WriteLine($"[INFO]: Tag encontrada: {name} = {value}");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"[WARNING]: Tag '{name}' encontrada mas sem valor");
+                            }
+                        }
+                    }
+                    
+                    // Agora construir a descrição na ordem específica das tags
+                    foreach (var tag in tags)
+                    {
+                        if (tagsEncontradasDict.TryGetValue(tag, out var value))
+                        {
+                            description += $"{value} ";
+                            Console.WriteLine($"[INFO]: Adicionando tag na ordem: {tag}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"[INFO]: Tag não encontrada na API: {tag}");
+                        }
+                    }
+                    
+                    // Log das tags encontradas
+                    var tagsEncontradas = tagsEncontradasDict.Count;
+                    Console.WriteLine($"[INFO]: Total de tags encontradas: {tagsEncontradas} de {tags.Length}");
+                    
+                    // Se nenhuma tag foi encontrada, log de aviso
+                    if (tagsEncontradas == 0)
+                    {
+                        Console.WriteLine($"[WARNING]: Nenhuma das tags especificadas foi encontrada para o SKU: {formatedSku}");
+                    }   
+                
+                // Log da descrição final construída
+                if (!string.IsNullOrEmpty(description))
+                {
+                    Console.WriteLine($"[INFO]: Descrição construída com sucesso. Tamanho: {description.Length} caracteres");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[WARNING]: Atributos não encontrados para o SKU: {formatedSku}. Erro: {ex.Message}");
+
+                // Ler o cache atual como JObject
+                var cachedJson = File.ReadAllText(PRODUCT_CACHE_FILE);
+                var jsonCacheObj = JObject.Parse(cachedJson);
+                
+                // Definir a descrição como null no cache
+                if (jsonCacheObj[formatedSku] != null)
+                {
+                    // Garantir que a estrutura existe
+                    if (jsonCacheObj[formatedSku]["data"] == null)
+                    {
+                        jsonCacheObj[formatedSku]["data"] = new JObject();
+                    }
+                    
+                    jsonCacheObj[formatedSku]["data"]["description"] = null;
+                    string newJson = jsonCacheObj.ToString(Formatting.Indented);
+                    File.WriteAllText(PRODUCT_CACHE_FILE, newJson);
+                    Console.WriteLine($"[INFO]: Dados do produto salvos como NULL em {PRODUCT_CACHE_FILE}");
+                }
+
+                return string.Empty;
+            }
+            
+            // Salvar a descrição construída no cache
+            if (!string.IsNullOrEmpty(description))
+            {
+                try
+                {
+                    // Ler o cache atual como JObject
+                    var cachedJson = File.ReadAllText(PRODUCT_CACHE_FILE);
+                    var jsonCacheObj = JObject.Parse(cachedJson);
+                    
+                    // Atualizar a descrição no cache
+                    if (jsonCacheObj[formatedSku] != null)
+                    {
+                        // Garantir que a estrutura existe
+                        if (jsonCacheObj[formatedSku]["data"] == null)
+                        {
+                            jsonCacheObj[formatedSku]["data"] = new JObject();
+                        }
+                        
+                        // Salvar como string (não como array)
+                        jsonCacheObj[formatedSku]["data"]["description"] = description;
+                        string json = jsonCacheObj.ToString(Formatting.Indented);
+                        File.WriteAllText(PRODUCT_CACHE_FILE, json);
+                        Console.WriteLine($"[INFO]: Descrição salva no cache para o SKU: {formatedSku}");
+                        Console.WriteLine($"[DEBUG]: Estrutura salva: {jsonCacheObj[formatedSku]["data"]["description"]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[WARNING]: SKU {formatedSku} não encontrado no cache para salvar descrição");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[WARNING]: Erro ao salvar descrição no cache: {ex.Message}");
+                }
+            }
+            
+            Console.WriteLine($"[INFO]: Descrição construída: {description}");
+            // Retornar a descrição construída em vez de string vazia
+            return description;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERROR]: Erro ao processar descrição para o SKU: {sku}. {ex.Message}");
+            return string.Empty;
+        }
     }
 } 

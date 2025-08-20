@@ -54,6 +54,7 @@ namespace eCommerce.Server.Services.HP;
                 Tipo = job.Tipo,
                 Fornecedor = job.Fornecedor,
                 DataCriacao = job.DataCriacao,
+                DataFinalizacao = job.DataFinalizacao,
                 CaminhoArquivoProduto = job.CaminhoArquivoProduto,
                 CaminhoArquivoPreco = job.CaminhoArquivoPreco,
                 Mensagem = job.Mensagem
@@ -97,6 +98,7 @@ namespace eCommerce.Server.Services.HP;
                 Tipo = job.Tipo,
                 Fornecedor = job.Fornecedor,
                 DataCriacao = job.DataCriacao,
+                DataFinalizacao = job.DataFinalizacao,
                 CaminhoArquivoProduto = job.CaminhoArquivoProduto,
                 Mensagem = job.Mensagem
             };
@@ -139,6 +141,7 @@ namespace eCommerce.Server.Services.HP;
                 Tipo = job.Tipo,
                 Fornecedor = job.Fornecedor,
                 DataCriacao = job.DataCriacao,
+                DataFinalizacao = job.DataFinalizacao,
                 CaminhoArquivoProduto = job.CaminhoArquivoProduto,
                 Mensagem = job.Mensagem
             };

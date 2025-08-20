@@ -36,6 +36,7 @@ public class BlingService
             Status = job.Status,
             Tipo = job.Tipo,
             DataCriacao = job.DataCriacao,
+            DataFinalizacao = job.DataFinalizacao,
             CaminhoArquivoProduto = job.CaminhoArquivoProduto,
             Mensagem = job.Mensagem
         };

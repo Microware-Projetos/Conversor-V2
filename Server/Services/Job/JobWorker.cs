@@ -83,26 +83,32 @@ public class JobWorker : BackgroundService
                     if (combinedCts.Token.IsCancellationRequested)
                     {
                         job.Status = StatusJob.Erro;
-                        job.Mensagem = "Job cancelado pelo usuário";
+                        job.Mensagem = "Cancelado pelo usuário";
                     }
                     else
                     {
                         job.Status = StatusJob.Concluido;
-                        job.Mensagem = "Processamento finalizado com sucesso!";
+                        job.Mensagem = "Finalizado com sucesso!";
                     }
+                    
+                    // Definir data de finalização
+                    job.DataFinalizacao = DateTime.Now;
                     
                     LimparArquivosExcel(job);
                 }
                 catch (OperationCanceledException)
                 {
                     job.Status = StatusJob.Erro;
-                    job.Mensagem = "Job cancelado pelo usuário";
+                    job.Mensagem = "Cancelado pelo usuário";
+                    job.DataFinalizacao = DateTime.Now;
                     LimparArquivosExcel(job);
                 }
                 catch (Exception ex)
                 {
                     job.Status = StatusJob.Erro;
                     job.Mensagem = $"Erro: {ex.Message}";
+                    job.DataFinalizacao = DateTime.Now;
+                    LimparArquivosExcel(job);
                 }
                 finally
                 {
@@ -138,7 +144,7 @@ public class JobWorker : BackgroundService
             if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto) && File.Exists(job.CaminhoArquivoProduto))
             {
                 File.Delete(job.CaminhoArquivoProduto);
-                Console.WriteLine($"[FINISH]: Arquivo de produtos removido: {job.CaminhoArquivoProduto} (Tipo: {job.Tipo})");
+                Console.WriteLine($"[FINISH]: Arquivo de produtos removido: {job.CaminhoArquivoProduto} (Tipo: {job.Tipo}) - Data Finalização: {job.DataFinalizacao?.ToString("dd/MM/yyyy HH:mm")}");
             }
             
             // Limpar arquivo de preços (se existir)

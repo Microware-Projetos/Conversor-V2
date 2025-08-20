@@ -65,7 +65,51 @@
         }
         else
         {
-            <div class="table-responsive">
+            <div>
+                <div class="mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card @(filtroStatus == StatusJob.Pendente ? "border-warning border-3" : "") bg-warning text-white cursor-pointer" 
+                                @onclick="() => FiltrarPorStatus(StatusJob.Pendente)">
+                                <div class="card-body text-center">
+                                    <h5>@todosJobs.Count(j => j.Status == StatusJob.Pendente)</h5>
+                                    <small>Pendentes</small>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card @(filtroStatus == StatusJob.Processando ? "border-warning border-3" : "") bg-info text-white cursor-pointer" 
+                                @onclick="() => FiltrarPorStatus(StatusJob.Processando)">
+                                <div class="card-body text-center">
+                                    <h5>@todosJobs.Count(j => j.Status == StatusJob.Processando)</h5>
+                                    <small>Processando</small>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card @(filtroStatus == StatusJob.Concluido ? "border-warning border-3" : "") bg-success text-white cursor-pointer" 
+                                @onclick="() => FiltrarPorStatus(StatusJob.Concluido)">
+                                <div class="card-body text-center">
+                                    <h5>@todosJobs.Count(j => j.Status == StatusJob.Concluido)</h5>
+                                    <small>Concluídos</small>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card @(filtroStatus == StatusJob.Erro ? "border-warning border-3" : "") bg-danger text-white cursor-pointer" 
+                                @onclick="() => FiltrarPorStatus(StatusJob.Erro)">
+                                <div class="card-body text-center">
+                                    <h5>@todosJobs.Count(j => j.Status == StatusJob.Erro)</h5>
+                                    <small>Com Erro</small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <table class="table table-hover">
                     <thead class="table-dark">
                         <tr>
@@ -73,6 +117,7 @@
                             <th>Tipo</th>
                             <th>Status</th>
                             <th>Data Criação</th>
+                            <th>Data Finalização</th>
                             <th>Arquivos</th>
                             <th>Mensagem</th>
                         </tr>
@@ -96,10 +141,13 @@
                                     <td>
                                         <small class="text-muted">@job.DataCriacao.ToString("dd/MM/yyyy HH:mm")</small>
                                     </td>
+                                    <td>
+                                        <small class="text-muted">@job.DataFinalizacao?.ToString("dd/MM/yyyy HH:mm")</small>
+                                    </td>
                                     <td class="arquivos-container">
                                         <div class="small d-flex align-items-center mb-1">
                                             <i class="bi bi-file-earmark-text text-primary"></i>
-                                            <span class="text-muted" title="@(job.CaminhoArquivoProduto ?? "Arquivo não disponível")">
+                                            <span class="text-muted" title="@(GetFileName(job.CaminhoArquivoProduto))">
                                                 @if (!string.IsNullOrEmpty(job.CaminhoArquivoProduto))
                                                 {
                                                     @Path.GetFileName(job.CaminhoArquivoProduto)
@@ -112,7 +160,7 @@
                                         </div>
                                         <div class="small d-flex align-items-center">
                                             <i class="bi bi-file-earmark-text text-success"></i>
-                                            <span class="text-muted" title="@(job.CaminhoArquivoPreco ?? "Arquivo não disponível")">
+                                            <span class="text-muted" title="@(GetFileName(job.CaminhoArquivoPreco))">
                                                 @if (!string.IsNullOrEmpty(job.CaminhoArquivoPreco))
                                                 {
                                                     @Path.GetFileName(job.CaminhoArquivoPreco)
@@ -127,21 +175,12 @@
                                     <td>
                                         @if (!string.IsNullOrEmpty(job.Mensagem))
                                         {
-                                            <small class="text-muted">@job.Mensagem</small>
+                                            <small class="text-muted" title="@job.Mensagem">@job.Mensagem</small>
                                         }
                                         else
                                         {
                                             <span class="text-muted">-</span>
                                         }
-                                    </td>
-                                </tr>
-                            }
-                            else
-                            {
-                                <tr class="table-row-placeholder">
-                                    <td class="text-muted text-center" colspan="6">
-                                        <i class="bi bi-dash-circle text-muted"></i>
-                                        <small>Nenhum job para exibir</small>
                                     </td>
                                 </tr>
                             }
@@ -200,85 +239,6 @@
                     </nav>
                 </div>
             }
-
-            <div class="mt-3">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card @(filtroStatus == StatusJob.Pendente ? "border-warning border-3" : "") bg-primary text-white cursor-pointer" 
-                             @onclick="() => FiltrarPorStatus(StatusJob.Pendente)">
-                            <div class="card-body text-center">
-                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Pendente)</h5>
-                                <small>Pendentes</small>
-                                @if (filtroStatus == StatusJob.Pendente)
-                                {
-                                    <div class="mt-2">
-                                        <i class="bi bi-check-circle-fill text-warning"></i>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card @(filtroStatus == StatusJob.Processando ? "border-warning border-3" : "") bg-info text-white cursor-pointer" 
-                             @onclick="() => FiltrarPorStatus(StatusJob.Processando)">
-                            <div class="card-body text-center">
-                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Processando)</h5>
-                                <small>Processando</small>
-                                @if (filtroStatus == StatusJob.Processando)
-                                {
-                                    <div class="mt-2">
-                                        <i class="bi bi-check-circle-fill text-warning"></i>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card @(filtroStatus == StatusJob.Concluido ? "border-warning border-3" : "") bg-success text-white cursor-pointer" 
-                             @onclick="() => FiltrarPorStatus(StatusJob.Concluido)">
-                            <div class="card-body text-center">
-                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Concluido)</h5>
-                                <small>Concluídos</small>
-                                @if (filtroStatus == StatusJob.Concluido)
-                                {
-                                    <div class="mt-2">
-                                        <i class="bi bi-check-circle-fill text-warning"></i>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card @(filtroStatus == StatusJob.Erro ? "border-warning border-3" : "") bg-danger text-white cursor-pointer" 
-                             @onclick="() => FiltrarPorStatus(StatusJob.Erro)">
-                            <div class="card-body text-center">
-                                <h5>@todosJobs.Count(j => j.Status == StatusJob.Erro)</h5>
-                                <small>Com Erro</small>
-                                @if (filtroStatus == StatusJob.Erro)
-                                {
-                                    <div class="mt-2">
-                                        <i class="bi bi-check-circle-fill text-warning"></i>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                @if (filtroStatus.HasValue)
-                {
-                    <div class="text-center mt-3">
-                        <button class="btn btn-outline-secondary btn-sm" @onclick="LimparFiltros">
-                            <i class="bi bi-x-circle"></i> Limpar Filtros
-                        </button>
-                        <span class="ms-3 text-muted">
-                            <i class="bi bi-funnel"></i> 
-                            Filtrado por: <strong>@filtroStatus.Value</strong> 
-                            (@jobsExibidos.Count de @todosJobs.Count jobs)
-                        </span>
-                    </div>
-                }
-            </div>
         }
     </div>
 </div>

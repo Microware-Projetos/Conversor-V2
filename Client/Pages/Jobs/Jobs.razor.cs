@@ -241,6 +241,27 @@ public partial class Jobs : ComponentBase
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Extrai o nome do arquivo de um caminho completo de forma segura
+    /// </summary>
+    /// <param name="caminho">Caminho completo do arquivo</param>
+    /// <returns>Nome do arquivo ou "Arquivo não disponível" se o caminho for nulo/vazio</returns>
+    private string GetFileName(string? caminho)
+    {
+        if (string.IsNullOrEmpty(caminho))
+            return "Arquivo não disponível";
+        
+        try
+        {
+            return Path.GetFileName(caminho);
+        }
+        catch
+        {
+            // Se houver erro ao extrair o nome, retorna o caminho original ou uma mensagem padrão
+            return !string.IsNullOrEmpty(caminho) ? caminho : "Arquivo não disponível";
+        }
+    }
+
     public void Dispose()
     {
         CancelarTimerMensagem();
