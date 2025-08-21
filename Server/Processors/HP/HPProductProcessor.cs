@@ -145,6 +145,12 @@ public static class HPProductProcessor
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Desktop " + model + " " + memory + " " + storage + " " + os;
+                            }
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -152,7 +158,7 @@ public static class HPProductProcessor
                                 name = "Desktop " + model,
                                 sku = sku,
                                 short_description = "HP " + model,
-                                description = "Desktop " + model + " " + processor + " " + memory + " " + storage + " " + os,
+                                description = descriptionApi, //"Desktop " + model + " " + processor + " " + memory + " " + storage + " " + os,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
@@ -244,6 +250,12 @@ public static class HPProductProcessor
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Notebook " + model + " " + processor + " " + memory + " " + storage + " " + os;
+                            }
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -251,7 +263,7 @@ public static class HPProductProcessor
                                 name = "Notebook " + model,
                                 sku = sku,
                                 short_description = "HP " + model,
-                                description = "Notebook " + model + " " + processor + " " + memory + " " + storage + " " + os,
+                                description = descriptionApi, //"Notebook " + model + " " + processor + " " + memory + " " + storage + " " + os,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
@@ -340,6 +352,12 @@ public static class HPProductProcessor
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os;
+                            }
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -347,7 +365,7 @@ public static class HPProductProcessor
                                 name = "Workstation " + model,
                                 sku = sku,
                                 short_description = "HP " + model,
-                                description = "Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os,
+                                description = descriptionApi, //"Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
@@ -435,6 +453,13 @@ public static class HPProductProcessor
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os;
+                            }
+
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -442,7 +467,7 @@ public static class HPProductProcessor
                                 name = "Workstation " + model,
                                 sku = sku,
                                 short_description = "HP " + model,
-                                description = "Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os,
+                                description = descriptionApi, //"Workstation " + model + " " + processor + " " + memory + " " + storage + " " + os,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
@@ -529,6 +554,12 @@ public static class HPProductProcessor
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Desktop " + model + " " + memory + " " + storage + " " + os;
+                            }
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -536,9 +567,9 @@ public static class HPProductProcessor
                                 name = "Desktop " + model,
                                 sku = sku,
                                 short_description = "HP " + model,
-                                description = "Desktop " + model + " " + memory + " " + storage + " " + os,
-                                price = preco.ToString(),
-                                regular_price = preco.ToString(),
+                                description = descriptionApi, //"Desktop " + model + " " + memory + " " + storage + " " + os,
+                                price = preco.ToString("F2"),
+                                regular_price = preco.ToString("F2"),
                                 stock_quantity = "10",
                                 weight = ProductDataUtilsHP.ProcessWeight(weight, product_attributesAPI),
                                 manage_stock = true,
@@ -617,6 +648,12 @@ public static class HPProductProcessor
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
 
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = "Acessório " + descricao;
+                            }
+
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
                             var produto = new WooProduct
@@ -624,7 +661,7 @@ public static class HPProductProcessor
                                 name = descricao,
                                 sku = sku,
                                 short_description = descricao,
-                                description = "Acessório " + descricao,
+                                description = descriptionApi, //"Acessório " + descricao,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",
@@ -718,6 +755,13 @@ public static class HPProductProcessor
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
+
+                            if (descriptionApi == string.Empty)
+                            {
+                                Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                descriptionApi = tipoCategoria + " " + descricao;
+                            }
+
                             
                             var processedDimensions = ProductDataUtilsHP.ProcessDimensions(dimension, product_attributesAPI);
 
@@ -726,7 +770,7 @@ public static class HPProductProcessor
                                 name = descricao,
                                 sku = sku,
                                 short_description = descricao,
-                                description = tipoCategoria + " " + descricao,
+                                description = descriptionApi, //tipoCategoria + " " + descricao,
                                 price = preco.ToString(),
                                 regular_price = preco.ToString(),
                                 stock_quantity = "10",

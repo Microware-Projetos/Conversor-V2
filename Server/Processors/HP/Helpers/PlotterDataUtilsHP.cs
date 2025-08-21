@@ -26,6 +26,7 @@ namespace eCommerce.Server.Processors.HP.Helpers;
         public static async Task<List<WooAttribute>> ProcessAttributes(string sku)
         {
             var formatedSku = sku.Split('#')[0];
+            var attributes = new List<WooAttribute>();
 
             if (string.IsNullOrEmpty(formatedSku))
             {
@@ -41,17 +42,15 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 
                 if (File.Exists(PLOTTER_CACHE_FILE))
                 {
-                    var cachedJson = File.ReadAllText(PLOTTER_CACHE_FILE);
-                    var plotterData = JsonConvert.DeserializeObject<Dictionary<string, object>>(cachedJson) ?? new Dictionary<string, object>();
-
-                    if (plotterData.ContainsKey(sku))
+                    if(File.ReadAllText(PLOTTER_CACHE_FILE).Contains(sku))
                     {
-                        Console.WriteLine($"[INFO]: Dados do plotter encontrados no cache para o SKU: {formatedSku}");
-
-                        // CRIAR LÓGICA DE RETORNO DE ATRIBUTOS WOOATTRIBUTIE
-
                         System.Console.WriteLine($"[INFO]: Atributos processados no cache para o SKU: {formatedSku}");
-                        return new List<WooAttribute>();
+                        attributes = TakeAttributes(sku);
+
+                        if(attributes != null && attributes.Any())
+                            return attributes;
+                        else
+                            Console.WriteLine($"[INFO]: Atributos não encontrados para o SKU: {formatedSku}");
                     }
                     else
                     {
@@ -60,11 +59,11 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 }
                 else
                 {
-                    Console.WriteLine($"[INFO]: Cache não encontrado!");
+                    Console.WriteLine($"[INFO]: Dados do plotter não encontrados no cache para o SKU: {formatedSku}");
                 }
 
                 Console.WriteLine("[INFO]: Processando atributos via API...");
-                var attributes = await ProcessAttributesApi(sku);
+                attributes = await ProcessAttributesApi(sku);
                 
                 
                 if(attributes == null || !attributes.Any())
@@ -87,6 +86,7 @@ namespace eCommerce.Server.Processors.HP.Helpers;
         {            
             var formatedSku = sku.Split('#')[0];
             string? accessToken = null;
+            var attributes = new List<WooAttribute>();
             
             if (string.IsNullOrEmpty(formatedSku))
             {
@@ -232,15 +232,208 @@ namespace eCommerce.Server.Processors.HP.Helpers;
                 string json = JsonConvert.SerializeObject(plotterDataDict, Formatting.Indented);
                 File.WriteAllText(PLOTTER_CACHE_FILE, json);
                 Console.WriteLine($"[INFO]: Dados do plotter salvos em {PLOTTER_CACHE_FILE}");
-
                 Console.WriteLine($"[INFO]: Requisição realizada: {response.StatusCode}");
-                return new List<WooAttribute>();
+                attributes = TakeAttributes(sku);
+
+                return attributes;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[ERROR]: Erro ao processar atributos por API para o SKU {formatedSku}: {ex.Message}");
                 return new List<WooAttribute>();
             }
+        }
+
+        private static List<WooAttribute> TakeAttributes(string sku)
+        {
+            var attributes = new List<WooAttribute>();
+            
+            var cachedJson = File.ReadAllText(PLOTTER_CACHE_FILE);
+            var plotterJsonObj  = JObject.Parse(cachedJson);
+
+            if (plotterJsonObj[sku] != null)
+            {
+                Console.WriteLine($"[INFO]: Dados do plotter encontrados no cache para o SKU: {sku}");
+
+                attributes.Add(new WooAttribute
+                {
+                    id = 16,
+                    options = plotterJsonObj[sku]["whatsinbox"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 21,
+                    options = plotterJsonObj[sku]["powersupply"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 22,
+                    options = plotterJsonObj[sku]["wrntyfeatures"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 25,
+                    options = plotterJsonObj[sku]["memstd"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 39,
+                    options = plotterJsonObj[sku]["hdcapprntr"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                if(plotterJsonObj[sku]["facet_feat"] != null)
+                {   
+                    attributes.Add(new WooAttribute
+                    {
+                        id = 42,
+                        options = "Touchscreen",
+                        visible = true
+                    });
+                }
+                else
+                {
+                    attributes.Add(new WooAttribute
+                    {
+                        id = 42,
+                        options = "Não",
+                        visible = true
+                    });
+                }
+                    
+                attributes.Add(new WooAttribute
+                {
+                    id = 44,
+                    options = plotterJsonObj[sku]["facet_connect"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 82,
+                    options = plotterJsonObj[sku]["inktypes"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 827,
+                    options = plotterJsonObj[sku]["prntcartclr"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 828,
+                    options = plotterJsonObj[sku]["prntheads"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 829,
+                    options = plotterJsonObj[sku]["connectstd"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 830,
+                    options = plotterJsonObj[sku]["tempopcent"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 831,
+                    options = plotterJsonObj[sku]["tempstrgcent"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 832,
+                    options = plotterJsonObj[sku]["prntspdgenmet"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 833,
+                    options = plotterJsonObj[sku]["prnttech"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 834,
+                    options = plotterJsonObj[sku]["aiofunctions"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 835,
+                    options = plotterJsonObj[sku]["prntresclrbest"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 836,
+                    options = plotterJsonObj[sku]["prntlangstd"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 837,
+                    options = plotterJsonObj[sku]["prntmargcutshtmet"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 838,
+                    options = plotterJsonObj[sku]["lineaccuracy"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 839,
+                    options = plotterJsonObj[sku]["colorstability"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 840,
+                    options = plotterJsonObj[sku]["mediasizestdmet"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 841,
+                    options = plotterJsonObj[sku]["mediasizecustmet"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 842,
+                    options = plotterJsonObj[sku]["mediatype"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 843,
+                    options = plotterJsonObj[sku]["mediarollextdiammet"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+                attributes.Add(new WooAttribute
+                {
+                    id = 844,
+                    options = plotterJsonObj[sku]["mediathickbypath"]?.ToString() ?? string.Empty,
+                    visible = true
+                });
+            }
+            else
+            {
+                Console.WriteLine($"[INFO]: Dados do plotter não encontrados no cache para o SKU: {sku}");
+                Console.WriteLine("[WARNING]: Retornando atributos default");
+
+                return attributes;
+            }
+
+            return attributes;
         }
 
         public static async Task<List<MetaData>> ProcessPhotos(string sku)

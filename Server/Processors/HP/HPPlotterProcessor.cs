@@ -80,7 +80,7 @@ namespace eCommerce.Server.Processors.HP;
                                 var price = "";
                                 var regularPrice = "";
                                 var stockQuantity = STOCK.ToString();
-                                var attributes = await PlotterDataUtilsHP.ProcessAttributes(sku); // DEFINIR VALORES A SEREM PEGOS DO PLOTTER
+                                var attributes = await PlotterDataUtilsHP.ProcessAttributes(sku);
                                 var metaData = await PlotterDataUtilsHP.ProcessPhotos(sku);
                                 var dimensions = isAcessory ? new Dimensions { length = "33.1", width = "40.8", height = "31.5" } : PlotterDataUtilsHP.ProcessDimensions(sku);
                                 var weight = isAcessory ? "5.5" : PlotterDataUtilsHP.ProcessWeight(sku);
@@ -89,6 +89,12 @@ namespace eCommerce.Server.Processors.HP;
                                 var manageStock = true;
 
                                 var descriptionAPI = await PlotterDataUtilsHP.ProcessDescription(sku);
+
+                                if (descriptionAPI == string.Empty)
+                                {
+                                    Console.WriteLine($"[WARNING]: Descrição não encontrada para o SKU: {sku} | Usando descrição padrão");
+                                    descriptionAPI = "Plotter " + description;
+                                }
 
                                 try
                                 {
@@ -111,7 +117,7 @@ namespace eCommerce.Server.Processors.HP;
                                     name = productName,
                                     sku = sku,
                                     short_description = shortDescription,
-                                    description = description,
+                                    description = descriptionAPI,
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity,

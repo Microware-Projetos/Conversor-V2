@@ -20,17 +20,21 @@ namespace eCommerce.Server.Processors.Lenovo.Helpers;
 public static class ProductDataUtilsLenovo
 {
     private static readonly string CATEGORIES_PATH_FILE ="/app/eCommerce/Server/Maps/Lenovo/categoriesWordpress.json";
-    private static readonly HttpClient _httpClient = new HttpClient();
-    private static readonly Dictionary<int, string> DEFAULT_PHOTOS = new()
+    private static readonly string PRODUCTS_PATH_FILE = "/app/eCommerce/Server/Cache/Lenovo/product_cache.json";
+    private static readonly HttpClient _httpClient = new HttpClient
+    {
+        Timeout = TimeSpan.FromSeconds(30) // Timeout reduzido para 30 segundos
+    };
+    private static readonly Dictionary<string, string> DEFAULT_PHOTOS = new()
         {
-            { 17, "https://eprodutos-integracao.microware.com.br/api/photos/image/67f027b0ff6d81181139ddfe.png" },  // Acessório
-            { 18, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e5d5be14dc12f6b266dc.png" },  // Desktop
-            { 19, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e601be14dc12f6b266de.png" },  // Monitor
-            { 20, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e621be14dc12f6b266e0.png" },  // Notebook
-            { 21, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png" },  // Serviços
-            { 22, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e688be14dc12f6b266e4.png" },  // SmartOffice
-            { 23, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e6bbbe14dc12f6b266e8.png" },  // Workstation
-            { 24, "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e69dbe14dc12f6b266e6.png" }   // Tiny
+            { "Acessório", "https://eprodutos-integracao.microware.com.br/api/photos/image/67f027b0ff6d81181139ddfe.png" },  // Acessório
+            { "Desktop", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e5d5be14dc12f6b266dc.png" },  // Desktop
+            { "Monitor", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e601be14dc12f6b266de.png" },  // Monitor
+            { "Notebook", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e621be14dc12f6b266e0.png" },  // Notebook
+            { "Serviços", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e66abe14dc12f6b266e2.png" },  // Serviços
+            { "SmartOffice", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e688be14dc12f6b266e4.png" },  // SmartOffice
+            { "Workstation", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e6bbbe14dc12f6b266e8.png" },  // Workstation
+            { "Tiny", "https://eprodutos-integracao.microware.com.br/api/photos/image/67c1e69dbe14dc12f6b266e6.png" }   // Tiny
         };
 
     public static string ProcessWeight(IXLRow product, Dictionary<string, string> deliveryInfo, object productData)
@@ -543,193 +547,35 @@ public static class ProductDataUtilsLenovo
         return categories;
     }
 
-    public static async Task<List<MetaData>> ProcessPhotos(IXLRow product, List<Dictionary<string, object>> images, Dictionary<string, string> normalizedFamily, object productData)
+    public static async Task<List<MetaData>> ProcessPhotos(IXLRow product, List<Dictionary<string, object>> images, Dictionary<string, string> normalizedFamily, object productData, string aba)
     {
         Console.WriteLine("[INFO]: Iniciando ProcessPhotos");
         var metaData = new List<MetaData>();
 
-        if (productData != null)
+        var productFile = File.ReadAllText(PRODUCTS_PATH_FILE);
+        var products = JObject.Parse(productFile);
+
+        var sku = product.Cell(3).Value.ToString();
+        var productDict = products[sku];
+
+        if(productDict != null && productDict["data"] != null)
         {
-            Console.WriteLine("[INFO]: Product Data não é nullo, indo para FindApiImages.");
-            return await FindApiImages(product, productData);
-        }
-
-        string ph4Desc = product.Cell(5).GetString();
-        string phBrand = product.Cell(4).GetString();
-        string productCode = product.Cell(3).GetString();
-        string familyNormalized = normalizedFamily.ContainsKey(ph4Desc) ? normalizedFamily[ph4Desc] : "";
-
-        var baseUrl = "https://eprodutos-integracao.microware.com.br/api/photos/image/";
-
-        var filtered = images
-            .Where(img =>
-                img.TryGetValue("family", out var familyObj) &&
-                familyObj != null &&
-                ph4Desc.Contains(familyObj.ToString()))
-            .ToList();
-
-        if (!filtered.Any())
-        {
-            Console.WriteLine("[INFO]: Dentro do filtered.Any()");
-
-            filtered = images
-                .Where(img =>
-                    img.TryGetValue("manufacturer", out var manufacturer) && manufacturer?.ToString() == "Lenovo" &&
-                    img.TryGetValue("category", out var category) && category?.ToString() == phBrand &&
-                    img.TryGetValue("family", out var fam) && fam?.ToString() == familyNormalized)
-                .ToList();
-        }
-
-        if (!filtered.Any())
-        {
-            var CATEGORY_MAPPING = new Dictionary<string, List<string>>
+            var dataDict = productDict["data"];
+            if(dataDict?["ProductPicturePathArray"] == null)
             {
-                { "Notebook", new List<string> { "Notebook" } },
-                { "Desktop", new List<string> { "Desktop" } },
-                { "Workstation", new List<string> { "Workstation" } },
-                { "Tablet Android", new List<string> { "Tablet" } },
-                { "Visuals", new List<string> { "Monitor" } },
-                { "Smart Office", new List<string> { "SmartOffice" } }
-            };
-
-            var categoriasPadrao = CATEGORY_MAPPING.ContainsKey(phBrand) ? CATEGORY_MAPPING[phBrand] : new List<string> { "Acessório" };
-
-            filtered = images
-                .Where(img =>
-                    img.TryGetValue("category", out var cat) && categoriasPadrao.Contains(cat?.ToString()) &&
-                    img.TryGetValue("manufacturer", out var manuf) && manuf?.ToString() == "Lenovo" &&
-                    img.TryGetValue("family", out var fam) && fam?.ToString() == "Default")
-                .ToList();
-
-            if (filtered.Any())
-                Console.WriteLine($"[INFO]: {productCode} - Usando foto default");
-        }
-
-        var imageUrls = filtered
-            .Where(img =>
-                img.TryGetValue("id", out var id) &&
-                img.TryGetValue("extension", out var ext))
-            .Select(img => $"{baseUrl}{img["id"]}.{img["extension"]}")
-            .ToList();
-
-        if (!imageUrls.Any())
-        {
-            var categories = ProductDataUtilsLenovo.ProcessCategories(product);
-            var defaultPhoto = GetDefaultPhoto(categories);
-            metaData.Add(new MetaData
-            {
-                key = "_external_image_url",
-                value = defaultPhoto
-            });
-            Console.WriteLine($"[INFO]: {productCode} - Usando foto padrão da categoria");
-            return metaData;
-        }
-
-        metaData.Add(new MetaData
-        {
-            key = "_external_image_url",
-            value = imageUrls.First()
-        });
-
-        if (imageUrls.Count > 1)
-        {
-            metaData.Add(new MetaData
-            {
-                key = "_external_gallery_images",
-                value = imageUrls.Skip(1).ToList()
-            });
-        }
-
-        return metaData;
-    }
-
-    private static async Task<List<MetaData>> FindApiImages(IXLRow product, object productData)
-    {
-        var categories = ProductDataUtilsLenovo.ProcessCategories(product);
-        var defaultPhoto = GetDefaultPhoto(categories);
-
-        if (productData == null)
-        {
-            Console.WriteLine("[INFO]: Product Data é null");
-
-            Console.WriteLine("[INFO]: Entrando no FindApiImages");
-            string baseUrl = "https://psref.lenovo.com/api/product/Photo/0";
-            string modelCode = product.Cell(3).Value.ToString();
-
-            string url = $"{baseUrl}?model_code={modelCode}";
-            string token = "eyJ0eXAiOiJKV1QifQ.bjVTdWk0YklZeUc2WnFzL0lXU0pTeU1JcFo0aExzRXl1UGxHN3lnS1BtckI0ZVU5WEJyVGkvaFE0NmVNU2U1ZjNrK3ZqTEVIZ29nTk1TNS9DQmIwQ0pTN1Q1VytlY1RpNzZTUldXbm4wZ1g2RGJuQWg4MXRkTmxKT2YrOW9LRjBzQUZzV05HM3NpcU92WFVTM0o0blM1SDQyUlVXNThIV1VBS2R0c1B2NjJyQjIrUGxNZ2x6RTRhUjY5UDZWclBX.ZDBmM2EyMWRjZTg2N2JmYWMxZDIxY2NiYjQzMWFhNjg1YjEzZTAxNmU2M2RmN2M5ZjIyZWJhMzZkOWI1OWJhZg";
-
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("x-psref-user-token", token);
-            
-            if (!_httpClient.DefaultRequestHeaders.Contains("User-Agent"))
-            {
-                _httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
+                Console.WriteLine("[INFO]: Product Picture Path Array é null, indo para FindApiImages.");
+                
+                return await FindApiImages(product, productData, aba);   
             }
-
-            try
-            {
-                HttpResponseMessage response = await _httpClient.GetAsync(url);
-
-                Console.WriteLine($"[INFO]: Status da resposta: {response.StatusCode}");
-
-                if(response.IsSuccessStatusCode)
-                {
-                    var metaData = new List<MetaData>();
-                    string content = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"[INFO]: Conteúdo da resposta: {content}");
-
-                    var responseJObj = JObject.Parse(content);
-                    var imageUrls = responseJObj["data"]?["ProductPicturePathArray"]?.ToObject<List<string>>() ?? new List<string>();
-
-                    if (!imageUrls.Any())
-                    {
-                        Console.WriteLine("[INFO]: Nenhuma imagem retornada pela API.");
-                        return new List<MetaData>
-                        {
-                            new MetaData { key = "_external_image_url", value = defaultPhoto }
-                        };
-                    }
-
-                    metaData.Add(new MetaData
-                    {
-                        key = "_external_image_url",
-                        value = imageUrls.First()
-                    });
-
-                    if (imageUrls.Count > 1)
-                    {
-                        metaData.Add(new MetaData
-                        {
-                            key = "_external_gallery_images",
-                            value = imageUrls.Skip(1).ToList()
-                        });
-                    }
-                    return metaData;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[ERRO]: Não foi possível realizar a requisição: {ex.Message}");
-            }
-            
-            Console.WriteLine("[INFO]: Retornando vazio sem entrar em nada!");
-            return new List<MetaData>
-            {
-                new MetaData { key = "_external_image_url", value = defaultPhoto }
-            };
         }
-
         try
         {
-            var metaData = new List<MetaData>();
-            
-
             if (productData is not JObject productJObj)
             {
                 Console.WriteLine("[INFO]: Product Data não é um JObject");
                 return new List<MetaData>
                 { 
-                    new MetaData { key = "_external_image_url", value = defaultPhoto }
+                    new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[aba] }
                 };
             }
 
@@ -747,7 +593,7 @@ public static class ProductDataUtilsLenovo
                 Console.WriteLine("[INFO]: Nenhuma imagem no cache. Usando imagem padrão.");
                 return new List<MetaData>
                 {
-                    new MetaData { key = "_external_image_url", value = defaultPhoto }
+                    new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[aba] }
                 };
             }
 
@@ -773,22 +619,149 @@ public static class ProductDataUtilsLenovo
             Console.WriteLine($"[ERRO]: Falha ao processar imagens do cache: {ex.Message}");
             return new List<MetaData>
             {
-                new MetaData { key = "_external_image_url", value = defaultPhoto }
+                new MetaData { key = "_external_image_url", value = DEFAULT_PHOTOS[aba] }
             };
         }
     }
 
-    private static string GetDefaultPhoto(List<Category> categories)
+    private static async Task<List<MetaData>> FindApiImages(IXLRow product, object productData, string aba)
     {
+        Console.WriteLine("[INFO]: Iniciando FindApiImages");
+        var categories = ProductDataUtilsLenovo.ProcessCategories(product);
+        var defaultPhoto = DEFAULT_PHOTOS[aba];
+        var specData = productData as JObject;
 
-        foreach (var category in categories)
+        Console.WriteLine("[INFO]: Entrando no FindApiImages");
+        string baseUrl = "https://psref.lenovo.com/api/model/Info/SpecData";
+        string sku = product.Cell(3).Value.ToString();
+
+        string url = $"{baseUrl}?model_code={sku}";
+        string token = "eyJ0eXAiOiJKV1QifQ.bjVTdWk0YklZeUc2WnFzL0lXU0pTeU1JcFo0aExzRXl1UGxHN3lnS1BtckI0ZVU5WEJyVGkvaFE0NmVNU2U1ZjNrK3ZqTEVIZ29nTk1TNS9DQmIwQ0pTN1Q1VytlY1RpNzZTUldXbm4wZ1g2RGJuQWg4MXRkTmxKT2YrOW9LRjBzQUZzV05HM3NpcU92WFVTM0o0blM1SDQyUlVXNThIV1VBS2R0c1B2NjJyQjIrUGxNZ2x6RTRhUjY5UDZWclBX.ZDBmM2EyMWRjZTg2N2JmYWMxZDIxY2NiYjQzMWFhNjg1YjEzZTAxNmU2M2RmN2M5ZjIyZWJhMzZkOWI1OWJhZg";
+
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("x-psref-user-token", token);
+        
+        if (!_httpClient.DefaultRequestHeaders.Contains("User-Agent"))
         {
-            if (DEFAULT_PHOTOS.TryGetValue(category.id, out var photoUrl))
-            {
-                return photoUrl;
-            }
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
         }
 
-        return DEFAULT_PHOTOS[17];
+        int maxRetries = 2;
+        int currentRetry = 0;
+        
+        while (currentRetry <= maxRetries)
+        {
+            try
+            {
+                Console.WriteLine($"[INFO]: Tentativa {currentRetry + 1} de {maxRetries + 1} para buscar imagens do SKU: {sku}");
+                
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(30));
+                var response = await _httpClient.GetAsync(url, cts.Token);
+
+                Console.WriteLine($"[INFO]: Status da resposta: {response.StatusCode}");
+
+                if(response.IsSuccessStatusCode)
+                {
+                    var metaData = new List<MetaData>();
+                    string content = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"[INFO]: Conteúdo da resposta: {content}");
+
+                    var responseJObj = JObject.Parse(content);
+                    var apiData = responseJObj["data"]?.ToObject<Dictionary<string, object>>() ?? new Dictionary<string, object>();
+                    var imageUrls = responseJObj["data"]?["ProductPicturePathArray"]?.ToObject<List<string>>() ?? new List<string>();
+
+                    if (!imageUrls.Any())
+                    {
+                        Console.WriteLine("[INFO]: Nenhuma imagem retornada pela API.");
+                        return new List<MetaData>
+                        {
+                            new MetaData { key = "_external_image_url", value = defaultPhoto }
+                        };
+                    }
+
+                    // Carregar cache existente
+                    var cacheFile = CacheManagerLenovo.LoadCache(PRODUCTS_PATH_FILE);
+                    
+                    // Verificar se o SKU existe no cache
+                    if (!cacheFile.ContainsKey(sku))
+                    {
+                        cacheFile[sku] = new Dictionary<string, object>();
+                    }
+                    
+                    // Converter o SKU para Dictionary se necessário
+                    if (!(cacheFile[sku] is Dictionary<string, object> skuData))
+                    {
+                        cacheFile[sku] = new Dictionary<string, object>();
+                        skuData = (Dictionary<string, object>)cacheFile[sku];
+                    }
+                    
+                    // Verificar se a estrutura "data" existe
+                    if (!skuData.ContainsKey("data"))
+                    {
+                        skuData["data"] = new Dictionary<string, object>();
+                    }
+                    
+                    var dataDict = skuData["data"] as Dictionary<string, object>;
+                    if (dataDict == null)
+                    {
+                        dataDict = new Dictionary<string, object>();
+                        skuData["data"] = dataDict;
+                    }
+                    
+                    // Atualizar apenas os dados retornados pela API para este SKU
+                    foreach (var kvp in apiData)
+                    {
+                        dataDict[kvp.Key] = kvp.Value;
+                    }
+                    
+                    Console.WriteLine($"[INFO]: Cache atualizado para SKU: {sku} com dados da API");
+                    CacheManagerLenovo.SaveCache(PRODUCTS_PATH_FILE, cacheFile);
+
+                    metaData.Add(new MetaData
+                    {
+                        key = "_external_image_url",
+                        value = imageUrls.First()
+                    });
+
+                    if (imageUrls.Count > 1)
+                    {
+                        metaData.Add(new MetaData
+                        {
+                            key = "_external_gallery_images",
+                            value = imageUrls.Skip(1).ToList()
+                        });
+                    }
+                    return metaData; // Sucesso - sair do loop
+                }
+            }
+            catch (TaskCanceledException ex) when (ex.InnerException is TimeoutException)
+            {
+                Console.WriteLine($"[ERRO]: Timeout na tentativa {currentRetry + 1}: {ex.Message}");
+            }
+            catch (TaskCanceledException ex)
+            {
+                Console.WriteLine($"[ERRO]: Requisição cancelada na tentativa {currentRetry + 1}: {ex.Message}");
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"[ERRO]: Erro HTTP na tentativa {currentRetry + 1}: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERRO]: Erro inesperado na tentativa {currentRetry + 1}: {ex.Message}");
+            }
+            
+            currentRetry++;
+            if (currentRetry <= maxRetries)
+            {
+                Console.WriteLine($"[INFO]: Aguardando 2 segundos antes da próxima tentativa...");
+                await Task.Delay(2000); // Aguardar 2 segundos antes de tentar novamente
+            }
+        }
+        
+        Console.WriteLine($"[INFO]: Todas as {maxRetries + 1} tentativas falharam. Retornando imagem padrão.");
+        return new List<MetaData>
+        {
+            new MetaData { key = "_external_image_url", value = defaultPhoto }
+        };
     }
 }

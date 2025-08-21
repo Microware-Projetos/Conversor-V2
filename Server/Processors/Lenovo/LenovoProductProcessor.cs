@@ -141,7 +141,7 @@ public static class LenovoProductProcessor
                                 // Verifica se o campo PART_ORIGIN é IMPORTED e se não for, define como local
                                 if (linha.Cell(7).Value.ToString() != "IMPORTED")
                                     shippingClass = "local";
-
+                                
                                 var produto = new WooProduct
                                 {
                                     name = productName,
@@ -151,17 +151,18 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
                                 contadorLinhas++;
+                                
                             }
                             catch (Exception ex)
                             {
@@ -249,13 +250,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -347,13 +348,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -445,13 +446,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -543,13 +544,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -641,13 +642,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -739,13 +740,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -837,13 +838,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);
@@ -935,13 +936,13 @@ public static class LenovoProductProcessor
                                     price = price,
                                     regular_price = regularPrice,
                                     stock_quantity = stockQuantity.ToString(),
-                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
                                     manage_stock = manageStock,
                                     shipping_class = shippingClass,
                                     attributes = attributes,
+                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData, aba),
                                     dimensions = ProductDataUtilsLenovo.ProcessDimensions(linha, deliveryInfoDict, productData),
-                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha),
-                                    meta_data = await ProductDataUtilsLenovo.ProcessPhotos(linha, images, normalizedFamily, productData)
+                                    weight = ProductDataUtilsLenovo.ProcessWeight(linha, deliveryInfoDict, productData),
+                                    categories = ProductDataUtilsLenovo.ProcessCategories(linha)
                                 };
                                 
                                 produtos.Add(produto);

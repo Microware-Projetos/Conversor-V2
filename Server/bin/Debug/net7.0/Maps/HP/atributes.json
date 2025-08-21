@@ -178,5 +178,81 @@
     {
         "id": 46,
         "name": "Família"
+    },
+    {
+        "id": 82,
+        "name": "Tipos de tinta"
+    },
+    {
+        "id": 827,
+        "name": "Cartucho/frasco de impressão, cor(es)"
+    },
+    {
+        "id": 828,
+        "name": "Cabeças de impressão"
+    },
+    {
+        "id": 829,
+        "name": "Conectividade"
+    },
+    {
+        "id": 830,
+        "name": "Gama de temperaturas de funcionamento"
+    },
+    {
+        "id": 831,
+        "name": "Amplitude Térmica de Armazenamento"
+    },
+    {
+        "id": 832,
+        "name": "Velocidade de impressão"
+    },
+    {
+        "id": 833,
+        "name": "Tecnologia de impressão"
+    },
+    {
+        "id": 834,
+        "name": "Funções"
+    },
+    {
+        "id": 835,
+        "name": "Qualidade de impressão colorida"
+    },
+    {
+        "id": 836,
+        "name": "Idiomas de impressão"
+    },
+    {
+        "id": 837,
+        "name": "Área não imprimível"
+    },
+    {
+        "id": 838,
+        "name": "Precisão de linha"
+    },
+    {
+        "id": 839,
+        "name": "Estabilidade da cor"
+    },
+    {
+        "id": 840,
+        "name": "Tamanhos de mídia suportados"
+    },
+    {
+        "id": 841,
+        "name": "Tamanhos de mídia, personalizados"
+    },
+    {
+        "id": 842,
+        "name": "Tipos de mídias"
+    },
+    {
+        "id": 843,
+        "name": "Diâmetro externo do rolo"
+    },
+    {
+        "id": 844,
+        "name": "Espessura de suportes"
     }
 ]
