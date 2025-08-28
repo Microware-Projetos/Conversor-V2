@@ -1,0 +1,500 @@
+@page "/cisco/revisao/{tipoLista}"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Text.Json
+@using eCommerce.Shared.Models
+
+<PageTitle>Revisão de Produtos - @(tipoLista.ToUpper())</PageTitle>
+
+<link href="css/cisco-revisao.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="mb-0">
+                            <i class="bi bi-database me-2"></i>
+                            Banco de Produtos - @(tipoLista.ToUpper())
+                        </h2>
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="/cisco" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left me-2"></i>Voltar ao Upload
+                            </a>
+                            <img src="images/cisco.png" alt="Cisco Logo" style="max-height: 40px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Estatísticas do Banco -->
+                    @if (stats != null)
+                    {
+                        <div class="row mb-4">
+                            <div class="col-md-3">
+                                <div class="card border-primary">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-primary">@stats.TotalProdutos</h4>
+                                        <small class="text-muted">Total de Produtos</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-success">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-success">@stats.Disponiveis</h4>
+                                        <small class="text-muted">Disponíveis na Lista Atual</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-warning">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-warning">@stats.NaoDisponiveis</h4>
+                                        <small class="text-muted">Não Disponíveis (*)</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card border-info">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-info">@stats.ProdutosComVariacao</h4>
+                                        <small class="text-muted">Com Variação de Preço</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                    <!-- Botões de Ação -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-primary" @onclick="SalvarAlteracoes">
+                                    <i class="bi bi-save me-2"></i>Salvar Alterações
+                                </button>
+                                <button class="btn btn-success" @onclick="ConfirmarEnvioWooCommerce">
+                                    <i class="bi bi-cloud-upload me-2"></i>Enviar para WooCommerce
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-info" @onclick="ExportarBanco">
+                                    <i class="bi bi-download me-2"></i>Exportar Banco
+                                </button>
+                                <button class="btn btn-outline-warning" @onclick="ConfirmarLimpezaBanco">
+                                    <i class="bi bi-trash me-2"></i>Limpar Banco
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtros e Busca -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="buscaProduto" class="form-label small mb-1">Buscar Produtos</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" class="form-control" id="buscaProduto" @bind="buscaProduto" placeholder="Buscar SKU, Nome e Descr.....">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="filtroCategoria" class="form-label small mb-1">Filtrar por Categoria</label>
+                            <select class="form-select" @bind="filtroCategoria">
+                                <option value="">Todas as Categorias</option>
+                                <option value="Licenças">Licenças</option>
+                                <option value="Produtos Gerais">Produtos Gerais</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="produtosPorPagina" class="form-label small mb-1">Produtos/Página</label>
+                            <select class="form-select" @bind="produtosPorPagina">
+                                <option value="@(10)">10</option>
+                                <option value="@(20)">20</option>
+                                <option value="@(50)">50</option>
+                                <option value="@(100)">100</option>
+                                <option value="@(200)">200</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tipoEnvio" class="form-label small mb-1">Tipo de Envio</label>
+                            <select class="form-select" @bind="tipoEnvio">
+                                <option value="todos">Todos os Produtos</option>
+                                <option value="selecionados">Apenas Selecionados</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtro de Disponibilidade -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="btn-group" role="group">
+                                <input type="radio" class="btn-check" name="filtroDisponibilidade" id="todos" @bind="filtroDisponibilidade">
+                                <label class="btn btn-outline-secondary" for="todos">
+                                    <i class="bi bi-list-ul me-1"></i>Todos os Produtos
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="filtroDisponibilidade" id="disponiveis" @bind="filtroDisponibilidade">
+                                <label class="btn btn-outline-success" for="disponiveis">
+                                    <i class="bi bi-check-circle me-1"></i>Disponíveis na Lista Atual
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="filtroDisponibilidade" id="naoDisponiveis" @bind="filtroDisponibilidade">
+                                <label class="btn btn-outline-warning" for="naoDisponiveis">
+                                    <i class="bi bi-exclamation-triangle me-1"></i>Não Disponíveis (*)
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="filtroDisponibilidade" id="enviadosWooCommerce" @bind="filtroDisponibilidade">
+                                <label class="btn btn-outline-success" for="enviadosWooCommerce">
+                                    <i class="bi bi-check-circle-fill me-1"></i>Enviados para WooCommerce
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="filtroDisponibilidade" id="pendentesWooCommerce" @bind="filtroDisponibilidade">
+                                <label class="btn btn-outline-warning" for="pendentesWooCommerce">
+                                    <i class="bi bi-clock me-1"></i>Pendentes de Envio
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contador de Produtos Selecionados -->
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="selectAll" @bind="selectAll">
+                                        <label class="form-check-label" for="selectAll">
+                                            Selecionar Todos
+                                        </label>
+                                    </div>
+                                    <span class="text-muted">
+                                        <span id="produtosSelecionados">@produtosSelecionados</span> de <span id="totalProdutosTabela">@produtosFiltrados.Count</span> produtos selecionados
+                                    </span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm" @onclick="EditarProdutosSelecionados" disabled="@(produtosSelecionados == 0)">
+                                        <i class="bi bi-pencil me-1"></i>Editar Selecionados
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm" @onclick="ExportarProdutosSelecionados" disabled="@(produtosSelecionados == 0)">
+                                        <i class="bi bi-download me-1"></i>Exportar Selecionados
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading -->
+                    @if (isLoading)
+                    {
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Carregando...</span>
+                            </div>
+                            <p class="mt-2 text-muted">Carregando produtos...</p>
+                        </div>
+                    }
+                    
+                    <!-- Tabela de Produtos -->
+                    @if (!isLoading && produtosFiltrados.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" class="form-check-input" @bind="selectAllHeader">
+                                        </th>
+                                        <th>SKU</th>
+                                        <th>Nome do Produto</th>
+                                        <th>Preço</th>
+                                        <th>Estoque</th>
+                                        <th>Categoria</th>
+                                        <th>Foto</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var produto in produtosPagina)
+                                    {
+                                        var index = produtosFiltrados.IndexOf(produto);
+                                        var categoria = produto.categories?.FirstOrDefault()?.id == 28 ? "Licenças" : "Produtos Gerais";
+                                        var disponivel = true; // Simulado - implementar lógica real
+                                        var enviadoWooCommerce = false; // Simulado - implementar lógica real
+                                        
+                                        string statusClass, statusText, statusIcon, linhaClass;
+                                        
+                                        if (!disponivel)
+                                        {
+                                            statusClass = "bg-warning";
+                                            statusText = "Não Disponível (*)";
+                                            statusIcon = "bi-exclamation-triangle";
+                                            linhaClass = "table-warning";
+                                        }
+                                        else if (enviadoWooCommerce)
+                                        {
+                                            statusClass = "bg-success";
+                                            statusText = "Enviado para WooCommerce";
+                                            statusIcon = "bi-check-circle-fill";
+                                            linhaClass = "table-success";
+                                        }
+                                        else
+                                        {
+                                            statusClass = "bg-warning";
+                                            statusText = "Disponível (Pendente)";
+                                            statusIcon = "bi-clock";
+                                            linhaClass = "table-warning";
+                                        }
+                                        
+                                        <tr data-sku="@produto.sku" data-index="@index" class="@linhaClass">
+                                            <td>
+                                                <input type="checkbox" class="form-check-input produto-checkbox" 
+                                                       value="@produto.sku" 
+                                                       @onchange="(e) => ToggleProdutoSelecionado(produto, e.Value)"
+                                                       disabled="@(!disponivel)" 
+                                                       title="@(enviadoWooCommerce ? "Produto já enviado para WooCommerce" : "")">
+                                            </td>
+                                            <td>
+                                                <code class="text-primary">@produto.sku</code>
+                                                @if (!disponivel)
+                                                {
+                                                    <br><small class="text-warning">(*) Não na lista atual</small>
+                                                }
+                                            </td>
+                                            <td>
+                                                <div class="fw-bold">@produto.name</div>
+                                                <small class="text-muted">@(produto.description ?? produto.name)</small>
+                                            </td>
+                                            <td>
+                                                <span class="fw-bold text-success">R$ @produto.price</span>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-secondary">@produto.stock_quantity</span>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-info">@categoria</span>
+                                            </td>
+                                            <td class="text-center">
+                                                @{
+                                                    var imageUrl = GetImagemUrl(produto);
+                                                }
+                                                @if (!string.IsNullOrEmpty(imageUrl))
+                                                {
+                                                    <div class="produto-imagem position-relative d-inline-block">
+                                                        <img src="@imageUrl" alt="Foto do Produto" 
+                                                             style="width: 50px; height: 50px; object-fit: cover;"
+                                                             @onclick="() => AmpliarImagem(imageUrl, produto.name)"
+                                                             title="Clique para ampliar">
+                                                        <div class="indicador-imagem">
+                                                            <i class="bi bi-image"></i>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="sem-foto text-center">
+                                                        <i class="bi bi-image" style="font-size: 2rem;"></i>
+                                                        <div class="small">Sem foto</div>
+                                                    </div>
+                                                }
+                                            </td>
+                                            <td>
+                                                <span class="badge @statusClass">
+                                                    <i class="bi @statusIcon me-1"></i>@statusText
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm" role="group">
+                                                    <button class="btn btn-outline-primary" @onclick="() => EditarProduto(index)" title="Editar">
+                                                        <i class="bi bi-pencil"></i>
+                                                    </button>
+                                                    <button class="btn btn-outline-secondary" @onclick="() => VerDetalhes(produto.sku)" title="Detalhes">
+                                                        <i class="bi bi-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Paginação -->
+                        @if (totalPaginas > 1)
+                        {
+                            <nav aria-label="Paginação de produtos">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item @(paginaAtual == 1 ? "disabled" : "")">
+                                        <a class="page-link" href="#" @onclick="() => MudarPagina(paginaAtual - 1)" @onclick:preventDefault>Anterior</a>
+                                    </li>
+                                    
+                                    @for (int i = 1; i <= totalPaginas; i++)
+                                    {
+                                        if (i == 1 || i == totalPaginas || (i >= paginaAtual - 2 && i <= paginaAtual + 2))
+                                        {
+                                            <li class="page-item @(i == paginaAtual ? "active" : "")">
+                                                <a class="page-link" href="#" @onclick="() => MudarPagina(i)" @onclick:preventDefault>@i</a>
+                                            </li>
+                                        }
+                                        else if (i == paginaAtual - 3 || i == paginaAtual + 3)
+                                        {
+                                            <li class="page-item disabled"><span class="page-link">...</span></li>
+                                        }
+                                    }
+                                    
+                                    <li class="page-item @(paginaAtual == totalPaginas ? "disabled" : "")">
+                                        <a class="page-link" href="#" @onclick="() => MudarPagina(paginaAtual + 1)" @onclick:preventDefault>Próximo</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        }
+                    }
+                    
+                    <!-- Mensagem quando não há produtos -->
+                    @if (!isLoading && !produtosFiltrados.Any())
+                    {
+                        <div class="text-center py-5">
+                            <i class="bi bi-inbox text-muted" style="font-size: 3rem;"></i>
+                            <p class="mt-2 text-muted">Nenhum produto encontrado</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edição de Produto -->
+@if (showModalEditar)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Produto</h5>
+                    <button type="button" class="btn-close" @onclick="FecharModalEditar"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="produtoEditando" OnValidSubmit="SalvarEdicaoProduto">
+                        <DataAnnotationsValidator />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editNome" class="form-label">Nome do Produto</label>
+                                    <InputText id="editNome" class="form-control" @bind-Value="produtoEditando.name" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editSku" class="form-label">SKU</label>
+                                    <InputText id="editSku" class="form-control" @bind-Value="produtoEditando.sku" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editPreco" class="form-label">Preço</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">R$</span>
+                                        <InputText id="editPreco" class="form-control" @bind-Value="produtoEditando.price" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editEstoque" class="form-label">Estoque</label>
+                                    <InputText id="editEstoque" class="form-control" @bind-Value="produtoEditando.stock_quantity" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDescricao" class="form-label">Descrição</label>
+                            <InputTextArea id="editDescricao" class="form-control" @bind-Value="produtoEditando.description" rows="3" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editCategoria" class="form-label">Categoria</label>
+                                    <InputSelect id="editCategoria" class="form-select" @bind-Value="categoriaEditando">
+                                        <option value="@(29)">Produtos Gerais</option>
+                                        <option value="@(28)">Licenças</option>
+                                    </InputSelect>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editLeadtime" class="form-label">Lead Time</label>
+                                    <InputSelect id="editLeadtime" class="form-select" @bind-Value="leadtimeEditando">
+                                        <option value="local">Local</option>
+                                        <option value="importado">Importado</option>
+                                    </InputSelect>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editImagem" class="form-label">URL da Imagem</label>
+                            <InputText id="editImagem" class="form-control" @bind-Value="urlImagemEditando" />
+                        </div>
+                        
+                        <!-- Campo para associar licenças -->
+                        <div class="mb-3">
+                            <label for="editLicencaProduto" class="form-label">
+                                <i class="bi bi-link-45deg me-1"></i>Produto de Licença Associado
+                            </label>
+                            <div class="input-group">
+                                <InputText class="form-control" id="editLicencaProduto" 
+                                           @bind-Value="skuLicencaEditando"
+                                           placeholder="Digite o SKU do produto de licença" />
+                                <button class="btn btn-outline-secondary" type="button" 
+                                        @onclick="BuscarProdutoLicenca" title="Buscar produto">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                            <small class="form-text text-muted">
+                                Digite o SKU do produto de licença que será associado a este produto
+                            </small>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                        <button type="button" class="btn btn-secondary" @onclick="FecharModalEditar">Cancelar</button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Backdrop do modal -->
+    <div class="modal-backdrop fade show"></div>
+}
+
+<!-- Modal de Confirmação -->
+@if (showModalConfirmacao)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmação</h5>
+                    <button type="button" class="btn-close" @onclick="FecharModalConfirmacao"></button>
+                </div>
+                <div class="modal-body">
+                    <p>@mensagemConfirmacao</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="FecharModalConfirmacao">Cancelar</button>
+                    <button type="button" class="btn btn-primary" @onclick="ConfirmarAcao">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Backdrop do modal -->
+    <div class="modal-backdrop fade show"></div>
+}
+
+

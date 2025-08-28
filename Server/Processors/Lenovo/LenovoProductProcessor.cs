@@ -10,11 +10,14 @@ using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.Lenovo;
 using eCommerce.Server.Processors.Lenovo.Helpers;
+using eCommerce.Server.Services.Lenovo;
+using eCommerce.Server.Wordpress.Lenovo;
 
 namespace eCommerce.Server.Processors.Lenovo;
 
 public static class LenovoProductProcessor
 {
+
     public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, CancellationToken cancellationToken = default)
     {
 
@@ -973,6 +976,11 @@ public static class LenovoProductProcessor
                 File.WriteAllText(caminhoArquivoJson, json);
                 Console.WriteLine($"\n[INFO]: Arquivo produtosLenovo.json criado com sucesso em: {caminhoArquivoJson}");
                 Console.WriteLine($"[INFO]: Tamanho do arquivo: {new FileInfo(caminhoArquivoJson).Length} bytes");
+
+                //Enviar produtos para a API
+                Console.WriteLine($"[INFO]: Enviando produtos para a API, WooCommerce...");
+                await LenovoWordPressProdutos.EnviarListaDeProdutos(produtos);
+                Console.WriteLine($"[INFO]: Produtos enviados para a API com sucesso.");
             }
             else
             {

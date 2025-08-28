@@ -5,6 +5,7 @@ using eCommerce.Client.Services.HP;
 using eCommerce.Client.Services.Job;
 using eCommerce.Client.Services.Bling;
 using eCommerce.Client.Services.Lenovo;
+using eCommerce.Client.Services.Cisco;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -16,5 +17,6 @@ builder.Services.AddScoped<HPService>();
 builder.Services.AddScoped<JobService>();
 builder.Services.AddScoped<BlingService>();
 builder.Services.AddScoped<LenovoService>();
+builder.Services.AddScoped<CiscoService>();
 
 await builder.Build().RunAsync();

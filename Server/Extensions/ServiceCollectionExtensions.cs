@@ -6,6 +6,7 @@ using eCommerce.Server.Services.Job;
 using eCommerce.Server.Services.Bling;
 using eCommerce.Server.Services.HP;
 using eCommerce.Server.Services.Lenovo;
+using eCommerce.Server.Services.Cisco;
 
 namespace eCommerce.Server.Extensions
 {
@@ -35,6 +36,7 @@ namespace eCommerce.Server.Extensions
             services.AddScoped<BlingService>();
             services.AddScoped<HPService>();
             services.AddScoped<LenovoService>();
+            services.AddScoped<CiscoService>();
 
             // HttpClient
             services.AddHttpClient();

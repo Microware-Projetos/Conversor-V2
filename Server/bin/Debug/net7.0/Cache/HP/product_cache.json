@@ -4110,7 +4110,14 @@
           "instantInk": "/wcc-assets/content/dam/hp-wcc/headless-assets/images/contact/instantInk.png"
         }
       },
-      "description": null
+      "description": null,
+      "images": [
+        "https://hp.widen.net/content/6y2adfxzt8/png/6y2adfxzt8.png",
+        "https://hp.widen.net/content/mmshkiooae/png/mmshkiooae.png",
+        "https://hp.widen.net/content/t8f9iiqp3q/png/t8f9iiqp3q.png",
+        "https://hp.widen.net/content/uo4bl9qytm/png/uo4bl9qytm.png",
+        "https://hp.widen.net/content/91ghpw1mwa/png/91ghpw1mwa.png"
+      ]
     },
     "timestamp": "2025-06-03T17:43:09.155475"
   },

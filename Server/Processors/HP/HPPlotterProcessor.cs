@@ -10,6 +10,7 @@ using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
 using eCommerce.Server.Processors.HP.Helpers;
+using eCommerce.Server.Wordpress.HP;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -157,6 +158,11 @@ namespace eCommerce.Server.Processors.HP;
                     File.WriteAllText(caminhoArquivoJson, json);
                     Console.WriteLine($"\n[INFO]: Arquivo plotterHP.json criado com sucesso em: {caminhoArquivoJson}");
                     Console.WriteLine($"[INFO]: Tamanho do arquivo: {new FileInfo(caminhoArquivoJson).Length} bytes");
+
+                    //Enviar lista de plotter para o WooCommerce
+                    await HPWordPressPlotter.EnviarListaDePlotter(produtos);
+                    Console.WriteLine($"[INFO]: Lista de plotter enviada com sucesso para o WooCommerce.");
+
                 }
                 else
                 {

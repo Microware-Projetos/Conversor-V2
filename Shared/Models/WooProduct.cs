@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using eCommerce.Shared.Helpers;
 
 namespace eCommerce.Shared.Models
 {
     public class WooProduct
     {
+        public int? id { get; set; }
         public string name { get; set; }
         public string sku { get; set; }
         public string short_description { get; set; }
@@ -15,7 +18,10 @@ namespace eCommerce.Shared.Models
         public List<Attribute> attributes { get; set; } = new List<Attribute>();
         public List<MetaData> meta_data { get; set; } = new List<MetaData>();
         public Dimensions dimensions { get; set; } = new Dimensions();
+
+        [JsonConverter(typeof(WeightConverter))]
         public string weight { get; set; }
+        
         public List<Category> categories { get; set; } = new List<Category>();
         public string shipping_class { get; set; }
         public bool manage_stock { get; set; } = true;
@@ -24,7 +30,10 @@ namespace eCommerce.Shared.Models
     public class Attribute
     {
         public int id { get; set; }
+
+        [JsonConverter(typeof(FirstOptionConverter))]
         public string options { get; set; }
+
         public bool visible { get; set; } = true;
     }
 

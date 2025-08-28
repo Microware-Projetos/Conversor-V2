@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
+      "Id": "/app/eCommerce/Client/wwwroot/css/cisco-revisao.css",
+      "PackagePath": "staticwebassets/css/cisco-revisao.css"
+    },
+    {
       "Id": "/app/eCommerce/Client/wwwroot/css/open-iconic/FONT-LICENSE",
       "PackagePath": "staticwebassets/css/open-iconic"
     },

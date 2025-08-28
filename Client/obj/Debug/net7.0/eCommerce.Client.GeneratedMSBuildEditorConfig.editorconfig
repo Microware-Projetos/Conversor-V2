@@ -24,8 +24,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxpbmcvQmxpbmdDYWxsYmFjay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/app/eCommerce/Client/Pages/Cisco/Cisco.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY28ucmF6b3I=
+[/app/eCommerce/Client/Pages/Cisco/CiscoRevisao.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY29SZXZpc2FvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/app/eCommerce/Client/Pages/Microware/Microware.razor]
@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 [/app/eCommerce/Client/Pages/Bling/Bling.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxpbmcvQmxpbmcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-je3wv7lug2
+
+[/app/eCommerce/Client/Pages/Cisco/Cisco.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY28ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ve9minl1cw
 
 [/app/eCommerce/Client/Pages/HP/HP.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSFAvSFAucmF6b3I=

@@ -1,0 +1,255 @@
+/* Estilos específicos para a página de revisão Cisco */
+
+.table-responsive {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.produto-foto {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto-foto:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.badge {
+    font-size: 0.8em;
+}
+
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.form-control, .form-select {
+    font-size: 0.9rem;
+}
+
+.alert {
+    margin-bottom: 1rem;
+}
+
+.modal-content {
+    border-radius: 0.5rem;
+}
+
+.stats-card {
+    border-left: 4px solid;
+}
+
+.stats-card.primary {
+    border-left-color: #007bff;
+}
+
+.stats-card.success {
+    border-left-color: #28a745;
+}
+
+.stats-card.warning {
+    border-left-color: #ffc107;
+}
+
+.stats-card.info {
+    border-left-color: #17a2b8;
+}
+
+/* Estilos para produtos selecionados */
+.produto-checkbox:checked + tr {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+}
+
+.produto-checkbox:checked + tr td {
+    border-color: #007bff !important;
+}
+
+/* Estilos para linhas da tabela */
+.table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.table-success {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Estilos para modais */
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+/* Estilos para paginação */
+.pagination .page-link {
+    color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+}
+
+/* Estilos para botões de filtro */
+.btn-check:checked + .btn-outline-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-check:checked + .btn-outline-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.btn-check:checked + .btn-outline-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+/* Estilos para imagens de produtos */
+.produto-imagem {
+    position: relative;
+    display: inline-block;
+}
+
+.produto-imagem img {
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.produto-imagem img:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.indicador-imagem {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+.sem-foto {
+    color: #6c757d;
+}
+
+.sem-foto i {
+    opacity: 0.5;
+}
+
+/* Estilos para formulários de edição */
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #495057;
+}
+
+/* Estilos para mensagens de status */
+.badge.bg-warning {
+    color: #212529;
+}
+
+.badge.bg-success {
+    color: white;
+}
+
+.badge.bg-info {
+    color: white;
+}
+
+/* Estilos para loading */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        border-radius: 0.375rem !important;
+        margin-bottom: 0.25rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+}
+
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para seleção múltipla */
+.selected {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+}
+
+.selected td {
+    border-color: #007bff !important;
+}
+
+/* Estilos para campos desabilitados */
+.produto-checkbox:disabled + tr {
+    opacity: 0.6;
+}
+
+.produto-checkbox:disabled + tr td {
+    color: #6c757d;
+}

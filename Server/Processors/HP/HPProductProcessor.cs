@@ -11,11 +11,14 @@ using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
 using eCommerce.Server.Processors.HP.Helpers;
+using eCommerce.Server.Services.HP;
+using eCommerce.Server.Wordpress.HP;
 
 namespace eCommerce.Server.Processors.HP;
 
 public static class HPProductProcessor
 {
+
     public static async Task ProcessarListasProdutos(string caminhoArquivoProdutos, string caminhoArquivoPrecos, CancellationToken cancellationToken = default)
     {
         const string CHACHE_DIR = "Cache/HP";
@@ -140,7 +143,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -245,7 +247,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -347,7 +348,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -448,7 +448,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -549,7 +548,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -643,7 +641,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
                             
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -751,7 +748,6 @@ public static class HPProductProcessor
                             var attributes = AttributeProcessorHP.ProcessarAttributes(sku, model, linha, cabecalho, prodInfo, aba, normalizedAnatel, normalizedFamily);
 
                             // Processar fotos
-                            //var fotos = ProductDataUtilsHP.ProcessarFotos(sku, model, images, normalizedFamily, product_attributesAPI, aba);
                             var fotos = await ProductDataUtilsHP.ProcessPhotos(sku, aba);
 
                             var descriptionApi = await ProductDataUtilsHP.ProcessDescription(sku);
@@ -811,6 +807,10 @@ public static class HPProductProcessor
                 File.WriteAllText(caminhoArquivoJson, json);
                 Console.WriteLine($"Arquivo produtos.json criado com sucesso em: {caminhoArquivoJson}");
                 Console.WriteLine($"Tamanho do arquivo: {new FileInfo(caminhoArquivoJson).Length} bytes");
+
+                //Enviar produtos para a API
+                await HPWordPressProdutos.EnviarListaDeProdutos(produtos);
+                Console.WriteLine($"[INFO]: Produtos enviados para a API com sucesso.");
             }
             else
             {

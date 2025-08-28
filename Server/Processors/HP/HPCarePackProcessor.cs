@@ -10,6 +10,7 @@ using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.HP;
 using eCommerce.Server.Processors.HP.Helpers;
+using eCommerce.Server.Wordpress.HP;
 
 namespace eCommerce.Server.Processors.HP;
 
@@ -130,6 +131,11 @@ public static class HPCarePackProcessor
                 File.WriteAllText(caminhoArquivoJson, json);
                 Console.WriteLine($"\n[INFO]: Arquivo carepackHP.json criado com sucesso em: {caminhoArquivoJson}");
                 Console.WriteLine($"[INFO]: Tamanho do arquivo: {new FileInfo(caminhoArquivoJson).Length} bytes");
+
+                //Enviar carepacks para o WooCommerce
+                Console.WriteLine($"[INFO]: Enviando carepacks para o WooCommerce...");
+                await HPWordPressCarePack.EnviarListaDeCarePack(produtos);
+                Console.WriteLine($"[INFO]: Carepacks enviados para o WooCommerce com sucesso.");
             }
             else
             {

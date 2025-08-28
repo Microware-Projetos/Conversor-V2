@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l06S1G2XXyjdWlSyzBHdURmfVrc8eaQX+GN0r6zrnjU=",
+  "Hash": "/XEJNaO+0GjPDIjl7Bchp2/sfjHrRh3sw2B6zpNtAho=",
   "Source": "eCommerce.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7121,6 +7121,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/wwwroot/css/cisco-revisao.css",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "/app/eCommerce/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "css/cisco-revisao.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/cisco-revisao.css"
     },
     {
       "Identity": "/app/eCommerce/Client/wwwroot/css/open-iconic/FONT-LICENSE",

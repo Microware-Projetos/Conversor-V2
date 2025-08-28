@@ -21,6 +21,7 @@ public static class CarePackDataUtilsLenovo
     
     public static List<MetaData> ProcessPhotos()
     {
+        Console.WriteLine($"[INFO]: Processando fotos...");
         var metaData = new MetaData()
         {
             key = "_external_image_url",
@@ -32,6 +33,7 @@ public static class CarePackDataUtilsLenovo
 
     public static Dimensions ProcessDimensions()
     {
+        Console.WriteLine($"[INFO]: Processando dimensões...");
         return new Dimensions()
         {
             length = "0",
@@ -47,6 +49,7 @@ public static class CarePackDataUtilsLenovo
 
     public static List<WooAttribute> ProcessAttributes(IXLRow product)
     {
+        Console.WriteLine($"[INFO]: Processando atributos...");
         var attributes = new List<WooAttribute>
         {
             new WooAttribute
@@ -74,6 +77,7 @@ public static class CarePackDataUtilsLenovo
 
     public static List<Category> ProcessCategories()
     {
+        Console.WriteLine($"[INFO]: Processando categorias...");
         var categories = new List<Category>();
         var json = File.ReadAllText(CATEGORIES_PATH_FILE);
         var categoriesMapping = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(json);

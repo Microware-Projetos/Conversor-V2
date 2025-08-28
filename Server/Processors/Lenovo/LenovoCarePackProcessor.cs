@@ -10,6 +10,7 @@ using System.Threading;
 using eCommerce.Server.Helpers;
 using eCommerce.Server.Processors.Lenovo;
 using eCommerce.Server.Processors.Lenovo.Helpers;
+using eCommerce.Server.Wordpress.Lenovo;
 
 namespace eCommerce.Server.Processors.Lenovo;
 
@@ -130,6 +131,11 @@ public static class LenovoCarePackProcessor
                 File.WriteAllText(caminhoArquivoJson, json);
                 Console.WriteLine($"\n[INFO]: Arquivo carepackLenovo.json criado com sucesso em: {caminhoArquivoJson}");
                 Console.WriteLine($"[INFO]: Tamanho do arquivo: {new FileInfo(caminhoArquivoJson).Length} bytes");
+
+                //Enviar produtos para a API
+                Console.WriteLine($"[INFO]: Enviando carepack para a API, WooCommerce...");
+                await LenovoWordPressCarePack.EnviarListaDeCarePack(produtos);
+                Console.WriteLine($"[INFO]: Carepack enviado para a API com sucesso.");
             }
             else
             {

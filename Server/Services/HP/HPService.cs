@@ -1,5 +1,15 @@
 using Newtonsoft.Json.Linq;
 using eCommerce.Shared.Models;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Linq;
+using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Threading;
+using WooProduct = eCommerce.Shared.Models.WooProduct;
 using LiteDB;
 
 namespace eCommerce.Server.Services.HP;
