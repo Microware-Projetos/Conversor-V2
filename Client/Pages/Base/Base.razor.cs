@@ -1,11 +1,11 @@
 using Microsoft.JSInterop;
-using eCommerce.Client.Services.Bling;
+using eCommerce.Client.Services.Base;
 using eCommerce.Shared.Models;
 using System.Threading;
 
-namespace eCommerce.Client.Pages.Bling;
+namespace eCommerce.Client.Pages.Base;
 
-partial class Bling
+partial class Base
 {
     private string? mensagem;
     private TokenResponse? tokenResponse;
@@ -21,10 +21,10 @@ partial class Bling
     {
         try
         {
-            var tokenValido = await BlingService.VerificarTokenValido();
+            var tokenValido = await BaseService.VerificarTokenValido();
             if (tokenValido)
             {
-                tokenResponse = await BlingService.ObterToken();
+                tokenResponse = await BaseService.ObterToken();
                 mensagem = "Token válido encontrado e carregado.";
                 StateHasChanged();
             }
@@ -47,12 +47,12 @@ partial class Bling
             mensagem = "Verificando token existente...";
             StateHasChanged();
 
-            var tokenValido = await BlingService.VerificarTokenValido();
+            var tokenValido = await BaseService.VerificarTokenValido();
             if (tokenValido)
             {
                 try
                 {
-                    tokenResponse = await BlingService.ObterToken();
+                    tokenResponse = await BaseService.ObterToken();
                     mensagem = "Token válido encontrado! Iniciando envio de produtos...";
                     StateHasChanged();
                     
@@ -74,7 +74,7 @@ partial class Bling
             mensagem = "Iniciando autorização OAuth...";
             StateHasChanged();
 
-            var codigoAutorizacao = await BlingService.RedirecionarParaAutorizacao();
+            var codigoAutorizacao = await BaseService.RedirecionarParaAutorizacao();
             
             if (string.IsNullOrEmpty(codigoAutorizacao))
             {
@@ -88,7 +88,7 @@ partial class Bling
             mensagem = "Obtendo token de acesso...";
             StateHasChanged();
 
-            tokenResponse = await BlingService.TrocarCodigoPorToken(codigoAutorizacao);
+            tokenResponse = await BaseService.TrocarCodigoPorToken(codigoAutorizacao);
             
             if (tokenResponse == null || string.IsNullOrEmpty(tokenResponse.access_token))
             {
@@ -125,7 +125,7 @@ partial class Bling
         try
         {
             var loja = "HP";
-            var job = await BlingService.EnviarProdutos(loja);
+            var job = await BaseService.EnviarProdutos(loja);
             mensagem = $"✅ Produtos enviados com sucesso! Job ID: {job.Id}";
             StateHasChanged();
         }
@@ -142,7 +142,7 @@ partial class Bling
         loadingMessage = "Descartando token atual...";
         StateHasChanged();
 
-        var sucesso = await BlingService.DeletarToken();
+        var sucesso = await BaseService.DeletarToken();
         if (sucesso)
         {
             tokenResponse = null;
@@ -151,14 +151,14 @@ partial class Bling
 
             try
             {
-                var codigoAutorizacao = await BlingService.RedirecionarParaAutorizacao();
+                var codigoAutorizacao = await BaseService.RedirecionarParaAutorizacao();
                 if (string.IsNullOrEmpty(codigoAutorizacao))
                 {
                     throw new InvalidOperationException("Não foi possível obter o código de autorização. Verifique se a popup foi fechada corretamente.");
                 }
                 loadingMessage = "Obtendo novo token de acesso...";
                 StateHasChanged();
-                tokenResponse = await BlingService.TrocarCodigoPorToken(codigoAutorizacao);
+                tokenResponse = await BaseService.TrocarCodigoPorToken(codigoAutorizacao);
                 if (tokenResponse == null || string.IsNullOrEmpty(tokenResponse.access_token))
                 {
                     throw new InvalidOperationException("Falha ao obter novo token de acesso.");

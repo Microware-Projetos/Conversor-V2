@@ -20,8 +20,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/app/eCommerce/Client/Pages/Bling/BlingCallback.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxpbmcvQmxpbmdDYWxsYmFjay5yYXpvcg==
+[/app/eCommerce/Client/Pages/Base/BaseCallback.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmFzZS9CYXNlQ2FsbGJhY2sucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/app/eCommerce/Client/Pages/Cisco/CiscoRevisao.razor]
@@ -36,9 +36,9 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/app/eCommerce/Client/Pages/Bling/Bling.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmxpbmcvQmxpbmcucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-je3wv7lug2
+[/app/eCommerce/Client/Pages/Base/Base.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQmFzZS9CYXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-tahottxqik
 
 [/app/eCommerce/Client/Pages/Cisco/Cisco.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2lzY28vQ2lzY28ucmF6b3I=

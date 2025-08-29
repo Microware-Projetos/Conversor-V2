@@ -83,21 +83,47 @@ main {
 .menu-top {
     background-color: #182A3F;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 20px;
+    min-height: 60px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+}
+
+.right-elements {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.jobs-link-container {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .jobs-link {
     color: white !important;
     text-decoration: none !important;
-    position: absolute !important;
-    right: 20px !important;
     font-weight: 500 !important;
     font-size: 1.2rem !important;
     padding: 8px 15px !important;
     border-radius: 4px !important;
     transition: all 0.3s ease !important;
+    white-space: nowrap;
+    margin-right: 40px;
 }
 
 .jobs-link:hover {
@@ -106,7 +132,119 @@ main {
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.jobs-link i {
-    color: rgb(255, 255, 255) !important;
-    margin-right: 8px;
+.gear-btn {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.gear-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f0f0f0 !important;
+}
+
+/* Estilos para o popup de configurações */
+.settings-popup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.settings-header h6 {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-close:hover {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.settings-content {
+    padding: 8px 0;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.settings-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.settings-item i {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.settings-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.settings-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 8px 0;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-danger:hover {
+    color: #c82333 !important;
 }

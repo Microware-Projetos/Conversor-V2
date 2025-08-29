@@ -7,7 +7,7 @@ public class WordPressCategory
     public string name { get; set; } = "";
 }
 
-public class BlingCategory
+public class BaseCategory
 {
     public long id { get; set; }
     public string descricao { get; set; } = "";
@@ -19,40 +19,40 @@ public class CategoriaPai
     public long id { get; set; }
 }
 
-// Classes para deserializar resposta da API do Bling
-public class BlingProdutoResponse
+// Classes para deserializar resposta da API do Base
+public class BaseProdutoResponse
 {
-    public BlingProdutoData? data { get; set; }
+    public BaseProdutoData? data { get; set; }
 }
 
-public class BlingProdutoData
+public class BaseProdutoData
 {
     public long id { get; set; }
     public object? variations { get; set; }
     public List<string>? warnings { get; set; }
 }
 
-public class BlingProdutoCompletoResponse
+public class BaseProdutoCompletoResponse
 {
-    public BlingProdutoCompletoData? data { get; set; }
+    public BaseProdutoCompletoData? data { get; set; }
 }
 
-public class BlingProdutoCompletoData
+public class BaseProdutoCompletoData
 {
     public long id { get; set; }
     public string? nome { get; set; }
     public string? codigo { get; set; }
     public decimal? preco { get; set; }
-    public List<BlingImagemURLVerificacao>? imagens { get; set; }
-    public BlingEstoqueVerificacao? estoque { get; set; }
+    public List<BaseImagemURLVerificacao>? imagens { get; set; }
+    public BaseEstoqueVerificacao? estoque { get; set; }
 }
 
-public class BlingImagemURLVerificacao
+public class BaseImagemURLVerificacao
 {
     public string? link { get; set; }
 }
 
-public class BlingEstoqueVerificacao
+public class BaseEstoqueVerificacao
 {
     public int? quantidade { get; set; }
 } 

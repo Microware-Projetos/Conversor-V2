@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using eCommerce.Client;
 using eCommerce.Client.Services.HP;
 using eCommerce.Client.Services.Job;
-using eCommerce.Client.Services.Bling;
+using eCommerce.Client.Services.Base;
 using eCommerce.Client.Services.Lenovo;
 using eCommerce.Client.Services.Cisco;
 
@@ -15,7 +15,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<HPService>();
 builder.Services.AddScoped<JobService>();
-builder.Services.AddScoped<BlingService>();
+builder.Services.AddScoped<BaseService>();
 builder.Services.AddScoped<LenovoService>();
 builder.Services.AddScoped<CiscoService>();
 

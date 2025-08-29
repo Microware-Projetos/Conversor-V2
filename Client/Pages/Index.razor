@@ -1,39 +1,53 @@
 ﻿@page "/"
+@inject NavigationManager Navigation
 
-<div class="cards">
-    <div class="card">
-        <NavLink href="/lenovo">
-            <img src="images/lenovo.png" alt="Lenovo" class="logo" />
-            <h2>Lenovo</h2>
-            <p>Clique para fazer upload de arquivos Lenovo</p>
-        </NavLink>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4">Sistema de Upload de Listas</h1>
+            <small class="lead">Selecione a marca para iniciar o processo de upload de arquivos</small>
+        </div>
     </div>
-    <div class="card">
-        <NavLink href="/hp">
-        <img src="images/hp.png" alt="HP" class="logo" />
-            <h2>HP</h2>
-            <p>Clique para fazer upload de arquivos HP</p>
-        </NavLink>
-    </div>
-    <div class="card">
-        <NavLink href="/cisco">
-        <img src="images/cisco.png" alt="Cisco" class="logo" />
-        <h2>Cisco</h2>
-        <p>Clique para fazer upload de arquivos Cisco</p>
-        </NavLink>
-    </div>
-    <div class="card">
-        <NavLink href="/microware">
-            <img src="images/logo_mw.png" alt="Microware" class="logo" />
-            <h2>Microware</h2>
-            <p>Clique para fazer upload de arquivos Microware</p>
-        </NavLink>
-    </div>
-    <div class="card">
-        <NavLink href="/bling">
-            <img src="images/bling.png" alt="Bling" class="logo" />
-            <h2>Bling</h2>
-            <p>Clique para enviar produtos para Bling</p>
-        </NavLink>
+    <div class="row justify-content-center mt-3">
+        <div class="cards">
+            <div class="card clickable-card" @onclick="() => NavigateTo(lenovoUrl)">
+                <img src="images/lenovo.png" alt="Lenovo" class="logo" />
+                <h2>Lenovo</h2>
+                <p>Clique para fazer upload de arquivos Lenovo</p>
+            </div>
+            <div class="card clickable-card" @onclick="() => NavigateTo(hpUrl)">
+                <img src="images/hp.png" alt="HP" class="logo" />
+                <h2>HP</h2>
+                <p>Clique para fazer upload de arquivos HP</p>
+            </div>
+            <div class="card clickable-card" @onclick="() => NavigateTo(ciscoUrl)">
+                <img src="images/cisco.png" alt="Cisco" class="logo" />
+                <h2>Cisco</h2>
+                <p>Clique para fazer upload de arquivos Cisco</p>
+            </div>
+            <div class="card clickable-card" @onclick="() => NavigateTo(microwareUrl)">
+                <img src="images/logo_mw.png" alt="Microware" class="logo" />
+                <h2>Microware</h2>
+                <p>Clique para fazer upload de arquivos Microware</p>
+            </div>
+            <div class="card clickable-card" @onclick="() => NavigateTo(baseUrl)">
+                <img src="images/base.png" alt="Base" class="logo" />
+                <h2>Base</h2>
+                <p>Clique para enviar produtos para Base</p>
+            </div>
+        </div>
     </div>
 </div>
+
+@code {
+    private string lenovoUrl = "/lenovo";
+    private string hpUrl = "/hp";
+    private string ciscoUrl = "/cisco";
+    private string microwareUrl = "/microware";
+    private string baseUrl = "/base";
+
+    private void NavigateTo(string url)
+    {
+        Navigation.NavigateTo(url);
+    }
+}

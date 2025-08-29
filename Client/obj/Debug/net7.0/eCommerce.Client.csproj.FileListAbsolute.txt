@@ -833,7 +833,6 @@
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.pack.json
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.build.json
 /app/eCommerce/Client/obj/Debug/net7.0/staticwebassets.development.json
-/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Bling/Bling.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/HP/HP.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Index.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Jobs/Jobs.razor.rz.scp.css
@@ -847,3 +846,4 @@
 /app/eCommerce/Client/obj/Debug/net7.0/ref/eCommerce.Client.dll
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Lenovo/Lenovo.razor.rz.scp.css
 /app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Cisco/Cisco.razor.rz.scp.css
+/app/eCommerce/Client/obj/Debug/net7.0/scopedcss/Pages/Base/Base.razor.rz.scp.css

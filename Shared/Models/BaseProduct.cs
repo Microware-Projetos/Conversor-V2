@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace eCommerce.Shared.Models;
 
-public class BlingProduct
+public class BaseProduct
 {
     [JsonProperty("nome")]
     public string Nome { get; set; } = "";
@@ -66,19 +66,19 @@ public class BlingProduct
     public string DescricaoEmbalagemDiscreta { get; set; } = "";
     
     [JsonProperty("categoria")]
-    public BlingCategoria Categoria { get; set; } = new();
+    public BaseCategoria Categoria { get; set; } = new();
     
     [JsonProperty("estoque")]
-    public BlingEstoque Estoque { get; set; } = new();
+    public BaseEstoque Estoque { get; set; } = new();
     
     [JsonProperty("actionEstoque")]
     public string ActionEstoque { get; set; } = "T";
     
     [JsonProperty("dimensoes")]
-    public BlingDimensoes Dimensoes { get; set; } = new();
+    public BaseDimensoes Dimensoes { get; set; } = new();
     
     [JsonProperty("midia")]
-    public BlingMidia Midia { get; set; } = new();
+    public BaseMidia Midia { get; set; } = new();
     
     [JsonProperty("dataCriacao")]
     public DateTime DataCriacao { get; set; } = DateTime.Now;
@@ -87,16 +87,16 @@ public class BlingProduct
     public DateTime DataAtualizacao { get; set; } = DateTime.Now;
     
     [JsonProperty("camposCustomizados")]
-    public List<BlingCampoCustomizado>? CamposCustomizados { get; set; }
+    public List<BaseCampoCustomizado>? CamposCustomizados { get; set; }
 }
 
-public class BlingCategoria
+public class BaseCategoria
 {
     [JsonProperty("id")]
     public long Id { get; set; }
 }
 
-public class BlingEstoque
+public class BaseEstoque
 {
     [JsonProperty("minimo")]
     public int Minimo { get; set; }
@@ -108,7 +108,7 @@ public class BlingEstoque
     public int CrossDocking { get; set; }
 }
 
-public class BlingDimensoes
+public class BaseDimensoes
 {
     [JsonProperty("largura")]
     public decimal Largura { get; set; }
@@ -123,19 +123,19 @@ public class BlingDimensoes
     public int UnidadeMedida { get; set; }
 }
 
-public class BlingMidia
+public class BaseMidia
 {
     [JsonProperty("imagens")]
-    public BlingImagens Imagens { get; set; } = new();
+    public BaseImagens Imagens { get; set; } = new();
 }
 
-public class BlingImagens
+public class BaseImagens
 {
     [JsonProperty("imagensURL")]
-    public List<BlingImagemURL> ImagensURL { get; set; } = new();
+    public List<BaseImagemURL> ImagensURL { get; set; } = new();
 }
 
-public class BlingImagemURL
+public class BaseImagemURL
 {
     [JsonProperty("link")]
     public string Link { get; set; } = "";

@@ -67,5 +67,21 @@ public class HPService
             throw new HttpRequestException($"Erro ao enviar produtos: {response.StatusCode}");
         }
     }
-    
+
+    public async Task<JobFilaResponse> EnviarPromocao(IBrowserFile arquivoProdutos)
+    {
+        var formData = new MultipartFormDataContent();
+        formData.Add(new StreamContent(arquivoProdutos.OpenReadStream(MAX_ALLOWED_SIZE)), "arquivoProdutos", arquivoProdutos.Name);
+        var response = await _http.PostAsync("api/hp/promocao", formData);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var job = await response.Content.ReadFromJsonAsync<JobFilaResponse>();
+            return job ?? throw new HttpRequestException("Resposta vazia do servidor");
+        }
+        else
+        {
+            throw new HttpRequestException($"Erro ao enviar produtos: {response.StatusCode}");
+        }
+    }
 }

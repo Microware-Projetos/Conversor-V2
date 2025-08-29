@@ -1,15 +1,53 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
 
 <div class="page">
 
     <main>
         <div class="top-row px-4 menu-top">
-            <NavLink href="/">
-                <img src="images/logo.png" alt="Microware Logo" class="navbar-logo"/>
-            </NavLink>
-            <NavLink href="/jobs" class="jobs-link">
-                <i class="bi bi-list-task"></i> Jobs
-            </NavLink>
+            <div class="logo-container">
+                <NavLink href="/">
+                    <img src="images/logo.png" alt="Microware Logo" class="navbar-logo"/>
+                </NavLink>
+            </div>
+            <div class="right-elements">
+                <div class="jobs-link-container">
+                    <NavLink href="/jobs" class="jobs-link">
+                        <i class="bi bi-list-task"></i> Jobs
+                    </NavLink>
+                </div>
+                <button class="gear-btn" @onclick="ToggleSettings">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
+                @if (showSettings)
+                {
+                    <div class="settings-popup" @onclick:stopPropagation="true">
+                        <div class="settings-header">
+                            <h6 class="mb-0">Configurações</h6>
+                            <button class="btn-close" @onclick="ToggleSettings"></button>
+                        </div>
+                        <div class="settings-content">
+                            <a href="/profile" class="settings-item">
+                                <i class="bi bi-person-circle"></i>
+                                <span>Perfil</span>
+                            </a>
+                            <a href="/settings" class="settings-item">
+                                <i class="bi bi-sliders"></i>
+                                <span>Preferências</span>
+                            </a>
+                            <a href="/help" class="settings-item">
+                                <i class="bi bi-question-circle"></i>
+                                <span>Ajuda</span>
+                            </a>
+                            <div class="settings-divider"></div>
+                            <a href="/logout" class="settings-item text-danger">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sair</span>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
 
         <article class="content px-4">
@@ -19,3 +57,27 @@
         </article>
     </main>
 </div>
+
+@code {
+    private bool showSettings = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("addClickOutsideListener", DotNetObjectReference.Create(this));
+        }
+    }
+
+    private void ToggleSettings()
+    {
+        showSettings = !showSettings;
+    }
+
+    [JSInvokable]
+    public void CloseSettings()
+    {
+        showSettings = false;
+        StateHasChanged();
+    }
+}

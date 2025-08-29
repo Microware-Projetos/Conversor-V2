@@ -22,7 +22,7 @@ public class TokenResponse
     public string? scope { get; set; }
 }
 
-public class BlingToken
+public class BaseToken
 {
     public ObjectId Id { get; set; }
     public string? AccessToken { get; set; }

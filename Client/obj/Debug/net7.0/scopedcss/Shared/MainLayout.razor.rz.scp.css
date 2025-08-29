@@ -83,21 +83,47 @@ main[b-s5cvtvm9go] {
 .menu-top[b-s5cvtvm9go] {
     background-color: #182A3F;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 20px;
+    min-height: 60px;
+}
+
+.logo-container[b-s5cvtvm9go] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-logo[b-s5cvtvm9go] {
+    height: 40px;
+    width: auto;
+}
+
+.right-elements[b-s5cvtvm9go] {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.jobs-link-container[b-s5cvtvm9go] {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .jobs-link[b-s5cvtvm9go] {
     color: white !important;
     text-decoration: none !important;
-    position: absolute !important;
-    right: 20px !important;
     font-weight: 500 !important;
     font-size: 1.2rem !important;
     padding: 8px 15px !important;
     border-radius: 4px !important;
     transition: all 0.3s ease !important;
+    white-space: nowrap;
+    margin-right: 40px;
 }
 
 .jobs-link:hover[b-s5cvtvm9go] {
@@ -106,7 +132,119 @@ main[b-s5cvtvm9go] {
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.jobs-link i[b-s5cvtvm9go] {
-    color: rgb(255, 255, 255) !important;
-    margin-right: 8px;
+.gear-btn[b-s5cvtvm9go] {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.gear-btn:hover[b-s5cvtvm9go] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f0f0f0 !important;
+}
+
+/* Estilos para o popup de configurações */
+.settings-popup[b-s5cvtvm9go] {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.settings-header[b-s5cvtvm9go] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.settings-header h6[b-s5cvtvm9go] {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-close[b-s5cvtvm9go] {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-close:hover[b-s5cvtvm9go] {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.settings-content[b-s5cvtvm9go] {
+    padding: 8px 0;
+}
+
+.settings-item[b-s5cvtvm9go] {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.settings-item:hover[b-s5cvtvm9go] {
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.settings-item i[b-s5cvtvm9go] {
+    margin-right: 12px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.settings-item span[b-s5cvtvm9go] {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.settings-divider[b-s5cvtvm9go] {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 8px 0;
+}
+
+.text-danger[b-s5cvtvm9go] {
+    color: #dc3545 !important;
+}
+
+.text-danger:hover[b-s5cvtvm9go] {
+    color: #c82333 !important;
 }

@@ -128,7 +128,6 @@ public partial class HP : ComponentBase
 
     private async Task EnviarPlotter()
     {
-        // TODO: Implementar chamada de API para Plotter usando arquivoProdutos
         Console.WriteLine("Enviando Plotter");
         var job = await _hpService.EnviarPlotter(arquivoProdutos!);
         mensagem = $"Plotters enviados com sucesso! Job ID: {job.Id}";
@@ -137,18 +136,17 @@ public partial class HP : ComponentBase
 
     private async Task EnviarCarePack()
     {
-        // TODO: Implementar chamada de API para Care Pack usando arquivoProdutos
         Console.WriteLine("Enviando Care Pack");
         var job = await _hpService.EnviarCarePack(arquivoProdutos!);
         mensagem = $"Care Packs enviados com sucesso! Job ID: {job.Id}";
         StateHasChanged();
     }
 
-    private Task EnviarPromocao()
+    private async Task EnviarPromocao()
     {
-        // TODO: Implementar chamada de API para Promoção usando arquivoProdutos
         Console.WriteLine("Enviando Promoção");
-        mensagem = "Funcionalidade Promoção ainda não implementada.";
-        return Task.CompletedTask;
+        var job = await _hpService.EnviarPromocao(arquivoProdutos!);
+        mensagem = $"Promoções enviadas com sucesso! Job ID: {job.Id}";
+        StateHasChanged();
     }
 }

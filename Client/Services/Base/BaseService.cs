@@ -4,16 +4,16 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.JSInterop;
 using System.Text.Json;
 
-namespace eCommerce.Client.Services.Bling;
+namespace eCommerce.Client.Services.Base;
 
-public class BlingService 
+public class BaseService 
 {
     
     private readonly HttpClient _http;
     private readonly IJSRuntime _jsRuntime;
     private TokenResponse? _currentToken;
 
-    public BlingService(HttpClient http, IJSRuntime jsRuntime)
+    public BaseService(HttpClient http, IJSRuntime jsRuntime)
     {
         _http = http;
         _jsRuntime = jsRuntime;
@@ -23,7 +23,7 @@ public class BlingService
 
     public async Task<string> ObterCodigo()
     {
-       var url = "https://www.bling.com.br/Api/v3/oauth/authorize?response_type=code&client_id=ec6a23e8433ec9f24b2b7787bf4f5deea2892064&state=53a7fb14d9f453aa0dfd8eb1322a65a1";
+       var url = "https://www.Base.com.br/Api/v3/oauth/authorize?response_type=code&client_id=ec6a23e8433ec9f24b2b7787bf4f5deea2892064&state=53a7fb14d9f453aa0dfd8eb1322a65a1";
        var response = await _http.GetAsync(url);
        if (response.IsSuccessStatusCode)
        {
@@ -37,19 +37,19 @@ public class BlingService
 
     public async Task<string> RedirecionarParaAutorizacao()
     {
-        var redirectUri = "http://127.0.0.1:5009/bling-callback.html";
-        var url = $"https://www.bling.com.br/Api/v3/oauth/authorize?response_type=code&client_id=ec6a23e8433ec9f24b2b7787bf4f5deea2892064&state=53a7fb14d9f453aa0dfd8eb1322a65a1&redirect_uri={Uri.EscapeDataString(redirectUri)}";
+        var redirectUri = "http://127.0.0.1:5009/Base-callback.html";
+        var url = $"https://www.Base.com.br/Api/v3/oauth/authorize?response_type=code&client_id=ec6a23e8433ec9f24b2b7787bf4f5deea2892064&state=53a7fb14d9f453aa0dfd8eb1322a65a1&redirect_uri={Uri.EscapeDataString(redirectUri)}";
         
         // Abrir popup para autorização
-        await _jsRuntime.InvokeVoidAsync("window.open", url, "blingAuth", "width=600,height=700,scrollbars=yes,resizable=yes");
+        await _jsRuntime.InvokeVoidAsync("window.open", url, "BaseAuth", "width=600,height=700,scrollbars=yes,resizable=yes");
         
         // Aguardar o código ser capturado via JavaScript
-        return await _jsRuntime.InvokeAsync<string>("waitForBlingAuth");
+        return await _jsRuntime.InvokeAsync<string>("waitForBaseAuth");
     }
 
     public async Task<string> CapturarCodigoDaPopup()
     {
-        return await _jsRuntime.InvokeAsync<string>("captureBlingCode");
+        return await _jsRuntime.InvokeAsync<string>("captureBaseCode");
     }
 
     public string? ExtrairCodigoDaUrl(string url)
@@ -96,7 +96,7 @@ public class BlingService
                 grant_type = "authorization_code"
             };
 
-            var response = await _http.PostAsJsonAsync("api/bling/token", request);
+            var response = await _http.PostAsJsonAsync("api/Base/token", request);
             
             if (response.IsSuccessStatusCode)
             {
@@ -120,7 +120,7 @@ public class BlingService
     {
         try
         {
-            var response = await _http.GetAsync("api/bling/token");
+            var response = await _http.GetAsync("api/Base/token");
             
             if (response.IsSuccessStatusCode)
             {
@@ -166,7 +166,7 @@ public class BlingService
     {
         try
         {
-            var response = await _http.PostAsync("api/bling/refresh-token", null);
+            var response = await _http.PostAsync("api/Base/refresh-token", null);
             
             if (response.IsSuccessStatusCode)
             {
@@ -203,7 +203,7 @@ public class BlingService
                 }
             }
 
-            var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.bling.com.br/Api/v3/{endpoint}");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.Base.com.br/Api/v3/{endpoint}");
             request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _currentToken!.access_token);
 
             var response = await _http.SendAsync(request);
@@ -220,7 +220,7 @@ public class BlingService
                     await RenovarToken();
                     
                     // Tentar novamente com o novo token
-                    request = new HttpRequestMessage(HttpMethod.Get, $"https://api.bling.com.br/Api/v3/{endpoint}");
+                    request = new HttpRequestMessage(HttpMethod.Get, $"https://api.Base.com.br/Api/v3/{endpoint}");
                     request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _currentToken!.access_token);
                     
                     response = await _http.SendAsync(request);
@@ -248,7 +248,7 @@ public class BlingService
     public async Task<JobFilaResponse> EnviarProdutos(string loja)
     {
         var request = new { loja = loja };
-        var response = await _http.PostAsJsonAsync("api/bling/produtos", request);
+        var response = await _http.PostAsJsonAsync("api/Base/produtos", request);
         if (response.IsSuccessStatusCode)
         {
             var job = await response.Content.ReadFromJsonAsync<JobFilaResponse>();
@@ -264,7 +264,7 @@ public class BlingService
     {
         try
         {
-            var response = await _http.DeleteAsync("api/bling/token");
+            var response = await _http.DeleteAsync("api/Base/token");
             if (response.IsSuccessStatusCode)
             {
                 _currentToken = null;

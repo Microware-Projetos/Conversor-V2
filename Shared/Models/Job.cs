@@ -39,7 +39,7 @@ public enum TipoJob {
     Plotter,
     CarePack,
     Promocao,
-    Bling
+    Base
 }
 
 public enum StatusJob {
@@ -53,7 +53,7 @@ public enum StatusJob {
 public enum FornecedorJob{
     HP,
     Lenovo,
-    Bling,
+    Base,
     Cisco,
     Microware
 }

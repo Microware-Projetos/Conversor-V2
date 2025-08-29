@@ -9,12 +9,12 @@ using WooAttribute = eCommerce.Shared.Models.Attribute;
 using System.Threading;
 using System.Net.Http;
 
-namespace eCommerce.Server.Processors.Bling;
+namespace eCommerce.Server.Processors.Base;
 
-public static class BlingProcessor
+public static class BaseProcessor
 {
     private static List<WordPressCategory>? _wordPressCategories;
-    private static List<BlingCategory>? _blingCategories;
+    private static List<BaseCategory>? _BaseCategories;
     private static List<AttributeMap>? _attributeMaps;
 
     // Dicionários globais para mapeamento
@@ -37,7 +37,7 @@ public static class BlingProcessor
             var json = File.ReadAllText("produtosHP.json");
             var produtos = JsonConvert.DeserializeObject<List<WooProduct>>(json);
 
-            var produtosBling = new List<BlingProduct>();
+            var produtosBase = new List<BaseProduct>();
 
             foreach (var produto in produtos)
             {
@@ -50,7 +50,7 @@ public static class BlingProcessor
                     continue; // Pular produtos sem nome
                 }
 
-                var produtoBling = new BlingProduct
+                var produtoBase = new BaseProduct
                 {
                     Nome = produto.name.Trim(),
                     Codigo = !string.IsNullOrWhiteSpace(produto.sku) ? produto.sku.Trim() : produto.name.Trim(),
@@ -62,26 +62,26 @@ public static class BlingProcessor
                     Gtin = ObterEanDosAtributos(produto.attributes),
                     DescricaoComplementar = !string.IsNullOrWhiteSpace(produto.description) ? produto.description.Trim() : "",
                     Observacoes = ProcessarObservacoesAtributos(produto.attributes),
-                    Categoria = new BlingCategoria
+                    Categoria = new BaseCategoria
                     {
-                        Id = ObterIdCategoriaBling(produto.categories)
+                        Id = ObterIdCategoriaBase(produto.categories)
                     },
-                    Estoque = new BlingEstoque
+                    Estoque = new BaseEstoque
                     {
                         Minimo = 1,
                         Maximo = 10,
                         CrossDocking = ShippingTime(produto.shipping_class)
                     },
-                    Dimensoes = new BlingDimensoes
+                    Dimensoes = new BaseDimensoes
                     {
                         Largura = decimal.TryParse(produto.dimensions.width, out var largura) ? largura : 0,
                         Altura = decimal.TryParse(produto.dimensions.height, out var altura) ? altura : 0,
                         Profundidade = decimal.TryParse(produto.dimensions.length, out var profundidade) ? profundidade : 0,
                         UnidadeMedida = 2
                     },
-                    Midia = new BlingMidia
+                    Midia = new BaseMidia
                     {
-                        Imagens = new BlingImagens
+                        Imagens = new BaseImagens
                         {
                             ImagensURL = ExtrairImagensDoProduto(produto.meta_data)
                         }
@@ -90,34 +90,34 @@ public static class BlingProcessor
                 };
                 
                 // Verificar se o produto tem imagens antes de adicionar à lista
-                if (produtoBling.Midia?.Imagens?.ImagensURL == null || !produtoBling.Midia.Imagens.ImagensURL.Any())
+                if (produtoBase.Midia?.Imagens?.ImagensURL == null || !produtoBase.Midia.Imagens.ImagensURL.Any())
                 {
-                    Console.WriteLine($"⚠️ Produto {produtoBling.Codigo} não tem imagens. Verificando meta_data...");
+                    Console.WriteLine($"⚠️ Produto {produtoBase.Codigo} não tem imagens. Verificando meta_data...");
                     
                     // Tentar extrair imagens novamente com mais detalhes
                     var imagens = ExtrairImagensDoProduto(produto.meta_data);
                     if (imagens.Any())
                     {
-                        produtoBling.Midia.Imagens.ImagensURL = imagens;
-                        Console.WriteLine($"✅ Imagens encontradas na segunda tentativa para {produtoBling.Codigo}");
+                        produtoBase.Midia.Imagens.ImagensURL = imagens;
+                        Console.WriteLine($"✅ Imagens encontradas na segunda tentativa para {produtoBase.Codigo}");
                     }
                     else
                     {
-                        Console.WriteLine($"❌ Produto {produtoBling.Codigo} será pulado por não ter imagens");
+                        Console.WriteLine($"❌ Produto {produtoBase.Codigo} será pulado por não ter imagens");
                         continue; // Pular produtos sem imagens
                     }
                 }
                 
-                Console.WriteLine($"✅ Produto {produtoBling.Codigo} processado com {produtoBling.Midia.Imagens.ImagensURL.Count} imagens");
-                produtosBling.Add(produtoBling);
+                Console.WriteLine($"✅ Produto {produtoBase.Codigo} processado com {produtoBase.Midia.Imagens.ImagensURL.Count} imagens");
+                produtosBase.Add(produtoBase);
             }
             
-            //Enviar produtos para o Bling
-            await EnviarProdutosParaBling(produtosBling, cancellationToken);
+            //Enviar produtos para o Base
+            await EnviarProdutosParaBase(produtosBase, cancellationToken);
         }
     }
 
-    private static async Task EnviarProdutosParaBling(List<BlingProduct> produtosBling, CancellationToken cancellationToken)
+    private static async Task EnviarProdutosParaBase(List<BaseProduct> produtosBase, CancellationToken cancellationToken)
     {
         // Obter token do banco de dados
         var token = ObterTokenDoBanco();
@@ -126,7 +126,7 @@ public static class BlingProcessor
             throw new InvalidOperationException("Token de acesso não encontrado. Execute a autorização OAuth primeiro.");
         }
 
-        var url = "https://api.bling.com.br/Api/v3/produtos";
+        var url = "https://api.Base.com.br/Api/v3/produtos";
         using var client = new HttpClient();
         
         // Configurar autenticação com Bearer token
@@ -140,7 +140,7 @@ public static class BlingProcessor
         var semaphore = new SemaphoreSlim(batchSize, batchSize);
         var tasks = new List<Task>();
 
-        foreach (var produto in produtosBling)
+        foreach (var produto in produtosBase)
         {
             var task = ProcessarProdutoComRateLimit(client, url, produto, semaphore, cancellationToken);
             tasks.Add(task);
@@ -150,7 +150,7 @@ public static class BlingProcessor
         await Task.WhenAll(tasks);
     }
 
-    private static async Task ProcessarProdutoComRateLimit(HttpClient client, string url, BlingProduct produto, SemaphoreSlim semaphore, CancellationToken cancellationToken)
+    private static async Task ProcessarProdutoComRateLimit(HttpClient client, string url, BaseProduct produto, SemaphoreSlim semaphore, CancellationToken cancellationToken)
     {
         await semaphore.WaitAsync(cancellationToken);
         
@@ -167,7 +167,7 @@ public static class BlingProcessor
         }
     }
 
-    private static async Task EnviarProdutoComRetry(HttpClient client, string url, BlingProduct produto, CancellationToken cancellationToken, int maxRetries = 3)
+    private static async Task EnviarProdutoComRetry(HttpClient client, string url, BaseProduct produto, CancellationToken cancellationToken, int maxRetries = 3)
     {
         for (int attempt = 1; attempt <= maxRetries; attempt++)
         {
@@ -196,7 +196,7 @@ public static class BlingProcessor
                     Console.WriteLine($"📥 Resposta da criação: {responseBody}");
                     
                     // Deserializar resposta para obter o ID do produto
-                    var produtoResponse = JsonConvert.DeserializeObject<BlingProdutoResponse>(responseBody);
+                    var produtoResponse = JsonConvert.DeserializeObject<BaseProdutoResponse>(responseBody);
                     if (produtoResponse?.data?.id != null)
                     {
                         var produtoId = produtoResponse.data.id;
@@ -294,7 +294,7 @@ public static class BlingProcessor
                 // Aguardar um pouco antes de tentar adicionar estoque para evitar conflitos
                 await Task.Delay(2000, cancellationToken);
                 
-                var url = "https://api.bling.com.br/Api/v3/estoques";
+                var url = "https://api.Base.com.br/Api/v3/estoques";
                 
                 var estoqueRequest = new
                 {
@@ -385,7 +385,7 @@ public static class BlingProcessor
     {
         try
         {
-            var url = $"https://api.bling.com.br/Api/v3/produtos/{produtoId}";
+            var url = $"https://api.Base.com.br/Api/v3/produtos/{produtoId}";
             Console.WriteLine($"🔍 Verificando produto {codigoProduto} (ID: {produtoId})...");
             
             var response = await client.GetAsync(url, cancellationToken);
@@ -398,7 +398,7 @@ public static class BlingProcessor
                 // Tentar deserializar a resposta completa para extrair informações das imagens
                 try
                 {
-                    var produtoCompleto = JsonConvert.DeserializeObject<BlingProdutoCompletoResponse>(responseBody);
+                    var produtoCompleto = JsonConvert.DeserializeObject<BaseProdutoCompletoResponse>(responseBody);
                     
                     if (produtoCompleto?.data != null)
                     {
@@ -462,11 +462,11 @@ public static class BlingProcessor
         }
     }
 
-    private static async Task TentarAtualizarImagensProduto(HttpClient client, long produtoId, BlingProduct produto, CancellationToken cancellationToken)
+    private static async Task TentarAtualizarImagensProduto(HttpClient client, long produtoId, BaseProduct produto, CancellationToken cancellationToken)
     {
         try
         {
-            var url = $"https://api.bling.com.br/Api/v3/produtos/{produtoId}";
+            var url = $"https://api.Base.com.br/Api/v3/produtos/{produtoId}";
             Console.WriteLine($"🔄 Tentando atualizar imagens do produto {produto.Codigo} (ID: {produtoId})...");
 
             // Verificar se o produto tem imagens para enviar
@@ -476,7 +476,7 @@ public static class BlingProcessor
                 return;
             }
 
-            // Criar objeto com a estrutura correta da API do Bling (PATCH)
+            // Criar objeto com a estrutura correta da API do Base (PATCH)
             var patchBody = new
             {
                 imagens = new
@@ -510,12 +510,12 @@ public static class BlingProcessor
         }
     }
 
-    private static BlingToken? ObterTokenDoBanco()
+    private static BaseToken? ObterTokenDoBanco()
     {
         try
         {
             using var db = new LiteDatabase("Filename=fila.db;Connection=shared");
-            var tokenCollection = db.GetCollection<BlingToken>("bling_tokens");
+            var tokenCollection = db.GetCollection<BaseToken>("Base_tokens");
             var token = tokenCollection.Query().FirstOrDefault();
             
             if (token != null && !token.IsExpired)
@@ -547,9 +547,9 @@ public static class BlingProcessor
         var wordPressJson = File.ReadAllText("Maps/HP/categoriesWordpress.json");
         _wordPressCategories = JsonConvert.DeserializeObject<List<WordPressCategory>>(wordPressJson);
 
-        // Carregar categorias do Bling
-        var blingJson = File.ReadAllText("Maps/Bling/categories.json");
-        _blingCategories = JsonConvert.DeserializeObject<List<BlingCategory>>(blingJson);
+        // Carregar categorias do Base
+        var BaseJson = File.ReadAllText("Maps/Base/categories.json");
+        _BaseCategories = JsonConvert.DeserializeObject<List<BaseCategory>>(BaseJson);
     }
 
     private static void CarregarMapeamentosAtributos()
@@ -567,9 +567,9 @@ public static class BlingProcessor
         }
     }
 
-    private static long ObterIdCategoriaBling(List<Category>? categoriasProduto)
+    private static long ObterIdCategoriaBase(List<Category>? categoriasProduto)
     {
-        if (categoriasProduto == null || !categoriasProduto.Any() || _wordPressCategories == null || _blingCategories == null)
+        if (categoriasProduto == null || !categoriasProduto.Any() || _wordPressCategories == null || _BaseCategories == null)
         {
             return 0; // Categoria padrão ou sem categoria
         }
@@ -585,16 +585,16 @@ public static class BlingProcessor
             return 0; // Categoria não encontrada no mapeamento
         }
 
-        // Buscar o ID correspondente no mapeamento do Bling pelo nome
-        var categoriaBling = _blingCategories.FirstOrDefault(c => 
+        // Buscar o ID correspondente no mapeamento do Base pelo nome
+        var categoriaBase = _BaseCategories.FirstOrDefault(c => 
             string.Equals(c.descricao, categoriaWordPress.name, StringComparison.OrdinalIgnoreCase));
         
-        return categoriaBling?.id ?? 0;
+        return categoriaBase?.id ?? 0;
     }
 
-    private static List<BlingImagemURL> ExtrairImagensDoProduto(List<MetaData> meta_data)
+    private static List<BaseImagemURL> ExtrairImagensDoProduto(List<MetaData> meta_data)
     {
-        var imagensURL = new List<BlingImagemURL>();
+        var imagensURL = new List<BaseImagemURL>();
 
         Console.WriteLine($"🔍 Iniciando extração de imagens. Meta_data count: {meta_data?.Count ?? 0}");
 
@@ -620,7 +620,7 @@ public static class BlingProcessor
             
             if (!string.IsNullOrWhiteSpace(urlImagem) && IsValidImageUrl(urlImagem))
             {
-                imagensURL.Add(new BlingImagemURL { Link = urlImagem.Trim() });
+                imagensURL.Add(new BaseImagemURL { Link = urlImagem.Trim() });
                 Console.WriteLine($"✅ Imagem principal adicionada: {urlImagem}");
             }
             else
@@ -654,7 +654,7 @@ public static class BlingProcessor
                     {
                         if (!string.IsNullOrWhiteSpace(imagem) && IsValidImageUrl(imagem))
                         {
-                            imagensURL.Add(new BlingImagemURL { Link = imagem.Trim() });
+                            imagensURL.Add(new BaseImagemURL { Link = imagem.Trim() });
                             Console.WriteLine($"✅ Imagem da galeria adicionada: {imagem}");
                         }
                         else
@@ -670,7 +670,7 @@ public static class BlingProcessor
                     var imagemUnica = galeriaImagens.value.ToString();
                     if (!string.IsNullOrWhiteSpace(imagemUnica) && IsValidImageUrl(imagemUnica))
                     {
-                        imagensURL.Add(new BlingImagemURL { Link = imagemUnica.Trim() });
+                        imagensURL.Add(new BaseImagemURL { Link = imagemUnica.Trim() });
                         Console.WriteLine($"✅ Imagem única da galeria adicionada: {imagemUnica}");
                     }
                     else
@@ -686,7 +686,7 @@ public static class BlingProcessor
                 var imagemUnica = galeriaImagens.value.ToString();
                 if (!string.IsNullOrWhiteSpace(imagemUnica) && IsValidImageUrl(imagemUnica))
                 {
-                    imagensURL.Add(new BlingImagemURL { Link = imagemUnica.Trim() });
+                    imagensURL.Add(new BaseImagemURL { Link = imagemUnica.Trim() });
                     Console.WriteLine($"✅ Imagem única da galeria (fallback) adicionada: {imagemUnica}");
                 }
                 else
@@ -771,14 +771,14 @@ public static class BlingProcessor
 
     private static Dictionary<string, long> CarregarCamposCustomizados()
     {
-        var camposJson = File.ReadAllText("Maps/Bling/campos.json");
-        var camposBling = JsonConvert.DeserializeObject<List<BlingCampoInfo>>(camposJson);
-        return camposBling.ToDictionary(c => c.Nome, c => c.Id);
+        var camposJson = File.ReadAllText("Maps/Base/campos.json");
+        var camposBase = JsonConvert.DeserializeObject<List<BaseCampoInfo>>(camposJson);
+        return camposBase.ToDictionary(c => c.Nome, c => c.Id);
     }
 
-    private static List<BlingCampoCustomizado> MontarCamposCustomizados(WooProduct produto)
+    private static List<BaseCampoCustomizado> MontarCamposCustomizados(WooProduct produto)
     {
-        var camposCustomizados = new List<BlingCampoCustomizado>();
+        var camposCustomizados = new List<BaseCampoCustomizado>();
         foreach (var attribute in produto.attributes)
         {
             var attributeMap = _attributeMaps.FirstOrDefault(a => a.id == attribute.id);
@@ -787,7 +787,7 @@ public static class BlingProcessor
             var nomeCampo = attributeMap.name;
             if (campoNomeParaId.TryGetValue(nomeCampo, out var idCampo))
             {
-                camposCustomizados.Add(new BlingCampoCustomizado
+                camposCustomizados.Add(new BaseCampoCustomizado
                 {
                     Id = idCampo,
                     Valor = attribute.options

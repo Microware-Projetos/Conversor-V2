@@ -162,7 +162,7 @@ public partial class Jobs : ComponentBase
             TipoJob.Plotter => "badge bg-secondary",
             TipoJob.CarePack => "badge bg-info",
             TipoJob.Promocao => "badge bg-warning",
-            TipoJob.Bling => "badge bg-success",
+            TipoJob.Base => "badge bg-success",
             _ => "badge bg-secondary"
         };
     }

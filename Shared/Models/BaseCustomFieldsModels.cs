@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace eCommerce.Shared.Models
 {
-    public class BlingCampoCustomizado
+    public class BaseCampoCustomizado
     {
         [JsonProperty("idCampoCustomizado")]
         public long Id { get; set; }
@@ -15,7 +15,7 @@ namespace eCommerce.Shared.Models
         public long? IdOpcao { get; set; }
     }
 
-    public class BlingCampoInfo
+    public class BaseCampoInfo
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -24,7 +24,7 @@ namespace eCommerce.Shared.Models
         [JsonProperty("tipoCampo")]
         public TipoCampo TipoCampo { get; set; }
         [JsonProperty("opcoes")]
-        public List<BlingOpcaoInfo> Opcoes { get; set; }
+        public List<BaseOpcaoInfo> Opcoes { get; set; }
     }
 
     public class TipoCampo
@@ -35,7 +35,7 @@ namespace eCommerce.Shared.Models
         public string Nome { get; set; }
     }
 
-    public class BlingOpcaoInfo
+    public class BaseOpcaoInfo
     {
         [JsonProperty("id")]
         public long Id { get; set; }

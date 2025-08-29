@@ -81,8 +81,8 @@
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
-      "Id": "/app/eCommerce/Client/wwwroot/images/bling.png",
-      "PackagePath": "staticwebassets/images/bling.png"
+      "Id": "/app/eCommerce/Client/wwwroot/images/base.png",
+      "PackagePath": "staticwebassets/images/base.png"
     },
     {
       "Id": "/app/eCommerce/Client/wwwroot/images/cisco.png",
@@ -111,6 +111,10 @@
     {
       "Id": "/app/eCommerce/Client/wwwroot/js/bling-auth.js",
       "PackagePath": "staticwebassets/js/bling-auth.js"
+    },
+    {
+      "Id": "/app/eCommerce/Client/wwwroot/js/settings-popup.js",
+      "PackagePath": "staticwebassets/js/settings-popup.js"
     },
     {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.eCommerce.Client.props",

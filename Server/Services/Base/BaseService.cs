@@ -2,13 +2,13 @@ using Newtonsoft.Json.Linq;
 using eCommerce.Shared.Models;
 using LiteDB;
 
-namespace eCommerce.Server.Services.Bling;
+namespace eCommerce.Server.Services.Base;
 
-public class BlingService
+public class BaseService
 {
     private readonly LiteDatabase _db;
    
-    public BlingService(LiteDatabase db)
+    public BaseService(LiteDatabase db)
     {
         _db = db;
     }
@@ -22,7 +22,7 @@ public class BlingService
         var job = new JobFila
         {
             Id = objectId,
-            Tipo = TipoJob.Bling,
+            Tipo = TipoJob.Base,
             Status = StatusJob.Pendente,
             DataCriacao = DateTime.Now,
             CaminhoArquivoProduto = caminhoArquivoJson

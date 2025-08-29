@@ -3,7 +3,6 @@
 /app/eCommerce/Server/bin/Debug/net7.0/appsettings.json
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/HP/attributes_cache.json
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/HP/product_cache.json
-/app/eCommerce/Server/bin/Debug/net7.0/Maps/Bling/categories.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/HP/atributes.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/HP/categoriesWordpress.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/HP/map.json
@@ -70,7 +69,6 @@
 /app/eCommerce/Server/obj/Debug/net7.0/eCommerce.Server.genruntimeconfig.cache
 /app/eCommerce/Server/obj/Debug/net7.0/ref/eCommerce.Server.dll
 /app/eCommerce/Server/bin/Debug/net7.0/produtosHP.json
-/app/eCommerce/Server/bin/Debug/net7.0/Maps/Bling/campos.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/attributesLenovo.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/attributesWordpress.json
 /app/eCommerce/Server/bin/Debug/net7.0/Maps/Lenovo/categoriesWordpress.json
@@ -94,3 +92,5 @@
 /app/eCommerce/Server/bin/Debug/net7.0/runtimes/win/lib/net7.0/System.Drawing.Common.dll
 /app/eCommerce/Server/bin/Debug/net7.0/runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll
 /app/eCommerce/Server/bin/Debug/net7.0/Cache/Cisco/dolar.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Base/campos.json
+/app/eCommerce/Server/bin/Debug/net7.0/Maps/Base/categories.json

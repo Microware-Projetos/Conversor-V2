@@ -1,29 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
 using LiteDB;
 using eCommerce.Shared.Models;
-using eCommerce.Server.Services.Bling;
+using eCommerce.Server.Services.Base;
 
 namespace eCommerce.Server.Controllers;
 
 [ApiController]
-[Route("api/bling")]
-public class BlingController : ControllerBase
+[Route("api/Base")]
+public class BaseController : ControllerBase
 {
     private readonly LiteDatabase _db;
-    private readonly BlingService _blingService;
+    private readonly BaseService _baseService;
     private readonly HttpClient _httpClient;
 
-    public BlingController(LiteDatabase db, BlingService blingService, HttpClient httpClient)
+    public BaseController(LiteDatabase db, BaseService baseService, HttpClient httpClient)
     {
         _db = db;
-        _blingService = blingService;
+        _baseService = baseService;
         _httpClient = httpClient;
     }
     
     [HttpPost("produtos")]
     public async Task<IActionResult> EnviarProdutos([FromBody] EnviarProdutosRequest request)
     {
-        var job = await _blingService.EnviarProdutos(request.loja);
+        var job = await _baseService.EnviarProdutos(request.loja);
         return Ok(job);
     }
 
@@ -34,7 +34,7 @@ public class BlingController : ControllerBase
         {
             Console.WriteLine($"Iniciando troca de código por token. Code: {request.code}");
             
-            var url = "https://api.bling.com.br/Api/v3/oauth/token";
+            var url = "https://api.Base.com.br/Api/v3/oauth/token";
             
             // Configurar timeout de 30 segundos
             using var httpClient = new HttpClient();
@@ -67,13 +67,13 @@ public class BlingController : ControllerBase
                 // Salvar token no banco de dados
                 if (tokenResponse != null)
                 {
-                    var tokenCollection = _db.GetCollection<BlingToken>("bling_tokens");
+                    var tokenCollection = _db.GetCollection<BaseToken>("Base_tokens");
                     
                     // Remover tokens antigos
                     tokenCollection.DeleteAll();
                     
                     // Salvar novo token
-                    var blingToken = new BlingToken
+                    var BaseToken = new BaseToken
                     {
                         Id = ObjectId.NewObjectId(),
                         AccessToken = tokenResponse.access_token,
@@ -85,8 +85,8 @@ public class BlingController : ControllerBase
                         DataExpiracao = DateTime.Now.AddSeconds(tokenResponse.expires_in ?? 0)
                     };
                     
-                    tokenCollection.Insert(blingToken);
-                    Console.WriteLine($"Token salvo no banco com ID: {blingToken.Id}");
+                    tokenCollection.Insert(BaseToken);
+                    Console.WriteLine($"Token salvo no banco com ID: {BaseToken.Id}");
                 }
                 
                 return Ok(tokenResponse);
@@ -115,7 +115,7 @@ public class BlingController : ControllerBase
     {
         try
         {
-            var tokenCollection = _db.GetCollection<BlingToken>("bling_tokens");
+            var tokenCollection = _db.GetCollection<BaseToken>("Base_tokens");
             var token = tokenCollection.Query().FirstOrDefault();
             
             if (token == null)
@@ -149,7 +149,7 @@ public class BlingController : ControllerBase
     {
         try
         {
-            var tokenCollection = _db.GetCollection<BlingToken>("bling_tokens");
+            var tokenCollection = _db.GetCollection<BaseToken>("Base_tokens");
             var currentToken = tokenCollection.Query().FirstOrDefault();
             
             if (currentToken == null || string.IsNullOrEmpty(currentToken.RefreshToken))
@@ -157,7 +157,7 @@ public class BlingController : ControllerBase
                 return BadRequest("Nenhum refresh token disponível. Execute a autorização OAuth novamente.");
             }
             
-            var url = "https://api.bling.com.br/Api/v3/oauth/token";
+            var url = "https://api.Base.com.br/Api/v3/oauth/token";
             
             using var httpClient = new HttpClient();
             httpClient.Timeout = TimeSpan.FromSeconds(30);
@@ -221,7 +221,7 @@ public class BlingController : ControllerBase
     {
         try
         {
-            var tokenCollection = _db.GetCollection<BlingToken>("bling_tokens");
+            var tokenCollection = _db.GetCollection<BaseToken>("Base_tokens");
             tokenCollection.DeleteAll();
             return Ok("Token removido com sucesso.");
         }

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using eCommerce.Shared.Models;
 using eCommerce.Server.Processors.HP;
-using eCommerce.Server.Processors.Bling;
+using eCommerce.Server.Processors.Base;
 using eCommerce.Server.Processors.Lenovo;
 
 namespace eCommerce.Server.Services.Job;
@@ -63,6 +63,11 @@ public class JobWorker : BackgroundService
                             Console.WriteLine($"\n[INFO]: Processando job HP - Plotter: {job.CaminhoArquivoProduto}");
                             await HPPlotterProcessor.ProcessarListaPlotter(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
+                        
+                        case TipoJob.Promocao when job.Fornecedor == FornecedorJob.HP:
+                            Console.WriteLine($"\n[INFO]: Processando job HP - Promocao: {job.CaminhoArquivoProduto}");
+                            await HPPromocaoProcessor.ProcessarListasPromocao(job.CaminhoArquivoProduto, combinedCts.Token);
+                            break;
 
                         case TipoJob.Produtos when job.Fornecedor == FornecedorJob.Lenovo:
                             Console.WriteLine($"\n[INFO]: Processando job Lenovo - Produto: {job.CaminhoArquivoProduto}");
@@ -74,8 +79,8 @@ public class JobWorker : BackgroundService
                             await LenovoCarePackProcessor.ProcessarListaCarePack(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
 
-                        case TipoJob.Bling:
-                            await BlingProcessor.ProcessarProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
+                        case TipoJob.Base:
+                            await BaseProcessor.ProcessarProdutos(job.CaminhoArquivoProduto, combinedCts.Token);
                             break;
                     }
                     

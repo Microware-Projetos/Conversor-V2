@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using LiteDB;
 using eCommerce.Server.Services.Job;
-using eCommerce.Server.Services.Bling;
+using eCommerce.Server.Services.Base;
 using eCommerce.Server.Services.HP;
 using eCommerce.Server.Services.Lenovo;
 using eCommerce.Server.Services.Cisco;
@@ -33,7 +33,7 @@ namespace eCommerce.Server.Extensions
             // Serviços customizados
             services.AddHostedService<JobWorker>();
             services.AddScoped<JobWorker>();
-            services.AddScoped<BlingService>();
+            services.AddScoped<BaseService>();
             services.AddScoped<HPService>();
             services.AddScoped<LenovoService>();
             services.AddScoped<CiscoService>();

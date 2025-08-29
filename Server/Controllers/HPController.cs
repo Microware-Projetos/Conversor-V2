@@ -46,4 +46,12 @@ public class HPController : ControllerBase
         return Ok(job);
     }
 
+    [HttpPost("promocao")]
+    public async Task<IActionResult> EnviarPromocao([FromForm] IFormFile arquivoProdutos)
+    {
+        var pastaUploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        var job = await _hpService.EnviarPromocao(arquivoProdutos);
+        
+        return Ok(job);
+    }
 }

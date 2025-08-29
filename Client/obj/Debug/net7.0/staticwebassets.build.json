@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/XEJNaO+0GjPDIjl7Bchp2/sfjHrRh3sw2B6zpNtAho=",
+  "Hash": "0nmROQZM7fBcnM9FZF0YssdlCadJuUs0ZSR8fnUC4Rc=",
   "Source": "eCommerce.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7327,12 +7327,12 @@
       "OriginalItemSpec": "wwwroot/icon-192.png"
     },
     {
-      "Identity": "/app/eCommerce/Client/wwwroot/images/bling.png",
+      "Identity": "/app/eCommerce/Client/wwwroot/images/base.png",
       "SourceId": "eCommerce.Client",
       "SourceType": "Discovered",
       "ContentRoot": "/app/eCommerce/Client/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "images/bling.png",
+      "RelativePath": "images/base.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7341,7 +7341,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/bling.png"
+      "OriginalItemSpec": "wwwroot/images/base.png"
     },
     {
       "Identity": "/app/eCommerce/Client/wwwroot/images/cisco.png",
@@ -7461,6 +7461,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/bling-auth.js"
+    },
+    {
+      "Identity": "/app/eCommerce/Client/wwwroot/js/settings-popup.js",
+      "SourceId": "eCommerce.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "/app/eCommerce/Client/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "js/settings-popup.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/settings-popup.js"
     }
   ]
 }
